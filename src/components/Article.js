@@ -11,14 +11,16 @@ export default function Article({ params }) {
 
   return (
     <article className="producto model">
-      <img
-        className="img-models"
-        alt={`${modelo.name}(${modelo.color})`}
-        src={modelo.previewImage}
-      />
-      <h4 className="model-titles">{modelo.name}</h4>
-      <h3 className="h3-style">{modelo.variant}</h3>
-      <h3 className="h3-color">{modelo.color}</h3>
+      <a href={`/modelos/${modelo.id}`}>
+        <img
+          className="img-models"
+          alt={`${modelo.name}(${modelo.color})`}
+          src={modelo.previewImage}
+        />
+        <h4 className="model-titles">{modelo.name}</h4>
+        <h3 className="h3-style">{modelo.variant}</h3>
+        <h3 className="h3-color">{modelo.color}</h3>
+      </a>
     </article>
   );
 }

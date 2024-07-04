@@ -12,7 +12,7 @@ export default function Modelos() {
         description={"Calzado estándar listo para vestir."}
       />
       <hr className="hr-rtw" />
-      <section id="lista-productos" class="container">
+      <section id="lista-productos" className="container">
         {modelos.map((modelo) => (
           <Article key={modelo.id} params={{ id: modelo.id }} />
         ))}
