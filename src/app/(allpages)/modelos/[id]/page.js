@@ -90,31 +90,37 @@ export default function Modelos({ params }) {
           <img
             className="img-model"
             id="imagen-modelo"
-            src=""
-            alt="modelo ready to wear"
+            alt={`${modelo.name}(${modelo.color})`}
+            src={modelo.previewImage}
           />
           <div>
             <h2 className="h2-model">
-              Titulo del Producto
+              {modelo.name}
             </h2>
-            <h3 className="h3-model" id="estilo-modelo">
-              Estilo del Producto
+            <h3 className="h3-model">
+              {modelo.class}
             </h3>
             <div className="row div-model">
               <h4 className="h4-model">Descripción</h4>
-              <p className="p-model" id="descripcion-modelo">
-                Descripción del producto.
+              <p className="p-model">
+                {modelo.description}
               </p>
               <h4 className="h4-model">Tipo de cuero</h4>
-              <p className="p-model" id="cuero-modelo"></p>
+              <p className="p-model">
+                {modelo.leather}
+              </p>
               <h4 className="h4-model">Color</h4>
-              <p className="p-model" id="color-modelo"></p>
+              <p className="p-model">
+                {modelo.color}
+              </p>
               <h4 className="h4-model">Código de Modelo</h4>
-              <p className="p-model" id="codigo-modelo"></p>
-              <div id="div-precio_modelo">
+              <p className="p-model">
+                {modelo.codigo}
+              </p>
+              {/* <div id="div-precio_modelo">
                 <h4 className="h4-model">Precio</h4>
-                <p className="p-price" id="precio-modelo"></p>
-              </div>
+                <p className="p-price"></p>
+              </div> */}
               <p className="aclaracion-colores">
                 Calzados 100% plantillados a mano. Nuestros cueros poseen un
                 curtido artesanal el cual puede variar sutilmente de tono según
@@ -129,7 +135,7 @@ export default function Modelos({ params }) {
       </div>
       <hr id="hr-var_modelos" />
       <section className="container-var">
-        <img id="img1" className="img-model_var" src="" alt="" />
+        <img id="img1" className="img-model_var" alt={`${modelo.name}(${modelo.color})`} src={modelo.previewImage} />
         <img id="img2" className="img-model_var" src="" alt="" />
         <img id="img3" className="img-model_var" src="" alt="" />
         <img id="img4" className="img-model_var" src="" alt="" />
