@@ -20,21 +20,21 @@ export default function Modelos() {
                       <h5 className="model-subtitles_car">(Listos para usar)</h5>
                     </div>
                   </a>
-                  <a href="../pages/made by order.html" className="carousel-item">
+                  <a href="/modelos/made-to-order" className="carousel-item">
                     <img src="../images/made to order car.webp" className="d-block w-100 img-carousel" alt="..." />
                     <div className="carousel-caption">
                       <h4 className="model-titles_car">Made to Order</h4>
                       <h5 className="model-subtitles_car">(Personalizados a pedido)</h5>
                     </div>
                   </a>
-                  <a href="../pages/bespoke.html" className="carousel-item">
+                  <a href="/modelos/bespoke" className="carousel-item">
                     <img src="../images/bespoke car.webp" className="d-block w-100 img-carousel" alt="..." />
                     <div className="carousel-caption">
                       <h4 className="model-titles_car">Bespoke</h4>
                       <h5 className="model-subtitles_car">(Exclusivos de medida)</h5>
                     </div>
                   </a>
-                  <a href="../pages/cinturones.html" className="carousel-item">
+                  <a href="/modelos/cinturones" className="carousel-item">
                     <img src="../images/cinturones car.webp" className="d-block w-100 img-carousel" alt="..." />
                     <div className="carousel-caption">
                       <h4 className="model-titles_car">Cinturones</h4>
@@ -52,28 +52,28 @@ export default function Modelos() {
                 </button>
               </div>
               <section className="contenedor-tipo_modelos fade-section">
-                <a href="./ready to wear.html" className="model">
+                <a href="/modelos/ready-to-wear" className="model">
                     <img className="img-modeltype" src="/images/Ready to Wear.webp" alt="modelo ready to wear" />
                     <div className="div-model_type_texts">
                         <h4 className="model-type_titles">Modelos Ready to Wear</h4>
                         <h5 className="model-type_subtitles">(Modelos Listos para usar)</h5>    
                     </div>
                 </a>
-                <a href="./made by order.html" className="model">
+                <a href="/modelos/made-to-order" className="model">
                     <img className="img-modeltype" src="/images/Made to Order.webp" alt="modelo made to order" />
                     <div className="div-model_type_texts">
                         <h4 className="model-type_titles">Modelos Made to Order</h4>
                         <h5 className="model-type_subtitles">(Personalizados a pedido)</h5>    
                     </div>
                 </a>
-                <a href="./bespoke.html" className="model">
+                <a href="/modelos/bespoke" className="model">
                     <img className="img-modeltype" src="/images/Bespoke.webp" alt="modelo bespoke" />
                     <div className="div-model_type_texts">
                         <h4 className="model-type_titles">Modelos Bespoke</h4>
                         <h5 className="model-type_subtitles">(Exclusivos de medida)</h5>    
                     </div>
                 </a>
-                <a href="./cinturones.html" className="model">
+                <a href="/modelos/cinturones" className="model">
                     <img className="img-modeltype" src="/images/cinturones.webp" alt="modelos de cinturones" />
                     <div className="div-model_type_texts">
                         <h4 className="model-type_titles">Cinturones</h4>

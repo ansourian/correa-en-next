@@ -47,17 +47,17 @@ export default function Modelos({ params }) {
           ></button>
         </div>
         <div className="carousel-inner">
-          <div className="carousel-item2 carousel-item active">
-            <img src="" className="d-block w-100" alt="..." />
+          <div className="carousel-item2 carousel-item active" data-bs-interval="5000">
+            <img src={modelo.images[0]} className="d-block w-100" alt="..." />
           </div>
-          <div className="carousel-item carousel-item2">
-            <img src="" className="d-block w-100" alt="..." />
+          <div className="carousel-item carousel-item2" data-bs-interval="5000">
+            <img src={modelo.images[1]} className="d-block w-100" alt="..." />
           </div>
-          <div className="carousel-item carousel-item2">
-            <img src="" className="d-block w-100" alt="..." />
+          <div className="carousel-item carousel-item2" data-bs-interval="5000">
+            <img src={modelo.images[2]} className="d-block w-100" alt="..." />
           </div>
-          <div className="carousel-item carousel-item2">
-            <img src="" className="d-block w-100" alt="..." />
+          <div className="carousel-item carousel-item2" data-bs-interval="5000">
+            <img src={modelo.images[3]} className="d-block w-100" alt="..." />
           </div>
         </div>
         <button
@@ -135,10 +135,10 @@ export default function Modelos({ params }) {
       </div>
       <hr id="hr-var_modelos" />
       <section className="container-var">
-        <img id="img1" className="img-model_var" alt={`${modelo.name}(${modelo.color})`} src={modelo.previewImage} />
-        <img id="img2" className="img-model_var" src="" alt="" />
-        <img id="img3" className="img-model_var" src="" alt="" />
-        <img id="img4" className="img-model_var" src="" alt="" />
+        <img id="img1" className="img-model_var" alt={`${modelo.name}(${modelo.color})`} src={modelo.images[0]} />
+        <img id="img2" className="img-model_var" alt={`${modelo.name}(${modelo.color})`} src={modelo.images[1]} />
+        <img id="img3" className="img-model_var" alt={`${modelo.name}(${modelo.color})`} src={modelo.images[2]} />
+        <img id="img4" className="img-model_var" alt={`${modelo.name}(${modelo.color})`} src={modelo.images[3]} />
       </section>
     </main>
   );

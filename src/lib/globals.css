@@ -23,8 +23,8 @@ ul{
 }
 
 a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+    text-decoration: none !important;
+    color: rgb(255, 255, 255) !important;
 }
 
 .hr-rtw{
@@ -1078,7 +1078,7 @@ hr {
 }
 
 .contenedor-card_models {
-  margin: 1vw 0vw 0vw;
+  margin: 1vw 0vw;
   padding: 0vw 0 0vw;
   display: flex;
   flex-direction: row;
