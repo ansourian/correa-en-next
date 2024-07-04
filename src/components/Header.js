@@ -1,5 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
+import Logo from "@/assets/img/logo.png";
+import LogoInstagram from "@/assets/img/ig-logo.svg";
+import Image from "next/image";
 
 export default function Navbar({}) {
   const [scroll, setScroll] = useState(false);
@@ -36,7 +39,11 @@ export default function Navbar({}) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <a id="redireccion" className="navbar-brand" href="#top">
-          <img className="logo" src="./images/logocorrea.png" alt="Logo Calzados Correa" />
+          <Image width={190}
+            className="logo"
+            src={Logo}
+            alt="Logo Calzados Correa"
+          />
         </a>
         <div className="div-socials_mobile">
           <a className="socials" target="_blank" href="https://www.instagram.com/calzadoscorrea/">
@@ -61,7 +68,12 @@ export default function Navbar({}) {
         </div>
         <div className="div-socials_web">
           <a className="socials" target="_blank" href="https://www.instagram.com/calzadoscorrea/">
-          <img className="instagram-nav" src="./images/instagram-svg.svg" alt="Instagram button" />
+            <Image 
+              width={100}
+              className="instagram-nav"
+              src={LogoInstagram}
+              alt="Logo Instagram"
+            />
           </a>
         </div>
       </div>

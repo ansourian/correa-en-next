@@ -1,4 +1,7 @@
 "use client";
+import Logo from "@/assets/img/logo.png"
+import LogoInstagram from "@/assets/img/ig-logo.svg"
+import Image from "next/image";
 export default function HeaderPages({}) {
   return (
     <nav
@@ -22,9 +25,9 @@ export default function HeaderPages({}) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <a id="redireccion" className="navbar-brand" href="#top">
-          <img
+          <Image width={190}
             className="logo"
-            src="./images/logocorrea.png"
+            src={Logo}
             alt="Logo Calzados Correa"
           />
         </a>
@@ -70,15 +73,16 @@ export default function HeaderPages({}) {
             target="_blank"
             href="https://www.instagram.com/calzadoscorrea/"
           >
-            <img
+            <Image 
+              width={100}
               className="instagram-nav"
-              src="./images/instagram-svg.svg"
-              alt="Instagram button"
+              src={LogoInstagram}
+              alt="Logo Instagram"
             />
           </a>
         </div>
       </div>
-      <a className="volver-button" onClick={() => history.back()}>
+      <a className="volver-button fixed-top" onClick={() => history.back()}>
         {" "}
         VOLVER
       </a>

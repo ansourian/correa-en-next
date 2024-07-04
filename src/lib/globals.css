@@ -24,11 +24,15 @@ ul{
 
 a{
     text-decoration: none !important;
-    color: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0) !important;
 }
 
 .hr-rtw{
   margin: 2rem 20rem;
+}
+
+.hr-top{
+  margin: 1rem 20rem 4rem;
 }
 
 header {
@@ -56,7 +60,6 @@ header .item-nav:hover {
 .logo {
   margin: 0 auto;
   display: block;
-  width: 10vw;
 }
 
 ul {
@@ -86,6 +89,11 @@ ul {
 .nav-items{
   display: flex;
   justify-content: center;
+}
+
+.nav-link{
+  font-family: "Josefin Sans", sans-serif;
+  color: white !important;
 }
 
 .navigation {
@@ -126,6 +134,7 @@ ul {
 
 .video-intro {
   height: 90vh;
+  margin: 5.2vw 0;
   overflow: hidden;
 }
 
@@ -497,6 +506,7 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 1;
+  margin: 6vw 0 0;
 }
 .div-section .linea-subtitulo {
   border-width: 0.3vw;
@@ -633,10 +643,10 @@ a:visited {
 
 .volver-button {
   font-family: "Outfit", sans-serif;
-  color: #1F2337;
+  color: #1F2337 !important;
   display: flex;
   text-align: left;
-  margin: 1vw 85vw -3.5vw 2vw;
+  margin: 6vw 85vw -3.5vw 2vw;
   padding: 0.5vw;
   text-decoration: none;
   font-size: 1vw;
@@ -709,6 +719,14 @@ a:visited {
   padding: 0.5vw 3vw;
   border-radius: 0.5vw;
   background-color: rgba(28, 31, 49, 0.9254901961);
+  border: none;
+}
+
+.button-card_models_subtypes {
+  margin: 0 0.3vw;
+  padding: 0.5vw 3vw;
+  border-radius: 0.5vw;
+  background-color: rgba(103, 106, 124, 0.93);
   border: none;
 }
 
@@ -938,7 +956,7 @@ hr {
 }
 
 .contenedor-modelos {
-  margin: 0vw 10vw;
+  margin: 6vw 10vw 0;
   padding: 0vw 0 2vw;
   display: flex;
   flex-direction: row;
@@ -1083,6 +1101,15 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  background-color: #ffffff;
+  border: 0;
+}
+
+.contenedor-card_models_subtypes {
+  margin: 1vw 0vw;
+  padding: 0vw 0 0vw;
+  display: flex;
+  flex-direction: row;
   background-color: #ffffff;
   border: 0;
 }
@@ -1562,6 +1589,11 @@ footer .derechos-reservados {
   display: none;
 }
 
+.selected {
+  background-color: #7783af;
+  color: white;
+}
+
 @media screen and (min-width: 300px) and (max-width: 767px) {
   h1 {
     flex-direction: column;
@@ -1637,7 +1669,7 @@ footer .derechos-reservados {
   .volver-button {
     padding: 2.5vw;
     font-size: 3vw;
-    margin: 2vw 80vw -3vw 2vw;
+    margin: 25vw 80vw -3vw 2vw;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -1688,7 +1720,7 @@ footer .derechos-reservados {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5vw 1vw -5vw;
+    margin: 30vw 1vw -5vw;
   }
   .div-section .p-sub {
     flex-direction: column;
@@ -1827,7 +1859,6 @@ footer .derechos-reservados {
     margin: 0 0 6vw;
   }
   .logo {
-    width: 30vw;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -1848,7 +1879,7 @@ footer .derechos-reservados {
   }
   .h3-model {
     font-size: 3.5vw;
-    margin: 0 0 1vw;
+    margin: 0 0 10vw;
     text-align: center;
   }
   .h2_quienes_somos {
@@ -2298,14 +2329,30 @@ footer .derechos-reservados {
     margin: 3vw auto;
   }
   .contenedor-card_models {
-    margin: 2vw 15vw;
+    margin: 2vw 5vw;
     padding: 0 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: #ffffff;
     border: 0;
-    flex-direction: column;
+    flex-direction: row;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+  }
+  .contenedor-card_models_subtypes {
+    margin: 2vw 5vw 3vw;
+    padding: 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #ffffff;
+    border: 0;
+    flex-direction: row;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
   }
   .contenedor-card_shoe_models {
     margin: 0vw 4vw;
@@ -2346,12 +2393,23 @@ footer .derechos-reservados {
     flex-direction: column;
   }
   .button-card_models {
-    margin: 3vw;
-    padding: 1vw 0;
+    margin: 3vw 2vw;
+    padding: 3vw 7vw;
     border-radius: 5px;
     border: none;
     background-color: #29395c;
   }
+  .button-card_models_subtypes {
+    display: inline-block;
+    margin: 0rem 0.5rem 0.8rem;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(103, 106, 124, 0.93);
+    text-align: center;
+    white-space: nowrap;
+  }
+
   .button-card_shoe_models {
     margin: 3vw;
     padding: 1vw 0;
@@ -2360,7 +2418,7 @@ footer .derechos-reservados {
   }
   .button-card_allmodels {
     margin: 3vw 0 0;
-    padding: 5vw 7vw;
+    padding: 3vw 7vw;
     border-radius: 5px;
     border: none;
   }
@@ -2445,12 +2503,13 @@ footer .derechos-reservados {
   }
   .carousel-container {
     display: block;
+    margin: 25vw 0 0;
   }
   .carousel-item {
     transition-duration: 0.3s !important;
   }
   .carousel-indicators2 {
-    margin-bottom: 0rem;
+    margin-bottom: 0rem !important;
   }
   .section-nuestro_trabajo_reverse {
     flex-direction: column;
@@ -2497,6 +2556,12 @@ footer .derechos-reservados {
     display: flex;
     visibility: hidden;
   }
+
+  .selected {
+    background-color: #7783af;
+    color: white;
+  }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -2762,7 +2827,6 @@ footer .derechos-reservados {
     margin: 0 0 6vw;
   }
   .logo {
-    width: 15vw;
     margin: 0 auto;
   }
   .div-biografia {
@@ -3376,7 +3440,14 @@ footer .derechos-reservados {
   .marquee-content {
     font-size: 2.5vw;
   }
+
+  .selected {
+    background-color: #7783af;
+    color: white;
+  }
+
 }
+
 .estilo-x {
   font-size: calc(1em + 1vw);
 }

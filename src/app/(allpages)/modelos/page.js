@@ -5,6 +5,7 @@ export default function Modelos() {
     return (
         <main>
             <Banner title={"Variedad para cada estilo de vida"} subtitle={"NUESTROS ZAPATOS"} description={"Correa estará con vos en cada paso del camino."} />
+            <hr className="hr-top" />
             <div id="carouselExampleCaptions" className="carousel slide model-carousel" data-bs-ride="carousel">
                 <div className="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-label="Slide 1" aria-current="true"></button>
@@ -81,7 +82,7 @@ export default function Modelos() {
                     </div>
                 </a>
               </section>
-              <hr />
+              <hr className="hr-rtw" />
               <section className="container-info_modelos fade-section">
                   <article className="notas-periodisticas">
                       <h4 className="h4-modelos">PRUEBA</h4>

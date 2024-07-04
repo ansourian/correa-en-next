@@ -8,6 +8,7 @@ import Buscador from "@/components/Buscador";
 
 export default function Modelos() {
   const [tipoSeleccionado, setTipoSeleccionado] = useState("");
+  const [subTipoSeleccionado, setSubTipoSeleccionado] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
   const normalizeText = (text) => {
@@ -22,11 +23,13 @@ export default function Modelos() {
     const normalizedVariant = normalizeText(modelo.variant);
     const normalizedColor = normalizeText(modelo.color);
     const matchesTipo = tipoSeleccionado ? modelo.type === tipoSeleccionado : true;
+    const matchesSubTipo = subTipoSeleccionado ? modelo.subtype === subTipoSeleccionado : true;
     return (
       (normalizedName.includes(normalizedTerm) ||
         normalizedVariant.includes(normalizedTerm) ||
         normalizedColor.includes(normalizedTerm)) &&
-      matchesTipo
+      matchesTipo &&
+      matchesSubTipo
     );
   });
 
@@ -38,7 +41,11 @@ export default function Modelos() {
         description={"Calzado estándar listo para vestir."}
       />
       <hr className="hr-rtw" />
-      <Buscador setTipoSeleccionado={setTipoSeleccionado} setSearchTerm={setSearchTerm} />
+      <Buscador
+        setTipoSeleccionado={setTipoSeleccionado}
+        setSubTipoSeleccionado={setSubTipoSeleccionado}
+        setSearchTerm={setSearchTerm}
+      />
       <section id="lista-productos" className="container">
         {modelosFiltrados.map((modelo) => (
           <Article key={modelo.id} params={{ id: modelo.id }} />

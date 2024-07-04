@@ -7,11 +7,6 @@ export default function Modelos({ params }) {
   const modelo = modelos.find((a) => a.id == id);
   return (
     <main>
-      <Banner
-        title={"Variedad para cada estilo de vida"}
-        subtitle={"NUESTROS ZAPATOS"}
-        description={"Correa estará con vos en cada paso del camino."}
-      />
       <div
         id="carouselExampleIndicators"
         className="carousel slide carousel-container"
