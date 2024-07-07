@@ -51,13 +51,23 @@ export default function HeaderPages({}) {
               </a>
             </li>
             <li className="nav-item">
+              <a className="nav-link" href="/modelos">
+                MODELOS
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/mantenimiento">
+                MANTENIMIENTO
+              </a>
+            </li>
+            <li className="nav-item">
               <a className="nav-link" href="/acerca-de">
                 ACERCA DE
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/modelos">
-                MODELOS
+              <a className="nav-link" href="/preguntas-frecuentes">
+                AYUDA
               </a>
             </li>
             <li className="nav-item">

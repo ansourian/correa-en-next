@@ -55,11 +55,18 @@ export default function Navbar({}) {
             <li className="nav-item">
               <a className="nav-link" href="#top">INICIO</a>
             </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="/modelos">MODELOS</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/mantenimiento">MANTENIMIENTO</a>
+            </li>
             <li className="nav-item">
               <a className="nav-link" href="/acerca-de">ACERCA DE</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/modelos">MODELOS</a>
+              <a className="nav-link" href="/preguntas-frecuentes">AYUDA</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/contacto">CONTACTO</a>

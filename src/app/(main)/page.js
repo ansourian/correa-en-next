@@ -9,10 +9,10 @@ export default function Home() {
                 <div className="div-bienvenida">
                   <h1 className="h1-index">Calzados Correa</h1>
                   <h2 className="h2-titulo">Si querés brillar en la vida, comenzá por tus zapatos.</h2>
-                  <a id="redirection" href="./index.html#redirection"><img className="flecha-index" src="images/flecha.png"/></a>
+                  <a id="redirection" href="#section-1"><img className="flecha-index" src="images/flecha.png"/></a>
                 </div>
             </div>
-            <div className="div-section fade-section">
+            <div id="section-1" className="div-section fade-section">
                 <h3 className="h3-index">CALZADOS CORREA</h3>
                 <h2 className="h2-index">Calzados hechos a mano de Buenos Aires, desde 1955</h2>
                 <hr className="linea-subtitulo"/>
@@ -23,7 +23,7 @@ export default function Home() {
                 </div>
             </div>
             <hr/>
-            <div className="div-section fade-section">
+            <div id="section-2" className="div-section fade-section">
                 <h3 className="h3-index">NUESTROS ZAPATOS</h3>
                 <h2 className="h2-index">Variedad para cada estilo de vida</h2>
                 <hr className="linea-subtitulo"/>
@@ -36,7 +36,7 @@ export default function Home() {
                 </div>
             </div>
             <hr/>
-            <div className="div-section fade-section">
+            <div id="section-3" className="div-section fade-section">
                 <h3 className="h3-index">COMUNICATE CON NOSOTROS</h3>
                 <h2 className="h2-index">¿Preguntas? Estamos aquí para usted</h2>
                 <hr className="linea-subtitulo"/>
@@ -46,7 +46,7 @@ export default function Home() {
                 </div>
             </div>
             <hr/>       
-        <section className="container-notas fade-section">
+        <section id="section-4" className="container-notas fade-section">
             <article className="notas-periodisticas">
                 <img className="logos-diarios" src="/images/2560px-Logo_La_Nacion.svg.png" alt="logo diario la nación"/>
                 <p className="p-lanacion">“Hicimos un pacto con Dios: él no hace zapatos, y nosotros no hacemos milagros” se lee en la entrada de Calzados Correa, una de las últimas zapaterías que hacen zapatos totalmente a mano y a medida desde hace 66 años. Presidentes, grandes empresarios, artistas y miembros de la realeza asiática y árabe sacan turnos para poder tenerlos.</p>

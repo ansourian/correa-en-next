@@ -62,6 +62,10 @@ header .item-nav:hover {
   display: block;
 }
 
+.arrow {
+  transform: scaleX(-1);
+}
+
 ul {
   color: #ffffff;
   list-style-type: none;
@@ -86,14 +90,36 @@ ul {
   font-size: 14px;
 }
 
+.nav-item{
+  margin: 0 1vw;
+}
+
 .nav-items{
   display: flex;
   justify-content: center;
 }
 
-.nav-link{
+.nav-link {
   font-family: "Josefin Sans", sans-serif;
   color: white !important;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: -1px;
+  left: 0;
+  background-color: #fff9b7;
+  transform-origin: center;
+  transition: transform 0.5s ease-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
 }
 
 .navigation {
@@ -236,15 +262,19 @@ ul {
 }
 
 .img-biografia_left {
-  width: 20vw;
+  width: 15vw;
   margin: 1.5vw 6vw;
   display: block;
+  border-radius: 1vw;
+  box-shadow: 0px 15px 31px #000000c7;
 }
 
 .img-biografia_right {
-  width: 20vw;
+  width: 15vw;
   margin: 1.5vw 6vw;
   display: block;
+  border-radius: 1vw;
+  box-shadow: 0px 15px 31px #000000c7;
 }
 
 .img-404 {
@@ -258,9 +288,10 @@ ul {
   justify-content: center;
   margin: 0 auto 4vw;
   width: 1200px;
-  height: 400px;
+  height: 375px;
   object-fit: cover;
-  border-radius: 0vw;
+  border-radius: 1vw;
+  box-shadow: 0px 9px 23px #0000007d;
 }
 
 .img-index {
@@ -270,7 +301,8 @@ ul {
   width: 950px;
   height: 400px;
   object-fit: cover;
-  border-radius: 0vw;
+  border-radius: 1vw;
+  box-shadow: 0px 9px 23px #0000007d;
 }
 
 .img-recomendaciones {
@@ -280,7 +312,8 @@ ul {
   width: 1200px;
   height: 400px;
   object-fit: cover;
-  border-radius: 0vw;
+  border-radius: 1vw;
+  box-shadow: 0px 9px 23px #0000007d;
 }
 
 .img-carousel {
@@ -322,7 +355,7 @@ p {
 
 .p-general {
   text-align: left;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   padding: 0 11vw;
   margin: 3vw 8vw;
   font-family: "EB Garamond", serif;
@@ -330,7 +363,7 @@ p {
 
 .p-general_center {
   text-align: center;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   padding: 0 11vw;
   margin: 3vw 8vw;
   font-family: "EB Garamond", serif;
@@ -338,7 +371,7 @@ p {
 
 .p-biografia {
   text-align: left;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   padding: 0px;
   margin: 2rem 5rem;
   font-family: "EB Garamond", serif;
@@ -392,7 +425,7 @@ p {
 
 .p-sub {
   text-align: center;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   margin: 2vw 25vw 2vw;
   font-family: "EB Garamond", serif;
 }
@@ -516,12 +549,6 @@ p {
   border-style: solid;
   opacity: 100;
 }
-.div-section .p-sub {
-  text-align: center;
-  font-size: 1.3vw;
-  margin: 2vw 25vw 2vw;
-  font-family: "EB Garamond", serif;
-}
 
 .container {
   display: flex;
@@ -555,17 +582,17 @@ p {
   margin: 0rem 1rem 0rem 1rem;
 }
 .container-notas .notas-periodisticas .p-notas {
-  font-size: 1.1vw;
+  font-size: 1vw;
   text-align: center;
   margin: 2vw 1vw;
 }
 .container-notas .notas-periodisticas .p-lanacion {
-  font-size: 1.1vw;
+  font-size: 1vw;
   text-align: center;
   margin: 4.5vw 1vw 4.4vw;
 }
 .container-notas .notas-periodisticas .p-natgeo {
-  font-size: 1.1vw;
+  font-size: 1vw;
   text-align: center;
   margin: 3.5vw 1vw 3.7vw;
 }
@@ -605,7 +632,7 @@ a:visited {
     transform: translateX(-100%);
   }
 }
-/* Detener la animación cuando el cursor está encima */
+
 .marquee:hover .marquee-animation {
   animation-play-state: paused;
 }
@@ -630,15 +657,14 @@ a:visited {
   color: rgb(0, 0, 0);
   padding: 1vw;
   text-decoration: none;
-  font-size: 1vw;
+  font-size: 0.9vw;
   transition: 0.3s;
 }
 .button-index:hover {
   background-color: #1F2337;
-  color: #ffffff;
+  color: #ffffff !important;
   transition: 0.3s;
-  padding: 1.3vw;
-  font-size: 1.1vw;
+  font-size: 1vw;
 }
 
 .volver-button {
@@ -695,11 +721,11 @@ a:visited {
 }
 
 .button-slide {
-  font-size: 3vw;
+  font-size: 2.3vw;
   border: none;
   background-color: transparent;
-  padding: 0 8vw;
-  margin: 0.5vw 0 0;
+  padding: 0 5vw;
+  margin: 0;
   color: #101225;
 }
 
@@ -867,6 +893,11 @@ hr {
 
 .hr-white {
   color: #ffffff;
+  margin: 2vw 20vw;
+}
+
+.hr-nuestra_historia{
+  margin: 2vw 20vw 5vw;
 }
 
 .linea-subtitulo {
@@ -1178,7 +1209,7 @@ h2 {
 .h2-index{
   color: #000000;
   text-align: center;
-  font-size: 4vw;
+  font-size: 3vw;
   margin: 0 0 2vw 0;
   font-family: "EB Garamond", serif;
 }
@@ -1186,13 +1217,14 @@ h2 {
 .h2-pages{
   color: #000000;
   text-align: center;
-  font-size: 4vw;
+  font-size: 3vw;
   margin: 0 0 2vw 0;
   font-family: "EB Garamond", serif;
 }
 
 .h2_quienes_somos {
   color: #ffffff;
+  font-size: 3vw;
 }
 
 .h2-titulo {
@@ -1293,7 +1325,7 @@ h3 {
 .h3-index{
   color: #000000;
   font-family: "Outfit", sans-serif;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   text-align: center;
   letter-spacing: 0.3vw;
   margin: 3vw 0;
@@ -1302,7 +1334,7 @@ h3 {
 .h3-pages{
   color: #000000;
   font-family: "Outfit", sans-serif;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   text-align: center;
   letter-spacing: 0.3vw;
   margin: 3vw 0;
@@ -1516,7 +1548,7 @@ footer {
 .h3-footer {
   color: #ffffff;
   font-family: "Outfit", sans-serif;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   text-align: center;
   letter-spacing: 0.3vw;
   margin: 3vw 0;
@@ -1541,6 +1573,7 @@ footer .p-footer {
   text-align: center;
   color: white;
   margin: 3vw 0 0 0;
+  font-size: 1.1vw;
 }
 footer .vertical-hr {
   margin: 1vw 0 0 0;
@@ -1568,7 +1601,7 @@ footer .row .p-footerinfo_horario {
   justify-content: center;
   align-items: center;
   margin: 3.5vw 0 0;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
 }
 footer .derechos-reservados {
   font-family: "Josefin Sans", sans-serif;
@@ -1611,6 +1644,7 @@ footer .derechos-reservados {
   }
   .h2-pages{
     font-size: 7vw;
+    margin: 1.5vw 0 2vw 0;
   }
   .h4-biografia {
     color: #fff7b7;
@@ -1681,7 +1715,7 @@ footer .derechos-reservados {
   .linea-subtitulo {
     border-width: 0.4vw;
     width: 10vw;
-    margin: 2.5vw 0 3.5vw;
+    margin: 3.5vw 0 !important;
   }
   .banner {
     width: 70vw;
@@ -1720,7 +1754,7 @@ footer .derechos-reservados {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 30vw 1vw -5vw;
+    margin: 35vw 1vw -5vw;
   }
   .div-section .p-sub {
     flex-direction: column;
@@ -1863,6 +1897,11 @@ footer .derechos-reservados {
     justify-content: center;
     display: flex;
     margin: 0;
+    width: 140px;
+    height: auto;
+  }
+  .logo-arrow{
+    width: 5vw;
   }
   .div-biografia {
     flex-direction: column;
@@ -2061,7 +2100,7 @@ footer .derechos-reservados {
   .button-slide {
     font-size: 7vw;
     padding: 0 8vw;
-    margin: 10vw 0 0;
+    margin: 0vw 0 0;
   }
   .contenedor-recomendaciones {
     margin: 0vw 4vw 2vw;
@@ -2560,6 +2599,13 @@ footer .derechos-reservados {
   .selected {
     background-color: #7783af;
     color: white;
+  }
+
+  .nav-items{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 0 5vw;
   }
 
 }

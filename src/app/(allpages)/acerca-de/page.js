@@ -14,7 +14,7 @@ export default function AcercaDe() {
                     </div>
                 </a>
                 */}
-                <a href="./quienes_somos.html" className="model">
+                <a href="/acerca-de/nuestra-historia" className="model">
                     <img className="img-acerca_de" src="./images/Made to Order.webp" alt="modelo made to order" />
                     <div className="div-acerca_de_texts">
                         <h4 className="acerca_de_titles">Nuestra historia</h4>
