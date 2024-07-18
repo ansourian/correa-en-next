@@ -66,7 +66,7 @@ export default function Navbar({}) {
               <a className="nav-link" href="/acerca-de">ACERCA DE</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/preguntas-frecuentes">AYUDA</a>
+              <a className="nav-link" href="/ayuda">AYUDA</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/contacto">CONTACTO</a>

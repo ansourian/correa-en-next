@@ -66,7 +66,7 @@ export default function HeaderPages({}) {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/preguntas-frecuentes">
+              <a className="nav-link" href="/ayuda">
                 AYUDA
               </a>
             </li>

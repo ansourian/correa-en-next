@@ -160,7 +160,7 @@ ul {
 
 .video-intro {
   height: 90vh;
-  margin: 5.2vw 0;
+  margin: 5.2vw 0 0;
   overflow: hidden;
 }
 
@@ -539,8 +539,18 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  margin: 6vw 0 0;
+  margin: 2vw 0 0;
 }
+
+.div-section_pages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin: 5vw 0 0;
+}
+
 .div-section .linea-subtitulo {
   border-width: 0.3vw;
   width: 8vw;
@@ -664,7 +674,7 @@ a:visited {
   background-color: #1F2337;
   color: #ffffff !important;
   transition: 0.3s;
-  font-size: 1vw;
+  font-size: 0.9vw;
 }
 
 .volver-button {
@@ -870,6 +880,14 @@ section {
 }
 
 .div-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.div-section_pages {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1201,7 +1219,7 @@ hr {
 h2 {
   color: #000000;
   text-align: center;
-  font-size: 4vw;
+  font-size: 3.5vw;
   margin: 0 0 2vw 0;
   font-family: "EB Garamond", serif;
 }
@@ -1209,7 +1227,7 @@ h2 {
 .h2-index{
   color: #000000;
   text-align: center;
-  font-size: 3vw;
+  font-size: 3.5vw;
   margin: 0 0 2vw 0;
   font-family: "EB Garamond", serif;
 }
@@ -1217,7 +1235,7 @@ h2 {
 .h2-pages{
   color: #000000;
   text-align: center;
-  font-size: 3vw;
+  font-size: 3.5vw;
   margin: 0 0 2vw 0;
   font-family: "EB Garamond", serif;
 }
@@ -1750,6 +1768,13 @@ footer .derechos-reservados {
     flex-direction: column-reverse;
   }
   .div-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 35vw 1vw -5vw;
+  }
+  .div-section_pages {
     display: flex;
     flex-direction: column;
     justify-content: center;

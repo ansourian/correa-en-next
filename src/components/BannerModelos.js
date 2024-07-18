@@ -12,7 +12,7 @@ export default function BannerModelos({ subtitle, title, description }) {
   const navigation = navigationMap[title] || { left: "#", right: "#" };
 
   return (
-    <div className="div-section">
+    <div className="div-section_pages">
       <h3 className="h3-pages">{subtitle}</h3>
       <div className="slide-styles">
         <a className="button-slide" href={navigation.left}>
