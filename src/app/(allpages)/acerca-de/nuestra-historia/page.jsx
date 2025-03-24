@@ -1,7 +1,7 @@
-import React from "react";
 import Banner from "@/components/Banner";
+import React from "react";
 
-export default function AcercaDe() {
+export default function NuestraHistoria() {
   return (
     <>
       <Banner
@@ -11,13 +11,13 @@ export default function AcercaDe() {
           "La tradición de una familia dedicada a la confección artesanal de calzados de alta calidad."
         }
       />
-      <hr className="hr-nuestra_historia" />
+      <hr className="hr-custom" />
       <img
         class="banner-quienes_somos banner"
         src="/images/quienes somos.webp"
         alt="don felix correa junto a un trabajador"
       />
-      <div class="fade-section">
+      <div class="textos-historia fade-section">
         <p class="p-general">
           Desde su fundación en el año 1955 en Buenos Aires, Calzados Correa ha
           sido un pilar de la industria del calzado artesanal en Argentina. Esta
@@ -64,13 +64,13 @@ export default function AcercaDe() {
       </div>
       <div class="blue-section">
         <div class="contenedor-biografia fade-section">
-          <h2 class="h2_quienes_somos">Don Félix Correa</h2>
-          <h4 class="h4-biografia">FUNDADOR</h4>
+          <img
+            class="img-biografia_left"
+            src="/images/don felix biografia.webp"
+          />
           <div class="div-biografia d-flex">
-            <img
-              class="img-biografia_left"
-              src="/images/don felix biografia.webp"
-            />
+            <h2 class="h2-quienes_somos">Don Félix Correa</h2>
+            <h4 class="h4-biografia">FUNDADOR</h4>
             <p class="p-biografia">
               Nacido en Corrientes, vino con su familia a probar suerte a Buenos
               Aires. Se alquilaron una casa en una pensión y, en 1940, la madre
@@ -88,11 +88,11 @@ export default function AcercaDe() {
             </p>
           </div>
         </div>
-        <hr class="hr-white" />
+        <hr class="hr-custom hr-white" />
         <div class="contenedor-biografia fade-section">
-          <h2 class="h2_quienes_somos">Félix A. Correa</h2>
-          <h4 class="h4-biografia">DIRECTOR GENERAL - MAESTRO ZAPATERO</h4>
           <div class="div-biografia2 d-flex">
+            <h2 class="h2-quienes_somos">Félix A. Correa</h2>
+            <h4 class="h4-biografia">DIRECTOR GENERAL - MAESTRO ZAPATERO</h4>
             <p class="p-biografia">
               Félix Correa, hijo del fundador, está a cargo del negocio
               familiar. Se crió desde niño jugando en los pasillos de la
@@ -106,23 +106,17 @@ export default function AcercaDe() {
               zapateria intacto, pero a su vez sumando nuevas formas de concebir
               el calzado.
             </p>
-            <img
-              class="img-biografia_right"
-              src="/images/dany biografia.webp"
-            />
           </div>
+          <img class="img-biografia_right" src="/images/dany biografia.webp" />
         </div>
-        <hr class="hr-white" />
+        <hr class="hr-custom hr-white" />
         <div class="contenedor-biografia fade-section">
-          <h2 class="h2_quienes_somos">Hector Pelizoli</h2>
-          <h4 class="h4-biografia">
-            DIRECTOR DE PRODUCCIÓN - MAESTRO ZAPATERO
-          </h4>
+          <img class="img-biografia_left" src="/images/hector biografia.webp" />
           <div class="div-biografia d-flex">
-            <img
-              class="img-biografia_left"
-              src="/images/hector biografia.webp"
-            />
+            <h2 class="h2-quienes_somos">Hector Pelizoli</h2>
+            <h4 class="h4-biografia">
+              DIRECTOR DE PRODUCCIÓN - MAESTRO ZAPATERO
+            </h4>
             <p class="p-biografia">
               Yerno de Felix A. Correa (padre), aprendió el oficio del maestro.
               Tenía 16 años cuando entró de cadete y hoy en día sabe todos los
@@ -136,24 +130,43 @@ export default function AcercaDe() {
             </p>
           </div>
         </div>
-        {/* <hr class="hr-white" />
-            <div class="contenedor-biografia fade-section">
-                <h2 class="h2_quienes_somos">José A. Correa</h2>
-                <h4 class="h4-biografia">SEGUNDA GENERACIÓN</h4>
-                <div class="div-biografia2 d-flex">
-                    <p class="p-biografia">José Correa, sobrino de Don Félix Correa, personifica la pasión por la artesanía del calzado. Además de mantener viva la tradición familiar, José tiene una afición por desarrollar nuevas herramientas de trabajo para las distintas tareas del día a día. Su compromiso no solo se evidencia en su destreza técnica, sino también en la atención ejemplar que brinda a los clientes. Cada vez que alguien recibe atención de José, experimenta su dedicación inquebrantable para asegurarse de que quienes confían en su habilidad reciban un servicio excepcional y satisfactorio.</p>
-                    <img class="img-biografia_right" src="/images/jose biografia.jpg" />
-                </div>
-            </div>
-            <hr class="hr-white" />
-            <div class="contenedor-biografia fade-section">
-                <h2 class="h2_quienes_somos">Juan Cruz Correa</h2>
-                <h4 class="h4-biografia">TERCER GENERACIÓN</h4>
-                <div class="div-biografia d-flex">
-                    <img class="img-biografia_right" src="/images/juan biografia.jpg" />
-                    <p class="p-biografia">Juan Cruz Correa, uno de los nietos de Don Felix Correa, forma parte de la tercera generación de la familia. De la misma forma que su padre comenzó, colaboró con tareas generales y atención al cliente. Con el tiempo, su ambición lo llevó a querer conocer el ambiente de las zapaterías Bespoke de en otras partes del mundo. Durante un período breve, tuvo la oportunidad de trabajar con distintos zapateros de Italia, y de esa forma sumar experiencias para plasmar en su proyección.</p>
-                </div>
-            </div> */}
+        <hr class="hr-custom hr-white" />
+        <div class="contenedor-biografia fade-section">
+          <div class="div-biografia2 d-flex">
+            <h2 class="h2-quienes_somos">José A. Correa</h2>
+            <h4 class="h4-biografia">SEGUNDA GENERACIÓN</h4>
+            <p class="p-biografia">
+              José Correa, sobrino de Don Félix Correa, personifica la pasión
+              por la artesanía del calzado. Además de mantener viva la tradición
+              familiar, José tiene una afición por desarrollar nuevas
+              herramientas de trabajo para las distintas tareas del día a día.
+              Su compromiso no solo se evidencia en su destreza técnica, sino
+              también en la atención ejemplar que brinda a los clientes. Cada
+              vez que alguien recibe atención de José, experimenta su dedicación
+              inquebrantable para asegurarse de que quienes confían en su
+              habilidad reciban un servicio excepcional y satisfactorio.
+            </p>
+          </div>
+          <img class="img-biografia_right" src="/images/jose biografia.jpg" />
+        </div>
+        <hr class="hr-custom hr-white" />
+        <div class="contenedor-biografia fade-section">
+          <img class="img-biografia_right" src="/images/juan biografia.jpg" />
+          <div class="div-biografia d-flex">
+            <h2 class="h2-quienes_somos">Juan Cruz Correa</h2>
+            <h4 class="h4-biografia">TERCER GENERACIÓN</h4>
+            <p class="p-biografia">
+              Juan Cruz Correa, uno de los nietos de Don Felix Correa, forma
+              parte de la tercera generación de la familia. De la misma forma
+              que su padre comenzó, colaboró con tareas generales y atención al
+              cliente. Con el tiempo, su ambición lo llevó a querer conocer el
+              ambiente de las zapaterías Bespoke de en otras partes del mundo.
+              Durante un período breve, tuvo la oportunidad de trabajar con
+              distintos zapateros de Italia, y de esa forma sumar experiencias
+              para plasmar en su proyección.
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );

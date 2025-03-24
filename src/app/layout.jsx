@@ -1,8 +1,9 @@
-"use client"
-import 'bootstrap/dist/css/bootstrap.min.css';
+"use client";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "@/lib/globals.css";
+import Header from "@/components/Header";
+import { useEffect } from "react";
 import Footer from "@/components/Footer";
-import { useEffect } from 'react';
 
 export default function RootLayout({ children }) {
   useEffect(() => {
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Header />
         {children}
         <Footer />
       </body>

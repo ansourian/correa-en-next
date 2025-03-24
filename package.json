@@ -9,10 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.8",
+    "@mui/material": "^6.4.8",
     "bootstrap": "^5.3.3",
     "next": "14.2.3",
     "next-fonts": "^1.5.1",
     "react": "^18",
+    "react-bootstrap": "^2.10.4",
     "react-dom": "^18"
   },
   "devDependencies": {

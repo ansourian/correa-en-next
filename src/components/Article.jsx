@@ -17,9 +17,14 @@ export default function Article({ params }) {
           alt={`${modelo.name}(${modelo.color})`}
           src={modelo.previewImage}
         />
-        <h4 className="model-titles">{modelo.name}</h4>
-        <h3 className="h3-style">{modelo.variant}</h3>
-        <h3 className="h3-color">{modelo.color}</h3>
+        <div style={{display:"flex", flexDirection:"column", gap:"0.1rem"}}>
+          <h4 className="model-titles">{modelo.name}</h4>
+          <h3 className="h3-class">{modelo.class}</h3>
+          <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+            <h3 className="h3-color">{modelo.color}</h3>
+            {modelo.variant && <h3 className="h3-style">{modelo.variant}</h3>}
+          </div>
+        </div>
       </a>
     </article>
   );
