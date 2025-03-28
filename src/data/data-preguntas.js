@@ -3,11 +3,11 @@ export const preguntas = [
     pregunta: "¿Cómo realizo una compra?",
     respuesta: (
       <>
-        <div>
+        <div class="card-body p-preguntas_frecuentes">
           Para realizar una compra, lo ideal siempre es acercarse al local en
           Mario Bravo 750, CABA.
         </div>
-        <div>
+        <div class="card-body p-preguntas_frecuentes">
           Por el momento, no se pueden realizar comprás a través de la web, pero
           si usted ya es cliente, podemos tener sus datos en nuestros registros.
           De esta forma, puede contactarse con nuestros ascesores para consultar
@@ -21,7 +21,7 @@ export const preguntas = [
       "¿Cuál es la diferencia entre Ready to Wear, Made to Order y Bespoke?",
     respuesta: (
       <>
-        <div class="card-body p-respuestas">
+        <div class="card-body p-preguntas_frecuentes">
           La diferencia principal entre estos tres modelos de calzado radica en
           el nivel de personalización y la forma en que se fabrican:
           <h2 class="h2-preguntas_frecuentes">Ready to Wear:</h2>
@@ -121,8 +121,12 @@ export const preguntas = [
   },
   {
     pregunta: "¿Realizan reparaciones o renovaciones de zapatos?",
-    respuesta:
-      "Sí, realizamos reparaciones o renovaciones solamente de los zapatos que se confeccionan en nuestro taller.",
+    respuesta: (
+      <div class="card-body p-preguntas_frecuentes">
+        Sí, realizamos reparaciones o renovaciones solamente de los zapatos que
+        se confeccionan en nuestro taller.
+      </div>
+    ),
   },
   {
     pregunta: "¿Tienen información de contacto?",
@@ -148,8 +152,11 @@ export const preguntas = [
   },
   {
     pregunta: "¿Qué horario de atención al público tiene el local?",
-    respuesta:
-      "Lunes a Viernes de 9hs a 13hs y de 15hs a 19hs / Sábados de 9hs a 13hs",
+    respuesta: (
+      <div class="card-body p-preguntas_frecuentes">
+        Lunes a Viernes de 9hs a 13hs y de 15hs a 19hs / Sábados de 9hs a 13hs
+      </div>
+    ),
   },
   {
     pregunta: "¿Cuáles son los medios de pago disponibles?",

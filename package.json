@@ -18,7 +18,11 @@
     "next-fonts": "^1.5.1",
     "react": "^18",
     "react-bootstrap": "^2.10.4",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-medium-image-zoom": "^5.2.14",
+    "react-slick": "^0.30.3",
+    "react-zoom-pan-pinch": "^3.7.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "^8",

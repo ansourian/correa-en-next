@@ -5,7 +5,7 @@ import Accordion from 'react-bootstrap/Accordion';
 
 export default function CardPreguntas({ params }) {
   return (
-    <Accordion >
+    <Accordion className="container-accordion" >
       {preguntas.map((item, index) => (
         <Accordion.Item eventKey={index.toString()} key={index} className='card-frecuentes'>
           <Accordion.Header>{item.pregunta}</Accordion.Header>

@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import FadeIn from "@/components/FadeInAnimation";
 import Image from "next/image";
 
 export default function NuestroTrabajo() {
@@ -11,8 +12,9 @@ export default function NuestroTrabajo() {
           "Conoce un poco más sobre nuestro oficio y el proceso de trabajo."
         }
       />
-        <hr className="hr-custom" />
-        <section className="section-trabajo">
+      <hr className="hr-custom" />
+      <section className="section-trabajo">
+        <FadeIn>
           <section className="section-nuestro_trabajo_reverse">
             <div className="div-nuestro_trabajo">
               <h2 className="h2-pages fade-section">
@@ -36,6 +38,8 @@ export default function NuestroTrabajo() {
               />
             </div>
           </section>
+        </FadeIn>
+        <FadeIn>
           <section className="section-nuestro_trabajo">
             <div className="div-nuestro_trabajo">
               <h2 className="h2-pages fade-section">
@@ -57,6 +61,8 @@ export default function NuestroTrabajo() {
               />
             </div>
           </section>
+        </FadeIn>
+        <FadeIn>
           <section className="section-nuestro_trabajo_reverse">
             <div className="div-nuestro_trabajo">
               <h2 className="h2-pages fade-section">
@@ -78,7 +84,8 @@ export default function NuestroTrabajo() {
               />
             </div>
           </section>
-        </section>
+        </FadeIn>
+      </section>
     </>
   );
 }

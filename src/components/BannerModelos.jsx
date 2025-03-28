@@ -2,10 +2,11 @@ import Image from "next/image";
 import Arrow from "@/assets/img/arrow.svg";
 
 const navigationMap = {
-  "Ready to Wear": { left: "/modelos/cinturones", right: "/modelos/made-to-order" },
+  "Todos los Modelos": { left: "/modelos/cinturones", right: "/modelos/ready-to-wear" },
+  "Ready to Wear": { left: "/modelos/all", right: "/modelos/made-to-order" },
   "Made to Order": { left: "/modelos/ready-to-wear", right: "/modelos/bespoke" },
   "Bespoke": { left: "/modelos/made-to-order", right: "/modelos/cinturones" },
-  "Cinturones": { left: "/modelos/bespoke", right: "/modelos/ready-to-wear" },
+  "Cinturones": { left: "/modelos/bespoke", right: "/modelos/all" },
 };
 
 export default function BannerModelos({ subtitle, title, description }) {

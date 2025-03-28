@@ -1,3 +1,5 @@
+// isNuevo: true, // Para marcar los modelos nuevos
+
 export const modelos = [
   {
     id: "1122-Negro",

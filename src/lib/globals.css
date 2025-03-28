@@ -32,7 +32,7 @@ header {
 }
 
 .logo {
-  width: 150px;
+  width: 120px;
   height: auto;
 }
 
@@ -109,7 +109,11 @@ ul {
   backdrop-filter: blur(5px) !important;
   max-width: 100% !important;
   margin: 0 !important;
-  padding: 0 10px !important;
+  padding: 0 !important;
+}
+
+.navbar-toggler {
+  border: none !important;
 }
 
 .instagram-nav {
@@ -286,19 +290,17 @@ ul {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  width: 55rem;
-  height: 20rem;
+  width: 100%;
+  height: 100vh;
   object-fit: cover;
-  border-radius: 1vw;
-  box-shadow: 0px 9px 23px #0000007d;
 }
 
 .img-recomendaciones {
   display: flex;
   justify-content: center;
-  margin: 0 auto 4vw;
-  width: 1200px;
-  height: 400px;
+  width: 50%;
+  height: 430px;
+  margin: 2rem auto;
   object-fit: cover;
   border-radius: 1vw;
   box-shadow: 0px 9px 23px #0000007d;
@@ -339,7 +341,7 @@ ul {
 
 p {
   text-align: left;
-  font-size: 1.2vw;
+  font-size: 1.2rem;
   font-family: "EB Garamond", serif;
 }
 
@@ -458,9 +460,6 @@ p {
 
 .p-recomendaciones {
   text-align: left;
-  font-size: 1.3vw;
-  padding: 0px;
-  margin: 0 1rem;
   font-family: "EB Garamond", serif;
   align-self: center;
 }
@@ -499,7 +498,7 @@ p {
 
 .p-preguntas_frecuentes {
   text-align: center;
-      font-size: 1.2rem;
+  font-size: 1.2rem;
   font-family: "EB Garamond", serif;
   color: rgb(0, 0, 0);
   display: flex;
@@ -509,7 +508,7 @@ p {
   margin: 0;
 }
 
-.container-medios_pago{
+.container-medios_pago {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -585,7 +584,7 @@ p {
   justify-content: space-between;
   align-items: center;
   height: auto;
-  margin: 2rem;
+  margin: 1rem 0;
   gap: 2rem;
 }
 
@@ -618,6 +617,7 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .button-index {
@@ -642,13 +642,14 @@ a:visited {
   font-family: "Outfit", sans-serif;
   color: #1f2337 !important;
   display: flex;
+  position: fixed;
+  z-index: 100;
   text-align: left;
-  margin: 6vw 85vw -3.5vw 2vw;
-  padding: 0.5vw;
-  text-decoration: none;
-  font-size: 1vw;
+  font-size: 1.2rem;
   font-weight: 500;
   cursor: pointer;
+  top: 12%;
+  left: 3%;
 }
 
 .imagenes-button {
@@ -694,10 +695,8 @@ a:visited {
 .button-slide {
   display: flex;
   align-items: center;
-  font-size: 2.3vw;
   border: none;
   background-color: transparent;
-  padding: 0 5vw;
   margin: 0;
   color: #101225;
 }
@@ -880,6 +879,14 @@ button:focus:not(:focus-visible) {
   margin: 2vw 3vw 4vw;
 }
 
+.div-specific_model {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
 .div-biografia {
   display: flex;
   flex-direction: column;
@@ -958,6 +965,24 @@ button:focus:not(:focus-visible) {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+  gap: 4rem;
+}
+
+.contenedor-recomendaciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5rem auto;
+  width: 80%;
+  gap: 4rem;
+}
+
+.div-recomendaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .div-model_type_texts {
@@ -988,7 +1013,7 @@ button:focus:not(:focus-visible) {
 .div-nuestro_trabajo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .carousel-pages [data-bs-target] {
@@ -1012,6 +1037,14 @@ button:focus:not(:focus-visible) {
 .contenedor-biografia {
   display: flex;
   flex-direction: row;
+  width: 80%;
+  margin: 0rem auto;
+  padding: 4rem 0;
+}
+
+.contenedor-biografia2 {
+  display: flex;
+  flex-direction: row-reverse;
   width: 80%;
   margin: 0rem auto;
   padding: 4rem 0;
@@ -1060,11 +1093,6 @@ button:focus:not(:focus-visible) {
   width: 80%;
   margin: 0vw auto;
   flex: 1;
-}
-
-.contenedor-recomendaciones {
-  margin: 0vw 4vw 2vw;
-  padding: 2vw 0 2vw;
 }
 
 .contenedor-aclaracion {
@@ -1143,7 +1171,6 @@ button:focus:not(:focus-visible) {
   border-radius: 0.6vw !important;
   margin: 1vw !important;
   border: none !important;
-  padding: 0 10vw !important;
 }
 
 .accordion-item {
@@ -1217,7 +1244,7 @@ button:focus:not(:focus-visible) {
 }
 
 .contenedor-card_models {
-  padding: 0vw 0 0vw;
+  padding: 0vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1311,7 +1338,6 @@ h2 {
 
 .h2-quienes_somos {
   color: #ffffff;
-  font-size: 3.5rem;
 }
 
 .h2-model {
@@ -1423,7 +1449,6 @@ h3 {
   color: #595959;
   font-size: 1.2rem;
   text-align: center;
-  margin: 0 0 2vw;
 }
 
 .h3-class {
@@ -1608,7 +1633,7 @@ h5 {
   background-color: #ffffff;
   margin-bottom: 2vw;
   border: 0;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 .section-nuestro_trabajo_reverse {
@@ -1620,7 +1645,7 @@ h5 {
   border: 0;
   margin: 0 auto;
   flex-direction: row-reverse;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 #imagenesAdicionales {
@@ -1635,7 +1660,7 @@ h5 {
   display: flex;
   flex-direction: column;
   gap: 6rem;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   background-color: #ffffff;
   border: 0;
@@ -1752,7 +1777,6 @@ footer {
   color: #b1b1b1;
   background-color: #101225;
   padding: 1vw 0;
-  margin-top: 2vw;
   margin-bottom: 0;
 }
 
@@ -1809,7 +1833,7 @@ footer {
 }
 
 .card-title {
-  font-size: 1.2vw;
+  font-size: 1.5rem;
   font-weight: 500;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   font-family: "Outfit", sans-serif;
@@ -1835,14 +1859,179 @@ footer {
   gap: 2rem;
 }
 
+/* Contenedor principal con las dos secciones (galería y contenido) */
+.modelo-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Sección de la galería (izquierda) */
+.gallery-section {
+  flex: 1 1 60%; /* Se puede ajustar el ancho de la galería */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo de la galería */
+.slick-slide img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+/* Contenedor de miniaturas */
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+/* Estilo de las miniaturas */
+.thumbnails img {
+  margin: 0 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnails img:hover {
+  border-color: #007bff;
+}
+
+/* Sección de información del modelo (derecha) */
+.info-section {
+  flex: 1 1 40%; /* Ajusta el tamaño de la sección de la derecha */
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+}
+
+.info-section h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.info-section p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.div-galeria {
+  width: 50%;
+  min-height: 300px; /* Ajustá según lo necesario */
+}
+
+.div-info-modelo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.div-titulo-modelo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.slick-dots {
+  bottom: 0 !important;
+}
+
+.slick-slide:focus,
+.slick-slide div:focus {
+  outline: none !important;
+}
+
+.div-modelo {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 80%;
+  gap: 2rem;
+}
+
+.modal-image {
+  width: 90%;
+  height: 80%;
+}
+
+.div-anuncio_card {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #ffffffc4;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.p-anuncio_card {
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+.icon-anuncio_card {
+  color: #488cf7;
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.producto.model {
+  position: relative;
+}
+
+.nuevo-label {
+  position: absolute;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #dc3545;
+  color: white;
+  padding: 0.3rem 0.5rem 0.2rem;
+  font-weight: 500;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.fade-in-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container-accordion {
+  width: 80%;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 300px) and (max-width: 767px) {
   h1 {
     flex-direction: column;
     font-size: 170%;
   }
   h2 {
-    margin: 40px 10px 40px;
-    font-size: 7vw;
+    font-size: 2.5rem;
   }
   h3 {
     font-size: 3vw;
@@ -1851,22 +2040,20 @@ footer {
     font-size: 3vw;
   }
   .h2-pages {
-    font-size: 7vw;
-    margin: 1.5vw 0 2vw 0;
+    font-size: 2rem;
+    margin: 0;
   }
   .h2-index {
-    font-size: 7vw;
-    margin: 40px 10px 40px;
+    font-size: 2rem;
   }
   .h3-index {
     font-size: 3vw;
   }
   .h4-biografia {
     color: #fff7b7;
-    font-size: 2.5vw;
+    font-size: 1rem;
     text-align: center;
     font-family: "Outfit", sans-serif;
-    margin: 1vw;
   }
 
   hr {
@@ -1876,6 +2063,11 @@ footer {
     margin: 0 auto 0;
     font-size: 5vw;
   }
+
+  .p-sub {
+    width: auto;
+  }
+
   .p-sub_biografia {
     flex-direction: column;
     font-size: 100%;
@@ -1883,9 +2075,7 @@ footer {
   }
   .p-general {
     text-align: left;
-    font-size: 3.5vw;
-    padding: 0 5vw;
-    margin: 6vw 8vw;
+    padding: 0;
   }
   .p-general_center {
     text-align: center;
@@ -1895,9 +2085,7 @@ footer {
   }
   .p-biografia {
     text-align: left;
-    font-size: 3.5vw;
-    padding: 0px;
-    margin: 10vw 7vw;
+    margin: 1rem auto 0;
     align-self: center;
   }
   .button-index {
@@ -1912,30 +2100,28 @@ footer {
     padding: 3vw;
     font-size: 3vw;
   }
-  .div-button {
-    margin: 10vw;
-  }
   .volver-button {
     padding: 2.5vw;
     font-size: 3vw;
-    margin: 25vw 80vw -3vw 2vw;
     display: flex;
     text-align: center;
     justify-content: center;
   }
-  hr {
-    border-width: 0.4vw;
-    margin: 10vw 15vw 15vw !important;
+  .hr-custom {
+    width: 80%;
+    margin: 3rem auto !important;
   }
   .linea-subtitulo {
-    border-width: 0.4vw !important;
-    width: 15vw !important;
-    margin: 3vw 0 10vw !important;
+    border-width: 1vw !important;
+    width: 5rem !important;
+    margin: 0 !important;
   }
   .banner {
-    width: 70vw;
+    width: 80%;
+    height: 300px;
     margin: 0 auto;
     display: block;
+    object-fit: cover;
   }
   .banner-quienes_somos {
     filter: grayscale(100);
@@ -1944,157 +2130,43 @@ footer {
   .banner-quienes_somos:hover {
     filter: grayscale(0);
     transition: 0.5s;
-    width: 70vw;
+    width: 80%;
   }
   .img-biografia_left {
-    width: 50vw;
-    margin: 4vw auto;
+    width: 100%;
+    margin: 0 auto;
     display: block;
   }
   .img-biografia_right {
-    width: 50vw;
-    margin: 4vw auto;
+    width: 100%;
+    margin: 0 auto;
     display: block;
   }
   .div-biografia {
-    margin: 0rem;
+    margin: 2rem 0;
     flex-direction: column;
   }
   .div-biografia2 {
-    margin: 0rem;
-    flex-direction: column-reverse;
-  }
-  .div-section {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+    margin: 2rem 0;
   }
   .div-section_pages {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 35vw 1vw -5vw;
+    margin: 3rem 1rem 0;
   }
-  .div-section .p-sub {
-    flex-direction: column;
-    font-size: 3vw;
-    margin: 1vw 7vw 3vw;
+  .p-sub {
+    margin: 0 auto;
   }
-
-  .div-section_pages .p-sub {
-    flex-direction: column;
-    font-size: 3vw;
-    margin: 1vw 15vw 3vw;
-  }
-
   .container-notas {
     flex-direction: column;
-    margin: 3rem 5rem 3rem;
-  }
-  .container-notas .notas-periodisticas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2vw 0;
-    flex: 1;
-  }
-  .container-notas .notas-periodisticas .logos-diarios {
-    width: 25vw;
-    margin: 3vw;
-  }
-  .container-notas .notas-periodisticas .p-notas {
-    font-size: 4vw;
-    text-align: center;
-    margin: 5vw -3vw 7vw;
-  }
-  .container-notas .notas-periodisticas .p-lanacion {
-    font-size: 4vw;
-    text-align: center;
-    margin: 5vw -3vw 7vw;
-  }
-  .container-notas .notas-periodisticas .p-natgeo {
-    font-size: 4vw;
-    text-align: center;
-    margin: 5vw -3vw 7vw;
+    margin: 0rem 2rem;
   }
   .container-info_modelos {
     flex-direction: column;
-    margin: 3rem 5rem 3rem;
-  }
-  .container-info_modelos .notas-periodisticas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2vw 0;
-    flex: 1;
-  }
-  .div-button-nota {
-    margin: 4vw 0 20vw;
-  }
-  footer .row {
-    justify-content: center;
-    flex-direction: column;
-  }
-  footer .row .h2-footer {
-    color: white;
-    display: flex;
-    margin: 3vw 0vw 0 17vw;
-    font-size: 6vw;
-    align-items: center;
-    text-align: center;
-  }
-  footer .row .instagram-logo {
-    width: 60%;
-    display: flex;
-    margin: 2vw 0 0 -3vw;
-    padding: 0vw 0vw 0vw 0vw;
-    justify-self: center;
-    object-fit: fill;
-  }
-  footer .row .p-footer {
-    font-size: 3.5vw;
-    margin: 5vw 0 0;
-  }
-  footer .div-seguinos_ig {
-    display: flex;
-    flex-direction: row !important;
-    justify-content: space-between;
-  }
-  footer .h3-footer {
-    font-size: 4vw;
-    margin: 12vw 0 4vw;
-  }
-  footer .row .footer-content {
-    height: 50%;
-    margin: 2vw 0 0 1vw;
-  }
-  footer .row .footer-content .p-footerinfo {
-    font-size: 4vw;
-    text-align: center !important;
-    justify-content: center;
-    align-items: center;
-    margin: 5vw 0;
-  }
-  footer .row .footer-maps {
-    margin: 6vw 6vw 6vw 0;
-  }
-  footer .row .footer-maps .maps {
-    width: 300px;
-    height: 300px;
+    margin: 0 auto;
+    gap: 2rem;
   }
   footer .vertical-hr {
     visibility: hidden;
-  }
-  footer .row {
-    flex-direction: column;
-  }
-  footer .derechos-reservados {
-    font-size: 3vw;
-    padding: 3vw 10vw;
-    overflow: hidden;
   }
   .p-modelos {
     display: flex;
@@ -2107,11 +2179,9 @@ footer {
   }
   .p-info_modelos {
     display: flex;
-    font-size: 4vw;
+    font-size: 1.2rem;
     text-align: center;
-    margin: 2rem -3rem;
     box-sizing: content-box;
-    height: 145px;
     align-items: center;
   }
   .youtube-vid {
@@ -2132,22 +2202,14 @@ footer {
   .logo-arrow {
     width: 5vw;
   }
-  .div-biografia {
-    flex-direction: column;
-  }
   .img-model {
     margin: 3vw auto 0vw;
     width: 80vw;
     justify-content: center;
     display: none;
   }
-  .h2-model {
-    font-size: 230%;
-    text-align: center;
-  }
   .h3-model {
     font-size: 3.5vw;
-    margin: 0 0 10vw;
     text-align: center;
   }
   .h2_quienes_somos {
@@ -2163,7 +2225,7 @@ footer {
     font-size: 1.2rem;
     text-align: center;
     font-family: "Outfit", sans-serif;
-    margin: 2vw -4vw 0vw;
+    margin: 0 0 1rem;
   }
   .p-model {
     font-size: 3.5vw;
@@ -2194,16 +2256,19 @@ footer {
     margin: 0 0 20vw;
     animation: fadein 3s;
   }
-  .video-intro .div-bienvenida .h1-index {
-    padding: 20vw 0 0;
-    font-size: 10vw;
-    color: #fff7b7;
-    margin: 0;
+  .h1-index {
+    font-size: 5rem;
   }
-  .video-intro .div-bienvenida .h2-titulo {
-    color: #ffffff;
-    font-size: 3.2vw;
-    margin: 0 0 0;
+  .h2-titulo {
+    margin: 2rem 0;
+    font-size: 2rem;
+  }
+  .flecha-index {
+    width: 10vw;
+    left: 45%;
+  }
+  .div-section {
+    margin: 2rem;
   }
   .contenedor-modelos {
     margin: 0vw 10vw;
@@ -2225,8 +2290,7 @@ footer {
     margin: 2vw 0 4vw;
   }
   .p-mantenimiento {
-    font-size: 3.5vw;
-    margin: 6vw 1rem 2vw;
+    margin: 1rem 0 0;
   }
   .p-aclaracion {
     font-size: 3.5vw;
@@ -2240,17 +2304,14 @@ footer {
     font-size: 6vw;
     margin: 2vw 0 4vw;
   }
-  .h5-right {
-    font-size: 5vw;
-    margin: 2vw 0 0;
-  }
   .h5-number {
-    font-size: 30vw;
-    margin: 0 2vw 0 0;
-    padding: 0 0 0 6vw;
+    font-size: 20rem;
+    top: 35%;
     display: flex;
-    align-items: center;
     justify-content: center;
+  }
+  .h-right {
+    left: 0;
   }
   .contenedor-404 {
     flex-direction: column;
@@ -2283,9 +2344,7 @@ footer {
     color: white;
     font-size: 6vw;
   }
-  #nav-bar {
-    position: sticky;
-  }
+
   .navigation {
     visibility: hidden;
     position: absolute;
@@ -2315,30 +2374,25 @@ footer {
   .img-mantenimiento {
     display: flex;
     justify-content: center;
-    margin: 8vw auto 18vw;
-    width: 325px;
+    width: auto;
     height: 150px;
-    border-radius: 3vw;
+    border-radius: 10px;
     object-fit: cover;
+    margin: 0;
   }
   .img-index {
     display: flex;
     justify-content: center;
-    margin: 1vw auto 5vw;
-    width: 325px;
-    height: 150px;
-    border-radius: 3vw;
+    width: 80%;
+    height: 25vh;
+    margin: 4rem auto;
+    border-radius: 10px;
     object-fit: cover;
   }
   .button-slide {
-    font-size: 7vw;
-    padding: 0 8vw;
-    margin: 0vw 0 0;
+    padding: 0;
   }
-  .contenedor-recomendaciones {
-    margin: 0vw 4vw 2vw;
-    padding: 2vw 0 2vw;
-  }
+
   .p-recomendaciones {
     display: flex;
     text-align: left;
@@ -2352,7 +2406,18 @@ footer {
   .slide-styles {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 3rem auto;
+    gap: 0.5rem;
+  }
+  .contenedor-recomendaciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 3rem auto;
+    gap: 1rem;
   }
   .h5-recomendaciones {
     font-size: 5vw;
@@ -2446,7 +2511,7 @@ footer {
     display: none;
   }
   .blue-section {
-    margin: 10vw 0 0;
+    padding-top: 2.5rem;
   }
   .h3-color {
     color: #595959;
@@ -2492,7 +2557,7 @@ footer {
     color: rgb(255, 219, 140);
   }
   .model-subtitles_car {
-    margin: auto 1rem;
+    margin: auto 2rem;
     text-align: center;
     font-size: 3.5vw;
     font-family: "Outfit", sans-serif;
@@ -2501,8 +2566,7 @@ footer {
   .carousel-caption {
     display: flex !important;
     flex-direction: column !important;
-    margin: 33vw auto !important;
-    justify-content: center !important;
+    bottom: 45% !important;
   }
   .video-intro {
     height: auto;
@@ -2598,34 +2662,30 @@ footer {
     margin: 2vw 0;
   }
   .search-bar {
-    width: 70vw;
-    margin: 3vw auto;
+    width: 100%;
+    margin: 0.5rem auto;
   }
   .contenedor-card_models {
-    margin: 2vw 5vw;
-    padding: 0 0;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     background-color: #ffffff;
     border: 0;
     flex-direction: row;
     overflow-x: scroll;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
+    width: 100%;
   }
   .contenedor-card_models_subtypes {
-    margin: 2vw 5vw 3vw;
-    padding: 0 0;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     background-color: #ffffff;
     border: 0;
     flex-direction: row;
     overflow-x: scroll;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .subcategoria-container {
+    margin-top: 0.5rem;
   }
   .contenedor-card_shoe_models {
     margin: 0vw 4vw;
@@ -2666,16 +2726,16 @@ footer {
     flex-direction: column;
   }
   .button-card_models {
-    margin: 3vw 2vw;
-    padding: 3vw 7vw;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
     border-radius: 5px;
     border: none;
     background-color: #29395c;
   }
   .button-card_models_subtypes {
     display: inline-block;
-    margin: 0rem 0.5rem 0.8rem;
-    padding: 0.8rem 2rem;
+    margin: 0 0 1rem;
+    padding: 1rem 2rem;
     border-radius: 5px;
     border: none;
     background-color: rgba(103, 106, 124, 0.93);
@@ -2689,12 +2749,6 @@ footer {
     border-radius: 5px;
     border: none;
   }
-  .button-card_allmodels {
-    margin: 3vw 0 0;
-    padding: 3vw 7vw;
-    border-radius: 5px;
-    border: none;
-  }
   .card-title_models {
     margin: auto -1vw;
     justify-content: center;
@@ -2703,10 +2757,9 @@ footer {
     color: white;
   }
   .card-title_clean_models {
-    margin: auto -1vw;
     justify-content: center;
     align-items: center;
-    font-size: 4.5vw;
+    font-size: 1rem;
   }
   .acordion-filters {
     margin: 0 12vw;
@@ -2786,15 +2839,15 @@ footer {
   }
   .section-nuestro_trabajo_reverse {
     flex-direction: column;
-    margin: 10vw 7vw;
+    gap: 2rem;
   }
   .section-nuestro_trabajo {
     flex-direction: column;
-    margin: 10vw 7vw;
+    gap: 2rem;
   }
   .section-trabajo {
-    padding: 0;
-    margin-bottom: 20vw;
+    width: 80%;
+    gap: 4rem;
   }
   .div-nuestro_trabajo {
     align-items: center;
@@ -2804,8 +2857,7 @@ footer {
     text-align: center;
   }
   .p-nuestro_trabajo {
-    font-size: 4vw;
-    margin: 5vw 4vw 0;
+    margin: 2rem 0 0;
   }
   .img-nuestro_trabajo {
     width: 75vw;
@@ -2845,889 +2897,177 @@ footer {
   .nav-item {
     margin: 1vw;
   }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  html {
-    overflow-x: hidden;
-  }
-  h1 {
-    flex-direction: column;
-    font-size: 260%;
-  }
-  h2 {
-    margin: 40px 10px 40px;
-    font-size: 7vw;
-  }
-  h3 {
-    font-size: 3vw;
-  }
-  .h4-biografia {
-    color: #fff7b7;
-    font-size: 2.5vw;
-    text-align: center;
-    font-family: "Outfit", sans-serif;
-    margin: 1vw;
-  }
-  .model-titles {
-    margin: 0 auto 0;
-    font-size: 4vw;
-  }
-  .p-sub_biografia {
-    flex-direction: column;
-    font-size: 2vw;
-    margin: 1vw 0vw 3vw;
-  }
-  .p-general {
-    text-align: left;
-    font-size: 2.5vw;
-    padding: 0 5vw;
-    margin: 6vw 8vw;
-  }
-  .p-general_center {
-    text-align: center;
-    font-size: 2.5vw;
-    padding: 0 5vw;
-    margin: 6vw 8vw;
-  }
-  .p-biografia {
-    text-align: left;
-    font-size: 2.5vw;
-    padding: 0px;
-    margin: 10vw 7vw;
-    align-self: center;
-  }
-  .button-index {
-    border-width: 0.5vw;
-    padding: 2vw;
-    font-size: 2vw;
-  }
-  .button-index:hover {
-    background-color: #1f2337;
-    color: #ffffff;
-    transition: 0.3s;
-    padding: 2.3vw;
-    font-size: 2.3vw;
-  }
-  .div-button {
-    margin: 10vw;
-  }
-  .volver-button {
-    padding: 0.5vw;
-    font-size: 2vw;
-    margin: 2vw 85vw -3vw 2vw;
-  }
-  hr {
-    border-width: 0.4vw;
-    margin: 6.5vw 15vw 4.5vw;
-  }
-  .linea-subtitulo {
-    border-width: 0.4vw;
-    width: 10vw;
-    margin: 2.5vw 0 3.5vw;
-  }
-  .banner {
-    width: 70vw;
-    margin: 0 auto;
-    display: block;
-  }
-  .banner-quienes_somos {
-    filter: grayscale(100);
-    transition: 0.5s;
-  }
-  .banner-quienes_somos:hover {
-    filter: grayscale(0);
-    transition: 0.5s;
-    width: 70vw;
-  }
-  .img-biografia_left {
-    width: 50vw;
-    margin: 4vw auto;
-    display: block;
-  }
-  .img-biografia_right {
-    width: 50vw;
-    margin: 4vw auto;
-    display: block;
-  }
-  .div-biografia {
-    margin: 0rem;
-    flex-direction: column;
-  }
-  .div-biografia2 {
-    margin: 0rem;
-    flex-direction: column-reverse;
-  }
-  .div-section {
+  .div-modelo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5vw 1vw -5vw;
-  }
-  .div-section .p-sub {
-    flex-direction: column;
-    font-size: 3vw;
-    margin: 2vw 7vw 2vw;
-  }
-  .container-notas {
-    flex-direction: column;
-    margin: 3rem 5rem 3rem;
-  }
-  .container-notas .notas-periodisticas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2vw 0;
-    flex: 1;
-  }
-  .container-notas .notas-periodisticas .logos-diarios {
-    width: 25vw;
-    margin: 3vw;
-  }
-  .container-notas .notas-periodisticas .p-notas {
-    font-size: 3vw;
-    text-align: center;
-    margin: 5vw 0 5vw;
-  }
-  .container-notas .notas-periodisticas .p-lanacion {
-    font-size: 3vw;
-    text-align: center;
-    margin: 5vw 0 5vw;
-  }
-  .container-notas .notas-periodisticas .p-natgeo {
-    font-size: 3vw;
-    text-align: center;
-    margin: 5vw 0 5vw;
-  }
-  .container-info_modelos {
-    flex-direction: column;
-    margin: 3rem 5rem 3rem;
-  }
-  .container-info_modelos .notas-periodisticas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2vw 0;
-    flex: 1;
-  }
-  .div-button-nota {
-    margin: 4vw 0 20vw;
-  }
-  footer .row {
-    justify-content: center;
-    flex-direction: column;
-  }
-  footer .row .h2-footer {
-    color: white;
-    display: flex;
-    margin: 3.5vw 0vw 0 33vw;
-    font-size: 3vw;
-    align-items: center;
-    text-align: center;
-  }
-  footer .row .instagram-logo {
-    width: 30%;
-    display: flex;
-    margin: 3vw -2vw 0vw;
-    padding: 0vw 0vw 0vw 0vw;
-    justify-self: center;
-    object-fit: fill;
-  }
-  footer .row .p-footer {
-    font-size: 3vw;
-    margin: 5vw 0 0;
-  }
-  footer .derechos-reservados {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 0.8vw;
-    text-align: center;
-    background-color: #101225;
-    padding: 1vw 0;
-    margin-top: 2vw;
-    margin-bottom: 0;
-  }
-  footer .div-seguinos_ig {
-    display: flex;
-    flex-direction: row !important;
-    justify-content: space-between;
-  }
-  footer h3 {
-    font-size: 3vw;
-    margin: 10vw 0 1vw;
-  }
-  footer .row .footer-content {
-    height: 50%;
-    margin: 2vw 0 0 1vw;
-  }
-  footer .row .footer-content .p-footerinfo {
-    font-size: 3vw;
-    text-align: center !important;
-    justify-content: center;
-    align-items: center;
-    margin: 5vw 0;
-  }
-  footer .row .footer-maps {
-    margin: 4vw 4vw 4vw 0;
-  }
-  footer .row .footer-maps .maps {
-    width: 450px !important;
-    height: 450px !important;
-  }
-  footer .vertical-hr {
-    visibility: hidden;
-  }
-  footer .row {
-    flex-direction: column;
-  }
-  footer .derechos-reservados {
-    font-size: 1.5vw;
-    padding: 3vw;
-  }
-  .p-modelos {
-    display: flex;
-    font-size: 2.5vw;
-    text-align: center;
-    margin: 2rem 0rem;
-    box-sizing: content-box;
-    height: 200px;
-    align-items: center;
-  }
-  .p-info_modelos {
-    display: flex;
-    font-size: 2.5vw;
-    text-align: center;
-    margin: 2rem 0rem;
-    box-sizing: content-box;
-    height: 200px;
-    align-items: center;
-  }
-  .youtube-vid {
-    width: 75vw;
-    height: 40vw;
-  }
-  .div-youtube {
-    margin: 0 0 6vw;
-  }
-  .logo {
-    margin: 0 auto;
-  }
-  .div-biografia {
-    flex-direction: column;
-  }
-  .img-model {
-    margin: 3vw auto 0vw;
-    width: 70vw;
-    justify-content: center;
-    display: none;
-  }
-  .h2-model {
-    font-size: 400%;
-    text-align: center;
-  }
-  .h3-model {
-    font-size: 3vw;
-    margin: 0 0 1vw;
-    text-align: center;
-  }
-  .h4-model {
-    font-size: 3vw;
-    text-align: center;
-  }
-  .p-model {
-    font-size: 3.5vw;
-    margin: 3vw 0 4vw;
-    text-align: center;
-  }
-  .div-model {
-    margin: 6vw 0;
-  }
-  .model-variant {
-    width: 10vw;
-  }
-  .container-variant {
-    justify-content: center;
-  }
-  .video-intro {
-    margin: 0 0 3vw;
-  }
-  .video-intro .video-index {
-    position: absolute;
-    z-index: -1;
-    margin: 0;
-    width: 100%;
-    height: 40vw;
-    object-fit: cover;
-  }
-  .video-intro .div-bienvenida {
-    margin: 0 0 10vw;
-    animation: fadein 3s;
-  }
-  .video-intro .div-bienvenida .h1-index {
-    padding: 11vw 0 0;
-    font-size: 7vw;
-    color: #fff7b7;
-    margin: 0;
-  }
-  .video-intro .div-bienvenida .h2-titulo {
-    color: #ffffff;
-    font-size: 2.3vw;
-    margin: 0 0 0;
-  }
-  .contenedor-modelos {
-    margin: 0vw 10vw;
-    padding: 6vw 0 2vw;
-  }
-  .form-contact {
-    margin: 3vw 22vw;
-    font-family: "EB Garamond", serif;
-    font-size: 2.5vw;
-  }
-  .div-button-send {
-    display: flex;
-    justify-content: center;
-  }
-  .button-send {
-    border-width: 0.5vw;
-    padding: 2vw 24vw;
-    font-size: 2vw;
-    margin: 2vw 0 4vw;
-  }
-  .p-mantenimiento {
-    font-size: 3vw;
-    margin: 6vw 1rem 2vw;
-  }
-  .p-aclaracion {
-    font-size: 3vw;
-    margin: 6vw 1rem 2vw;
-  }
-  .h5-number {
-    font-size: 40vw;
-  }
-  h4 {
-    font-size: 6vw;
-    margin: 2vw 0;
-  }
-  h5 {
-    font-size: 6vw;
-    margin: 2vw 0;
-  }
-  .h5-right {
-    font-size: 3vw;
-    margin: 2vw 0 0;
-  }
-  .h5-number {
-    font-size: 30vw;
-    margin: 0 2vw 0 0;
-    padding: 0 0 0 6vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .contenedor-404 {
-    flex-direction: column;
-  }
-  .div-404 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 0;
     width: 100%;
   }
-  .p-404 {
-    text-align: center;
-    font-size: 2vw;
-    margin: 2vw 0vw 2vw;
-  }
-  .img-mantenimiento {
-    display: flex;
-    justify-content: center;
-    margin: 8vw auto 1vw;
-    width: 750px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 1vw;
-  }
-  .img-index {
-    display: flex;
-    justify-content: center;
-    margin: 1vw auto 4vw;
-    width: 650px;
-    height: 300px;
-    object-fit: cover;
-  }
-  .button-slide {
-    font-size: 5vw;
-    padding: 0 10vw;
-    margin: 5vw 0 0;
-  }
-  .contenedor-recomendaciones {
-    margin: 0vw 4vw 2vw;
-    padding: 1vw 0 1vw;
-  }
-  .p-recomendaciones {
-    display: flex;
-    text-align: left;
-    font-size: 2.5vw;
-    padding: 0px;
-    margin: 0 3vw 0 3vw;
-    font-family: "EB Garamond", serif;
-    align-self: center;
-  }
-  .slide-styles {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .h5-recomendaciones {
-    font-size: 6vw;
-    display: flex;
-    justify-content: center;
-  }
-  .img-recomendaciones {
-    display: flex;
-    justify-content: center;
-    margin: 8vw auto;
-    width: 750px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 1vw;
-  }
-  .container-var {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-    display: none;
-  }
-  .img-model_var {
-    width: 70vw;
-    align-items: center;
-    justify-content: center;
-    margin: 4vw;
-    display: block;
-    border-radius: 0.5vw;
-  }
-  .model-subtitles {
-    margin: auto 1rem 10vw;
-    text-align: center;
-    font-size: 3.5vw;
-    font-family: "EB Garamond", serif;
-    color: #595959;
-  }
-  .contenedor-modelos {
-    margin: 0vw 10vw;
-    padding: 0vw 0 2vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .contenedor-tipo_modelos {
-    margin: 0vw 10vw;
-    padding: 0vw 0 2vw;
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .img-modeltype {
-    width: 600px;
-    height: 600px;
-    margin: 1rem;
-    transition: 0.5s;
-    filter: brightness(100%) grayscale(0%);
-    object-fit: cover;
-  }
-  .img-modeltype:hover {
-    width: 600px;
-    height: 600px;
-    margin: 1rem;
-    transition: 0.5s;
-    filter: brightness(100%) grayscale(0%);
-    object-fit: cover;
-  }
-  .fade-section {
-    opacity: 1;
-  }
-  .img-models {
-    width: 600px;
-    margin: 1rem;
-    transition: 0.5s;
-    filter: brightness(100%) grayscale(0%);
-  }
-  .imagenes-button {
-    font-family: "Outfit", sans-serif;
-    color: #1f2337;
-    display: none;
-    text-align: center;
-    margin: 1vw 2vw -3.5vw;
-    padding: 0.5vw;
-    text-decoration: none;
-    font-size: 3vw;
-  }
-  #hr-var_modelos {
-    display: none;
-  }
-  .blue-section {
-    margin: 10vw 0 0;
-  }
-  .h3-color {
-    color: #595959;
-    font-size: 3.5vw;
-    text-align: center;
-    margin: 0 0 0;
-    letter-spacing: 0;
-  }
-  .h3-style {
-    color: #000000;
-    font-size: 3.5vw;
-    text-align: center;
-    margin: 0 0 0;
-    letter-spacing: 0;
-  }
-  .aclaracion-colores {
-    font-size: 3.5vw;
-    text-align: center;
-  }
-  .model-carousel {
-    width: 75%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-  }
-  .carousel-modelos {
-    border-radius: 1vw;
-  }
-  .img-carousel {
-    object-fit: cover;
-    aspect-ratio: 3/4;
-  }
-  .model-titles_car {
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    font-family: "EB Garamond", serif;
-    font-size: 8vw;
-    color: rgb(255, 219, 140);
-  }
-  .model-subtitles_car {
-    margin: auto 1rem;
-    text-align: center;
-    font-size: 3.5vw;
-    font-family: "Outfit", sans-serif;
-    color: #ffffff;
-  }
-  .carousel-caption {
-    display: flex !important;
-    flex-direction: column !important;
-    margin: 41vw auto !important;
-    justify-content: center !important;
-  }
-  .video-intro {
-    height: auto;
-    overflow: hidden;
-  }
-  .p-footerinfo_horario {
-    margin: 2vw 0vw 6vw 0vw !important;
-    padding: 0vw 11vw !important;
-    font-size: 4vw !important;
-    text-align: center;
-  }
-  .card-frecuentes {
-    border-radius: 2vw;
-    margin: 4vw;
-    padding: 1vw;
-    box-shadow: 0px 0px 0px 3px rgb(45, 48, 64);
-  }
-  .card-frecuentes2 {
-    padding: 0rem;
-    background-color: rgba(28, 31, 49, 0.9254901961);
-    border-radius: 2vw !important;
-  }
-  .p-preguntas {
-    text-align: center;
-    font-size: 3.5vw;
-    font-family: "EB Garamond", serif;
-    color: rgb(255, 255, 255);
-    display: flex;
-    text-decoration: none;
+
+  .div-info-modelo {
     width: 80%;
   }
-  .p-preguntas:hover {
-    color: #ffffff;
-  }
-  .p-respuestas {
-    text-align: center;
-    font-size: 3.5vw;
-    font-family: "EB Garamond", serif;
-    color: rgb(0, 0, 0);
-    display: flex;
-    text-decoration: none;
-    justify-content: center;
-  }
-  .p-preguntas_frecuentes {
-    text-align: center;
-    font-size: 3.5vw;
-    font-family: "EB Garamond", serif;
-    color: rgb(0, 0, 0);
-    display: flex;
-    text-decoration: none;
-    justify-content: center;
-    flex-direction: column;
-    margin: 2vw 3vw;
-  }
-  .h5-preguntas {
-    text-align: left;
-    font-size: 3vw;
-    font-family: "EB Garamond", serif;
-    display: flex;
-    justify-content: center;
-    padding: 2vw 0vw;
-  }
-  .h2-preguntas_frecuentes {
-    color: #000000;
-    text-align: center;
-    font-size: 5vw;
-    margin: 6vw 0;
-    font-family: "EB Garamond", serif;
-  }
-  .h2-preguntas_frecuentes_link {
-    color: #29395c;
-    text-align: center;
-    font-size: 3.5vw;
-    margin: 4vw 0;
-    font-family: "EB Garamond", serif;
-    text-decoration: underline;
-  }
-  .search-bar {
-    width: 60vw;
-    margin: 3vw auto;
-  }
-  .contenedor-card_models {
-    margin: 3vw 8vw;
-    padding: 0 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #ffffff;
-    border: 0;
-    flex-direction: column;
-  }
-  .contenedor-card_shoe_models {
-    margin: 0vw 4vw;
-    padding: 0 0;
-    display: none !important;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #ffffff;
-    border: 0;
-    flex-direction: column;
-  }
-  .contenedor-card_shoe_models_mobile {
-    margin: 0vw 4vw;
-    padding: 0 0;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #ffffff;
-    border: 0;
-    flex-direction: column;
-  }
-  .contenedor-card_shoe_models_mocasines {
-    margin: 0vw 4vw;
-    padding: 0 0;
-    display: none !important;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #ffffff;
-    border: 0;
-    flex-direction: column;
-  }
-  .contenedor-card_shoe_models_mocasines_mobile {
-    margin: 0vw 4vw;
-    padding: 0 0;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #ffffff;
-    border: 0;
-    flex-direction: column;
-  }
-  .button-card_models {
-    margin: 1.5vw;
-    padding: 1vw 0;
-    border-radius: 5px;
-    border: none;
-    background-color: #1f2337;
-  }
-  .button-card_shoe_models {
-    margin: 1.5vw;
-    padding: 1vw 0;
-    border-radius: 5px;
-    border: none;
-  }
-  .button-card_allmodels {
-    margin: 3vw 0 0;
-    border-radius: 5px;
-    border: none;
-  }
-  .card-title_models {
-    margin: auto -1vw;
-    justify-content: center;
-    align-items: center;
-    font-size: 2vw;
-    color: white;
-  }
-  .card-title_clean_models {
-    margin: auto -1vw;
-    justify-content: center;
-    align-items: center;
-    font-size: 2vw;
-  }
-  .acordion-filters {
-    margin: 0 17vw;
-    border: none;
-  }
-  .p-filters {
-    font-size: 2vw;
-    margin: 0;
-  }
-  .hr-rtw {
-    margin: 12.5vw 15vw 0;
-  }
-  .accordion-button:not(.collapsed) {
-    background-color: rgba(255, 255, 255, 0);
-    color: #47629e;
-  }
-  .anuncio {
-    display: flex;
-    background-color: rgba(11, 12, 20, 0.73);
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2vw;
-    border-radius: 5vw;
-    left: 2vw;
-    right: 2vw;
-  }
-  .h2-anuncio {
-    text-align: center;
-    font-size: 2vw;
-    margin: 1vw 0;
-  }
-  .accordion-button {
-    padding: 1.5vw 2vw;
-  }
-  .p-price {
-    margin: 3vw 0 4vw;
-    text-align: center;
-    font-size: 5vw;
-    font-family: "Outfit", sans-serif;
-    color: #2a2a2a;
-  }
-  .p-aclaracion_filtros {
-    font-size: 3vw;
-    margin: 9vw 10vw 5vw;
-    color: #df1616;
-  }
-  .contenedor-acerca_de {
-    margin: 0vw 10vw 12vw;
-    padding: 0vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    border: 0;
-  }
-  .img-acerca_de {
-    width: 70vw;
-    height: 25vw;
-    margin: 1rem;
-    border-radius: 3vw;
-  }
-  .img-acerca_de:hover {
-    width: 70vw;
-    height: 25vw;
-  }
-  .div-acerca_de_texts {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10.5vw;
-    padding: 0;
-  }
-  .acerca_de_titles {
-    margin: auto -1vw;
-    justify-content: center;
-    align-items: center;
-    font-size: 5vw;
-    color: white;
-  }
-  .carousel-container {
-    display: block;
-  }
-  .carousel-item2 {
-    margin-left: 12vw !important;
-    width: 75% !important;
-  }
-  .carousel-control-prev-icon2,
-  .carousel-control-next-icon2 {
-    filter: invert(1);
-    opacity: 0.8;
-    width: 6vw;
-    margin-top: 86vw;
-  }
-  .carousel-models {
-    margin-bottom: 18vw !important;
-  }
-  .carousel-item {
-    transition-duration: 0.3s !important;
-  }
-  .section-nuestro_trabajo_reverse {
-    flex-direction: column;
-    margin: 10vw 7vw;
-  }
-  .section-nuestro_trabajo {
-    flex-direction: column;
-    margin: 10vw 7vw;
-  }
-  .section-trabajo {
-    padding: 0;
-    margin-bottom: 20vw;
-  }
-  .div-nuestro_trabajo {
-    align-items: center;
-  }
-  .h5-nuestro_trabajo {
-    font-size: 6vw;
-    text-align: center;
-  }
-  .p-nuestro_trabajo {
-    font-size: 4vw;
-    margin: 5vw 4vw 0;
-  }
-  .img-nuestro_trabajo {
-    width: 75vw;
-    border-radius: 2vw;
-    box-shadow: 0px -1px 20px 0px;
-    color: rgba(0, 0, 0, 0.6117647059);
-  }
-  .marquee {
-    padding: 1vw;
-    pointer-events: none;
-  }
-  .marquee-content {
-    font-size: 2.5vw;
+
+  .div-galeria {
+    width: 100%;
   }
 
-  .selected {
-    background-color: #7783af;
-    color: white;
+  .thumbnails {
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  .div-footer {
+    width: 80%;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  .h3-footer {
+    font-size: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .p-footer {
+    margin: 0;
+  }
+
+  .div-seguinos_ig {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .h2-footer {
+    font-size: 1.5rem;
+    margin: 0 10px 0 0;
+  }
+
+  .instagram-logo {
+    width: 8rem;
+  }
+
+  .div-footer_contacto_content {
+    flex-direction: column;
+  }
+
+  .div-footer_info_contacto {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-maps {
+    margin: 1rem;
+  }
+
+  .modal-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar-nav {
+    margin: 0 0 1rem !important;
+  }
+
+  #lista-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #lista-productos .producto {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  .img-models {
+    width: 100%;
+    margin: 0;
+  }
+
+  .div-filters_top_buttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    gap: 0;
+  }
+
+  .button-card_allmodels {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .h2-model {
+    font-size: 2.5rem;
+    margin: 1rem 0 0;
+  }
+
+  .div-titulo-modelo {
+    margin-bottom: 1rem;
+  }
+
+  .div-mantenimiento {
+    flex-direction: column;
+  }
+
+  .clickable-card {
+    width: 300px !important;
+    height: 200px !important;
+  }
+
+  .card-title {
+    margin: 0;
+  }
+
+  .textos-historia {
+    margin: 3rem auto;
+  }
+
+  .contenedor-biografia {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .contenedor-biografia2 {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .h2-quienes_somos {
+    margin: 0;
+  }
+
+  .accordion-button {
+    font-size: 1.2rem !important;
+  }
+
+  .accordion-header {
+    margin-bottom: 0;
+  }
+
+  .container-accordion {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto 0;
+    gap: 1rem;
+  }
+
+  .accordion-body {
+    padding: 0 !important;
+  }
+
+  .h2-preguntas_frecuentes_link {
+    color: #29395c !important;
+    font-size: 1.5rem;
+    font-weight: 500;
   }
 }
 

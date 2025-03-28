@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import FadeIn from "@/components/FadeInAnimation";
 import MantenimientoSteps from "@/components/MantenimientoSteps";
 import React from "react";
 
@@ -45,37 +46,48 @@ export default function Mantenimiento() {
         alineacion="right"
       />
       <hr className="hr-custom" />
-      <Banner
-        title={"Marcas de productos recomendadas"}
-        subtitle={"ASESORAMIENTO"}
-        description={
-          "Te ofrecemos recomendaciones para cremas y ceras tanto nacionales como internacionales."
-        }
-      />
+      <FadeIn>
+        <Banner
+          title={"Marcas de productos recomendadas"}
+          subtitle={"ASESORAMIENTO"}
+          description={
+            "Te ofrecemos recomendaciones para cremas y ceras tanto nacionales como internacionales."
+          }
+        />
+      </FadeIn>
       <hr className="hr-custom" />
-      <div className="slide-styles">
-        <div className="contenedor-recomendaciones fade-section visible">
-          <h2 className="h2-pages">Para cremas</h2>
-          <p className="p-recomendaciones">● Tintaló (Industria Argentina)</p>
-          <p className="p-recomendaciones">
-            ● Saphir Médaille d'Or (Industria Francesa)
-          </p>
-          <p className="p-recomendaciones">● Boot Black (Industria Japonesa)</p>
+      <FadeIn>
+        <div className="contenedor-recomendaciones">
+          <div className="div-recomendaciones">
+            <h2 className="h2-pages">Para cremas</h2>
+            <div>
+              <p className="p-recomendaciones">
+                ● Tintaló (Industria Argentina)
+              </p>
+              <p className="p-recomendaciones">
+                ● Saphir Médaille d'Or (Industria Francesa)
+              </p>
+              <p className="p-recomendaciones">
+                ● Boot Black (Industria Japonesa)
+              </p>
+            </div>
+          </div>
+          <div className="div-recomendaciones">
+            <h2 className="h2-pages">Para ceras</h2>
+            <div>
+              <p className="p-recomendaciones">
+                ● Saphir Médaille d'Or (Industria Francesa)
+              </p>
+              <p className="p-recomendaciones">
+                ● Wassington Premium (Industria Argentina)
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="contenedor-recomendaciones fade-section visible">
-          <h2 className="h2-pages">Para ceras</h2>
-          <p className="p-recomendaciones">
-            ● Saphir Médaille d'Or (Industria Francesa)
-          </p>
-          <p className="p-recomendaciones">
-            ● Wassington Premium (Industria Argentina)
-          </p>
-        </div>
-      </div>
-      <img
-        className="img-recomendaciones fade-section"
-        src="/images/saphir.webp"
-      />
+      </FadeIn>
+      <FadeIn>
+        <img className="img-recomendaciones" src="/images/saphir.webp" />
+      </FadeIn>
     </>
   );
 }
