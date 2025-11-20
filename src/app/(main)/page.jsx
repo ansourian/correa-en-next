@@ -27,7 +27,7 @@ export default function Home() {
           linkTexto="QUIENES SOMOS"
         />
       </FadeIn>
-      <img className="img-index" src="/images/foto-index1.webp" />
+      <img className="img-index" src="/images/foto-index1.webp" alt="Foto de la entrada del local de Mario Bravo 750" />
       {/* <hr className="hr-custom" /> */}
       <SectionHome
         id="section-2"
@@ -39,7 +39,7 @@ export default function Home() {
         imgSrc="/images/foto-index2.webp"
       />
       {/* <hr className="hr-custom" /> */}
-      <img className="img-index" src="/images/foto-index2.webp" />
+      <img className="img-index" src="/images/foto-index2.webp" alt="Foto de un par de zapatos recibiendo un tratamiento de pátina pintada" />
       <SectionHome
         id="section-3"
         titulo="COMUNICATE CON NOSOTROS"
@@ -49,7 +49,7 @@ export default function Home() {
         linkTexto="CONTACTANOS"
       />
       {/* <hr className="hr-custom" /> */}
-      <img className="img-index" src="/images/foto-index3.webp" />
+      <img className="img-index" src="/images/foto-index3.webp" alt="Foto de trabajo en el taller" />
       <FadeIn>
         <section id="section-4" className="container-notas fade-section">
           <NotasPeriodisticas

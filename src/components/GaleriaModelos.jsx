@@ -59,6 +59,7 @@ export default function GaleriaModelos({ images }) {
 
   // Función para alternar el zoom en la imagen
   const handleZoomToggle = () => {
+    if (isMobile) return;
     setIsZoomed(!isZoomed); // Cambia el estado de zoom cada vez que se hace clic
   };
 

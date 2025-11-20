@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css"
 
 export default function Footer({}) {
   return (
@@ -33,7 +33,12 @@ export default function Footer({}) {
             <div className="div-footer_info_contacto">
               <p className="p-footerinfo">Dirección: Mario Bravo 750</p>
               <p className="p-footerinfo">Mail: info@calzadoscorrea.com.ar</p>
-              <p className="p-footerinfo">Teléfono: (5411) 4861-7344</p>
+              <p className="p-footerinfo">
+                Teléfono:{" "}
+                <a href="tel:541148617344" className="phone-white">
+                  (5411) 4861-7344
+                </a>
+              </p>{" "}
             </div>
             <div className="footer-maps">
               <iframe
@@ -52,10 +57,10 @@ export default function Footer({}) {
       </div>
       <div className="div-copyright row">
         <p className="derechos-reservados">
-          © COPYRIGHT 2023 CALZADOS CORREA / WEB CUSTOM & PHOTO PRODUCTION
+          © COPYRIGHT 2025 CALZADOS CORREA / WEB CUSTOM & PHOTO PRODUCTION
           DESIGN BY JAIR ANSOURIAN
         </p>
       </div>
     </footer>
-  );
+  )
 }
