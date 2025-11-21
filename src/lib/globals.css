@@ -36,6 +36,11 @@ header {
   height: auto;
 }
 
+.logo-header {
+  width: 400px;
+  height: auto;
+}
+
 .arrow {
   transform: scaleX(-1);
 }
@@ -144,26 +149,36 @@ ul {
   top: 0;
 }
 
+.div-bienvenida-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .flecha-index {
   justify-content: center;
   align-items: center;
-  width: 4vw;
+  width: 3vw;
   display: flex;
   position: absolute;
   bottom: 10%;
 }
 
 .h1-index {
-  text-align: center;
-  margin: 0 0 0 0;
+  font-size: 0.1rem;
   font-family: "Dancing Script", cursive;
   color: #fff7b7;
-  font-size: 7rem;
+  visibility: hidden;
+  /* text-align: center; */
+  /* margin: 0 0 0 0; */
+  /* font-size: 7rem; */
 }
 
 .h2-titulo {
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  margin: 1rem;
   text-align: center;
 }
 
@@ -1780,7 +1795,7 @@ footer {
   text-align: center;
   color: #b1b1b1;
   background-color: #101225;
-  padding: 5vw;
+  padding: 1rem;
   margin-bottom: 0;
 }
 
@@ -2247,6 +2262,9 @@ footer {
   .logo-arrow {
     width: 5vw;
   }
+  .logo-header {
+    width: 70%;
+  }
   .img-model {
     margin: 3vw auto 0vw;
     width: 80vw;
@@ -2286,9 +2304,6 @@ footer {
   .container-variant {
     justify-content: center;
   }
-  .video-intro {
-    margin: 0 0 3vw;
-  }
   .video-intro .video-index {
     position: absolute;
     z-index: -1;
@@ -2296,20 +2311,16 @@ footer {
     height: 60vw;
     object-fit: cover;
   }
-  .div-video-intro {
+  /* .div-video-intro {
     display: flex;
     position: relative;
-  }
+  } */
   .div-bienvenida {
     position: absolute;
   }
-  .video-intro .div-bienvenida {
-    position: relative;
-    z-index: 2;
-    margin: 10vw 0 20vw;
-  }
   .h1-index {
-    font-size: 5rem;
+    font-size: 0.1rem;
+    /* font-size: 5rem; */
   }
   .h2-titulo {
     margin: 2rem 0;
