@@ -10,11 +10,13 @@ export default function HeaderHome() {
             className="logo-header"
             src={LogoCorreaHeader}
             alt="Logo Calzados Correa"
+            draggable={false}
+            style={{ pointerEvents: "none" }}
           />
           <h1 className="h1-index">Calzados Correa</h1>
-          <h2 className="h2-titulo">
+          {/* <h2 className="h2-titulo">
             Si querés brillar en la vida, comenzá por tus zapatos.
-          </h2>
+          </h2> */}
         </div>
         <a id="redirection" href="#section-1">
           <img className="flecha-index" src="images/flecha.png" />
