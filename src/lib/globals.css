@@ -1471,11 +1471,15 @@ h3 {
 }
 
 .h3-class {
-  color: #595959;
-  font-size: 0.9rem;
+  width: fit-content;
+  color: #535353;
+  font-size: 0.8rem;
   text-align: center;
   margin: 0 0 0;
+  padding: 5px;
   letter-spacing: 0.1vw;
+  background-color: #dcdcdc;
+  border-radius: 5px;
 }
 
 .h3-style {
@@ -1509,7 +1513,7 @@ h3 {
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  color: #29395c;
+  color: #383838;
 }
 
 .model-subtitles {
@@ -2020,10 +2024,9 @@ footer {
   position: relative;
 }
 
-.nuevo-label {
+.default-label {
   position: absolute;
   font-family: "Josefin Sans", sans-serif;
-  background-color: #dc3545;
   color: white;
   padding: 0.3rem 0.5rem 0.2rem;
   font-weight: 500;
@@ -2599,7 +2602,7 @@ footer {
     color: #595959;
     font-size: 3.5vw;
     text-align: center;
-    margin: 0 0 0;
+    margin: 0 5px 0 0;
     letter-spacing: 0;
   }
   .h3-style {
@@ -3067,6 +3070,7 @@ footer {
   #lista-productos .producto {
     flex: 1 1 calc(50% - 10px);
     max-width: calc(50% - 10px);
+    margin: 1rem 0;
   }
 
   .img-models {

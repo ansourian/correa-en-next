@@ -1,21 +1,21 @@
-import React from "react";
-import { modelos } from "@/data/data-modelos";
-import GaleriaModelos from "@/components/GaleriaModelos";
-import NuevoLabel from "@/components/NuevoLabel";
+import React from "react"
+import { modelos } from "@/data/data-modelos"
+import GaleriaModelos from "@/components/GaleriaModelos"
+import Label from "@/components/Label"
 
 export default function Modelos({ params }) {
-  const { id } = params;
-  const modelo = modelos.find((a) => a.id == id);
+  const { id } = params
+  const modelo = modelos.find((a) => a.id == id)
 
   // Verifica si se encontró el modelo
   if (!modelo) {
-    return <div>No se encontró el modelo.</div>; // Si no se encuentra el modelo, muestra un mensaje
+    return <div>No se encontró el modelo.</div> // Si no se encuentra el modelo, muestra un mensaje
   }
 
-  const { images } = modelo;
+  const { images } = modelo
 
   // Filtra las imágenes válidas (no nulas)
-  const validImages = images ? images.filter((image) => image) : [];
+  const validImages = images ? images.filter((image) => image) : []
 
   return (
     <div className="div-modelo">
@@ -30,7 +30,19 @@ export default function Modelos({ params }) {
         <div className="div-titulo-modelo">
           <h2 className="h2-model">{modelo.name}</h2>
           <h3 className="h3-model">{modelo.class}</h3>
-          {modelo.isNuevo && <NuevoLabel customStyle={{ position: "relative", top: 0, left: 0 }} />}
+          {modelo.isAgotado && (
+            <Label
+              type="agotado"
+              customStyle={{ position: "relative", top: 0, left: 0 }}
+            />
+          )}
+
+          {!modelo.isAgotado && modelo.isNuevo && (
+            <Label
+              type="nuevo"
+              customStyle={{ position: "relative", top: 0, left: 0 }}
+            />
+          )}
         </div>
         <div className="row div-model">
           <h4 className="h4-model">Descripción</h4>
@@ -49,5 +61,5 @@ export default function Modelos({ params }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

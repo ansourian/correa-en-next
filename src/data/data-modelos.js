@@ -1,4 +1,5 @@
-// isNuevo: true, // Para marcar los modelos nuevos
+// isNuevo: "true", // Para marcar los modelos nuevos
+// isAgotado: "true", // Para marcar los modelos agotados (tiene prioridad sobre "isNuevo")
 
 export const modelos = [
   {
@@ -2239,7 +2240,7 @@ export const modelos = [
     description:
       "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
     color: "Guinda (Claro y Oscuro)",
-    leather: "Cuero vacuno",
+    leather: "Shell Cordovan",
     codigo: "1122",
     previewImage: "/images/made by order/142 - 15.webp",
     images: [
@@ -2257,7 +2258,7 @@ export const modelos = [
     subtype: "oxfords",
     description:
       "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
-    color: "Suela - Marrón",
+    color: "Suela - Gamuza Marrón",
     leather: "Combinado de Cuero Vacuno y Gamuza",
     codigo: "1108",
     previewImage: "/images/made by order/142 - 31.webp",
