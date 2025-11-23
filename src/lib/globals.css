@@ -143,7 +143,7 @@ ul {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 90%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   top: 0;
@@ -154,7 +154,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 5;
+  height: 100%;
 }
 
 .flecha-index {
@@ -163,7 +163,7 @@ ul {
   width: 3vw;
   display: flex;
   bottom: 0;
-  flex: 1;
+  height: auto;
 }
 
 .h1-index {
@@ -2080,6 +2080,12 @@ footer {
   transform: scale(0.96);
 }
 
+.div-button-volver-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 576px) {
   .scroll-top-btn {
     bottom: 16px;
@@ -2154,7 +2160,7 @@ footer {
   }
   .button-index {
     border-width: 0.5vw;
-    padding: 3vw;
+    padding: 1rem 2rem;
     font-size: 3vw;
   }
   .button-index:hover {
@@ -2165,11 +2171,14 @@ footer {
     font-size: 3vw;
   }
   .volver-button {
-    padding: 2.5vw;
-    font-size: 3vw;
+    padding: 1rem;
+    font-size: 0.8rem;
     display: flex;
     text-align: center;
     justify-content: center;
+    color: #898989 !important;
+    top: 10%;
+    left: 5%;
   }
   .hr-custom {
     width: 80%;
@@ -2321,6 +2330,10 @@ footer {
   }
   .div-bienvenida {
     position: absolute;
+    height: 90%;
+  }
+  .div-bienvenida-title {
+    flex: 5;
   }
   .h1-index {
     font-size: 0.1rem;
@@ -2333,6 +2346,7 @@ footer {
   .flecha-index {
     width: 10vw;
     left: 45%;
+    flex: 1;
   }
   .div-section {
     margin: 2rem;
@@ -2343,9 +2357,9 @@ footer {
     padding: 6vw 0 2vw;
   }
   .form-contact {
-    margin: 3vw 22vw;
+    margin: 2rem;
     font-family: "EB Garamond", serif;
-    font-size: 3.5vw;
+    font-size: 1rem;
   }
   .div-button-send {
     display: flex;
@@ -3140,6 +3154,14 @@ footer {
 
   .div-anuncio_card {
     width: 90%;
+  }
+
+  .div-button-send {
+    margin-top: 2rem;
+  }
+
+  .div-button-volver-form {
+    padding: 4rem;
   }
 }
 
