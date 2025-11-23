@@ -143,7 +143,7 @@ ul {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 90%;
   justify-content: center;
   align-items: center;
   top: 0;
@@ -154,6 +154,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex: 5;
 }
 
 .flecha-index {
@@ -161,8 +162,8 @@ ul {
   align-items: center;
   width: 3vw;
   display: flex;
-  position: absolute;
-  bottom: 10%;
+  bottom: 0;
+  flex: 1;
 }
 
 .h1-index {
@@ -2314,10 +2315,10 @@ footer {
     height: 60vw;
     object-fit: cover;
   }
-  /* .div-video-intro {
+  .div-video-intro {
     display: flex;
     position: relative;
-  } */
+  }
   .div-bienvenida {
     position: absolute;
   }

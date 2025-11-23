@@ -18,7 +18,7 @@ export default function HeaderHome() {
             Si querés brillar en la vida, comenzá por tus zapatos.
           </h2> */}
         </div>
-        <a id="redirection" href="#section-1">
+        <a id="redirection" href="#section-1" style={{ flex: 1}}>
           <img className="flecha-index" src="images/flecha.png" />
         </a>
       </div>
