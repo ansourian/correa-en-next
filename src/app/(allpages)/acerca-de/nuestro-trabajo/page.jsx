@@ -1,11 +1,11 @@
-import Banner from "@/components/Banner";
-import FadeIn from "@/components/FadeInAnimation";
-import Image from "next/image";
+import Banner from "@/components/Banner"
+import FadeIn from "@/components/FadeInAnimation"
 
 export default function NuestroTrabajo() {
   return (
     <>
-      <Banner
+      <Banner title={"Página en construcción"} subtitle={"CALZADOS CORREA"} />
+      {/* <Banner
         title={"Nuestro trabajo"}
         subtitle={"CALZADOS CORREA"}
         description={
@@ -29,12 +29,10 @@ export default function NuestroTrabajo() {
               </p>
             </div>
             <div className="div-nuestro_trabajo">
-              <Image
+              <img
                 className="img-nuestro_trabajo fade-section"
                 src="/images/cueros.webp"
                 alt="Cueros"
-                width={500}
-                height={300}
               />
             </div>
           </section>
@@ -52,12 +50,10 @@ export default function NuestroTrabajo() {
               </p>
             </div>
             <div className="div-nuestro_trabajo">
-              <Image
+              <img
                 className="img-nuestro_trabajo fade-section"
                 src="/images/plantillado.webp"
                 alt="Plantillado"
-                width={500}
-                height={300}
               />
             </div>
           </section>
@@ -75,17 +71,15 @@ export default function NuestroTrabajo() {
               </p>
             </div>
             <div className="div-nuestro_trabajo">
-              <Image
+              <img
                 className="img-nuestro_trabajo fade-section"
                 src="/images/colores.webp"
                 alt="Colores"
-                width={500}
-                height={300}
               />
             </div>
           </section>
         </FadeIn>
-      </section>
+      </section> */}
     </>
-  );
+  )
 }

@@ -3,6 +3,12 @@ import { modelos } from "@/data/data-modelos"
 import GaleriaModelos from "@/components/GaleriaModelos"
 import Label from "@/components/Label"
 
+export function generateStaticParams() {
+  return modelos.map((m) => ({
+    id: m.id,
+  }))
+}
+
 export default function Modelos({ params }) {
   const { id } = params
   const modelo = modelos.find((a) => a.id == id)

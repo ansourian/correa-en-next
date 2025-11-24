@@ -14,13 +14,13 @@ export default function AcercaDe() {
       <hr className="hr-custom" />
       <FadeIn>
         <section className="contenedor-acerca_de fade-section">
-          <ModelStylesCard
+          {/* <ModelStylesCard
             imageSrc="/images/Ready to Wear.webp"
             title="Nuestro trabajo"
             link="/acerca-de/nuestro-trabajo"
             width={600}
             height={400}
-          />
+          /> */}
           <ModelStylesCard
             imageSrc="/images/Made to Order.webp"
             title="Nuestra historia"

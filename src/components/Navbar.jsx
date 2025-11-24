@@ -1,6 +1,3 @@
-import Image from "next/image"
-import Logo from "@/assets/img/logo.png"
-import LogoInstagram from "@/assets/img/ig-logo.svg"
 import Link from "next/link"
 import { useRouter, usePathname } from "next/navigation"
 
@@ -40,12 +37,11 @@ export function Navbar({ scroll }) {
           className="navbar-brand mx-auto order-2 order-lg-1 bg-transparent border-0 p-0"
           onClick={handleLogoClick}
         >
-          <Image
-            width={190}
-            height={50}
+          <img
             className="logo"
-            src={Logo}
+            src="/images/logo.png"
             alt="Logo Calzados Correa"
+            style={{ pointerEvents: "none" }}
           />
         </button>
         <Link
@@ -53,12 +49,10 @@ export function Navbar({ scroll }) {
           target="_blank"
           className="order-3 d-lg-none"
         >
-          <Image
-            width={20}
-            height={20}
-            className="mx-3"
-            src={LogoInstagram}
-            alt="logo de instagram"
+          <img
+            className="instagram-nav"
+            src="/images/ig-logo.svg"
+            alt="Enlace a Instagram"
           />
         </Link>
         <div
@@ -82,7 +76,7 @@ export function Navbar({ scroll }) {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/acerca-de">
+              <a className="nav-link" href="/acerca-de/nuestra-historia">
                 ACERCA DE
               </a>
             </li>
@@ -102,12 +96,10 @@ export function Navbar({ scroll }) {
             target="_blank"
             className="ms-lg-3 d-none d-lg-block"
           >
-            <Image
-              width={20}
-              height={20}
-              className="mx-3"
-              alt="logo de instagram"
-              src={LogoInstagram}
+            <img
+              className="instagram-nav"
+              src="/images/ig-logo.svg"
+              alt="Enlace a Instagram"
             />
           </Link>
         </div>

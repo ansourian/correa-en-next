@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import Banner from "@/components/Banner";
 import FadeIn from "@/components/FadeInAnimation";
 import MantenimientoSteps from "@/components/MantenimientoSteps";

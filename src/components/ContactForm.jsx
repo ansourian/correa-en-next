@@ -9,8 +9,7 @@ export default function ContactForm() {
 
   return (
     <form
-      action="https://formsubmit.co/theviewer707@gmail.com"
-      // action="https://formsubmit.co/info@calzadoscorrea.com.ar"
+      action="https://formsubmit.co/info@calzadoscorrea.com.ar"
       method="POST"
       className="form-contact"
     >

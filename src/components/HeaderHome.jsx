@@ -1,14 +1,11 @@
-import LogoCorreaHeader from "@/assets/img/logo-correa-header.png"
-import Image from "next/image"
-
 export default function HeaderHome() {
   return (
     <div className="div-video-intro">
       <div className="div-bienvenida">
         <div className="div-bienvenida-title">
-          <Image
+          <img
             className="logo-header"
-            src={LogoCorreaHeader}
+            src="/images/logo-correa-header.png"
             alt="Logo Calzados Correa"
             draggable={false}
             style={{ pointerEvents: "none" }}
@@ -18,8 +15,8 @@ export default function HeaderHome() {
             Si querés brillar en la vida, comenzá por tus zapatos.
           </h2> */}
         </div>
-        <a id="redirection" href="#section-1" style={{ flex: 1}}>
-          <img className="flecha-index" src="images/flecha.png" />
+        <a id="redirection" href="#section-1" style={{ flex: 1 }}>
+          <img className="flecha-index" src="/images/flecha.png" />
         </a>
       </div>
       <video

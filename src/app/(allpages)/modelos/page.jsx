@@ -204,7 +204,7 @@ export default function Modelos() {
               Es fundamental la elección de los materiales. Cueros Seleccionados
               y Materiales de calidad Premium confeccionan nuestros calzados. En
               nuestro Showroom podrá disfrutar además de un ambiente ameno,
-              cordial y con aires de antaño, gran cantidad de "pies" exhibidos
+              cordial y con aires de antaño, gran cantidad de pies exhibidos
               en nuestras vidrieras. Para los que se atrevan a más, existen
               líneas Trendy que combinan los diseños clásicos con colores de
               Tendencia.

@@ -122,9 +122,9 @@ ul {
 }
 
 .instagram-nav {
-  width: 1.5rem;
+  width: 1.2rem;
   color: white;
-  margin: 0 2vw;
+  margin: 0 2rem;
 }
 
 .video-index {
@@ -3166,6 +3166,11 @@ footer {
 
   .div-button-volver-form {
     padding: 4rem;
+  }
+
+  .instagram-nav {
+    width: 1.5rem;
+    margin: 0 1rem;
   }
 }
 

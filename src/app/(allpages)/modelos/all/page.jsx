@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import BannerModelos from "@/components/BannerModelos";
 import Article from "@/components/Article";
-import { modelos } from "@/data/data-modelos"; // Asegúrate de importar el array completo de modelos
+import { modelos } from "@/data/data-modelos";
 import Buscador from "@/components/Buscador";
 
 export default function AllModels() {
