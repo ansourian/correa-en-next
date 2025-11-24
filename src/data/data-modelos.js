@@ -67,6 +67,7 @@ export const modelos = [
     ],
   },
   {
+    isFavorito: "true",
     id: "1122-Tabaco",
     name: "Oxford Mod. 1122",
     variant: "Wingtip Full Brogued",

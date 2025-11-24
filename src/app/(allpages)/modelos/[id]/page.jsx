@@ -59,6 +59,12 @@ export default function Modelos({ params }) {
               customStyle={{ position: "relative", top: 0, left: 0 }}
             />
           )}
+          {!modelo.isAgotado && !modelo.isNuevo && !modelo.isEncargo && modelo.isFavorito && (
+            <Label
+              type="favorito"
+              customStyle={{ position: "relative", top: 0, left: 0 }}
+            />
+          )}
         </div>
         <div className="row div-model">
           <h4 className="h4-model">Descripción</h4>

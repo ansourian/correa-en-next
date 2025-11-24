@@ -35,10 +35,14 @@ export default function Article({ params }) {
             <Label type="nuevo" customStyle={{ top: "10%", left: "10%" }} />
           )}
           {!modelo.isAgotado && !modelo.isNuevo && modelo.isEncargo && (
-            <Tooltip arrow title="ñam">
-              <Label type="encargo" customStyle={{ top: "10%", left: "10%" }} />
-            </Tooltip>
+            <Label type="encargo" customStyle={{ top: "10%", left: "10%" }} />
           )}
+          {!modelo.isAgotado &&
+            !modelo.isNuevo &&
+            !modelo.isEncargo &&
+            modelo.isFavorito && (
+              <Label type="favorito" customStyle={{ top: "10%", left: "10%" }} />
+            )}
           <h4 className="model-titles">{modelo.name}</h4>
           <h3 className="h3-class">{modelo.class}</h3>
           <div
