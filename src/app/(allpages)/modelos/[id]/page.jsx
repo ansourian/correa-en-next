@@ -18,6 +18,13 @@ export default function Modelos({ params }) {
       m.name === modelo.name && m.class === modelo.class && m.id !== modelo.id
   )
 
+  const classToUrl = {
+    "READY TO WEAR": "/modelos/ready-to-wear",
+    "MADE TO ORDER": "/modelos/made-to-order",
+    "BESPOKE": "/modelos/bespoke",
+    "ACCESORIOS": "/modelos/cinturones",
+  }
+
   // Verifica si se encontró el modelo
   if (!modelo) {
     return <div>No se encontró el modelo.</div> // Si no se encuentra el modelo, muestra un mensaje
@@ -40,7 +47,9 @@ export default function Modelos({ params }) {
       <div className="div-info-modelo">
         <div className="div-titulo-modelo">
           <h2 className="h2-model">{modelo.name}</h2>
-          <h3 className="h3-model">{modelo.class}</h3>
+          <a href={classToUrl[modelo.class] || "#"}>
+            <h3 className="h3-model">{modelo.class}</h3>
+          </a>
           {modelo.isAgotado && (
             <Label
               type="agotado"
@@ -59,12 +68,15 @@ export default function Modelos({ params }) {
               customStyle={{ position: "relative", top: 0, left: 0 }}
             />
           )}
-          {!modelo.isAgotado && !modelo.isNuevo && !modelo.isEncargo && modelo.isFavorito && (
-            <Label
-              type="favorito"
-              customStyle={{ position: "relative", top: 0, left: 0 }}
-            />
-          )}
+          {!modelo.isAgotado &&
+            !modelo.isNuevo &&
+            !modelo.isEncargo &&
+            modelo.isFavorito && (
+              <Label
+                type="favorito"
+                customStyle={{ position: "relative", top: 0, left: 0 }}
+              />
+            )}
         </div>
         <div className="row div-model">
           <h4 className="h4-model">Descripción</h4>
