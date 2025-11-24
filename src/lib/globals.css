@@ -415,12 +415,12 @@ p {
 .p-model {
   font-size: 1.2rem;
   margin: 0 0 1vw;
-  text-align: start;
+  text-align: flex-start;
 }
 
 .p-price {
   margin: 0 0 1vw;
-  text-align: start;
+  text-align: flex-start;
   font-size: 1.4vw;
   font-family: "Outfit", sans-serif;
   color: #2a2a2a;
@@ -1436,7 +1436,7 @@ h4 {
 .h4-model {
   font-size: 1.2rem;
   margin: 0;
-  text-align: start;
+  text-align: left;
   color: #29395c;
 }
 
@@ -2089,6 +2089,40 @@ footer {
   align-items: center;
 }
 
+.otros-modelos {
+  margin: 20px 0 1vw;
+}
+
+.otros-modelos-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.otros-modelos-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  width: 70px;
+}
+
+.otros-modelos-img {
+  width: 70px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.otros-modelos-color {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+}
+
 @media (max-width: 576px) {
   .scroll-top-btn {
     bottom: 16px;
@@ -2438,7 +2472,7 @@ footer {
     background-color: #1f2337;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 1rem;
   }
   .nav-logo {
@@ -2447,7 +2481,7 @@ footer {
   }
   .nav-list {
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
   }
   .item-nav {
     padding: 4.3vw 2.5vw 4vw !important;
@@ -2492,8 +2526,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 80%;
-    margin: 3rem auto;
+    width: 90%;
+    margin: 0;
     gap: 0.5rem;
   }
   .contenedor-recomendaciones {
@@ -3062,7 +3096,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     width: 100%;
     margin: 0 auto;
   }
@@ -3171,6 +3205,35 @@ footer {
   .instagram-nav {
     width: 1.5rem;
     margin: 0 1rem;
+  }
+
+  .otros-modelos-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    margin: 10px 0 1rem;
+  }
+
+  .otros-modelos-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .otros-modelos-img {
+    width: 100%;
+    max-width: 90px; /* límite opcional */
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+  }
+
+  .otros-modelos-color {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
   }
 }
 

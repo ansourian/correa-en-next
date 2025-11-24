@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import SubcategoriaBuscador from "./SubcategoriaBuscador";
-import TuneIcon from "@mui/icons-material/Tune";
+import React, { useState } from "react"
+import SubcategoriaBuscador from "./SubcategoriaBuscador"
+import TuneIcon from "@mui/icons-material/Tune"
 
 export default function Buscador({
   setTipoSeleccionado,
@@ -9,33 +9,42 @@ export default function Buscador({
   tipoSeleccionado, // Añadimos esta prop para saber qué tipo está seleccionado
   subTipoSeleccionado, // Añadimos esta prop para saber qué subcategoría está seleccionada
 }) {
-  const [selectedButton, setSelectedButton] = useState(tipoSeleccionado);
+  const [selectedButton, setSelectedButton] = useState(tipoSeleccionado)
 
   const handleTipoClick = (tipo) => {
-    setTipoSeleccionado(tipo);
-    setSelectedButton(tipo === selectedButton ? null : tipo);
-    setSubTipoSeleccionado(null); // Reset subcategory when main category changes
-  };
+    setTipoSeleccionado(tipo)
+    setSelectedButton(tipo === selectedButton ? null : tipo)
+    setSubTipoSeleccionado(null) // Reset subcategory when main category changes
+  }
 
   const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
+    setSearchTerm(event.target.value)
+  }
 
   const handleClearFilters = () => {
-    setTipoSeleccionado("");
-    setSelectedButton(null);
-    setSubTipoSeleccionado(null);
-  };
+    setTipoSeleccionado("")
+    setSelectedButton(null)
+    setSubTipoSeleccionado(null)
+  }
 
   const subcategories = {
     zapatos: ["oxfords", "swann", "derby", "dandy", "con-hebillas"],
     mocasines: ["nauticos", "archibaldo", "doble-suela", "vegetal"],
     escarpines: ["slipper", "MP", "americano"],
-    botas: ["inglesa", "chelsea", "petta", "dandy", "carioca", "ET", "alpina", "manchester"],
+    botas: [
+      "inglesa",
+      "chelsea",
+      "petta",
+      "dandy",
+      "carioca",
+      "ET",
+      "alpina",
+      "manchester",
+    ],
     borcegos: ["altos", "bajos"],
     sneakers: ["urbana", "bota", "SC"],
     // Add other types and their subcategories here
-  };
+  }
 
   return (
     <>
@@ -79,7 +88,9 @@ export default function Buscador({
                   <button
                     key={tipo}
                     onClick={() => handleTipoClick(tipo)}
-                    className={`button-card_models ${selectedButton === tipo ? "selected" : ""}`}
+                    className={`button-card_models ${
+                      selectedButton === tipo ? "selected" : ""
+                    }`}
                     data-categoria={tipo}
                   >
                     <h4 className="card-title_models">
@@ -89,14 +100,16 @@ export default function Buscador({
                 ))}
               </section>
             </div>
-            {selectedButton && subcategories[selectedButton] && (
-              <div className="subcategoria-container">
-                <SubcategoriaBuscador
-                  subcategorias={subcategories[selectedButton]}
-                  setSubTipoSeleccionado={setSubTipoSeleccionado}
-                />
-              </div>
-            )}
+            {selectedButton &&
+              subcategories[selectedButton] &&
+              subcategories[selectedButton].length > 0 && (
+                <div className="subcategoria-container">
+                  <SubcategoriaBuscador
+                    subcategorias={subcategories[selectedButton]}
+                    setSubTipoSeleccionado={setSubTipoSeleccionado}
+                  />
+                </div>
+              )}
           </div>
         </div>
         <input
@@ -108,5 +121,5 @@ export default function Buscador({
         />
       </div>
     </>
-  );
+  )
 }

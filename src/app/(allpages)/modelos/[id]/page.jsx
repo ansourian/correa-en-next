@@ -13,6 +13,11 @@ export default function Modelos({ params }) {
   const { id } = params
   const modelo = modelos.find((a) => a.id == id)
 
+  const relatedModels = modelos.filter(
+    (m) =>
+      m.name === modelo.name && m.class === modelo.class && m.id !== modelo.id
+  )
+
   // Verifica si se encontró el modelo
   if (!modelo) {
     return <div>No se encontró el modelo.</div> // Si no se encuentra el modelo, muestra un mensaje
@@ -64,6 +69,29 @@ export default function Modelos({ params }) {
           <p className="p-model">{modelo.color}</p>
           <h4 className="h4-model">Código de Modelo</h4>
           <p className="p-model">{modelo.codigo}</p>
+          {relatedModels.length > 0 && (
+            <div className="otros-modelos">
+              <h4 className="h4-model">Otros colores</h4>
+
+              <div className="otros-modelos-grid">
+                {relatedModels.map((item) => (
+                  <a
+                    key={item.id}
+                    href={`/modelos/${item.id}`}
+                    className="otros-modelos-item"
+                  >
+                    <img
+                      src={item.previewImage}
+                      alt={item.color}
+                      className="otros-modelos-img"
+                    />
+                    <span className="otros-modelos-color">{item.color}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
           <p className="aclaracion-colores">
             Calzados 100% plantillados a mano. Nuestros cueros poseen un curtido
             artesanal el cual puede variar sutilmente de tono según la partida
