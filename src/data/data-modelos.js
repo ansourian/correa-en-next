@@ -282,7 +282,7 @@ export const modelos = [
     ],
   },
   {
-    id: "1116-Diamante-Castaña",
+    id: "1116-Diamante-Castana",
     name: "Derby Mod. 1116",
     class: "READY TO WEAR",
     type: "zapatos",
@@ -832,7 +832,7 @@ export const modelos = [
     ],
   },
   {
-    id: "Dandy-1100-Diamante-Castaña",
+    id: "Dandy-1100-Diamante-Castana",
     name: "Dandy Mod. 1100",
     class: "READY TO WEAR",
     type: "zapatos",
@@ -927,7 +927,7 @@ export const modelos = [
     ],
   },
   {
-    id: "Bota-Dandy-Diamante-Castaña",
+    id: "Bota-Dandy-Diamante-Castana",
     name: "Bota Inglesa Dandy",
     class: "READY TO WEAR",
     type: "botas",
@@ -2768,7 +2768,7 @@ export const modelos = [
     ],
   },
   {
-    id: "Escarpin-123-Diamante-Castaña",
+    id: "Escarpin-123-Diamante-Castana",
     name: "Escarpin Mod. 123 Americano",
     class: "MADE TO ORDER",
     type: "escarpines",
@@ -3471,7 +3471,7 @@ export const modelos = [
     ],
   },
   {
-    id: "Bota-Inglesa-Ñandu",
+    id: "Bota-Inglesa-Nandu",
     name: "Bota Inglesa",
     class: "BESPOKE",
     type: "botas",
