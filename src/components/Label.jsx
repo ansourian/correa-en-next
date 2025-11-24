@@ -1,6 +1,24 @@
 export default function Label({ type, customStyle = {} }) {
-  const text = type === "agotado" ? "AGOTADO" : "NUEVO"
-  const background = type === "agotado" ? "#363636" : "#dc3545"
+  const config = {
+    agotado: {
+      text: "AGOTADO",
+      background: "#363636", // gris oscuro
+    },
+    nuevo: {
+      text: "NUEVO",
+      background: "#dc3545", // rojo
+    },
+    encargo: {
+      text: "POR ENCARGO",
+      background: "#000000", // negro
+    },
+  }
+
+  // Si el type no existe, usa uno por defecto:
+  const { text, background } = config[type] || {
+    text: "LABEL",
+    background: "#666",
+  }
 
   return (
     <span

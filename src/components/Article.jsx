@@ -1,6 +1,7 @@
 import React from "react"
 import { modelos } from "@/data/data-modelos"
 import Label from "./Label"
+import { Tooltip } from "@mui/material"
 
 export default function Article({ params }) {
   const { id } = params
@@ -32,6 +33,11 @@ export default function Article({ params }) {
 
           {!modelo.isAgotado && modelo.isNuevo && (
             <Label type="nuevo" customStyle={{ top: "10%", left: "10%" }} />
+          )}
+          {!modelo.isAgotado && !modelo.isNuevo && modelo.isEncargo && (
+            <Tooltip arrow title="ñam">
+              <Label type="encargo" customStyle={{ top: "10%", left: "10%" }} />
+            </Tooltip>
           )}
           <h4 className="model-titles">{modelo.name}</h4>
           <h3 className="h3-class">{modelo.class}</h3>

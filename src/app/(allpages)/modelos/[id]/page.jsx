@@ -42,10 +42,15 @@ export default function Modelos({ params }) {
               customStyle={{ position: "relative", top: 0, left: 0 }}
             />
           )}
-
           {!modelo.isAgotado && modelo.isNuevo && (
             <Label
               type="nuevo"
+              customStyle={{ position: "relative", top: 0, left: 0 }}
+            />
+          )}
+          {!modelo.isAgotado && !modelo.isNuevo && modelo.isEncargo && (
+            <Label
+              type="encargo"
               customStyle={{ position: "relative", top: 0, left: 0 }}
             />
           )}

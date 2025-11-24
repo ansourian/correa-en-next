@@ -1,8 +1,10 @@
 // isNuevo: "true", // Para marcar los modelos nuevos
+// isEncargo: "true", // Para marcar los modelos por encargo
 // isAgotado: "true", // Para marcar los modelos agotados (tiene prioridad sobre "isNuevo")
 
 export const modelos = [
   {
+    isEncargo: "true",
     id: "1122-Negro",
     name: "Oxford Mod. 1122",
     variant: "Wingtip Full Brogued",
@@ -23,6 +25,7 @@ export const modelos = [
     ],
   },
   {
+    isNuevo: "true",
     id: "1122-Natural",
     name: "Oxford Mod. 1122",
     variant: "Wingtip Full Brogued",
@@ -43,6 +46,7 @@ export const modelos = [
     ],
   },
   {
+    isAgotado: "true",
     id: "1122-Marron",
     name: "Oxford Mod. 1122",
     variant: "Wingtip Full Brogued",
