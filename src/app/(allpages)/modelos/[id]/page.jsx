@@ -2,6 +2,7 @@ import React from "react"
 import { modelos } from "@/data/data-modelos"
 import GaleriaModelos from "@/components/GaleriaModelos"
 import Label from "@/components/Label"
+import { Tooltip } from "@mui/material"
 
 export function generateStaticParams() {
   return modelos.map((m) => ({
@@ -21,8 +22,8 @@ export default function Modelos({ params }) {
   const classToUrl = {
     "READY TO WEAR": "/modelos/ready-to-wear",
     "MADE TO ORDER": "/modelos/made-to-order",
-    "BESPOKE": "/modelos/bespoke",
-    "ACCESORIOS": "/modelos/cinturones",
+    BESPOKE: "/modelos/bespoke",
+    ACCESORIOS: "/modelos/cinturones",
   }
 
   // Verifica si se encontró el modelo
@@ -63,19 +64,31 @@ export default function Modelos({ params }) {
             />
           )}
           {!modelo.isAgotado && !modelo.isNuevo && modelo.isEncargo && (
-            <Label
-              type="encargo"
-              customStyle={{ position: "relative", top: 0, left: 0 }}
-            />
+            <Tooltip
+              arrow="top"
+              title="Este modelo es exclusivamente por encargo"
+              placement="right"
+            >
+              <Label
+                type="encargo"
+                customStyle={{ position: "relative", top: 0, left: 0 }}
+              />
+            </Tooltip>
           )}
           {!modelo.isAgotado &&
             !modelo.isNuevo &&
             !modelo.isEncargo &&
             modelo.isFavorito && (
-              <Label
-                type="favorito"
-                customStyle={{ position: "relative", top: 0, left: 0 }}
-              />
+              <Tooltip
+                arrow="top"
+                title="¡Este modelo es de los más elegidos por los clientes!"
+                placement="right"
+              >
+                <Label
+                  type="favorito"
+                  customStyle={{ position: "relative", top: 0, left: 0 }}
+                />
+              </Tooltip>
             )}
         </div>
         <div className="row div-model">

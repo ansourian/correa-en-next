@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import React, { useState, useEffect } from "react";
-import BannerModelos from "@/components/BannerModelos";
-import Article from "@/components/Article";
-import { modelos } from "@/data/data-modelos";
-import Buscador from "@/components/Buscador";
+import React, { useState, useEffect } from "react"
+import BannerModelos from "@/components/BannerModelos"
+import Article from "@/components/Article"
+import { modelos } from "@/data/data-modelos"
+import Buscador from "@/components/Buscador"
 
 export default function AllModels() {
   // Estados para el filtro
-  const [tipoSeleccionado, setTipoSeleccionado] = useState("");
-  const [subTipoSeleccionado, setSubTipoSeleccionado] = useState("");
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filteredModels, setFilteredModels] = useState([]);
+  const [tipoSeleccionado, setTipoSeleccionado] = useState("")
+  const [subTipoSeleccionado, setSubTipoSeleccionado] = useState("")
+  const [searchTerm, setSearchTerm] = useState("")
+  const [filteredModels, setFilteredModels] = useState([])
 
   useEffect(() => {
     const normalizeText = (text) => {
@@ -20,22 +20,22 @@ export default function AllModels() {
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "")
             .toLowerCase()
-        : "";
-    };
+        : ""
+    }
 
     // Filtrar todos los modelos
     const modelosFiltrados = modelos.filter((modelo) => {
-      const normalizedTerm = normalizeText(searchTerm);
-      const normalizedName = normalizeText(modelo.name);
-      const normalizedVariant = normalizeText(modelo.variant);
-      const normalizedColor = normalizeText(modelo.color);
+      const normalizedTerm = normalizeText(searchTerm)
+      const normalizedName = normalizeText(modelo.name)
+      const normalizedVariant = normalizeText(modelo.variant)
+      const normalizedColor = normalizeText(modelo.color)
       const matchesTipo = tipoSeleccionado
         ? modelo.type === tipoSeleccionado
-        : true;
+        : true
       const matchesSubTipo = subTipoSeleccionado
         ? modelo.subtype === subTipoSeleccionado
-        : true;
-      const isNotBelt = modelo.class !== "ACCESORIOS";
+        : true
+      const isNotBelt = modelo.class !== "ACCESORIOS"
       return (
         (normalizedName.includes(normalizedTerm) ||
           normalizedVariant.includes(normalizedTerm) ||
@@ -43,11 +43,19 @@ export default function AllModels() {
         matchesTipo &&
         matchesSubTipo &&
         isNotBelt
-      );
-    });
+      )
+    })
 
-    setFilteredModels(modelosFiltrados);
-  }, [searchTerm, tipoSeleccionado, subTipoSeleccionado]);
+    setFilteredModels(modelosFiltrados)
+  }, [searchTerm, tipoSeleccionado, subTipoSeleccionado])
+
+  const MODELS_PER_PAGE = 32
+  const [visibleCount, setVisibleCount] = useState(MODELS_PER_PAGE)
+  const modelosVisibles = filteredModels.slice(0, visibleCount)
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + MODELS_PER_PAGE)
+  }
 
   return (
     <>
@@ -59,8 +67,6 @@ export default function AllModels() {
         }
       />
       <hr className="hr-custom" />
-
-      {/* Aquí puedes usar el componente Buscador como en las otras pantallas */}
       <Buscador
         setTipoSeleccionado={setTipoSeleccionado}
         setSubTipoSeleccionado={setSubTipoSeleccionado}
@@ -70,13 +76,24 @@ export default function AllModels() {
         tipoSeleccionado={tipoSeleccionado}
         subTipoSeleccionado={subTipoSeleccionado}
       />
-
-      {/* Mostrar los modelos filtrados */}
-      <section id="lista-productos">
+      {/* <section id="lista-productos">
         {filteredModels.map((modelo) => (
           <Article key={modelo.id} params={{ id: modelo.id }} />
         ))}
+      </section> */}
+      <section id="lista-productos">
+        {modelosVisibles.map((modelo) => (
+          <Article key={modelo.id} params={{ id: modelo.id }} />
+        ))}
       </section>
+
+      {visibleCount < filteredModels.length && (
+        <div className="ver-mas-container">
+          <button className="button-index" onClick={handleLoadMore}>
+            Ver más modelos
+          </button>
+        </div>
+      )}
     </>
-  );
+  )
 }
