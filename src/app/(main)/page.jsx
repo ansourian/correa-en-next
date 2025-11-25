@@ -2,12 +2,12 @@ import {
   AnuncioApertura,
   AnuncioInfo,
   AnuncioMultiFeriado,
-} from "@/components/AnuncioCard";
-import FadeIn from "@/components/FadeInAnimation";
-import HeaderHome from "@/components/HeaderHome";
-import NotasPeriodisticas from "@/components/NotasPeriodisticas";
-import SectionHome from "@/components/SectionHome";
-import React from "react";
+} from "@/components/AnuncioCard"
+import FadeIn from "@/components/FadeInAnimation"
+import HeaderHome from "@/components/HeaderHome"
+import NotasPeriodisticas from "@/components/NotasPeriodisticas"
+import SectionHome from "@/components/SectionHome"
+import React from "react"
 
 export default function Home() {
   return (
@@ -27,7 +27,11 @@ export default function Home() {
           linkTexto="QUIENES SOMOS"
         />
       </FadeIn>
-      <img className="img-index" src="/images/foto-index1.webp" alt="Foto de la entrada del local de Mario Bravo 750" />
+      <div
+        className="parallax"
+        style={{ backgroundImage: `url('/images/foto-index1.webp')` }}
+      ></div>
+      {/* <img className="img-index" src="/images/foto-index1.webp" alt="Foto de la entrada del local de Mario Bravo 750" /> */}
       {/* <hr className="hr-custom" /> */}
       <SectionHome
         id="section-2"
@@ -39,7 +43,15 @@ export default function Home() {
         imgSrc="/images/foto-index2.webp"
       />
       {/* <hr className="hr-custom" /> */}
-      <img className="img-index" src="/images/foto-index2.webp" alt="Foto de un par de zapatos recibiendo un tratamiento de pátina pintada" />
+      {/* <img
+        className="img-index"
+        src="/images/foto-index2.webp"
+        alt="Foto de un par de zapatos recibiendo un tratamiento de pátina pintada"
+      /> */}
+      <div
+        className="parallax"
+        style={{ backgroundImage: `url('/images/foto-index2.webp')` }}
+      ></div>
       <SectionHome
         id="section-3"
         titulo="COMUNICATE CON NOSOTROS"
@@ -49,7 +61,15 @@ export default function Home() {
         linkTexto="CONTACTANOS"
       />
       {/* <hr className="hr-custom" /> */}
-      <img className="img-index" src="/images/foto-index3.webp" alt="Foto de trabajo en el taller" />
+      {/* <img
+        className="img-index"
+        src="/images/foto-index3.webp"
+        alt="Foto de trabajo en el taller"
+      /> */}
+      <div
+        className="parallax"
+        style={{ backgroundImage: `url('/images/foto-index3.webp')` }}
+      ></div>
       <FadeIn>
         <section id="section-4" className="container-notas fade-section">
           <NotasPeriodisticas
@@ -81,5 +101,5 @@ export default function Home() {
         </section>
       </FadeIn>
     </>
-  );
+  )
 }

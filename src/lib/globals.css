@@ -2130,6 +2130,14 @@ footer {
   margin: 5rem 0;
 }
 
+.parallax {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 @media (max-width: 576px) {
   .scroll-top-btn {
     bottom: 16px;
@@ -2506,7 +2514,7 @@ footer {
     object-fit: cover;
     margin: 0;
   }
-  .img-index {
+  .parallax {
     display: flex;
     justify-content: center;
     width: 80%;
