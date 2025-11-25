@@ -2,7 +2,7 @@ export default function Label({ type, customStyle = {} }) {
   const config = {
     agotado: {
       text: "AGOTADO",
-      background: "#363636",
+      background: "#555555ff",
     },
     nuevo: {
       text: "NUEVO",

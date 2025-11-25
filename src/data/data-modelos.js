@@ -4,7 +4,7 @@
 
 export const modelos = [
   {
-    isEncargo: "true",
+    // isEncargo: "true",
     id: "1122-Negro",
     name: "Oxford Mod. 1122",
     variant: "Wingtip Full Brogued",
@@ -25,7 +25,7 @@ export const modelos = [
     ],
   },
   {
-    isNuevo: "true",
+    // isNuevo: "true",
     id: "1122-Natural",
     name: "Oxford Mod. 1122",
     variant: "Wingtip Full Brogued",
@@ -46,7 +46,7 @@ export const modelos = [
     ],
   },
   {
-    isAgotado: "true",
+    // isAgotado: "true",
     id: "1122-Marron",
     name: "Oxford Mod. 1122",
     variant: "Wingtip Full Brogued",
@@ -67,7 +67,7 @@ export const modelos = [
     ],
   },
   {
-    isFavorito: "true",
+    // isFavorito: "true",
     id: "1122-Tabaco",
     name: "Oxford Mod. 1122",
     variant: "Wingtip Full Brogued",
