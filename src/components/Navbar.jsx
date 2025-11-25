@@ -8,16 +8,25 @@ export function Navbar({ scroll }) {
   const handleLogoClick = (e) => {
     e.preventDefault()
 
-    if (scroll) {
-      window.scrollTo({ top: 0, behavior: "smooth" })
+    const collapseEl = document.getElementById("navbarNav")
+    const isOpen = collapseEl?.classList.contains("show")
+
+    const scrollToTop = () => {
+      document.body.scrollTo({ top: 0, behavior: "smooth" })
+      document.documentElement.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    if (isOpen) {
+      const bsCollapse =
+        bootstrap.Collapse.getInstance(collapseEl) ||
+        new bootstrap.Collapse(collapseEl)
+      bsCollapse.hide()
+      setTimeout(scrollToTop, 300)
     } else {
-      if (pathname !== "/") {
-        router.push("/")
-      } else {
-        window.scrollTo({ top: 0, behavior: "smooth" })
-      }
+      scrollToTop()
     }
   }
+
   return (
     <nav
       className={`nav-bar sticky-top navbar navbar-expand-lg navbar-dark fade-section ${
