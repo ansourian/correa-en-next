@@ -62,7 +62,7 @@ export default function Buscador({
               aria-expanded="false"
               aria-controls="flush-collapseOne"
             >
-              <TuneIcon />
+              <TuneIcon style={{ color: "black" }} />
               <p className="p-filters">Tipos de modelos</p>
             </button>
           </h2>

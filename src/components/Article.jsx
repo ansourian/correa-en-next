@@ -19,14 +19,7 @@ export default function Article({ params }) {
           alt={`${modelo.name}(${modelo.color})`}
           src={modelo.previewImage}
         />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "0.5rem",
-          }}
-        >
+        <div className="div-article-info">
           {modelo.isAgotado && (
             <Label type="agotado" customStyle={{ top: "10%", left: "10%" }} />
           )}
@@ -41,17 +34,14 @@ export default function Article({ params }) {
             !modelo.isNuevo &&
             !modelo.isEncargo &&
             modelo.isFavorito && (
-              <Label type="favorito" customStyle={{ top: "10%", left: "10%" }} />
+              <Label
+                type="favorito"
+                customStyle={{ top: "10%", left: "10%" }}
+              />
             )}
           <h4 className="model-titles">{modelo.name}</h4>
           <h3 className="h3-class">{modelo.class}</h3>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-            }}
-          >
+          <div className="div-color-variant-article">
             <h3 className="h3-color">{modelo.color}</h3>
             {modelo.variant && <h3 className="h3-style">{modelo.variant}</h3>}
           </div>

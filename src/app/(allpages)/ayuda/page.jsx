@@ -22,7 +22,7 @@ export default function Ayuda() {
         <SectionHome
           subtitulo="Otras consultas"
           texto="Si tienes otra consulta que no figura en el listado de arriba puedes comunicarte con nosotros."
-          linkHref="./contacto"
+          linkHref="/contacto"
           linkTexto="CONTACTANOS"
         />
       </FadeIn>

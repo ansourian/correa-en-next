@@ -1,10 +1,10 @@
-import ButtonVolver from "@/components/ButtonVolver";
+import ButtonVolver from "@/components/ButtonVolver"
 
 export default function RootLayout({ children }) {
   return (
-    <main>
+    <>
       <ButtonVolver />
-      {children}
-    </main>
-  );
+      <main>{children}</main>
+    </>
+  )
 }

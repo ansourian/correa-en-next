@@ -24,7 +24,6 @@ export default function BannerModelos({ subtitle, title, description }) {
             className="logo-arrow arrow"
             src="/images/arrow.svg"
             alt="Botón para navegar a la izquierda"
-            style={{ width: 30 }}
           />
         </a>
         <h2 className="h2-pages">{title}</h2>
@@ -33,7 +32,6 @@ export default function BannerModelos({ subtitle, title, description }) {
             className="logo-arrow"
             src="/images/arrow.svg"
             alt="Botón para navegar a la derecha"
-            style={{ width: 30 }}
           />
         </a>
       </div>

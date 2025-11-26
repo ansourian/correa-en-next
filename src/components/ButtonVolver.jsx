@@ -1,4 +1,5 @@
 "use client"
+import { ArrowBackIosNew } from "@mui/icons-material"
 import { useRouter } from "next/navigation"
 
 export default function ButtonVolver() {
@@ -10,7 +11,8 @@ export default function ButtonVolver() {
 
   return (
     <button className="volver-button" onClick={handleVolver}>
-      VOLVER
+      <ArrowBackIosNew className="icono-volver" />
+      <span className="volver-text">VOLVER</span>
     </button>
   )
 }

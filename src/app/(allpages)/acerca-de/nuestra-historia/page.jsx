@@ -15,7 +15,7 @@ export default function NuestraHistoria() {
       <hr className="hr-custom" />
       <FadeIn>
         <img
-          class="banner-quienes_somos banner"
+          class="banner-quienes_somos"
           src="/images/quienes somos.webp"
           alt="don felix correa junto a un trabajador"
         />
