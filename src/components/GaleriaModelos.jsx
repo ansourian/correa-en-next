@@ -5,7 +5,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import { Modal, Button } from "react-bootstrap" // Asegúrate de tener react-bootstrap instalado
-import { AdsClick } from "@mui/icons-material"
+import { AdsClick, Pinch } from "@mui/icons-material"
 
 export default function GaleriaModelos({ images }) {
   const [selectedImage, setSelectedImage] = useState(images[0])
@@ -14,6 +14,7 @@ export default function GaleriaModelos({ images }) {
   const [isZoomed, setIsZoomed] = useState(false) // Estado para controlar el zoom de la imagen
   const [isMobile, setIsMobile] = useState(false) // Estado para detectar si es móvil
   const [showHint, setShowHint] = useState(true)
+  const [showModalHint, setShowModalHint] = useState(true)
 
   const sliderRef = useRef(null) // Crear una referencia para el slider
 
@@ -50,6 +51,7 @@ export default function GaleriaModelos({ images }) {
     setActiveImageIndex(index) // Establece el índice de la imagen seleccionada
     setModalOpen(true) // Abre el modal
     setIsZoomed(false) // Al abrir el modal, inicializamos el estado del zoom en falso
+    setShowModalHint(true)
   }
 
   // Función para manejar el clic en una miniatura
@@ -148,6 +150,11 @@ export default function GaleriaModelos({ images }) {
       >
         <Modal.Body style={{ padding: 0 }}>
           <div
+            onClick={() => setShowModalHint(false)}
+            onMouseDown={() => setShowModalHint(false)}
+            onTouchStart={() => setShowModalHint(false)}
+            onTouchMove={() => setShowModalHint(false)}
+            onDragStart={() => setShowModalHint(false)}
             style={{
               display: "flex",
               justifyContent: "center",
@@ -160,6 +167,18 @@ export default function GaleriaModelos({ images }) {
               transition: "width 0.3s ease", // Suavizar el cambio de tamaño cuando se hace zoom
             }}
           >
+            {isMobile && (
+              <div
+                className={`div-click-zoom ${
+                  showModalHint ? "visible" : "hidden"
+                }`}
+              >
+                <Pinch />
+                <p className="p-div-click-zoom">
+                  Deslizá dos dedos para hacer zoom
+                </p>
+              </div>
+            )}
             <img
               src={images[activeImageIndex]}
               alt={`Imagen a pantalla completa ${activeImageIndex + 1}`}

@@ -863,12 +863,17 @@ button:focus:not(:focus-visible) {
   box-shadow: none !important;
 }
 
-.carousel-control-prev-icon2,
-.carousel-control-next-icon2 {
-  filter: invert(1); /* Invertir los colores del ícono */
-  opacity: 0.8;
-  width: 6vw;
-  margin-top: 119vw;
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 50% 50%;
+  background-color: #ffffff;
+  background-blend-mode: difference;
+  border-radius: 50px;
 }
 
 .form-style {
@@ -2836,7 +2841,7 @@ footer {
     color: rgb(255, 219, 140);
   }
   .model-subtitles_car {
-    margin: auto 2rem;
+    margin: auto 3rem;
     text-align: center;
     font-size: 3.5vw;
     font-family: "Outfit", sans-serif;
