@@ -102,6 +102,7 @@ export const preguntas = [
   },
   {
     pregunta: "¿Cómo puedo realizar un mantenimiento de mi calzado?",
+    anchor: "mantenimiento-del-calzado",
     respuesta: (
       <>
         <div class="card-body p-preguntas_frecuentes">
@@ -121,6 +122,7 @@ export const preguntas = [
   },
   {
     pregunta: "¿Realizan reparaciones o renovaciones de zapatos?",
+    anchor: "reparaciones",
     respuesta: (
       <div class="card-body p-preguntas_frecuentes">
         Sí, realizamos reparaciones o renovaciones solamente de los zapatos que
@@ -152,6 +154,7 @@ export const preguntas = [
   },
   {
     pregunta: "¿Qué horario de atención al público tiene el local?",
+    anchor: "horarios",
     respuesta: (
       <div class="card-body p-preguntas_frecuentes">
         Lunes a Viernes de 9hs a 13hs y de 15hs a 19hs / Sábados de 9hs a 13hs
@@ -160,6 +163,7 @@ export const preguntas = [
   },
   {
     pregunta: "¿Cuáles son los medios de pago disponibles?",
+    anchor: "medios-de-pago",
     respuesta: (
       <>
         <div class="container-medios_pago card-body p-preguntas_frecuentes">
@@ -195,4 +199,4 @@ export const preguntas = [
       </>
     ),
   },
-];
+]

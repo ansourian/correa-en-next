@@ -1,20 +1,29 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import SubcategoriaBuscador from "./SubcategoriaBuscador"
 import TuneIcon from "@mui/icons-material/Tune"
+import { useSearchParams, useRouter } from "next/navigation"
 
 export default function Buscador({
   setTipoSeleccionado,
   setSubTipoSeleccionado,
   setSearchTerm,
-  tipoSeleccionado, // Añadimos esta prop para saber qué tipo está seleccionado
-  subTipoSeleccionado, // Añadimos esta prop para saber qué subcategoría está seleccionada
+  tipoSeleccionado,
+  subTipoSeleccionado,
 }) {
   const [selectedButton, setSelectedButton] = useState(tipoSeleccionado)
+
+  const router = useRouter()
+  const searchParams = useSearchParams()
 
   const handleTipoClick = (tipo) => {
     setTipoSeleccionado(tipo)
     setSelectedButton(tipo === selectedButton ? null : tipo)
-    setSubTipoSeleccionado(null) // Reset subcategory when main category changes
+    const params = new URLSearchParams(searchParams.toString())
+    params.set("tipo", tipo)
+    params.delete("subtipo")
+
+    router.push(`?${params.toString()}`, { scroll: false })
+    // setSubTipoSeleccionado(null)
   }
 
   const handleSearchChange = (event) => {
@@ -25,6 +34,7 @@ export default function Buscador({
     setTipoSeleccionado("")
     setSelectedButton(null)
     setSubTipoSeleccionado(null)
+    router.push(`?`)
   }
 
   const subcategories = {
@@ -45,6 +55,18 @@ export default function Buscador({
     sneakers: ["urbana", "bota", "SC"],
     // Add other types and their subcategories here
   }
+
+  useEffect(() => {
+    const tipo = searchParams.get("tipo")
+    const subtipo = searchParams.get("subtipo")
+
+    if (tipo) setTipoSeleccionado(tipo)
+    if (subtipo) setSubTipoSeleccionado(subtipo)
+  }, [])
+
+  useEffect(() => {
+    setSelectedButton(tipoSeleccionado)
+  }, [tipoSeleccionado])
 
   return (
     <>
@@ -107,6 +129,7 @@ export default function Buscador({
                   <SubcategoriaBuscador
                     subcategorias={subcategories[selectedButton]}
                     setSubTipoSeleccionado={setSubTipoSeleccionado}
+                    initialSubtipo={subTipoSeleccionado}
                   />
                 </div>
               )}

@@ -15,6 +15,7 @@ export default function GaleriaModelos({ images }) {
   const [isMobile, setIsMobile] = useState(false) // Estado para detectar si es móvil
   const [showHint, setShowHint] = useState(true)
   const [showModalHint, setShowModalHint] = useState(true)
+  const [isThumbnailClick, setIsThumbnailClick] = useState(false)
 
   const sliderRef = useRef(null) // Crear una referencia para el slider
 
@@ -42,7 +43,10 @@ export default function GaleriaModelos({ images }) {
     adaptiveHeight: true,
     beforeChange: (current, next) => {
       setSelectedImage(images[next]) // Actualiza la imagen seleccionada cuando el slider cambia
-      setShowHint(false)
+      if (!isThumbnailClick) {
+        setShowHint(false)
+      }
+      setIsThumbnailClick(false)
     },
   }
 
@@ -56,6 +60,7 @@ export default function GaleriaModelos({ images }) {
 
   // Función para manejar el clic en una miniatura
   const handleThumbnailClick = (image, index) => {
+    setIsThumbnailClick(true)
     setSelectedImage(image) // Cambia la imagen seleccionada al hacer clic en una miniatura
     if (sliderRef.current) {
       sliderRef.current.slickGoTo(index) // Desplaza el slider a la miniatura seleccionada
@@ -73,7 +78,7 @@ export default function GaleriaModelos({ images }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowHint(false)
-    }, 3000)
+    }, 5000)
 
     return () => clearTimeout(timer)
   }, [])
@@ -87,7 +92,7 @@ export default function GaleriaModelos({ images }) {
           className={`div-click-zoom ${showHint ? "visible" : "hidden"}`}
         >
           <AdsClick />
-          <p className="p-div-click-zoom">Click en la imágen para hacer zoom</p>
+          <p className="p-div-click-zoom">Click en la imagen para hacer zoom</p>
         </div>
         <div
           className="slider-wrapper"

@@ -2,6 +2,25 @@
 // isEncargo: "true", // Para marcar los modelos por encargo
 // isAgotado: "true", // Para marcar los modelos agotados (tiene prioridad sobre "isNuevo")
 
+const descriptions = [
+  {
+    id: "oxford",
+    desc: "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+  },
+  {
+    id: "derby",
+    desc: "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+  },
+  {
+    id: "derby-tres",
+    desc: "Un clásico liso de cordonera abierta. Una versión modernizada de 3 ojales que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+  },
+  {
+    id: "sneaker",
+    desc: "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino.",
+  },
+]
+
 export const modelos = [
   {
     // isEncargo: "true",
@@ -11,8 +30,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Negro",
     leather: "Cuero vacuno",
     codigo: "1122",
@@ -32,8 +50,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Natural",
     leather: "Cuero vacuno",
     codigo: "1122",
@@ -53,8 +70,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Marrón",
     leather: "Cuero vacuno",
     codigo: "1122",
@@ -74,8 +90,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Tabaco",
     leather: "Cuero vacuno",
     codigo: "1122",
@@ -94,8 +109,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Café",
     leather: "Cuero vacuno",
     codigo: "1122",
@@ -114,8 +128,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Suela",
     leather: "Cuero vacuno",
     codigo: "1122",
@@ -134,8 +147,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Verde",
     leather: "Cuero vacuno",
     codigo: "1122",
@@ -154,8 +166,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Rojo",
     leather: "Cuero vacuno",
     codigo: "1122",
@@ -174,8 +185,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Azul",
     leather: "Cuero vacuno",
     codigo: "1122",
@@ -193,8 +203,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Negro",
     leather: "Cuero vacuno",
     codigo: "1119",
@@ -212,8 +221,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Guinda",
     leather: "Cuero vacuno",
     codigo: "1119",
@@ -231,8 +239,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Marrón",
     leather: "Cuero vacuno",
     codigo: "1119",
@@ -250,8 +257,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Café",
     leather: "Cuero vacuno",
     codigo: "1119",
@@ -269,8 +275,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Diamante Café",
     leather: "Cuero vacuno graneado",
     codigo: "1116",
@@ -288,8 +293,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Diamante Castaña",
     leather: "Cuero vacuno graneado",
     codigo: "1116",
@@ -307,8 +311,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Verde",
     leather: "Cuero vacuno",
     codigo: "1116",
@@ -326,8 +329,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Negro",
     leather: "Cuero Vacuno",
     codigo: "1108",
@@ -345,8 +347,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Guinda",
     leather: "Cuero Vacuno",
     codigo: "1108",
@@ -364,8 +365,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Natural",
     leather: "Cuero Vacuno",
     codigo: "1108",
@@ -383,8 +383,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Marrón",
     leather: "Cuero Vacuno",
     codigo: "1108",
@@ -402,8 +401,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Guinda",
     leather: "Cuero Vacuno",
     codigo: "1108",
@@ -421,8 +419,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Suela",
     leather: "Cuero Vacuno",
     codigo: "1108",
@@ -440,8 +437,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Café",
     leather: "Cuero Vacuno",
     codigo: "1108",
@@ -686,8 +682,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión modernizada de 3 ojales que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "derby-tres")?.desc,
     color: "Negro",
     leather: "Cuero Vacuno",
     codigo: "1100 3 ojales",
@@ -705,8 +700,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión modernizada de 3 ojales que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "derby-tres")?.desc,
     color: "Natural",
     leather: "Cuero Vacuno",
     codigo: "1100 3 ojales",
@@ -724,8 +718,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión modernizada de 3 ojales que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "derby-tres")?.desc,
     color: "Suela",
     leather: "Cuero Vacuno",
     codigo: "1100 3 ojales",
@@ -743,8 +736,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión modernizada de 3 ojales que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "derby-tres")?.desc,
     color: "Mostaza",
     leather: "Cuero Vacuno",
     codigo: "1100 3 ojales",
@@ -762,8 +754,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión modernizada de 3 ojales que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "derby-tres")?.desc,
     color: "Marrón",
     leather: "Cuero Vacuno",
     codigo: "1100 3 ojales",
@@ -781,8 +772,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión modernizada de 3 ojales que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "derby-tres")?.desc,
     color: "Tabaco",
     leather: "Cuero Vacuno",
     codigo: "1100 3 ojales",
@@ -800,8 +790,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión modernizada de 3 ojales que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "derby-tres")?.desc,
     color: "Guinda",
     leather: "Cuero Vacuno",
     codigo: "1100 3 ojales",
@@ -2265,8 +2254,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Negro - Marrón",
     leather: "Cuero vacuno combinado",
     codigo: "1122",
@@ -2284,8 +2272,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Azul - Maíz",
     leather: "Combinado de Cuero Vacuno y Cabretilla",
     codigo: "1122",
@@ -2303,8 +2290,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Negro - Rojo",
     leather: "Combinado de Cuero Vacuno y Cabretilla",
     codigo: "1122",
@@ -2322,8 +2308,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Guinda (Claro y Oscuro)",
     leather: "Shell Cordovan",
     codigo: "1122",
@@ -2341,8 +2326,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Suela - Gamuza Marrón",
     leather: "Combinado de Cuero Vacuno y Gamuza",
     codigo: "1108",
@@ -2360,8 +2344,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Suela (con pátina)",
     leather: "Cuero Vacuno",
     codigo: "1107 MTO",
@@ -2379,8 +2362,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Marrón - Verde",
     leather: "Combinado de Anca de Potro, Gamuza y Cuero Vacuno",
     codigo: "1103",
@@ -3724,7 +3706,7 @@ export const modelos = [
   },
   {
     id: "Swann-Tatuado-Natural",
-    name: "Swann",
+    name: "Mod. Swann",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "swann",

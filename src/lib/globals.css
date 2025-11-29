@@ -1737,15 +1737,17 @@ h5 {
 }
 
 footer {
-  background-color: #1f2337;
+  display: flex;
+  flex-direction: column;
+  background-color: #12141f;
   color: #fff;
-  flex-direction: row;
   text-align: center;
 }
 .div-footer {
   display: flex;
   flex-direction: row;
   padding: 2rem 0;
+  flex: 1;
 }
 .h3-footer {
   color: #ffffff;
@@ -1758,13 +1760,31 @@ footer {
 .div-footer_sociales {
   display: flex;
   flex-direction: column;
+  border-right: 1px solid #ffffff17;
   flex: 1;
 }
 .div-footer_sociales_content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
   height: 100%;
+  margin-top: 2rem;
+}
+.div-footer_ayuda {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-right: 1px solid #ffffff17;
+  flex: 1;
+}
+.div-footer_modelos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-right: 1px solid #ffffff17;
+  flex: 1;
 }
 .div-footer_contacto {
   display: flex;
@@ -1775,19 +1795,22 @@ footer {
 .div-footer_contacto {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .div-footer_contacto_content {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
+  height: 100%;
 }
 .div-footer_info_contacto {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .div-seguinos_ig {
   display: flex;
@@ -1798,24 +1821,36 @@ footer {
 .h2-footer {
   color: white;
   display: flex;
-  font-size: 2rem;
+  font-size: 1.5rem;
   justify-content: flex-end;
   text-align: right;
   margin: 0 5px 0 0;
 }
 .instagram-logo {
-  width: 10vw;
+  width: 7rem;
+  display: flex;
+}
+.facebook-logo {
+  width: 6rem;
   display: flex;
 }
 .p-footer {
   text-align: center;
-  color: white;
+  color: #bebebe;
   font-size: 1.2rem;
   margin: 2rem 0;
 }
 .vertical-hr {
   border-left: thin solid #ffffff;
-  left: 50%;
+  left: 33%;
+  position: absolute;
+  width: 0;
+  height: 15rem;
+  align-self: center;
+}
+.vertical-hr2 {
+  border-left: thin solid #ffffff;
+  left: 66%;
   position: absolute;
   width: 0;
   height: 15rem;
@@ -1826,12 +1861,26 @@ footer {
   margin: 2vw 0 0 1vw;
 }
 .p-footerinfo {
-  color: white;
+  color: #bebebe;
   text-align: left;
   font-size: 1.2rem;
+  margin: 0;
+}
+.p-footerlinks {
+  color: #bebebe;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-family: "Outfit", sans-serif;
+  transition: 0.4s;
+}
+.p-footerlinks:hover {
+  color: #ffdb8c !important;
+  font-weight: 300;
+  transition: 0.4s;
 }
 .phone-white {
-  color: rgb(255, 219, 140) !important;
+  color: #ffdb8c !important;
   text-decoration: none;
 }
 .footer-maps {
@@ -1849,7 +1898,7 @@ footer {
   font-size: 0.8rem;
   text-align: center;
   color: #b1b1b1;
-  background-color: #101225;
+  background-color: #0b0d14;
   padding: 1rem;
   margin-bottom: 0;
 }
