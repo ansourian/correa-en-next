@@ -11,10 +11,21 @@ export default function SubcategoriaBuscador({
   const searchParams = useSearchParams()
 
   const handleSubTipoClick = (subtipo) => {
+    const params = new URLSearchParams(searchParams.toString())
+
+    if (selectedSubButton === subtipo) {
+      setSubTipoSeleccionado(null)
+      setSelectedSubButton(null)
+
+      params.delete("subtipo")
+
+      router.push(`?${params.toString()}`, { scroll: false })
+      return
+    }
+
     setSubTipoSeleccionado(subtipo)
     setSelectedSubButton(subtipo)
 
-    const params = new URLSearchParams(searchParams.toString())
     params.set("subtipo", subtipo)
 
     router.push(`?${params.toString()}`, { scroll: false })

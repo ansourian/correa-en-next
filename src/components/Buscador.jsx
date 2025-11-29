@@ -14,16 +14,28 @@ export default function Buscador({
 
   const router = useRouter()
   const searchParams = useSearchParams()
+  const params = new URLSearchParams(searchParams.toString())
 
   const handleTipoClick = (tipo) => {
+    if (selectedButton === tipo) {
+      setTipoSeleccionado("")
+      setSelectedButton(null)
+      setSubTipoSeleccionado(null)
+
+      params.delete("tipo")
+      params.delete("subtipo")
+
+      router.push(`?${params.toString()}`, { scroll: false })
+      return
+    }
+
     setTipoSeleccionado(tipo)
-    setSelectedButton(tipo === selectedButton ? null : tipo)
-    const params = new URLSearchParams(searchParams.toString())
+    setSelectedButton(tipo)
+
     params.set("tipo", tipo)
     params.delete("subtipo")
 
     router.push(`?${params.toString()}`, { scroll: false })
-    // setSubTipoSeleccionado(null)
   }
 
   const handleSearchChange = (event) => {
@@ -34,7 +46,7 @@ export default function Buscador({
     setTipoSeleccionado("")
     setSelectedButton(null)
     setSubTipoSeleccionado(null)
-    router.push(`?`)
+    router.push(`?`, { scroll: false })
   }
 
   const subcategories = {
@@ -53,7 +65,7 @@ export default function Buscador({
     ],
     borcegos: ["altos", "bajos"],
     sneakers: ["urbana", "bota", "SC"],
-    // Add other types and their subcategories here
+    // aca puedo agregar mas subcategorias
   }
 
   useEffect(() => {
