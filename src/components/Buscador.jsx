@@ -6,12 +6,12 @@ import { useSearchParams, useRouter } from "next/navigation"
 export default function Buscador({
   setTipoSeleccionado,
   setSubTipoSeleccionado,
+  searchTerm,
   setSearchTerm,
   tipoSeleccionado,
   subTipoSeleccionado,
 }) {
   const [selectedButton, setSelectedButton] = useState(tipoSeleccionado)
-
   const router = useRouter()
   const searchParams = useSearchParams()
   const params = new URLSearchParams(searchParams.toString())
@@ -44,6 +44,7 @@ export default function Buscador({
 
   const handleClearFilters = () => {
     setTipoSeleccionado("")
+    setSearchTerm("")
     setSelectedButton(null)
     setSubTipoSeleccionado(null)
     router.push(`?`, { scroll: false })
@@ -152,6 +153,7 @@ export default function Buscador({
           className="search-bar"
           id="searchInput"
           placeholder="Buscar modelos..."
+          value={searchTerm}
           onChange={handleSearchChange}
         />
       </div>
