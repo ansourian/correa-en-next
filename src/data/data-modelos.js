@@ -8,6 +8,18 @@ const descriptions = [
     desc: "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
   },
   {
+    id: "oxford-1107",
+    desc: "Un zapato sencillo y elegante. Su aspecto liso y sin picar, lo convierten en un modelo adecuado para ámbitos formales.",
+  },
+  {
+    id: "oxford-1107-flor",
+    desc: "Un zapato sencillo y elegante. Cuenta con flor en la punta y una tira picada.",
+  },
+  {
+    id: "oxford-1103",
+    desc: "Zapato abotinado de vestir, sobrio y elegante. Recomendado para una expresión más discreta y formal.",
+  },
+  {
     id: "derby",
     desc: "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
   },
@@ -16,8 +28,48 @@ const descriptions = [
     desc: "Un clásico liso de cordonera abierta. Una versión modernizada de 3 ojales que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
   },
   {
+    id: "dandy",
+    desc: "Un clásico liso de cordonera abierta. Una versión que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+  },
+  {
+    id: "swann",
+    desc: "Este modelo se caracteriza por estar confeccionado a partir de una sola pieza de cuero, lo que le confiere un aspecto elegante y limpio, ya que no tiene costuras visibles en la parte superior del zapato.",
+  },
+  {
+    id: "bota-carioca",
+    desc: "Un clásico liso de cordonera abierta. Una versión que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+  },
+  {
+    id: "2-hebillas",
+    desc: "Este es un modelo elegante que se distingue por sus dos hebillas en lugar de cordones (de las cuales una cuenta con un elástico), lo que le confiere una apariencia sofisticada y versátil, adecuada tanto para ocasiones formales como informales.",
+  },
+  {
+    id: "borcego-corto",
+    desc: "Un borcego suelto y robusto de caña baja a la altura del tobillo. Las suelas cuentan con una combinación de cuero y goma apta para diversos tipos de terreno.",
+  },
+  {
+    id: "borcego-texano",
+    desc: "Un borcego rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
+  },
+  {
     id: "sneaker",
-    desc: "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino.",
+    desc: "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior. La boca del calzado cuenta con un refuerzo acolchonado agradable al uso cotidiano.",
+  },
+  {
+    id: "sneaker-bota",
+    desc: "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior.",
+  },
+  {
+    id: "bespoke",
+    desc: "owee Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+  },
+  {
+    id: "cinturon-clasico",
+    desc: "Este modelo es un cinturón de estilo clásico que cuenta con una hebilla plateada y un ancho de 5 centímetros.",
+  },
+  {
+    id: "cinturon-rustico",
+    desc: "Este modelo es un cinturón de estilo rústico. Se caracteriza por su textura más áspera y su ancho de 5,5 centímetros.",
   },
 ]
 
@@ -455,8 +507,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un zapato sencillo y elegante. Su aspecto liso y sin picar, lo convierten en un modelo adecuado para ámbitos formales.",
+    description: descriptions.find((d) => d.id === "oxford-1107")?.desc,
     color: "Tabaco",
     leather: "Cuero Vacuno",
     codigo: "1107",
@@ -474,8 +525,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un zapato sencillo y elegante. Su aspecto liso y sin picar, lo convierten en un modelo adecuado para ámbitos formales.",
+    description: descriptions.find((d) => d.id === "oxford-1107")?.desc,
     color: "Guinda",
     leather: "Cuero Vacuno",
     codigo: "1107",
@@ -493,8 +543,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un zapato sencillo y elegante. Su aspecto liso y sin picar, lo convierten en un modelo adecuado para ámbitos formales.",
+    description: descriptions.find((d) => d.id === "oxford-1107")?.desc,
     color: "Marrón",
     leather: "Cuero Vacuno",
     codigo: "1107",
@@ -512,8 +561,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un zapato sencillo y elegante. Su aspecto liso y sin picar, lo convierten en un modelo adecuado para ámbitos formales.",
+    description: descriptions.find((d) => d.id === "oxford-1107")?.desc,
     color: "Suela",
     leather: "Cuero Vacuno",
     codigo: "1107",
@@ -531,8 +579,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un zapato sencillo y elegante. Cuenta con flor en la punta y una tira picada.",
+    description: descriptions.find((d) => d.id === "oxford-1107-flor")?.desc,
     color: "Marrón",
     leather: "Cuero Vacuno",
     codigo: "1107",
@@ -550,8 +597,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Un zapato sencillo y elegante. Cuenta con flor en la punta y una tira picada.",
+    description: descriptions.find((d) => d.id === "oxford-1107-flor")?.desc,
     color: "Tabaco",
     leather: "Cuero Vacuno",
     codigo: "1107",
@@ -587,8 +633,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Zapato abotinado de vestir, sobrio y elegante. Recomendado para una expresión más discreta y formal.",
+    description: descriptions.find((d) => d.id === "oxford-1103")?.desc,
     color: "Negro",
     leather: "Cuero vacuno",
     codigo: "1103",
@@ -606,8 +651,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Zapato abotinado de vestir, sobrio y elegante. Recomendado para una expresión más discreta y formal.",
+    description: descriptions.find((d) => d.id === "oxford-1103")?.desc,
     color: "Suela",
     leather: "Cuero vacuno",
     codigo: "1103",
@@ -625,8 +669,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Zapato abotinado de vestir, sobrio y elegante. Recomendado para una expresión más discreta y formal.",
+    description: descriptions.find((d) => d.id === "oxford-1103")?.desc,
     color: "Café",
     leather: "Cuero vacuno",
     codigo: "1103",
@@ -644,8 +687,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Zapato abotinado de vestir, sobrio y elegante. Recomendado para una expresión más discreta y formal.",
+    description: descriptions.find((d) => d.id === "oxford-1103")?.desc,
     color: "Marrón",
     leather: "Cuero vacuno",
     codigo: "1103",
@@ -663,8 +705,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Zapato abotinado de vestir, sobrio y elegante. Recomendado para una expresión más discreta y formal.",
+    description: descriptions.find((d) => d.id === "oxford-1103")?.desc,
     color: "Guinda",
     leather: "Cuero Vacuno",
     codigo: "1103",
@@ -808,8 +849,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "dandy",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Diamante Negro",
     leather: "Cuero Vacuno Granulado",
     codigo: "1100",
@@ -827,8 +867,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "dandy",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Diamante Castaña",
     leather: "Cuero Vacuno Granulado",
     codigo: "1100",
@@ -846,8 +885,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "dandy",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Marrón",
     leather: "Gamuza",
     codigo: "1100",
@@ -865,8 +903,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "swann",
-    description:
-      "Este modelo se caracteriza por estar confeccionado a partir de una sola pieza de cuero, lo que le confiere un aspecto elegante y limpio, ya que no tiene costuras visibles en la parte superior del zapato. ",
+    description: descriptions.find((d) => d.id === "swann")?.desc,
     color: "Tabaco",
     leather: "Vacuno",
     codigo: "Swann",
@@ -884,8 +921,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "swann",
-    description:
-      "Este modelo se caracteriza por estar confeccionado a partir de una sola pieza de cuero, lo que le confiere un aspecto elegante y limpio, ya que no tiene costuras visibles en la parte superior del zapato. ",
+    description: descriptions.find((d) => d.id === "swann")?.desc,
     color: "Negro",
     leather: "Vacuno",
     codigo: "Swann",
@@ -904,8 +940,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "swann",
-    description:
-      "Este modelo se caracteriza por estar confeccionado a partir de una sola pieza de cuero, lo que le confiere un aspecto elegante y limpio, ya que no tiene costuras visibles en la parte superior del zapato. ",
+    description: descriptions.find((d) => d.id === "swann")?.desc,
     color: "Verde",
     leather: "Vacuno",
     codigo: "Swann",
@@ -923,8 +958,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "dandy",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Diamante Negro",
     leather: "Cuero Vacuno Granulado",
     codigo: "Bota Dandy",
@@ -942,8 +976,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "dandy",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Diamante Castaña",
     leather: "Cuero Vacuno Granulado",
     codigo: "Bota Dandy",
@@ -961,8 +994,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "dandy",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Marrón",
     leather: "Gamuza",
     codigo: "Bota Dandy",
@@ -980,8 +1012,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "carioca",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "bota-carioca")?.desc,
     color: "Arena",
     leather: "Gamuza",
     codigo: "Bot. Carioca",
@@ -999,8 +1030,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "carioca",
-    description:
-      "Un clásico liso de cordonera abierta. Una versión que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "bota-carioca")?.desc,
     color: "Negro",
     leather: "Gamuza",
     codigo: "Bot. Carioca",
@@ -1018,8 +1048,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "con-hebillas",
-    description:
-      "Este es un modelo de class elegante que se distingue por sus dos hebillas en lugar de cordones (de las cuales una cuenta con un elástico), lo que le confiere una apariencia sofisticada y versátil, adecuada tanto para ocasiones formales como informales.",
+    description: descriptions.find((d) => d.id === "2-hebillas")?.desc,
     color: "Negro",
     leather: "Cuero Vacuno",
     codigo: "2 Hebillas",
@@ -1037,8 +1066,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "con-hebillas",
-    description:
-      "Este es un modelo de class elegante que se distingue por sus dos hebillas en lugar de cordones (de las cuales una cuenta con un elástico), lo que le confiere una apariencia sofisticada y versátil, adecuada tanto para ocasiones formales como informales.",
+    description: descriptions.find((d) => d.id === "2-hebillas")?.desc,
     color: "Suela",
     leather: "Cuero Vacuno",
     codigo: "2 Hebillas",
@@ -1056,8 +1084,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "con-hebillas",
-    description:
-      "Este es un modelo de class elegante que se distingue por sus dos hebillas en lugar de cordones (de las cuales una cuenta con un elástico), lo que le confiere una apariencia sofisticada y versátil, adecuada tanto para ocasiones formales como informales.",
+    description: descriptions.find((d) => d.id === "2-hebillas")?.desc,
     color: "Café",
     leather: "Cuero Vacuno",
     codigo: "2 Hebillas",
@@ -1075,8 +1102,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "con-hebillas",
-    description:
-      "Este es un modelo de class elegante que se distingue por sus dos hebillas en lugar de cordones (de las cuales una cuenta con un elástico), lo que le confiere una apariencia sofisticada y versátil, adecuada tanto para ocasiones formales como informales.",
+    description: descriptions.find((d) => d.id === "2-hebillas")?.desc,
     color: "Marrón",
     leather: "Cuero Vacuno",
     codigo: "2 Hebillas",
@@ -1095,8 +1121,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "bajos",
-    description:
-      "Un borcego suelto y robusto de caña baja a la altura del tobillo. Las suelas cuentan con una combinación de cuero y goma apta para diversos tipos de terreno.",
+    description: descriptions.find((d) => d.id === "borcego-corto")?.desc,
     color: "Natural",
     leather: "Cuero vacuno",
     codigo: "Borcego Corto",
@@ -1115,8 +1140,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "bajos",
-    description:
-      "Un borcego suelto y robusto de caña baja a la altura del tobillo. Las suelas cuentan con una combinación de cuero y goma apta para diversos tipos de terreno.",
+    description: descriptions.find((d) => d.id === "borcego-corto")?.desc,
     color: "Negro",
     leather: "Cuero vacuno granulado",
     codigo: "Borcego Corto",
@@ -1134,8 +1158,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "bajos",
-    description:
-      "Un borcego suelto y robusto de caña baja a la altura del tobillo. Las suelas cuentan con una combinación de cuero y goma apta para diversos tipos de terreno.",
+    description: descriptions.find((d) => d.id === "borcego-corto")?.desc,
     color: "Piedra",
     leather: "Cuero vacuno",
     codigo: "Borcego Corto",
@@ -1154,8 +1177,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "bajos",
-    description:
-      "Un borcego suelto y robusto de caña baja a la altura del tobillo. Las suelas cuentan con una combinación de cuero y goma apta para diversos tipos de terreno.",
+    description: descriptions.find((d) => d.id === "borcego-corto")?.desc,
     color: "Guinda",
     leather: "Cuero vacuno",
     codigo: "Borcego Corto",
@@ -1173,8 +1195,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "altos",
-    description:
-      "Un borcego rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
+    description: descriptions.find((d) => d.id === "borcego-texano")?.desc,
     color: "Negro",
     leather: "Búfalo",
     codigo: "Borcego Texano",
@@ -1192,8 +1213,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "altos",
-    description:
-      "Un borcego rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
+    description: descriptions.find((d) => d.id === "borcego-texano")?.desc,
     color: "Suela",
     leather: "Búfalo",
     codigo: "Borcego Texano",
@@ -1211,8 +1231,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "altos",
-    description:
-      "Un borcego rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
+    description: descriptions.find((d) => d.id === "borcego-texano")?.desc,
     color: "Marrón",
     leather: "Búfalo",
     codigo: "Borcego Texano",
@@ -1230,8 +1249,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "urbana",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior. La boca del calzado cuenta con un refuerzo acolchonado agradable al uso cotidiano.",
+    description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Suela",
     leather: "Cuero vacuno granulado",
     codigo: "Zap",
@@ -1249,8 +1267,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "urbana",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior. La boca del calzado cuenta con un refuerzo acolchonado agradable al uso cotidiano.",
+    description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Marrón",
     leather: "Cuero vacuno granulado",
     codigo: "Zap",
@@ -1268,8 +1285,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "urbana",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior. La boca del calzado cuenta con un refuerzo acolchonado agradable al uso cotidiano.",
+    description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Negro",
     leather: "Cuero vacuno granulado",
     codigo: "Zap",
@@ -1287,8 +1303,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "urbana",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior. La boca del calzado cuenta con un refuerzo acolchonado agradable al uso cotidiano.",
+    description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Negro Gastado",
     leather: "Cuero vacuno granulado",
     codigo: "Zap",
@@ -1306,8 +1321,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "urbana",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior. La boca del calzado cuenta con un refuerzo acolchonado agradable al uso cotidiano.",
+    description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Azul",
     leather: "Cuero vacuno granulado",
     codigo: "Zap",
@@ -1325,8 +1339,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "urbana",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior. La boca del calzado cuenta con un refuerzo acolchonado agradable al uso cotidiano.",
+    description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Verde Claro",
     leather: "Cuero vacuno granulado",
     codigo: "Zap",
@@ -1344,8 +1357,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "urbana",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior. La boca del calzado cuenta con un refuerzo acolchonado agradable al uso cotidiano.",
+    description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Verde",
     leather: "Cuero vacuno granulado",
     codigo: "Zap",
@@ -1363,8 +1375,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "urbana",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior. La boca del calzado cuenta con un refuerzo acolchonado agradable al uso cotidiano.",
+    description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Rojo",
     leather: "Cuero vacuno granulado",
     codigo: "Zap",
@@ -1382,8 +1393,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "urbana",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior. La boca del calzado cuenta con un refuerzo acolchonado agradable al uso cotidiano.",
+    description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Blanco con talón negro",
     leather: "Cuero vacuno",
     codigo: "Zap",
@@ -1401,8 +1411,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "urbana",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior. La boca del calzado cuenta con un refuerzo acolchonado agradable al uso cotidiano.",
+    description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Blanco con talón rojo",
     leather: "Cuero vacuno",
     codigo: "Zap",
@@ -1420,8 +1429,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "SC",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior. La boca del calzado cuenta con un refuerzo acolchonado agradable al uso cotidiano.",
+    description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Suela",
     leather: "Gamuza",
     codigo: "Zap SC",
@@ -1439,8 +1447,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "SC",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior. La boca del calzado cuenta con un refuerzo acolchonado agradable al uso cotidiano.",
+    description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Arena",
     leather: "Gamuza",
     codigo: "Zap SC",
@@ -1458,8 +1465,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "bota",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior.",
+    description: descriptions.find((d) => d.id === "sneaker-bota")?.desc,
     color: "Azul",
     leather: "Gamuza",
     codigo: "Zap",
@@ -1477,8 +1483,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "bota",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior.",
+    description: descriptions.find((d) => d.id === "sneaker-bota")?.desc,
     color: "Rojo",
     leather: "Gamuza",
     codigo: "Zap",
@@ -1496,8 +1501,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "bota",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior.",
+    description: descriptions.find((d) => d.id === "sneaker-bota")?.desc,
     color: "Amarillo",
     leather: "Gamuza",
     codigo: "Zap",
@@ -1515,8 +1519,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "bota",
-    description:
-      "Zapatillas de uso urbano confeccionadas en cuero 100% vacuno argentino tanto en su exterior como en su interior.",
+    description: descriptions.find((d) => d.id === "sneaker-bota")?.desc,
     color: "Verde",
     leather: "Cuero vacuno",
     codigo: "Zap",
@@ -2380,8 +2383,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "swann",
-    description:
-      "Este modelo se caracteriza por estar confeccionado a partir de una sola pieza de cuero, lo que le confiere un aspecto elegante y limpio, ya que no tiene costuras visibles en la parte superior del zapato. ",
+    description: descriptions.find((d) => d.id === "swann")?.desc,
     color: "Maíz",
     leather: "Cuero vacuno",
     codigo: "Swann",
@@ -2399,8 +2401,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "swann",
-    description:
-      "Este modelo se caracteriza por estar confeccionado a partir de una sola pieza de cuero, lo que le confiere un aspecto elegante y limpio, ya que no tiene costuras visibles en la parte superior del zapato. ",
+    description: descriptions.find((d) => d.id === "swann")?.desc,
     color: "Marrón",
     leather: "Cuero vacuno",
     codigo: "Swann",
@@ -3273,8 +3274,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Maíz",
     leather: "Cuero vacuno",
     codigo: "1122 Bespoke",
@@ -3292,8 +3292,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Pátina Museum",
     leather: "Cuero vacuno",
     codigo: "1122 Bespoke",
@@ -3311,8 +3310,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Rojo",
     leather: "Cuero Vacuno",
     codigo: "1122 Bespoke",
@@ -3330,8 +3328,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Verde Inglés",
     leather: "Gamuza",
     codigo: "1122 Bespoke",
@@ -3349,8 +3346,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "con-hebillas",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Maíz",
     leather: "Cuero vacuno",
     codigo: "1047 Bespoke",
@@ -3368,8 +3364,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "con-hebillas",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Maíz",
     leather: "Cuero vacuno",
     codigo: "1047 Bespoke HD",
@@ -3387,8 +3382,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Marrón Oscuro",
     leather: "Cuero vacuno",
     codigo: "1108 Bespoke",
@@ -3406,8 +3400,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "oxfords",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Negro",
     leather: "Cuero vacuno",
     codigo: "1103 Bespoke",
@@ -3425,8 +3418,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Maíz",
     leather: "Cuero vacuno",
     codigo: "1116 Bespoke",
@@ -3444,8 +3436,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Cognac",
     leather: "Cuero vacuno",
     codigo: "1116 Bespoke",
@@ -3463,8 +3454,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Suela",
     leather: "Cuero vacuno",
     codigo: "1116 Bespoke",
@@ -3482,8 +3472,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "swann",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Tabaco",
     leather: "Vacuno",
     codigo: "Swann Bespoke",
@@ -3501,8 +3490,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "swann",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Café",
     leather: "Vacuno",
     codigo: "Swann Bespoke",
@@ -3520,8 +3508,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "swann",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Museum",
     leather: "Vacuno",
     codigo: "Swann Bespoke",
@@ -3534,13 +3521,13 @@ export const modelos = [
     ],
   },
   {
+    isEncargo: "true",
     id: "Bota-Inglesa-Nandu",
     name: "Bota Inglesa",
     class: "BESPOKE",
     type: "botas",
     subtype: "inglesa",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente. Este cuero es a pedido, contra disponibilidad del material.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Natural",
     leather: "Ñandú Argentino",
     codigo: "Bota Inglesa Bespoke",
@@ -3553,13 +3540,13 @@ export const modelos = [
     ],
   },
   {
+    isEncargo: "true",
     id: "Bota-Inglesa-Negro-Bespoke",
     name: "Bota Inglesa",
     class: "BESPOKE",
     type: "botas",
     subtype: "inglesa",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente. Este cuero es a pedido, contra disponibilidad del material.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Negro",
     leather: "Cuero Vacuno",
     codigo: "Bota Inglesa Bespoke",
@@ -3572,13 +3559,13 @@ export const modelos = [
     ],
   },
   {
+    isEncargo: "true",
     id: "Bota-Inglesa-Bufalo-Negro-Bespoke",
     name: "Bota Inglesa",
     class: "BESPOKE",
     type: "botas",
     subtype: "inglesa",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente. Este cuero es a pedido, contra disponibilidad del material.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Negro",
     leather: "Búfalo (Buffalo)",
     codigo: "Bota Inglesa Bespoke",
@@ -3591,13 +3578,13 @@ export const modelos = [
     ],
   },
   {
+    isEncargo: "true",
     id: "Bota-Inglesa-Elefante",
     name: "Bota Inglesa",
     class: "BESPOKE",
     type: "botas",
     subtype: "inglesa",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente. Este cuero es a pedido, contra disponibilidad del material.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Marrón Oscuro",
     leather: "Elefante (Elephant)",
     codigo: "Bota Inglesa Bespoke",
@@ -3615,8 +3602,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Marrón",
     leather: "Vacuno",
     codigo: "Wholecut 1116",
@@ -3634,8 +3620,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Marrón",
     leather: "Vacuno",
     codigo: "1100 Bespoke",
@@ -3653,8 +3638,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "botas",
     subtype: "petta",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Marrón",
     leather: "Vacuno",
     codigo: "Bota Petta Bespoke",
@@ -3672,8 +3656,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente. Este cuero es a pedido, contra disponibilidad del material.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Marrón Oscuro",
     leather: "Elefante (Elephant)",
     codigo: "1100 Bespoke",
@@ -3691,8 +3674,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente. Este cuero es a pedido, contra disponibilidad del material.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Negro",
     leather: "Caimán (Alligator)",
     codigo: "1100 Bespoke",
@@ -3710,8 +3692,7 @@ export const modelos = [
     class: "BESPOKE",
     type: "zapatos",
     subtype: "swann",
-    description:
-      "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Natural",
     leather: "Vacuno",
     codigo: "Swann Bespoke",
@@ -3728,8 +3709,7 @@ export const modelos = [
     id: "Cinturon-Clasico-Tricolor",
     name: "Cinturón Clásico Tricolor",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class clásico que cuenta con una hebilla plateada y un ancho de 5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Rojo - Blanco - Verde",
     leather: "Vacuno",
     codigo: "Cinturón Clásico Tricolor",
@@ -3740,8 +3720,7 @@ export const modelos = [
     id: "Cinturon-Rustico-Maiz",
     name: "Cinturón Rústico",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class rústico Se caracteriza por su textura más áspera y su ancho de 5,5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-rustico")?.desc,
     color: "Maíz",
     leather: "Vacuno",
     codigo: "Cinturón Rústico",
@@ -3752,8 +3731,7 @@ export const modelos = [
     id: "Cinturon-Rustico-Marron-Oscuro",
     name: "Cinturón Rústico",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class rústico Se caracteriza por su textura más áspera y su ancho de 5,5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-rustico")?.desc,
     color: "Marrón Oscuro",
     leather: "Vacuno",
     codigo: "Cinturón Rústico",
@@ -3764,8 +3742,7 @@ export const modelos = [
     id: "Cinturon-Rustico-Blanco",
     name: "Cinturón Rústico",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class rústico Se caracteriza por su textura más áspera y su ancho de 5,5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-rustico")?.desc,
     color: "Blanco",
     leather: "Vacuno",
     codigo: "Cinturón Rústico",
@@ -3776,8 +3753,7 @@ export const modelos = [
     id: "Cinturon-Clasico-Guinda",
     name: "Cinturón Clásico",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class clásico que cuenta con una hebilla plateada y un ancho de 5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Guinda",
     leather: "Vacuno",
     codigo: "Cinturón Clásico",
@@ -3788,8 +3764,7 @@ export const modelos = [
     id: "Cinturon-Clasico-Maiz",
     name: "Cinturón Clásico",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class clásico que cuenta con una hebilla plateada y un ancho de 5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Maíz",
     leather: "Vacuno",
     codigo: "Cinturón Clásico",
@@ -3800,8 +3775,7 @@ export const modelos = [
     id: "Cinturon-Clasico-Graneado-Marron",
     name: "Cinturón Clásico",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class clásico que cuenta con una hebilla plateada y un ancho de 5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Marrón",
     leather: "Vacuno Graneado",
     codigo: "Cinturón Clásico",
@@ -3812,8 +3786,7 @@ export const modelos = [
     id: "Cinturon-Clasico-Rojo",
     name: "Cinturón Clásico",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class clásico que cuenta con una hebilla plateada y un ancho de 5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Rojo",
     leather: "Vacuno",
     codigo: "Cinturón Clásico",
@@ -3824,8 +3797,7 @@ export const modelos = [
     id: "Cinturon-Clasico-Negro",
     name: "Cinturón Clásico",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class clásico que cuenta con una hebilla plateada y un ancho de 5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Negro",
     leather: "Vacuno",
     codigo: "Cinturón Clásico",
@@ -3836,8 +3808,7 @@ export const modelos = [
     id: "Cinturon-Clasico-Verde",
     name: "Cinturón Clásico",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class clásico que cuenta con una hebilla plateada y un ancho de 5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Verde",
     leather: "Vacuno",
     codigo: "Cinturón Clásico",
@@ -3848,8 +3819,7 @@ export const modelos = [
     id: "Cinturon-Clasico-Azul",
     name: "Cinturón Clásico",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class clásico que cuenta con una hebilla plateada y un ancho de 5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Azul",
     leather: "Vacuno",
     codigo: "Cinturón Clásico",
@@ -3860,8 +3830,7 @@ export const modelos = [
     id: "Cinturon-Clasico-Gamuza-Marron",
     name: "Cinturón Clásico",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class clásico que cuenta con una hebilla plateada y un ancho de 5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Marrón",
     leather: "Gamuza",
     codigo: "Cinturón Clásico",
@@ -3872,8 +3841,7 @@ export const modelos = [
     id: "Cinturon-Clasico-Gamuza-Rojo",
     name: "Cinturón Clásico",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class clásico que cuenta con una hebilla plateada y un ancho de 5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Rojo",
     leather: "Gamuza",
     codigo: "Cinturón Clásico",
@@ -3884,8 +3852,7 @@ export const modelos = [
     id: "Cinturon-Clasico-Gamuza-Azul",
     name: "Cinturón Clásico",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class clásico que cuenta con una hebilla plateada y un ancho de 5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Azul",
     leather: "Gamuza",
     codigo: "Cinturón Clásico",
@@ -3896,8 +3863,7 @@ export const modelos = [
     id: "Cinturon-Clasico-Gamuza-Amarillo",
     name: "Cinturón Clásico",
     class: "ACCESORIOS",
-    description:
-      "Este modelo es un cinturón de class clásico que cuenta con una hebilla plateada y un ancho de 5 centímetros.",
+    description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Amarillo",
     leather: "Gamuza",
     codigo: "Cinturón Clásico",

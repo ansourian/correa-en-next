@@ -66,7 +66,7 @@ export default function Modelos({ params }) {
           {!modelo.isAgotado && !modelo.isNuevo && modelo.isEncargo && (
             <Tooltip
               arrow="top"
-              title="Este modelo es exclusivamente por encargo"
+              title="Este modelo es exclusivamente por encargo, contra disponibilidad del material."
               placement="right"
             >
               <Label
