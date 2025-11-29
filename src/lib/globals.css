@@ -1742,6 +1742,7 @@ footer {
   background-color: #12141f;
   color: #fff;
   text-align: center;
+  overflow-x: hidden;
 }
 .div-footer {
   display: flex;
@@ -1779,12 +1780,28 @@ footer {
   border-right: 1px solid #ffffff17;
   flex: 1;
 }
+.div-footer_ayuda_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
 .div-footer_modelos {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   border-right: 1px solid #ffffff17;
   flex: 1;
+}
+.div-footer_modelos_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
 }
 .div-footer_contacto {
   display: flex;
@@ -1802,9 +1819,10 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   height: 100%;
+  margin-bottom: 2rem;
 }
 .div-footer_info_contacto {
   display: flex;
@@ -1829,10 +1847,22 @@ footer {
 .instagram-logo {
   width: 7rem;
   display: flex;
+  opacity: 0.6;
+  transition: 0.4s;
 }
 .facebook-logo {
   width: 6rem;
   display: flex;
+  opacity: 0.6;
+  transition: 0.4s;
+}
+.instagram-logo:hover {
+  opacity: 1;
+  transition: 0.4s;
+}
+.facebook-logo:hover {
+  opacity: 1;
+  transition: 0.4s;
 }
 .p-footer {
   text-align: center;
@@ -1867,7 +1897,7 @@ footer {
   margin: 0;
 }
 .p-footerlinks {
-  color: #bebebe;
+  color: #949494;
   text-align: left;
   font-size: 0.9rem;
   font-weight: 300;
@@ -1875,8 +1905,7 @@ footer {
   transition: 0.4s;
 }
 .p-footerlinks:hover {
-  color: #ffdb8c !important;
-  font-weight: 300;
+  color: #ffffff !important;
   transition: 0.4s;
 }
 .phone-white {
@@ -2475,6 +2504,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    padding-top: 1rem;
   }
   footer .vertical-hr {
     visibility: hidden;
@@ -3259,7 +3289,7 @@ footer {
 
   .div-footer {
     width: 90%;
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin: 1rem auto;
     padding: 0;
     gap: 2rem;
@@ -3276,7 +3306,7 @@ footer {
 
   .h3-footer {
     font-size: 1rem;
-    margin: 1.5rem 0;
+    margin: 0 0 2rem;
   }
 
   .p-footer {
@@ -3293,21 +3323,44 @@ footer {
     margin: 0 10px 0 0;
   }
 
-  .instagram-logo {
-    width: 8rem;
-  }
-
-  .div-footer_contacto_content {
-    flex-direction: column;
-  }
-
   .div-footer_info_contacto {
     justify-content: center;
     align-items: center;
   }
 
-  .footer-maps {
-    margin: 1rem 0;
+  .div-footer_sociales {
+    border-right: none;
+    padding-bottom: 2rem;
+  }
+
+  .div-footer_sociales_content {
+    margin: 1rem 0rem;
+  }
+
+  .div-footer_modelos {
+    border-right: none;
+    border-bottom: 1px solid #ffffff17;
+    padding-bottom: 2rem;
+  }
+
+  .div-footer_ayuda {
+    border-right: none;
+    border-bottom: 1px solid #ffffff17;
+    padding-bottom: 2rem;
+  }
+
+  .div-footer_contacto {
+    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #ffffff17;
+  }
+
+  .div-footer_contacto_content {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .modal-image {

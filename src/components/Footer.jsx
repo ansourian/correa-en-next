@@ -34,7 +34,7 @@ export default function Footer({}) {
         {/* <div className="vertical-hr"></div> */}
         <div className="div-footer_modelos">
           <h3 className="h3-footer">MODELOS</h3>
-          <div className="div-footer_contacto_content">
+          <div className="div-footer_modelos_content">
             <div className="div-footer_info_contacto">
               <p className="p-footerinfo">
                 <a href="/modelos/all" className="p-footerlinks">
@@ -66,7 +66,7 @@ export default function Footer({}) {
         </div>
         <div className="div-footer_ayuda">
           <h3 className="h3-footer">AYUDA</h3>
-          <div className="div-footer_contacto_content">
+          <div className="div-footer_ayuda_content">
             <div className="div-footer_info_contacto">
               <p className="p-footerinfo">
                 <a
