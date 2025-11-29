@@ -1933,7 +1933,7 @@ export const modelos = [
     subtype: "archibaldo",
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
-    color: "Verde",
+    color: "Marrón",
     leather: "Cuero vacuno",
     codigo: "226",
     previewImage: "/images/ready to wear/130 - 33.webp",

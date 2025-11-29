@@ -12,7 +12,7 @@ import React from "react"
 export default function Home() {
   return (
     <>
-      {/* <AnuncioInfo texto="¡Nuevos modelos de zapatos disponibles!" /> */}
+      {/* <AnuncioInfo texto="Nuevos modelos de zapatos disponibles" /> */}
       {/* <AnuncioApertura dia="26/03" apertura="cerrado" /> */}
       {/* <AnuncioMultiFeriado dias={["26/12", "27/12", "29/12"]} vuelta="30/12" /> */}
       <HeaderHome />

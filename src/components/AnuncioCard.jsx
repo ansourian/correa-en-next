@@ -13,13 +13,13 @@ export function AnuncioInfo({ texto }) {
 // Componente para mostrar apertura/cierre del local
 export function AnuncioApertura({ dia, apertura }) {
   const estado = apertura === "cerrado" ? "cerrado" : "abierto";
-  const style = { color: apertura === "cerrado" ? "red" : "green" };
+  const style = { color: apertura === "cerrado" ? "#ff6c6c" : "#61f369" };
 
   return (
     <div className="div-anuncio_card">
       <InfoIcon className="icon-anuncio_card" />
       <p className="p-anuncio_card">
-        Hoy {dia} el local permanecerá <span style={style}>{estado}</span>.
+        Hoy {dia} el local permanecerá <span style={style}>{estado}</span>
       </p>
     </div>
   );
