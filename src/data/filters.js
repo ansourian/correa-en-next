@@ -1,0 +1,69 @@
+export const filtros = {
+  colores: [
+    { value: "negro", label: "Negro" },
+    { value: "natural", label: "Natural" },
+    { value: "suela", label: "Suela" },
+    { value: "maiz", label: "Maíz" },
+    { value: "marron", label: "Marrón" },
+    { value: "tabaco", label: "Tabaco" },
+    { value: "cafe", label: "Café" },
+    { value: "chocolate", label: "Chocolate" },
+    { value: "rojo", label: "Rojo" },
+    { value: "azul", label: "Azul" },
+    { value: "verde", label: "Verde" },
+    { value: "gris", label: "Gris" },
+    { value: "amarillo", label: "Amarillo" },
+  ],
+
+  linea: [
+    { value: "ready-to-wear", label: "Ready To Wear" },
+    { value: "made-to-order", label: "Made To Order" },
+    { value: "bespoke", label: "Bespoke" },
+  ],
+  estilo: [
+    { value: "captoe", label: "Captoe" },
+    { value: "wingtip-full-brogued", label: "Wingtip Full Brogued" },
+    { value: "wingtip-semi-brogued", label: "Wingtip Semi Brogued" },
+    { value: "plain-toe", label: "Plain Toe" },
+    { value: "wholecut", label: "Wholecut" },
+  ],
+  modelos: {
+    zapatos: [
+      { value: "oxfords", label: "Oxfords" },
+      { value: "swann", label: "Swann" },
+      { value: "derby", label: "Derby" },
+      { value: "dandy", label: "Dandy" },
+      { value: "con-hebillas", label: "Con Hebillas" },
+    ],
+    mocasines: [
+      { value: "nauticos", label: "Náuticos" },
+      { value: "archibaldo", label: "Archibaldo" },
+      { value: "doble-suela", label: "Doble Suela" },
+      { value: "vegetal", label: "Vegetal" },
+    ],
+    escarpines: [
+      { value: "slipper", label: "Slipper" },
+      { value: "MP", label: "MP" },
+      { value: "americano", label: "Americano" },
+    ],
+    botas: [
+      { value: "inglesa", label: "Inglesa" },
+      { value: "chelsea", label: "Chelsea" },
+      { value: "petta", label: "Petta" },
+      { value: "dandy", label: "Dandy" },
+      { value: "carioca", label: "Carioca" },
+      { value: "ET", label: "ET" },
+      { value: "alpina", label: "Alpina" },
+      { value: "manchester", label: "Manchester" },
+    ],
+    borcegos: [
+      { value: "altos", label: "Altos" },
+      { value: "bajos", label: "Bajos" },
+    ],
+    sneakers: [
+      { value: "urbana", label: "Urbana" },
+      { value: "bota", label: "Bota" },
+      { value: "SC", label: "SC" },
+    ],
+  },
+}

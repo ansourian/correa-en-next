@@ -1,3 +1,4 @@
+"use client"
 import { useRouter, useSearchParams } from "next/navigation"
 import React, { useEffect, useState } from "react"
 
@@ -41,17 +42,21 @@ export default function SubcategoriaBuscador({
 
   return (
     <section className="contenedor-card_models_subtypes">
-      {subcategorias.map((subtipo) => (
+      {subcategorias.map(({ value, label }) => (
         <button
-          key={subtipo}
-          onClick={() => handleSubTipoClick(subtipo)}
+          key={value}
+          data-subcategoria={value}
+          onClick={() => handleSubTipoClick(value)}
           className={`button-card_models_subtypes ${
-            selectedSubButton === subtipo ? "selected" : ""
+            selectedSubButton === value ? "selected" : ""
           }`}
-          data-subcategoria={subtipo}
         >
-          <h4 className="card-title_models">
-            {subtipo.charAt(0).toUpperCase() + subtipo.slice(1)}
+          <h4
+            className={`card-title_submodels ${
+              selectedSubButton === value ? "selected2" : ""
+            }`}
+          >
+            {label}
           </h4>
         </button>
       ))}

@@ -1,7 +1,17 @@
+"use client"
 import React, { useEffect, useState } from "react"
-import SubcategoriaBuscador from "./SubcategoriaBuscador"
 import TuneIcon from "@mui/icons-material/Tune"
 import { useSearchParams, useRouter } from "next/navigation"
+import FiltroBotones from "./FiltroBotones"
+import SubcategoriaBuscador from "./SubcategoriaBuscador"
+import {
+  AnimationOutlined,
+  ArrowDropDownOutlined,
+  BlurOnOutlined,
+  ColorLens,
+  ColorLensOutlined,
+} from "@mui/icons-material"
+import { filtros } from "@/data/filters"
 
 export default function Buscador({
   setTipoSeleccionado,
@@ -10,31 +20,80 @@ export default function Buscador({
   setSearchTerm,
   tipoSeleccionado,
   subTipoSeleccionado,
+  showLineaFilter = false,
 }) {
-  const [selectedButton, setSelectedButton] = useState(tipoSeleccionado)
   const router = useRouter()
   const searchParams = useSearchParams()
-  const params = new URLSearchParams(searchParams.toString())
+  const [selectedButton, setSelectedButton] = useState(tipoSeleccionado || null)
+
+  // sincronizar con los params 'tipo' y 'subtipo' (tu lógica original)
+  useEffect(() => {
+    const tipo = searchParams.get("tipo")
+    const subtipo = searchParams.get("subtipo")
+    if (tipo) {
+      setTipoSeleccionado(tipo)
+      setSelectedButton(tipo)
+    } else {
+      setTipoSeleccionado("")
+      setSelectedButton(null)
+    }
+    if (subtipo) setSubTipoSeleccionado(subtipo)
+    else setSubTipoSeleccionado(null)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams?.toString()])
+
+  useEffect(() => {
+    setSelectedButton(tipoSeleccionado || null)
+  }, [tipoSeleccionado])
+
+  const filtrosCount = () => {
+    let count = 0
+    if (searchParams.getAll("color").length > 0)
+      count += searchParams.getAll("color").length
+    if (searchParams.get("linea")) count++
+    if (searchParams.get("estilo")) count++
+    if (searchParams.get("tipo")) count++
+    if (searchParams.get("subtipo")) count++
+    return count
+  }
+
+  const filtrosActivos = filtrosCount() > 0
+  const colorPadre = filtrosActivos ? "#3481c7" : "black"
 
   const handleTipoClick = (tipo) => {
+    const params = new URLSearchParams(searchParams.toString())
+
     if (selectedButton === tipo) {
+      // deseleccionar (tu comportamiento original)
       setTipoSeleccionado("")
       setSelectedButton(null)
       setSubTipoSeleccionado(null)
-
       params.delete("tipo")
       params.delete("subtipo")
-
       router.push(`?${params.toString()}`, { scroll: false })
       return
     }
 
+    // seleccionar nueva categoria (tipo)
     setTipoSeleccionado(tipo)
     setSelectedButton(tipo)
-
+    // borrar subtipo anterior para que no quede inválido
     params.set("tipo", tipo)
     params.delete("subtipo")
+    router.push(`?${params.toString()}`, { scroll: false })
+  }
 
+  const handleColorClick = (color) => {
+    const params = new URLSearchParams(searchParams.toString())
+
+    if (searchParams.get("color") === color) {
+      // Si clickea el mismo color → limpiar filtro
+      params.delete("color")
+      router.push(`?${params.toString()}`, { scroll: false })
+      return
+    }
+
+    params.set("color", color)
     router.push(`?${params.toString()}`, { scroll: false })
   }
 
@@ -43,43 +102,13 @@ export default function Buscador({
   }
 
   const handleClearFilters = () => {
+    // limpiamos todo: dejamos solo el search vacío (si querés)
     setTipoSeleccionado("")
+    setSubTipoSeleccionado(null)
     setSearchTerm("")
     setSelectedButton(null)
-    setSubTipoSeleccionado(null)
-    router.push(`?`, { scroll: false })
+    router.push("?", { scroll: false })
   }
-
-  const subcategories = {
-    zapatos: ["oxfords", "swann", "derby", "dandy", "con-hebillas"],
-    mocasines: ["nauticos", "archibaldo", "doble-suela", "vegetal"],
-    escarpines: ["slipper", "MP", "americano"],
-    botas: [
-      "inglesa",
-      "chelsea",
-      "petta",
-      "dandy",
-      "carioca",
-      "ET",
-      "alpina",
-      "manchester",
-    ],
-    borcegos: ["altos", "bajos"],
-    sneakers: ["urbana", "bota", "SC"],
-    // aca puedo agregar mas subcategorias
-  }
-
-  useEffect(() => {
-    const tipo = searchParams.get("tipo")
-    const subtipo = searchParams.get("subtipo")
-
-    if (tipo) setTipoSeleccionado(tipo)
-    if (subtipo) setSubTipoSeleccionado(subtipo)
-  }, [])
-
-  useEffect(() => {
-    setSelectedButton(tipoSeleccionado)
-  }, [tipoSeleccionado])
 
   return (
     <>
@@ -97,8 +126,15 @@ export default function Buscador({
               aria-expanded="false"
               aria-controls="flush-collapseOne"
             >
-              <TuneIcon style={{ color: "black" }} />
-              <p className="p-filters">Tipos de modelos</p>
+              <TuneIcon style={{ color: colorPadre }} />
+              <p className="p-filters" style={{ color: colorPadre }}>
+                Filtros
+              </p>
+              {filtrosActivos && (
+                <p className="p-filters" style={{ color: colorPadre, marginLeft: "5px" }}>
+                  ({filtrosCount()})
+                </p>
+              )}
             </button>
           </h2>
           <div
@@ -118,8 +154,10 @@ export default function Buscador({
                   </h4>
                 </button>
               </section>
+
+              {/* FILTROS MODELOS: categorías (usa 'tipo' para no romper tu lógica) */}
               <section className="contenedor-card_models">
-                {Object.keys(subcategories).map((tipo) => (
+                {Object.keys(filtros.modelos).map((tipo) => (
                   <button
                     key={tipo}
                     onClick={() => handleTipoClick(tipo)}
@@ -128,24 +166,166 @@ export default function Buscador({
                     }`}
                     data-categoria={tipo}
                   >
-                    <h4 className="card-title_models">
+                    <h4
+                      className={`card-title_models ${
+                        selectedButton === tipo ? "selected2" : ""
+                      }`}
+                    >
                       {tipo.charAt(0).toUpperCase() + tipo.slice(1)}
                     </h4>
                   </button>
                 ))}
               </section>
             </div>
+
+            {/* SUBCATEGORIAS: mantenemos componente similar al tuyo */}
             {selectedButton &&
-              subcategories[selectedButton] &&
-              subcategories[selectedButton].length > 0 && (
+              filtros.modelos[selectedButton] &&
+              filtros.modelos[selectedButton].length > 0 && (
                 <div className="subcategoria-container">
+                  {/* Reutilizo tu SubcategoriaBuscador (no hace falta cambiarlo) */}
                   <SubcategoriaBuscador
-                    subcategorias={subcategories[selectedButton]}
+                    subcategorias={filtros.modelos[selectedButton]}
                     setSubTipoSeleccionado={setSubTipoSeleccionado}
                     initialSubtipo={subTipoSeleccionado}
                   />
                 </div>
               )}
+
+            {/* ---- filtros nuevos sin tocar 'tipo'/'subtipo' ---- */}
+            {/* SUB-ACCORDION — COLORES */}
+            <div className="accordion-item accordion-filters">
+              <h2 className="accordion-header" id="heading-colores">
+                <button
+                  className="accordion-button_filters collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse-colores"
+                  aria-expanded="false"
+                  aria-controls="collapse-colores"
+                >
+                  <ColorLensOutlined
+                    style={{
+                      color: searchParams.get("color") ? "#3481c7" : "black",
+                    }}
+                  />
+                  <p
+                    className="p-filters"
+                    style={{
+                      color: searchParams.get("color") ? "#3481c7" : "black",
+                    }}
+                  >
+                    Colores
+                  </p>
+                  <ArrowDropDownOutlined
+                    className="arrow-icon"
+                    style={{ color: "black" }}
+                  />
+                </button>
+              </h2>
+              <div
+                id="collapse-colores"
+                className="accordion-collapse collapse"
+                aria-labelledby="heading-colores"
+              >
+                <div className="accordion-body">
+                  <FiltroBotones
+                    nombreParam="color"
+                    opciones={filtros.colores}
+                    multiple={true}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* SUB-ACCORDION — LÍNEA */}
+            {showLineaFilter && (
+              <div className="accordion-item accordion-filters">
+                <h2 className="accordion-header" id="heading-linea">
+                  <button
+                    className="accordion-button_filters collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-linea"
+                    aria-expanded="false"
+                    aria-controls="collapse-linea"
+                  >
+                    <AnimationOutlined
+                      style={{
+                        color: searchParams.get("linea") ? "#3481c7" : "black",
+                      }}
+                    />
+                    <p
+                      className="p-filters"
+                      style={{
+                        color: searchParams.get("linea") ? "#3481c7" : "black",
+                      }}
+                    >
+                      Línea
+                    </p>
+                    <ArrowDropDownOutlined
+                      className="arrow-icon"
+                      style={{ color: "black" }}
+                    />
+                  </button>
+                </h2>
+                <div
+                  id="collapse-linea"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="heading-linea"
+                >
+                  <div className="accordion-body">
+                    <FiltroBotones
+                      nombreParam="linea"
+                      opciones={filtros.linea}
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+            {/* SUB-ACCORDION — ESTILO */}
+            <div className="accordion-item accordion-filters">
+              <h2 className="accordion-header" id="heading-estilo">
+                <button
+                  className="accordion-button_filters collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse-estilo"
+                  aria-expanded="false"
+                  aria-controls="collapse-estilo"
+                >
+                  <BlurOnOutlined
+                    style={{
+                      color: searchParams.get("estilo") ? "#3481c7" : "black",
+                    }}
+                  />
+                  <p
+                    className="p-filters"
+                    style={{
+                      color: searchParams.get("estilo") ? "#3481c7" : "black",
+                    }}
+                  >
+                    Estilo
+                  </p>
+                  <ArrowDropDownOutlined
+                    className="arrow-icon"
+                    style={{ color: "black" }}
+                  />
+                </button>
+              </h2>
+              <div
+                id="collapse-estilo"
+                className="accordion-collapse collapse"
+                aria-labelledby="heading-estilo"
+              >
+                <div className="accordion-body">
+                  <FiltroBotones
+                    nombreParam="estilo"
+                    opciones={filtros.estilo}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <input

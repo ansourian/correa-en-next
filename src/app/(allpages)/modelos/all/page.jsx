@@ -5,13 +5,15 @@ import BannerModelos from "@/components/BannerModelos"
 import Article from "@/components/Article"
 import { modelos } from "@/data/data-modelos"
 import Buscador from "@/components/Buscador"
+import { useSearchParams } from "next/navigation"
 
 export default function AllModels() {
-  // Estados para el filtro
   const [tipoSeleccionado, setTipoSeleccionado] = useState("")
   const [subTipoSeleccionado, setSubTipoSeleccionado] = useState("")
   const [searchTerm, setSearchTerm] = useState("")
   const [filteredModels, setFilteredModels] = useState([])
+  const searchParams = useSearchParams()
+  const showLineaFilter = true
 
   useEffect(() => {
     const normalizeText = (text) => {
@@ -19,9 +21,26 @@ export default function AllModels() {
         ? text
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "")
+            .replace(/-/g, " ")
             .toLowerCase()
         : ""
     }
+
+    const coloresSeleccionados = searchParams
+      ? searchParams.getAll("color")
+      : []
+    const coloresNormalizados = coloresSeleccionados.map((c) =>
+      normalizeText(c)
+    )
+    const lineaSeleccionada = showLineaFilter ? searchParams.get("linea") : null
+
+    const estilosSeleccionados = searchParams
+      ? searchParams.getAll("estilo")
+      : []
+
+    const estilosNormalizados = estilosSeleccionados.map((e) =>
+      normalizeText(e)
+    )
 
     // Filtrar todos los modelos
     const modelosFiltrados = modelos.filter((modelo) => {
@@ -29,12 +48,24 @@ export default function AllModels() {
       const normalizedName = normalizeText(modelo.name)
       const normalizedVariant = normalizeText(modelo.variant)
       const normalizedColor = normalizeText(modelo.color)
+      const normalizedLinea = normalizeText(lineaSeleccionada)
       const matchesTipo = tipoSeleccionado
         ? modelo.type === tipoSeleccionado
         : true
       const matchesSubTipo = subTipoSeleccionado
         ? modelo.subtype === subTipoSeleccionado
         : true
+      const matchesColor =
+        coloresNormalizados.length > 0
+          ? coloresNormalizados.some((c) => normalizedColor.includes(c))
+          : true
+      const matchesLinea = lineaSeleccionada
+        ? normalizeText(modelo.class) === normalizedLinea
+        : true
+      const matchesEstilo =
+        estilosNormalizados.length > 0
+          ? estilosNormalizados.includes(normalizeText(modelo.variant || ""))
+          : true
       const isNotBelt = modelo.class !== "ACCESORIOS"
       return (
         (normalizedName.includes(normalizedTerm) ||
@@ -42,12 +73,20 @@ export default function AllModels() {
           normalizedColor.includes(normalizedTerm)) &&
         matchesTipo &&
         matchesSubTipo &&
+        matchesColor &&
+        matchesLinea &&
+        matchesEstilo &&
         isNotBelt
       )
     })
 
     setFilteredModels(modelosFiltrados)
-  }, [searchTerm, tipoSeleccionado, subTipoSeleccionado])
+  }, [
+    searchTerm,
+    tipoSeleccionado,
+    subTipoSeleccionado,
+    searchParams?.toString(),
+  ])
 
   const MODELS_PER_PAGE = 32
   const [visibleCount, setVisibleCount] = useState(MODELS_PER_PAGE)
@@ -75,6 +114,7 @@ export default function AllModels() {
         searchTerm={searchTerm}
         tipoSeleccionado={tipoSeleccionado}
         subTipoSeleccionado={subTipoSeleccionado}
+        showLineaFilter
       />
       {/* <section id="lista-productos">
         {filteredModels.map((modelo) => (
