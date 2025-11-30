@@ -2,9 +2,11 @@ export const filtros = {
   colores: [
     { value: "negro", label: "Negro" },
     { value: "natural", label: "Natural" },
+    { value: "arena", label: "Arena" },
     { value: "suela", label: "Suela" },
     { value: "maiz", label: "Maíz" },
     { value: "marron", label: "Marrón" },
+    { value: "guinda", label: "Guinda" },
     { value: "tabaco", label: "Tabaco" },
     { value: "cafe", label: "Café" },
     { value: "chocolate", label: "Chocolate" },
@@ -12,6 +14,7 @@ export const filtros = {
     { value: "azul", label: "Azul" },
     { value: "verde", label: "Verde" },
     { value: "gris", label: "Gris" },
+    { value: "violeta", label: "Violeta" },
     { value: "amarillo", label: "Amarillo" },
   ],
 
@@ -43,7 +46,7 @@ export const filtros = {
     mocasines: [
       { value: "nauticos", label: "Náuticos" },
       { value: "archibaldo", label: "Archibaldo" },
-      { value: "doble-suela", label: "Doble Suela" },
+      { value: "clasicos", label: "Clásicos" },
       { value: "vegetal", label: "Vegetal" },
     ],
     escarpines: [

@@ -90,6 +90,22 @@ export default function Modelos({ params }) {
                 />
               </Tooltip>
             )}
+          {!modelo.isAgotado &&
+            !modelo.isNuevo &&
+            !modelo.isEncargo &&
+            !modelo.isFavorito &&
+            modelo.isMedida && (
+              <Tooltip
+                arrow="top"
+                title="Este modelo es únicamente de realización a medida."
+                placement="right"
+              >
+                <Label
+                  type="medida"
+                  customStyle={{ top: "10%", left: "10%" }}
+                />
+              </Tooltip>
+            )}
         </div>
         <div className="row div-model">
           <h4 className="h4-model">Descripción</h4>

@@ -10,11 +10,15 @@ export default function Label({ type, customStyle = {} }) {
     },
     encargo: {
       text: "POR ENCARGO",
-      background: "#000000",
+      background: "#343956",
     },
     favorito: {
       text: "MÁS ELEGIDO",
       background: "#ff9e01",
+    },
+    medida: {
+      text: "A MEDIDA",
+      background: "#000000",
     },
   }
 

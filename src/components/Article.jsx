@@ -39,6 +39,13 @@ export default function Article({ params }) {
                 customStyle={{ top: "10%", left: "10%" }}
               />
             )}
+          {!modelo.isAgotado &&
+            !modelo.isNuevo &&
+            !modelo.isEncargo &&
+            !modelo.isFavorito &&
+            modelo.isMedida && (
+              <Label type="medida" customStyle={{ top: "10%", left: "10%" }} />
+            )}
           <h4 className="model-titles">{modelo.name}</h4>
           <h3 className="h3-class">{modelo.class}</h3>
           <div className="div-color-variant-article">

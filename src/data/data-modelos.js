@@ -1,6 +1,7 @@
 // isNuevo: "true", // Para marcar los modelos nuevos
 // isEncargo: "true", // Para marcar los modelos por encargo
 // isAgotado: "true", // Para marcar los modelos agotados (tiene prioridad sobre "isNuevo")
+// isMedida: "true", // Para marcar los modelos a medida
 
 const descriptions = [
   {
@@ -912,14 +913,14 @@ export const modelos = [
     ],
   },
   {
-    id: "Dandy-1100-Gamuza-Marron",
+    id: "Dandy-1100-Gamuza-Chocolate",
     name: "Dandy Mod. 1100",
     variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "dandy",
     description: descriptions.find((d) => d.id === "dandy")?.desc,
-    color: "Marrón",
+    color: "Chocolate",
     leather: "Gamuza",
     codigo: "1100",
     previewImage: "/images/ready to wear/131 - 12.webp",
@@ -1027,14 +1028,14 @@ export const modelos = [
     ],
   },
   {
-    id: "Bota-Dandy-Gamuza-Marron",
+    id: "Bota-Dandy-Gamuza-Chocolate",
     name: "Bota Inglesa Dandy",
     variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "botas",
     subtype: "dandy",
     description: descriptions.find((d) => d.id === "dandy")?.desc,
-    color: "Marrón",
+    color: "Chocolate",
     leather: "Gamuza",
     codigo: "Bota Dandy",
     previewImage: "/images/ready to wear/131 - 21.webp",
@@ -1161,14 +1162,14 @@ export const modelos = [
   },
   {
     isNuevo: "true",
-    id: "Borcego-Corto-Natural",
+    id: "Borcego-Corto-Suela",
     name: "Borcego Corto",
     variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "bajos",
     description: descriptions.find((d) => d.id === "borcego-corto")?.desc,
-    color: "Natural",
+    color: "Suela",
     leather: "Cuero vacuno",
     codigo: "Borcego Corto",
     previewImage: "/images/ready to wear/180 - 5.webp",
@@ -1277,14 +1278,14 @@ export const modelos = [
     ],
   },
   {
-    id: "Borcego-Texano-Bufalo-Marron",
+    id: "Borcego-Texano-Bufalo-Chocolate",
     name: "Borcego Texano",
     variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "altos",
     description: descriptions.find((d) => d.id === "borcego-texano")?.desc,
-    color: "Marrón",
+    color: "Chocolate",
     leather: "Búfalo",
     codigo: "Borcego Texano",
     previewImage: "/images/made by order/130 - 12.webp",
@@ -1314,13 +1315,13 @@ export const modelos = [
     ],
   },
   {
-    id: "Sneaker-Marron",
+    id: "Sneaker-Chocolate",
     name: "Sneakers Urbanas",
     class: "READY TO WEAR",
     type: "sneakers",
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
-    color: "Marrón",
+    color: "Chocolate",
     leather: "Cuero vacuno granulado",
     codigo: "Zap",
     previewImage: "/images/ready to wear/117 - 10.webp",
@@ -1759,11 +1760,11 @@ export const modelos = [
     name: "Mocasín Mod. 800",
     class: "READY TO WEAR",
     type: "mocasines",
-    subtype: "doble-suela",
+    subtype: "clasicos",
     description:
       "Gracias a su liviana construccion es un modelo ideal para aquellas personas que buscan una comodidad superior. Únicamente realizados en cuero de Cabritilla y cuenta con elásticos internos. Tambien disponible en su horma de ancho extraordinario.",
     color: "Negro",
-    leather: "Cuero vacuno",
+    leather: "Cabretilla",
     codigo: "Mocasín 800",
     previewImage: "/images/ready to wear/150 - 29.webp",
     images: [
@@ -1774,15 +1775,15 @@ export const modelos = [
     ],
   },
   {
-    id: "Mocasin-800-Marron",
+    id: "Mocasin-800-Guinda",
     name: "Mocasín Mod. 800",
     class: "READY TO WEAR",
     type: "mocasines",
-    subtype: "doble-suela",
+    subtype: "clasicos",
     description:
       "Gracias a su liviana construccion es un modelo ideal para aquellas personas que buscan una comodidad superior. Únicamente realizados en cuero de Cabritilla y cuenta con elásticos internos. Tambien disponible en su horma de ancho extraordinario.",
-    color: "Marrón",
-    leather: "Cuero vacuno",
+    color: "Guinda",
+    leather: "Cabretilla",
     codigo: "Mocasín 800",
     previewImage: "/images/ready to wear/155 - 1.webp",
     images: [
@@ -1793,15 +1794,15 @@ export const modelos = [
     ],
   },
   {
-    id: "Mocasin-800-Suela",
+    id: "Mocasin-800-Marron",
     name: "Mocasín Mod. 800",
     class: "READY TO WEAR",
     type: "mocasines",
-    subtype: "doble-suela",
+    subtype: "clasicos",
     description:
       "Gracias a su liviana construccion es un modelo ideal para aquellas personas que buscan una comodidad superior. Únicamente realizados en cuero de Cabritilla y cuenta con elásticos internos. Tambien disponible en su horma de ancho extraordinario.",
-    color: "Suela",
-    leather: "Cuero vacuno",
+    color: "Marrón",
+    leather: "Cabretilla",
     codigo: "Mocasín 800",
     previewImage: "/images/ready to wear/153 - 13.webp",
     images: [
@@ -1835,7 +1836,7 @@ export const modelos = [
     name: "Mocasín Americano (Doble Suela)",
     class: "READY TO WEAR",
     type: "mocasines",
-    subtype: "doble-suela",
+    subtype: "clasicos",
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Suela",
@@ -1854,7 +1855,7 @@ export const modelos = [
     name: "Mocasín Americano (Doble Suela)",
     class: "READY TO WEAR",
     type: "mocasines",
-    subtype: "doble-suela",
+    subtype: "clasicos",
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Guinda",
@@ -1873,7 +1874,7 @@ export const modelos = [
     name: "Mocasín Americano (Doble Suela)",
     class: "READY TO WEAR",
     type: "mocasines",
-    subtype: "doble-suela",
+    subtype: "clasicos",
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Negro",
@@ -1989,7 +1990,7 @@ export const modelos = [
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Marrón",
-    leather: "Cuero vacuno",
+    leather: "Cuero vacuno (símil croco)",
     codigo: "226",
     previewImage: "/images/ready to wear/130 - 33.webp",
     images: [
@@ -2007,7 +2008,7 @@ export const modelos = [
     subtype: "vegetal",
     description:
       "Esta colaboración entre Calzados Correa e Industry Of All Nations, tiene como resultado un mocasín de cuero curtido vegetal con un enfoque ecológico.",
-    color: "Maíz",
+    color: "Natural",
     leather: "Cuero Vegetal",
     codigo: "Mocasín Industry",
     previewImage: "/images/ready to wear/123 - 32.webp",
@@ -2064,7 +2065,7 @@ export const modelos = [
     subtype: "nauticos",
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
-    color: "Marrón",
+    color: "Chocolate",
     leather: "Cuero vacuno",
     codigo: "Náutico",
     previewImage: "/images/ready to wear/149 - 9.webp",
@@ -2083,9 +2084,9 @@ export const modelos = [
     subtype: "nauticos",
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
-    color: "Marrón (Detalles Marrón)",
+    color: "Chocolate (Oscuro)",
     leather: "Cuero vacuno",
-    codigo: "Náutico",
+    codigo: "Náutico Pull-up",
     previewImage: "/images/ready to wear/149 - 1.webp",
     images: [
       "/images/ready to wear/149 - 1.webp",
@@ -2215,7 +2216,7 @@ export const modelos = [
     ],
   },
   {
-    id: "Bota-ET-Maiz",
+    id: "Bota-ET-Suela",
     name: "Bota ET",
     variant: "Captoe",
     class: "READY TO WEAR",
@@ -2223,7 +2224,7 @@ export const modelos = [
     subtype: "ET",
     description:
       "Una bota moderna y elegante ideal para combinar con jeans y con pantalones de vestir.",
-    color: "Maíz",
+    color: "Suela",
     leather: "Cuero Vacuno",
     codigo: "Bota ET",
     previewImage: "/images/ready to wear/143 - 4.webp",
@@ -2301,7 +2302,7 @@ export const modelos = [
     subtype: "oxfords",
     description:
       "Un zapato sencillo y elegante gracias a su aspecto liso y sin picar. Su combinación de colores le otorgan mucha presencia. ",
-    color: "Marrón - Maíz",
+    color: "Suela - Maíz",
     leather: "Cuero vacuno",
     codigo: "1122 Liso",
     previewImage: "/images/made by order/112 - 25.webp",
@@ -2391,7 +2392,7 @@ export const modelos = [
   {
     id: "Oxford-1108-Suela-Gamuza-Marron",
     name: "Oxford Mod. 1108",
-    variant: "Wingtip Full Brogued",
+    variant: "Captoe Full Brogued",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
@@ -2427,14 +2428,14 @@ export const modelos = [
     ],
   },
   {
-    id: "Oxford-1103-Marron-Verde",
+    id: "Oxford-1103-Chocolate-Verde",
     name: "Oxford Mod. 1103",
     variant: "Captoe",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
-    color: "Marrón - Verde",
+    color: "Chocolate - Verde",
     leather: "Combinado de Anca de Potro, Gamuza y Cuero Vacuno",
     codigo: "1103",
     previewImage: "/images/made by order/137 - 16.webp",
@@ -2584,7 +2585,7 @@ export const modelos = [
     ],
   },
   {
-    id: "Bota-Alpina-1101-Marron-Oscuro",
+    id: "Bota-Alpina-1101-Chocolate",
     name: "Bota Alpina Mod. 1101",
     variant: "Plain Toe",
     class: "MADE TO ORDER",
@@ -2592,7 +2593,7 @@ export const modelos = [
     subtype: "alpina",
     description:
       "Esta bota Derby se caracteriza por no contar con picados. Este diseño proporciona mayor comodidad y ajuste, ya que la lengüeta se puede ajustar de acuerdo con el ancho del pie.",
-    color: "Marrón Oscuro",
+    color: "Chocolate",
     leather: "Cuero vacuno",
     codigo: "Bota Alpina",
     previewImage: "/images/made by order/130 - 22.webp",
@@ -3360,6 +3361,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Oxford-1122-Bespoke-Maiz",
     name: "Oxford Mod. 1122",
     variant: "Wingtip Full Brogued",
@@ -3379,6 +3381,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Oxford-1122-Museum",
     name: "Oxford Mod. 1122",
     variant: "Wingtip Full Brogued",
@@ -3398,6 +3401,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Oxford-1122-Bespoke-Rojo",
     name: "Oxford Mod. 1122",
     variant: "Wingtip Full Brogued",
@@ -3417,6 +3421,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Oxford-1122-Bespoke-Gamuza-Verde",
     name: "Oxford Mod. 1122",
     variant: "Wingtip Full Brogued",
@@ -3436,6 +3441,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "1047-Maiz-Bespoke",
     name: "1 Hebilla Mod. 1047",
     variant: "Plain Toe",
@@ -3455,6 +3461,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "1047-Suela-HD-Bespoke",
     name: "1 Hebilla Mod. 1047 (Horma Delfín)",
     variant: "Plain Toe",
@@ -3462,7 +3469,7 @@ export const modelos = [
     type: "zapatos",
     subtype: "con-hebillas",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
-    color: "Maíz",
+    color: "Suela",
     leather: "Cuero vacuno",
     codigo: "1047 Bespoke HD",
     previewImage: "/images/bespoke/152 - 12.webp",
@@ -3474,14 +3481,15 @@ export const modelos = [
     ],
   },
   {
-    id: "Oxford-1108-Bespoke-Marron",
+    isMedida: "true",
+    id: "Oxford-1108-Bespoke-Cafe",
     name: "Oxford Mod. 1108",
     variant: "Captoe Semi Brogued",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
-    color: "Marrón Oscuro",
+    color: "Café",
     leather: "Cuero vacuno",
     codigo: "1108 Bespoke",
     previewImage: "/images/bespoke/112 - 5.webp",
@@ -3493,6 +3501,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Oxford-1103-Bespoke-Negro",
     name: "Oxford Mod. 1103",
     variant: "Captoe",
@@ -3512,6 +3521,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Derby-1116-Maiz",
     name: "Derby Mod. 1116",
     class: "BESPOKE",
@@ -3530,6 +3540,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Derby-1116-Cognac",
     name: "Derby Mod. 1116",
     class: "BESPOKE",
@@ -3548,6 +3559,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Derby-1116-Suela",
     name: "Derby Mod. 1116",
     class: "BESPOKE",
@@ -3566,6 +3578,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Swann-Wholecut-DC-Tabaco",
     name: "Mod. Swann Wholecut (Diente de Caballo)",
     variant: "Wholecut",
@@ -3585,6 +3598,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Swann-Wholecut-Cafe",
     name: "Mod. Swann Wholecut",
     variant: "Wholecut",
@@ -3604,6 +3618,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Swann-Museum",
     name: "Mod. Swann Wholecut",
     variant: "Wholecut",
@@ -3623,7 +3638,7 @@ export const modelos = [
     ],
   },
   {
-    isEncargo: "true",
+    isMedida: "true",
     id: "Bota-Inglesa-Nandu",
     name: "Bota Inglesa",
     variant: "Plain Toe",
@@ -3643,7 +3658,7 @@ export const modelos = [
     ],
   },
   {
-    isEncargo: "true",
+    isMedida: "true",
     id: "Bota-Inglesa-Negro-Bespoke",
     name: "Bota Inglesa",
     variant: "Plain Toe",
@@ -3663,7 +3678,7 @@ export const modelos = [
     ],
   },
   {
-    isEncargo: "true",
+    isMedida: "true",
     id: "Bota-Inglesa-Bufalo-Negro-Bespoke",
     name: "Bota Inglesa",
     variant: "Plain Toe",
@@ -3683,7 +3698,7 @@ export const modelos = [
     ],
   },
   {
-    isEncargo: "true",
+    isMedida: "true",
     id: "Bota-Inglesa-Elefante",
     name: "Bota Inglesa",
     variant: "Plain Toe",
@@ -3703,13 +3718,14 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "1116-Bespoke",
     name: "Wholecut Mod. 1116 (HD)",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "derby",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
-    color: "Marrón",
+    color: "Suela",
     leather: "Vacuno",
     codigo: "Wholecut 1116",
     previewImage: "/images/bespoke/114 - 19.webp",
@@ -3721,6 +3737,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "1100-Wholecut-Marron",
     name: "Mod. 1100 Wholecut",
     variant: "Plain Toe Semi Brogued",
@@ -3740,6 +3757,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Bota-Petta-Marron",
     name: "Bota Petta",
     variant: "Plain Toe",
@@ -3759,6 +3777,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Derby-1100-Elefante",
     name: "Derby Mod. 1100",
     variant: "Plain Toe",
@@ -3766,7 +3785,7 @@ export const modelos = [
     type: "zapatos",
     subtype: "derby",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
-    color: "Marrón Oscuro",
+    color: "Chocolate",
     leather: "Elefante (Elephant)",
     codigo: "1100 Bespoke",
     previewImage: "/images/bespoke/130 - 1.webp",
@@ -3778,6 +3797,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Derby-1100-Cocodrilo",
     name: "Derby Mod. 1100",
     variant: "Plain Toe",
@@ -3797,6 +3817,7 @@ export const modelos = [
     ],
   },
   {
+    isMedida: "true",
     id: "Swann-Tatuado-Natural",
     name: "Mod. Swann",
     variant: "Wholecut",
@@ -3816,7 +3837,6 @@ export const modelos = [
     ],
   },
   {
-    isNuevo: "true",
     id: "Cinturon-Clasico-Tricolor",
     name: "Cinturón Clásico Tricolor",
     class: "ACCESORIOS",
