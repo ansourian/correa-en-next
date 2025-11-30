@@ -1330,6 +1330,7 @@ button:focus:not(:focus-visible) {
   border: 0;
   gap: 1rem;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .contenedor-card_shoe_models {
@@ -1660,6 +1661,7 @@ h5 {
   align-items: center;
   font-size: 1rem;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .card-title_submodels {
@@ -3234,6 +3236,7 @@ body {
     overflow-x: scroll;
     width: 100%;
     margin-bottom: 0;
+    flex-wrap: nowrap;
   }
 
   .subcategoria-container {

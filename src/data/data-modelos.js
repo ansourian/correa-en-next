@@ -252,6 +252,7 @@ export const modelos = [
   {
     id: "1119-Negro",
     name: "Derby Mod. 1119",
+    variant: "Captoe Semi Brogued",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
@@ -270,6 +271,7 @@ export const modelos = [
   {
     id: "1119-Guinda",
     name: "Derby Mod. 1119",
+    variant: "Captoe Semi Brogued",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
@@ -288,6 +290,7 @@ export const modelos = [
   {
     id: "1119-Marron",
     name: "Derby Mod. 1119",
+    variant: "Captoe Semi Brogued",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
@@ -306,6 +309,7 @@ export const modelos = [
   {
     id: "1119-Cafe",
     name: "Derby Mod. 1119",
+    variant: "Captoe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
@@ -378,6 +382,7 @@ export const modelos = [
   {
     id: "1108-Negro",
     name: "Oxford Mod. 1108",
+    variant: "Captoe Full Brogued",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -396,6 +401,7 @@ export const modelos = [
   {
     id: "1108-Guinda",
     name: "Oxford Mod. 1108",
+    variant: "Captoe Full Brogued",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -414,6 +420,7 @@ export const modelos = [
   {
     id: "1108-Natural",
     name: "Oxford Mod. 1108",
+    variant: "Captoe Full Brogued",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -432,6 +439,7 @@ export const modelos = [
   {
     id: "1108-Marron",
     name: "Oxford Mod. 1108",
+    variant: "Captoe Full Brogued",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -450,6 +458,7 @@ export const modelos = [
   {
     id: "1108-SB-Guinda",
     name: "Oxford Mod. 1108",
+    variant: "Captoe Semi Brogued",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -468,6 +477,7 @@ export const modelos = [
   {
     id: "1108-SB-Suela",
     name: "Oxford Mod. 1108",
+    variant: "Captoe Semi Brogued",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -486,6 +496,7 @@ export const modelos = [
   {
     id: "1108-SB-Cafe",
     name: "Oxford Mod. 1108",
+    variant: "Captoe Semi Brogued",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -504,6 +515,7 @@ export const modelos = [
   {
     id: "1107-Tabaco",
     name: "Oxford Mod. 1107",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -522,6 +534,7 @@ export const modelos = [
   {
     id: "1107-Guinda",
     name: "Oxford Mod. 1107",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -540,6 +553,7 @@ export const modelos = [
   {
     id: "1107-Marron",
     name: "Oxford Mod. 1107",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -558,6 +572,7 @@ export const modelos = [
   {
     id: "1107-Suela",
     name: "Oxford Mod. 1107",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -576,6 +591,7 @@ export const modelos = [
   {
     id: "1107-Marron-Picado-Flor",
     name: "Oxford Mod. 1107",
+    variant: "Plain Toe Full Brogued",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -594,6 +610,7 @@ export const modelos = [
   {
     id: "1107-Tabaco-Picado-Flor",
     name: "Oxford Mod. 1107",
+    variant: "Plain Toe Full Brogued",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -612,6 +629,7 @@ export const modelos = [
   {
     id: "1107-Negro-Picado",
     name: "Oxford Mod. 1107",
+    variant: "Plain Toe Semi Brogued",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -630,6 +648,7 @@ export const modelos = [
   {
     id: "1103-Negro",
     name: "Oxford Mod. 1103",
+    variant: "Captoe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -648,6 +667,7 @@ export const modelos = [
   {
     id: "1103-Suela",
     name: "Oxford Mod. 1103",
+    variant: "Captoe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -666,6 +686,7 @@ export const modelos = [
   {
     id: "1103-Cafe",
     name: "Oxford Mod. 1103",
+    variant: "Captoe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -684,6 +705,7 @@ export const modelos = [
   {
     id: "1103-Marron",
     name: "Oxford Mod. 1103",
+    variant: "Captoe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -702,6 +724,7 @@ export const modelos = [
   {
     id: "1103-Guinda",
     name: "Oxford Mod. 1103",
+    variant: "Captoe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "oxfords",
@@ -720,6 +743,7 @@ export const modelos = [
   {
     id: "Derby-1100-Negro-3ojales",
     name: "Derby Mod. 1100",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
@@ -738,6 +762,7 @@ export const modelos = [
   {
     id: "Derby-1100-Natural-3ojales",
     name: "Derby Mod. 1100",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
@@ -756,6 +781,7 @@ export const modelos = [
   {
     id: "Derby-1100-Suela-3ojales",
     name: "Derby Mod. 1100",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
@@ -774,6 +800,7 @@ export const modelos = [
   {
     id: "Derby-1100-Mostaza-3ojales",
     name: "Derby Mod. 1100",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
@@ -792,6 +819,7 @@ export const modelos = [
   {
     id: "Derby-1100-Marron-3ojales",
     name: "Derby Mod. 1100",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
@@ -810,6 +838,7 @@ export const modelos = [
   {
     id: "Derby-1100-Tabaco-3ojales",
     name: "Derby Mod. 1100",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
@@ -828,6 +857,7 @@ export const modelos = [
   {
     id: "Derby-1100-Guinda-3ojales",
     name: "Derby Mod. 1100",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "derby",
@@ -846,6 +876,7 @@ export const modelos = [
   {
     id: "Dandy-1100-Diamante-Negro",
     name: "Dandy Mod. 1100",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "dandy",
@@ -864,6 +895,7 @@ export const modelos = [
   {
     id: "Dandy-1100-Diamante-Castana",
     name: "Dandy Mod. 1100",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "dandy",
@@ -882,6 +914,7 @@ export const modelos = [
   {
     id: "Dandy-1100-Gamuza-Marron",
     name: "Dandy Mod. 1100",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "dandy",
@@ -900,6 +933,7 @@ export const modelos = [
   {
     id: "Swann-Tabaco",
     name: "Mod. Swann",
+    variant: "Wholecut",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "swann",
@@ -918,6 +952,7 @@ export const modelos = [
   {
     id: "Swann-Negro",
     name: "Mod. Swann",
+    variant: "Wholecut",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "swann",
@@ -936,6 +971,7 @@ export const modelos = [
   {
     isNuevo: "true",
     id: "Swann-Verde",
+    variant: "Wholecut",
     name: "Mod. Swann",
     class: "READY TO WEAR",
     type: "zapatos",
@@ -955,6 +991,7 @@ export const modelos = [
   {
     id: "Bota-Dandy-Diamante-Negro",
     name: "Bota Inglesa Dandy",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "botas",
     subtype: "dandy",
@@ -973,6 +1010,7 @@ export const modelos = [
   {
     id: "Bota-Dandy-Diamante-Castana",
     name: "Bota Inglesa Dandy",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "botas",
     subtype: "dandy",
@@ -991,6 +1029,7 @@ export const modelos = [
   {
     id: "Bota-Dandy-Gamuza-Marron",
     name: "Bota Inglesa Dandy",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "botas",
     subtype: "dandy",
@@ -1009,6 +1048,7 @@ export const modelos = [
   {
     id: "Bota-Carioca-Gamuza-Arena",
     name: "Bota Carioca",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "botas",
     subtype: "carioca",
@@ -1027,6 +1067,7 @@ export const modelos = [
   {
     id: "Bota-Carioca-Gamuza-Negro",
     name: "Bota Carioca",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "botas",
     subtype: "carioca",
@@ -1045,6 +1086,7 @@ export const modelos = [
   {
     id: "2-Hebillas-Negro",
     name: "2 Hebillas",
+    variant: "Captoe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "con-hebillas",
@@ -1063,6 +1105,7 @@ export const modelos = [
   {
     id: "2-Hebillas-Suela",
     name: "2 Hebillas",
+    variant: "Captoe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "con-hebillas",
@@ -1081,6 +1124,7 @@ export const modelos = [
   {
     id: "2-Hebillas-Cafe",
     name: "2 Hebillas",
+    variant: "Captoe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "con-hebillas",
@@ -1099,6 +1143,7 @@ export const modelos = [
   {
     id: "2-Hebillas-Marron",
     name: "2 Hebillas",
+    variant: "Captoe",
     class: "READY TO WEAR",
     type: "zapatos",
     subtype: "con-hebillas",
@@ -1118,6 +1163,7 @@ export const modelos = [
     isNuevo: "true",
     id: "Borcego-Corto-Natural",
     name: "Borcego Corto",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "bajos",
@@ -1137,6 +1183,7 @@ export const modelos = [
     isNuevo: "true",
     id: "Borcego-Corto-Negro",
     name: "Borcego Corto",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "bajos",
@@ -1155,6 +1202,7 @@ export const modelos = [
   {
     id: "Borcego-Corto-Piedra",
     name: "Borcego Corto",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "bajos",
@@ -1174,6 +1222,7 @@ export const modelos = [
     isNuevo: "true",
     id: "Borcego-Corto-Rojo",
     name: "Borcego Corto",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "bajos",
@@ -1192,6 +1241,7 @@ export const modelos = [
   {
     id: "Borcego-Texano-Bufalo-Negro",
     name: "Borcego Texano",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "altos",
@@ -1210,6 +1260,7 @@ export const modelos = [
   {
     id: "Borcego-Texano-Bufalo-Suela",
     name: "Borcego Texano",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "altos",
@@ -1228,6 +1279,7 @@ export const modelos = [
   {
     id: "Borcego-Texano-Bufalo-Marron",
     name: "Borcego Texano",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "borcegos",
     subtype: "altos",
@@ -2045,6 +2097,7 @@ export const modelos = [
   {
     id: "Bota-Inglesa-Marron",
     name: "Bota Inglesa",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "botas",
     subtype: "inglesa",
@@ -2064,6 +2117,7 @@ export const modelos = [
   {
     id: "Bota-Inglesa-Negro-rtw",
     name: "Bota Inglesa",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "botas",
     subtype: "inglesa",
@@ -2083,6 +2137,7 @@ export const modelos = [
   {
     id: "Bota-Petta-Suela",
     name: "Bota Petta",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "botas",
     subtype: "petta",
@@ -2102,6 +2157,7 @@ export const modelos = [
   {
     id: "Bota-Petta-Negro",
     name: "Bota Petta",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "botas",
     subtype: "petta",
@@ -2121,6 +2177,7 @@ export const modelos = [
   {
     id: "Bota-Petta-Verde",
     name: "Bota Petta",
+    variant: "Plain Toe",
     class: "READY TO WEAR",
     type: "botas",
     subtype: "petta",
@@ -2140,6 +2197,7 @@ export const modelos = [
   {
     id: "Bota-ET-Negro",
     name: "Bota ET",
+    variant: "Captoe",
     class: "READY TO WEAR",
     type: "botas",
     subtype: "ET",
@@ -2159,6 +2217,7 @@ export const modelos = [
   {
     id: "Bota-ET-Maiz",
     name: "Bota ET",
+    variant: "Captoe",
     class: "READY TO WEAR",
     type: "botas",
     subtype: "ET",
@@ -2178,6 +2237,7 @@ export const modelos = [
   {
     id: "Bota-ET-Gamuza-Arena",
     name: "Bota ET",
+    variant: "Captoe",
     class: "READY TO WEAR",
     type: "botas",
     subtype: "ET",
@@ -2235,6 +2295,7 @@ export const modelos = [
   {
     id: "Oxford-Wingtips",
     name: "Oxford Mod. 1122",
+    variant: "Wingtip",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
@@ -2254,6 +2315,7 @@ export const modelos = [
   {
     id: "Oxford-1122-Negro-Marron",
     name: "Oxford Mod. 1122",
+    variant: "Wingtip Full Brogued",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
@@ -2272,6 +2334,7 @@ export const modelos = [
   {
     id: "Oxford-1122-Azul-Maiz",
     name: "Oxford Mod. 1122",
+    variant: "Wingtip Full Brogued",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
@@ -2290,6 +2353,7 @@ export const modelos = [
   {
     id: "Oxford-1122-Negro-Rojo",
     name: "Oxford Mod. 1122",
+    variant: "Wingtip Full Brogued",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
@@ -2308,6 +2372,7 @@ export const modelos = [
   {
     id: "Oxford-1122-Guinda-2-tonos",
     name: "Oxford Mod. 1122",
+    variant: "Wingtip Semi Brogued",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
@@ -2326,6 +2391,7 @@ export const modelos = [
   {
     id: "Oxford-1108-Suela-Gamuza-Marron",
     name: "Oxford Mod. 1108",
+    variant: "Wingtip Full Brogued",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
@@ -2344,6 +2410,7 @@ export const modelos = [
   {
     id: "Oxford-1107-Suela-MTO",
     name: "Oxford Mod. 1107",
+    variant: "Plain Toe Semi Brogued",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
@@ -2362,6 +2429,7 @@ export const modelos = [
   {
     id: "Oxford-1103-Marron-Verde",
     name: "Oxford Mod. 1103",
+    variant: "Captoe",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "oxfords",
@@ -2380,6 +2448,7 @@ export const modelos = [
   {
     id: "Swann-Maiz",
     name: "Mod. Swann Wholecut",
+    variant: "Wholecut",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "swann",
@@ -2398,6 +2467,7 @@ export const modelos = [
   {
     id: "Swann-Marron",
     name: "Mod. Swann Wholecut",
+    variant: "Wholecut",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "swann",
@@ -2416,6 +2486,7 @@ export const modelos = [
   {
     id: "Swann-Wookie",
     name: "Mod. Swann Wookie",
+    variant: "Wholecut",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "swann",
@@ -2435,6 +2506,7 @@ export const modelos = [
   {
     id: "Swann-Club-Rojo",
     name: "Mod. Swann Club Wholecut",
+    variant: "Wholecut",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "swann",
@@ -2454,6 +2526,7 @@ export const modelos = [
   {
     id: "2-Hebillas-Gamuza-Marron",
     name: "2 Hebillas",
+    variant: "Captoe",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "con-hebillas",
@@ -2473,6 +2546,7 @@ export const modelos = [
   {
     id: "Bota-Alpina-1101-Negro",
     name: "Bota Alpina Mod. 1101",
+    variant: "Captoe Full Brogued",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "alpina",
@@ -2492,6 +2566,7 @@ export const modelos = [
   {
     id: "Bota-Alpina-1101-Marron",
     name: "Bota Alpina Mod. 1101",
+    variant: "Captoe Semi Brogued",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "alpina",
@@ -2511,6 +2586,7 @@ export const modelos = [
   {
     id: "Bota-Alpina-1101-Marron-Oscuro",
     name: "Bota Alpina Mod. 1101",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "alpina",
@@ -2530,6 +2606,7 @@ export const modelos = [
   {
     id: "Bota-Chelsea-Gamuza-Gris",
     name: "Bota Chelsea",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
@@ -2549,6 +2626,7 @@ export const modelos = [
   {
     id: "Bota-Chelsea-Chocolate",
     name: "Bota Chelsea",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
@@ -2568,6 +2646,7 @@ export const modelos = [
   {
     id: "Bota-Chelsea-Cafe",
     name: "Bota Chelsea",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
@@ -2587,6 +2666,7 @@ export const modelos = [
   {
     id: "Bota-Chelsea-Marron",
     name: "Bota Chelsea",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
@@ -2606,6 +2686,7 @@ export const modelos = [
   {
     id: "Bota-Chelsea-Verde",
     name: "Bota Chelsea",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
@@ -2625,6 +2706,7 @@ export const modelos = [
   {
     id: "Bota-Chelsea-Gamuza-Negro",
     name: "Bota Chelsea",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
@@ -2644,6 +2726,7 @@ export const modelos = [
   {
     id: "Bota-Chelsea-Gamuza-Chocolate",
     name: "Bota Chelsea",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
@@ -2663,6 +2746,7 @@ export const modelos = [
   {
     id: "Bota-Chelsea-Gamuza-Verde",
     name: "Bota Chelsea",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
@@ -2682,6 +2766,7 @@ export const modelos = [
   {
     id: "Bota-Chelsea-Gamuza-Arena",
     name: "Bota Chelsea",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
@@ -2701,6 +2786,7 @@ export const modelos = [
   {
     id: "Bota-Chelsea-Gamuza-Azul",
     name: "Bota Chelsea",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
@@ -2720,6 +2806,7 @@ export const modelos = [
   {
     id: "Bota-Chelsea-Gamuza-Rojo",
     name: "Bota Chelsea",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
@@ -2739,6 +2826,7 @@ export const modelos = [
   {
     id: "Bota-Manchester-Negro",
     name: "Bota Manchester",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "manchester",
@@ -2758,6 +2846,7 @@ export const modelos = [
   {
     id: "Bota-Manchester-Guinda",
     name: "Bota Manchester",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "manchester",
@@ -2777,6 +2866,7 @@ export const modelos = [
   {
     id: "Bota-Manchester-Gamuza-Tostado",
     name: "Bota Manchester",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "manchester",
@@ -2815,6 +2905,7 @@ export const modelos = [
   {
     id: "Derby-1100-MTO-Gamuza-Verde-Musgo",
     name: "Derby Mod. 1100",
+    variant: "Plain Toe",
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "derby",
@@ -3271,6 +3362,7 @@ export const modelos = [
   {
     id: "Oxford-1122-Bespoke-Maiz",
     name: "Oxford Mod. 1122",
+    variant: "Wingtip Full Brogued",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "oxfords",
@@ -3289,6 +3381,7 @@ export const modelos = [
   {
     id: "Oxford-1122-Museum",
     name: "Oxford Mod. 1122",
+    variant: "Wingtip Full Brogued",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "oxfords",
@@ -3307,6 +3400,7 @@ export const modelos = [
   {
     id: "Oxford-1122-Bespoke-Rojo",
     name: "Oxford Mod. 1122",
+    variant: "Wingtip Full Brogued",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "oxfords",
@@ -3325,6 +3419,7 @@ export const modelos = [
   {
     id: "Oxford-1122-Bespoke-Gamuza-Verde",
     name: "Oxford Mod. 1122",
+    variant: "Wingtip Full Brogued",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "oxfords",
@@ -3343,6 +3438,7 @@ export const modelos = [
   {
     id: "1047-Maiz-Bespoke",
     name: "1 Hebilla Mod. 1047",
+    variant: "Plain Toe",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "con-hebillas",
@@ -3361,6 +3457,7 @@ export const modelos = [
   {
     id: "1047-Suela-HD-Bespoke",
     name: "1 Hebilla Mod. 1047 (Horma Delfín)",
+    variant: "Plain Toe",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "con-hebillas",
@@ -3379,6 +3476,7 @@ export const modelos = [
   {
     id: "Oxford-1108-Bespoke-Marron",
     name: "Oxford Mod. 1108",
+    variant: "Captoe Semi Brogued",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "oxfords",
@@ -3397,6 +3495,7 @@ export const modelos = [
   {
     id: "Oxford-1103-Bespoke-Negro",
     name: "Oxford Mod. 1103",
+    variant: "Captoe",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "oxfords",
@@ -3469,6 +3568,7 @@ export const modelos = [
   {
     id: "Swann-Wholecut-DC-Tabaco",
     name: "Mod. Swann Wholecut (Diente de Caballo)",
+    variant: "Wholecut",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "swann",
@@ -3487,6 +3587,7 @@ export const modelos = [
   {
     id: "Swann-Wholecut-Cafe",
     name: "Mod. Swann Wholecut",
+    variant: "Wholecut",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "swann",
@@ -3505,6 +3606,7 @@ export const modelos = [
   {
     id: "Swann-Museum",
     name: "Mod. Swann Wholecut",
+    variant: "Wholecut",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "swann",
@@ -3524,6 +3626,7 @@ export const modelos = [
     isEncargo: "true",
     id: "Bota-Inglesa-Nandu",
     name: "Bota Inglesa",
+    variant: "Plain Toe",
     class: "BESPOKE",
     type: "botas",
     subtype: "inglesa",
@@ -3543,6 +3646,7 @@ export const modelos = [
     isEncargo: "true",
     id: "Bota-Inglesa-Negro-Bespoke",
     name: "Bota Inglesa",
+    variant: "Plain Toe",
     class: "BESPOKE",
     type: "botas",
     subtype: "inglesa",
@@ -3562,6 +3666,7 @@ export const modelos = [
     isEncargo: "true",
     id: "Bota-Inglesa-Bufalo-Negro-Bespoke",
     name: "Bota Inglesa",
+    variant: "Plain Toe",
     class: "BESPOKE",
     type: "botas",
     subtype: "inglesa",
@@ -3581,6 +3686,7 @@ export const modelos = [
     isEncargo: "true",
     id: "Bota-Inglesa-Elefante",
     name: "Bota Inglesa",
+    variant: "Plain Toe",
     class: "BESPOKE",
     type: "botas",
     subtype: "inglesa",
@@ -3617,6 +3723,7 @@ export const modelos = [
   {
     id: "1100-Wholecut-Marron",
     name: "Mod. 1100 Wholecut",
+    variant: "Plain Toe Semi Brogued",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "derby",
@@ -3635,6 +3742,7 @@ export const modelos = [
   {
     id: "Bota-Petta-Marron",
     name: "Bota Petta",
+    variant: "Plain Toe",
     class: "BESPOKE",
     type: "botas",
     subtype: "petta",
@@ -3653,6 +3761,7 @@ export const modelos = [
   {
     id: "Derby-1100-Elefante",
     name: "Derby Mod. 1100",
+    variant: "Plain Toe",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "derby",
@@ -3671,6 +3780,7 @@ export const modelos = [
   {
     id: "Derby-1100-Cocodrilo",
     name: "Derby Mod. 1100",
+    variant: "Plain Toe",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "derby",
@@ -3689,6 +3799,7 @@ export const modelos = [
   {
     id: "Swann-Tatuado-Natural",
     name: "Mod. Swann",
+    variant: "Wholecut",
     class: "BESPOKE",
     type: "zapatos",
     subtype: "swann",
