@@ -102,7 +102,7 @@ export default function Modelos({ params }) {
               >
                 <Label
                   type="medida"
-                  customStyle={{ top: "10%", left: "10%" }}
+                  customStyle={{ position: "relative", top: 0, left: 0 }}
                 />
               </Tooltip>
             )}
