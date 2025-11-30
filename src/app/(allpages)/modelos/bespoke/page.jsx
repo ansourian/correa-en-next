@@ -2,15 +2,17 @@
 
 import React, { useState, useEffect } from "react"
 import BannerModelos from "@/components/BannerModelos"
-import { modelos } from "@/data/data-modelos"
 import Article from "@/components/Article"
+import { modelos } from "@/data/data-modelos"
 import Buscador from "@/components/Buscador"
+import { useSearchParams } from "next/navigation"
 
 export default function Modelos() {
   const [tipoSeleccionado, setTipoSeleccionado] = useState("")
   const [subTipoSeleccionado, setSubTipoSeleccionado] = useState("")
   const [searchTerm, setSearchTerm] = useState("")
   const [filteredModels, setFilteredModels] = useState([])
+  const searchParams = useSearchParams()
 
   useEffect(() => {
     const normalizeText = (text) => {
@@ -18,9 +20,29 @@ export default function Modelos() {
         ? text
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "")
+            .replace(/-/g, " ")
             .toLowerCase()
         : ""
     }
+
+    const coloresSeleccionados = searchParams
+      ? searchParams.getAll("color")
+      : []
+    const coloresNormalizados = coloresSeleccionados.map((c) =>
+      normalizeText(c)
+    )
+
+    const estilosSeleccionados = searchParams
+      ? searchParams.getAll("estilo")
+      : []
+    const estilosNormalizados = estilosSeleccionados.map((e) =>
+      normalizeText(e)
+    )
+
+    const leatherSeleccionado = searchParams
+      ? searchParams.get("leather")
+      : null
+    const leatherNormalizado = normalizeText(leatherSeleccionado)
 
     const modelosBespoke = modelos.filter(
       (modelo) => modelo.class === "BESPOKE"
@@ -31,23 +53,43 @@ export default function Modelos() {
       const normalizedName = normalizeText(modelo.name)
       const normalizedVariant = normalizeText(modelo.variant)
       const normalizedColor = normalizeText(modelo.color)
+      const normalizedLeather = normalizeText(modelo.leather)
       const matchesTipo = tipoSeleccionado
         ? modelo.type === tipoSeleccionado
         : true
       const matchesSubTipo = subTipoSeleccionado
         ? modelo.subtype === subTipoSeleccionado
         : true
+      const matchesColor =
+        coloresNormalizados.length > 0
+          ? coloresNormalizados.some((c) => normalizedColor.includes(c))
+          : true
+      const matchesEstilo =
+        estilosNormalizados.length > 0
+          ? estilosNormalizados.includes(normalizeText(modelo.variant || ""))
+          : true
+      const matchesLeather = leatherSeleccionado
+        ? normalizedLeather.includes(leatherNormalizado)
+        : true
       return (
         (normalizedName.includes(normalizedTerm) ||
           normalizedVariant.includes(normalizedTerm) ||
           normalizedColor.includes(normalizedTerm)) &&
         matchesTipo &&
-        matchesSubTipo
+        matchesSubTipo &&
+        matchesColor &&
+        matchesEstilo &&
+        matchesLeather
       )
     })
 
     setFilteredModels(modelosFiltrados)
-  }, [searchTerm, tipoSeleccionado, subTipoSeleccionado])
+  }, [
+    searchTerm,
+    tipoSeleccionado,
+    subTipoSeleccionado,
+    searchParams?.toString(),
+  ])
 
   const MODELS_PER_PAGE = 32
   const [visibleCount, setVisibleCount] = useState(MODELS_PER_PAGE)

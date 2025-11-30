@@ -39,6 +39,11 @@ export default function Modelos() {
       normalizeText(e)
     )
 
+    const leatherSeleccionado = searchParams
+      ? searchParams.get("leather")
+      : null
+    const leatherNormalizado = normalizeText(leatherSeleccionado)
+
     const modelosReadyToWear = modelos.filter(
       (modelo) => modelo.class === "READY TO WEAR"
     )
@@ -48,6 +53,7 @@ export default function Modelos() {
       const normalizedName = normalizeText(modelo.name)
       const normalizedVariant = normalizeText(modelo.variant)
       const normalizedColor = normalizeText(modelo.color)
+      const normalizedLeather = normalizeText(modelo.leather)
       const matchesTipo = tipoSeleccionado
         ? modelo.type === tipoSeleccionado
         : true
@@ -62,6 +68,9 @@ export default function Modelos() {
         estilosNormalizados.length > 0
           ? estilosNormalizados.includes(normalizeText(modelo.variant || ""))
           : true
+      const matchesLeather = leatherSeleccionado
+        ? normalizedLeather.includes(leatherNormalizado)
+        : true
       return (
         (normalizedName.includes(normalizedTerm) ||
           normalizedVariant.includes(normalizedTerm) ||
@@ -69,7 +78,8 @@ export default function Modelos() {
         matchesTipo &&
         matchesSubTipo &&
         matchesColor &&
-        matchesEstilo
+        matchesEstilo &&
+        matchesLeather
       )
     })
 

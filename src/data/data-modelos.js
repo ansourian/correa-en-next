@@ -334,7 +334,7 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Diamante Café",
-    leather: "Cuero vacuno graneado",
+    leather: "Cuero vacuno (graneado)",
     codigo: "1116",
     previewImage: "/images/ready to wear/136 - 22.webp",
     images: [
@@ -352,7 +352,7 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Diamante Castaña",
-    leather: "Cuero vacuno graneado",
+    leather: "Cuero vacuno (graneado)",
     codigo: "1116",
     previewImage: "/images/ready to wear/136 - 25.webp",
     images: [
@@ -883,7 +883,7 @@ export const modelos = [
     subtype: "dandy",
     description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Diamante Negro",
-    leather: "Cuero Vacuno Granulado",
+    leather: "Cuero vacuno (graneado)",
     codigo: "1100",
     previewImage: "/images/ready to wear/131 - 8.webp",
     images: [
@@ -902,7 +902,7 @@ export const modelos = [
     subtype: "dandy",
     description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Diamante Castaña",
-    leather: "Cuero Vacuno Granulado",
+    leather: "Cuero vacuno (graneado)",
     codigo: "1100",
     previewImage: "/images/ready to wear/131 - 4.webp",
     images: [
@@ -998,7 +998,7 @@ export const modelos = [
     subtype: "dandy",
     description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Diamante Negro",
-    leather: "Cuero Vacuno Granulado",
+    leather: "Cuero vacuno (graneado)",
     codigo: "Bota Dandy",
     previewImage: "/images/ready to wear/131 - 18.webp",
     images: [
@@ -1017,7 +1017,7 @@ export const modelos = [
     subtype: "dandy",
     description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Diamante Castaña",
-    leather: "Cuero Vacuno Granulado",
+    leather: "Cuero vacuno (graneado)",
     codigo: "Bota Dandy",
     previewImage: "/images/ready to wear/131 - 15.webp",
     images: [
@@ -1190,7 +1190,7 @@ export const modelos = [
     subtype: "bajos",
     description: descriptions.find((d) => d.id === "borcego-corto")?.desc,
     color: "Negro",
-    leather: "Cuero vacuno granulado",
+    leather: "Cuero vacuno",
     codigo: "Borcego Corto",
     previewImage: "/images/ready to wear/184 - 13.webp",
     images: [
@@ -1209,7 +1209,7 @@ export const modelos = [
     subtype: "bajos",
     description: descriptions.find((d) => d.id === "borcego-corto")?.desc,
     color: "Piedra",
-    leather: "Cuero vacuno",
+    leather: "Cuero vacuno (graneado)",
     codigo: "Borcego Corto",
     previewImage: "/images/ready to wear/115 - 13.webp",
     images: [
@@ -1304,7 +1304,7 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Suela",
-    leather: "Cuero vacuno granulado",
+    leather: "Cuero vacuno",
     codigo: "Zap",
     previewImage: "/images/ready to wear/122 - 26.webp",
     images: [
@@ -1322,7 +1322,7 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Chocolate",
-    leather: "Cuero vacuno granulado",
+    leather: "Cuero vacuno",
     codigo: "Zap",
     previewImage: "/images/ready to wear/117 - 10.webp",
     images: [
@@ -1340,7 +1340,7 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Negro",
-    leather: "Cuero vacuno granulado",
+    leather: "Cuero vacuno",
     codigo: "Zap",
     previewImage: "/images/ready to wear/156 - 20.webp",
     images: [
@@ -1358,7 +1358,7 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Negro Gastado",
-    leather: "Cuero vacuno granulado",
+    leather: "Cuero vacuno",
     codigo: "Zap",
     previewImage: "/images/ready to wear/122 - 20.webp",
     images: [
@@ -1376,7 +1376,7 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Azul",
-    leather: "Cuero vacuno granulado",
+    leather: "Cuero vacuno",
     codigo: "Zap",
     previewImage: "/images/ready to wear/122 - 17.webp",
     images: [
@@ -1394,7 +1394,7 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Verde Claro",
-    leather: "Cuero vacuno granulado",
+    leather: "Cuero vacuno",
     codigo: "Zap",
     previewImage: "/images/ready to wear/117 - 13.webp",
     images: [
@@ -1412,7 +1412,7 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Verde",
-    leather: "Cuero vacuno granulado",
+    leather: "Cuero vacuno",
     codigo: "Zap",
     previewImage: "/images/ready to wear/156 - 25.webp",
     images: [
@@ -1430,7 +1430,7 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Rojo",
-    leather: "Cuero vacuno granulado",
+    leather: "Cuero vacuno",
     codigo: "Zap",
     previewImage: "/images/ready to wear/156 - 5.webp",
     images: [
@@ -2145,7 +2145,7 @@ export const modelos = [
     description:
       "Un clásico de la casa. Esta bota cuenta con una costura redondeada y presenta un diseño clásico con un toque más suave y contemporáneo. Ofrece un equilibrio perfecto entre class tradicional y comodidad moderna.",
     color: "Suela",
-    leather: "Cuero Vacuno Graneado",
+    leather: "Cuero vacuno (graneado)",
     codigo: "Bota Petta",
     previewImage: "/images/ready to wear/144 - 8.webp",
     images: [
@@ -2165,7 +2165,7 @@ export const modelos = [
     description:
       "Un clásico de la casa. Esta bota cuenta con una costura redondeada y presenta un diseño clásico con un toque más suave y contemporáneo. Ofrece un equilibrio perfecto entre class tradicional y comodidad moderna.",
     color: "Negro",
-    leather: "Cuero Vacuno Graneado",
+    leather: "Cuero vacuno (graneado)",
     codigo: "Bota Petta",
     previewImage: "/images/ready to wear/144 - 12.webp",
     images: [
@@ -2185,7 +2185,7 @@ export const modelos = [
     description:
       "Un clásico de la casa. Esta bota cuenta con una costura redondeada y presenta un diseño clásico con un toque más suave y contemporáneo. Ofrece un equilibrio perfecto entre class tradicional y comodidad moderna.",
     color: "Verde",
-    leather: "Cuero Vacuno Graneado",
+    leather: "Cuero vacuno (graneado)",
     codigo: "Bota Petta",
     previewImage: "/images/ready to wear/144 - 15.webp",
     images: [
@@ -2322,7 +2322,7 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Negro - Marrón",
-    leather: "Cuero vacuno combinado",
+    leather: "Cuero vacuno",
     codigo: "1122",
     previewImage: "/images/made by order/114 - 4.webp",
     images: [
@@ -2436,7 +2436,7 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Chocolate - Verde",
-    leather: "Combinado de Anca de Potro, Gamuza y Cuero Vacuno",
+    leather: "Combinado de Anca de potro, gamuza y cuero vacuno",
     codigo: "1103",
     previewImage: "/images/made by order/137 - 16.webp",
     images: [
@@ -2594,7 +2594,7 @@ export const modelos = [
     description:
       "Esta bota Derby se caracteriza por no contar con picados. Este diseño proporciona mayor comodidad y ajuste, ya que la lengüeta se puede ajustar de acuerdo con el ancho del pie.",
     color: "Chocolate",
-    leather: "Cuero vacuno",
+    leather: "Cuero vacuno (graneado)",
     codigo: "Bota Alpina",
     previewImage: "/images/made by order/130 - 22.webp",
     images: [
@@ -2932,7 +2932,7 @@ export const modelos = [
     description:
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con un costurín y vincha.",
     color: "Diamante Castaña",
-    leather: "Cuero vacuno",
+    leather: "Cuero vacuno (graneado)",
     codigo: "123 con Costurín y Vincha",
     previewImage: "/images/made by order/112 - 29.webp",
     images: [

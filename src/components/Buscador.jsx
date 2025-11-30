@@ -8,8 +8,8 @@ import {
   AnimationOutlined,
   ArrowDropDownOutlined,
   BlurOnOutlined,
-  ColorLens,
   ColorLensOutlined,
+  WavesOutlined,
 } from "@mui/icons-material"
 import { filtros } from "@/data/filters"
 
@@ -52,6 +52,7 @@ export default function Buscador({
       count += searchParams.getAll("color").length
     if (searchParams.get("linea")) count++
     if (searchParams.get("estilo")) count++
+    if (searchParams.get("leather")) count++
     if (searchParams.get("tipo")) count++
     if (searchParams.get("subtipo")) count++
     return count
@@ -131,7 +132,10 @@ export default function Buscador({
                 Filtros
               </p>
               {filtrosActivos && (
-                <p className="p-filters" style={{ color: colorPadre, marginLeft: "5px" }}>
+                <p
+                  className="p-filters"
+                  style={{ color: colorPadre, marginLeft: "5px" }}
+                >
                   ({filtrosCount()})
                 </p>
               )}
@@ -193,50 +197,6 @@ export default function Buscador({
               )}
 
             {/* ---- filtros nuevos sin tocar 'tipo'/'subtipo' ---- */}
-            {/* SUB-ACCORDION — COLORES */}
-            <div className="accordion-item accordion-filters">
-              <h2 className="accordion-header" id="heading-colores">
-                <button
-                  className="accordion-button_filters collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse-colores"
-                  aria-expanded="false"
-                  aria-controls="collapse-colores"
-                >
-                  <ColorLensOutlined
-                    style={{
-                      color: searchParams.get("color") ? "#3481c7" : "black",
-                    }}
-                  />
-                  <p
-                    className="p-filters"
-                    style={{
-                      color: searchParams.get("color") ? "#3481c7" : "black",
-                    }}
-                  >
-                    Colores
-                  </p>
-                  <ArrowDropDownOutlined
-                    className="arrow-icon"
-                    style={{ color: "black" }}
-                  />
-                </button>
-              </h2>
-              <div
-                id="collapse-colores"
-                className="accordion-collapse collapse"
-                aria-labelledby="heading-colores"
-              >
-                <div className="accordion-body">
-                  <FiltroBotones
-                    nombreParam="color"
-                    opciones={filtros.colores}
-                    multiple={true}
-                  />
-                </div>
-              </div>
-            </div>
 
             {/* SUB-ACCORDION — LÍNEA */}
             {showLineaFilter && (
@@ -283,6 +243,97 @@ export default function Buscador({
                 </div>
               </div>
             )}
+
+            {/* SUB-ACCORDION — COLORES */}
+            <div className="accordion-item accordion-filters">
+              <h2 className="accordion-header" id="heading-colores">
+                <button
+                  className="accordion-button_filters collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse-colores"
+                  aria-expanded="false"
+                  aria-controls="collapse-colores"
+                >
+                  <ColorLensOutlined
+                    style={{
+                      color: searchParams.get("color") ? "#3481c7" : "black",
+                    }}
+                  />
+                  <p
+                    className="p-filters"
+                    style={{
+                      color: searchParams.get("color") ? "#3481c7" : "black",
+                    }}
+                  >
+                    Colores
+                  </p>
+                  <ArrowDropDownOutlined
+                    className="arrow-icon"
+                    style={{ color: "black" }}
+                  />
+                </button>
+              </h2>
+              <div
+                id="collapse-colores"
+                className="accordion-collapse collapse"
+                aria-labelledby="heading-colores"
+              >
+                <div className="accordion-body">
+                  <FiltroBotones
+                    nombreParam="color"
+                    opciones={filtros.colores}
+                    multiple={true}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* SUB-ACCORDION — CUERO */}
+            <div className="accordion-item accordion-filters">
+              <h2 className="accordion-header" id="heading-cuero">
+                <button
+                  className="accordion-button_filters collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse-cuero"
+                  aria-expanded="false"
+                  aria-controls="collapse-cuero"
+                >
+                  <WavesOutlined
+                    style={{
+                      color: searchParams.get("leather") ? "#3481c7" : "black",
+                    }}
+                  />
+                  <p
+                    className="p-filters"
+                    style={{
+                      color: searchParams.get("leather") ? "#3481c7" : "black",
+                    }}
+                  >
+                    Cuero
+                  </p>
+                  <ArrowDropDownOutlined
+                    className="arrow-icon"
+                    style={{ color: "black" }}
+                  />
+                </button>
+              </h2>
+
+              <div
+                id="collapse-cuero"
+                className="accordion-collapse collapse"
+                aria-labelledby="heading-cuero"
+              >
+                <div className="accordion-body">
+                  <FiltroBotones
+                    nombreParam="leather"
+                    opciones={filtros.cuero}
+                  />
+                </div>
+              </div>
+            </div>
+
             {/* SUB-ACCORDION — ESTILO */}
             <div className="accordion-item accordion-filters">
               <h2 className="accordion-header" id="heading-estilo">

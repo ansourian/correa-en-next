@@ -42,6 +42,11 @@ export default function AllModels() {
       normalizeText(e)
     )
 
+    const leatherSeleccionado = searchParams
+      ? searchParams.get("leather")
+      : null
+    const leatherNormalizado = normalizeText(leatherSeleccionado)
+
     // Filtrar todos los modelos
     const modelosFiltrados = modelos.filter((modelo) => {
       const normalizedTerm = normalizeText(searchTerm)
@@ -49,6 +54,7 @@ export default function AllModels() {
       const normalizedVariant = normalizeText(modelo.variant)
       const normalizedColor = normalizeText(modelo.color)
       const normalizedLinea = normalizeText(lineaSeleccionada)
+      const normalizedLeather = normalizeText(modelo.leather)
       const matchesTipo = tipoSeleccionado
         ? modelo.type === tipoSeleccionado
         : true
@@ -66,6 +72,9 @@ export default function AllModels() {
         estilosNormalizados.length > 0
           ? estilosNormalizados.includes(normalizeText(modelo.variant || ""))
           : true
+      const matchesLeather = leatherSeleccionado
+        ? normalizedLeather.includes(leatherNormalizado)
+        : true
       const isNotBelt = modelo.class !== "ACCESORIOS"
       return (
         (normalizedName.includes(normalizedTerm) ||
@@ -76,6 +85,7 @@ export default function AllModels() {
         matchesColor &&
         matchesLinea &&
         matchesEstilo &&
+        matchesLeather &&
         isNotBelt
       )
     })
