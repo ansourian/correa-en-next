@@ -149,6 +149,7 @@ export default function Buscador({
     setSubTipoSeleccionado(null)
     setSearchTerm("")
     setSelectedButton(null)
+    setSelectedCodigo(null)
     router.push("?", { scroll: false })
   }
 
@@ -233,7 +234,7 @@ export default function Buscador({
                     subcategorias={filtros.modelos[selectedButton]}
                     setSubTipoSeleccionado={setSubTipoSeleccionado}
                     initialSubtipo={subTipoSeleccionado}
-                    setSelectedCodigo={setSelectedCodigo} 
+                    setSelectedCodigo={setSelectedCodigo}
                   />
                 </div>
               )}

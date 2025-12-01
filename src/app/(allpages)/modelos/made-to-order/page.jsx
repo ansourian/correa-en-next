@@ -10,6 +10,7 @@ import { useSearchParams } from "next/navigation"
 export default function Modelos() {
   const [tipoSeleccionado, setTipoSeleccionado] = useState("")
   const [subTipoSeleccionado, setSubTipoSeleccionado] = useState("")
+  const [selectedCodigo, setSelectedCodigo] = useState(null)
   const [searchTerm, setSearchTerm] = useState("")
   const [filteredModels, setFilteredModels] = useState([])
   const searchParams = useSearchParams()
@@ -71,6 +72,9 @@ export default function Modelos() {
       const matchesLeather = leatherSeleccionado
         ? normalizedLeather.includes(leatherNormalizado)
         : true
+      const matchesCodigo = selectedCodigo
+        ? modelo.name.toLowerCase().includes(selectedCodigo.toLowerCase())
+        : true
       return (
         (normalizedName.includes(normalizedTerm) ||
           normalizedVariant.includes(normalizedTerm) ||
@@ -79,7 +83,8 @@ export default function Modelos() {
         matchesSubTipo &&
         matchesColor &&
         matchesEstilo &&
-        matchesLeather
+        matchesLeather &&
+        matchesCodigo
       )
     })
 
@@ -110,6 +115,8 @@ export default function Modelos() {
       <Buscador
         setTipoSeleccionado={setTipoSeleccionado}
         setSubTipoSeleccionado={setSubTipoSeleccionado}
+        setSelectedCodigo={setSelectedCodigo}
+        selectedCodigo={selectedCodigo}
         setSearchTerm={setSearchTerm}
         modelos={modelos}
         searchTerm={searchTerm}
