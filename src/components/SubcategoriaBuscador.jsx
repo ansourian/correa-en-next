@@ -6,6 +6,7 @@ export default function SubcategoriaBuscador({
   subcategorias,
   setSubTipoSeleccionado,
   initialSubtipo,
+  setSelectedCodigo,
 }) {
   const [selectedSubButton, setSelectedSubButton] = useState(null)
   const router = useRouter()
@@ -17,9 +18,9 @@ export default function SubcategoriaBuscador({
     if (selectedSubButton === subtipo) {
       setSubTipoSeleccionado(null)
       setSelectedSubButton(null)
-
+      setSelectedCodigo(null)
       params.delete("subtipo")
-
+      params.delete("codigo")
       router.push(`?${params.toString()}`, { scroll: false })
       return
     }
@@ -28,6 +29,11 @@ export default function SubcategoriaBuscador({
     setSelectedSubButton(subtipo)
 
     params.set("subtipo", subtipo)
+
+    if (params.get("codigo")) {
+      params.delete("codigo")
+      setSelectedCodigo(null)
+    }
 
     router.push(`?${params.toString()}`, { scroll: false })
   }

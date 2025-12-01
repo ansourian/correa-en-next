@@ -17,16 +17,16 @@ export const filtros = {
     { value: "violeta", label: "Violeta" },
     { value: "amarillo", label: "Amarillo" },
   ],
-cuero: [
-  { value: "cuero vacuno", label: "Cuero Vacuno" },
-  { value: "cuero vacuno (graneado)", label: "Cuero Vacuno Graneado" },
-  { value: "gamuza", label: "Gamuza" },
-  { value: "shell cordovan", label: "Shell Cordovan" },
-  { value: "combinado", label: "Combinado" },
-  { value: "cabretilla", label: "Cabretilla" },
-  { value: "carpincho", label: "Carpincho" },
-  { value: "cuero vegetal", label: "Cuero Vegetal" },
-],
+  cuero: [
+    { value: "cuero vacuno", label: "Cuero Vacuno" },
+    { value: "cuero vacuno (graneado)", label: "Cuero Vacuno Graneado" },
+    { value: "gamuza", label: "Gamuza" },
+    { value: "shell cordovan", label: "Shell Cordovan" },
+    { value: "combinado", label: "Combinado" },
+    { value: "cabretilla", label: "Cabretilla" },
+    { value: "carpincho", label: "Carpincho" },
+    { value: "cuero vegetal", label: "Cuero Vegetal" },
+  ],
   linea: [
     { value: "ready-to-wear", label: "Ready To Wear" },
     { value: "made-to-order", label: "Made To Order" },
@@ -83,4 +83,11 @@ cuero: [
       { value: "SC", label: "SC" },
     ],
   },
+}
+
+export const codigosPorModelo = {
+  oxfords: ["1122", "1108", "1107", "1103"],
+  derby: ["1119", "1116", "1115", "1100", "Coll"],
+  "con-hebillas": ["2 Hebillas", "1 Hebilla"],
+  // etc...
 }

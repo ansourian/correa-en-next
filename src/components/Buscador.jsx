@@ -11,7 +11,7 @@ import {
   ColorLensOutlined,
   WavesOutlined,
 } from "@mui/icons-material"
-import { filtros } from "@/data/filters"
+import { codigosPorModelo, filtros } from "@/data/filters"
 
 export default function Buscador({
   setTipoSeleccionado,
@@ -20,16 +20,20 @@ export default function Buscador({
   setSearchTerm,
   tipoSeleccionado,
   subTipoSeleccionado,
+  selectedCodigo,
+  setSelectedCodigo,
   showLineaFilter = false,
 }) {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [selectedButton, setSelectedButton] = useState(tipoSeleccionado || null)
+  const [codigosDisponibles, setCodigosDisponibles] = useState([])
 
   // sincronizar con los params 'tipo' y 'subtipo' (tu lógica original)
   useEffect(() => {
     const tipo = searchParams.get("tipo")
     const subtipo = searchParams.get("subtipo")
+    const codigoParam = searchParams.get("codigo")
     if (tipo) {
       setTipoSeleccionado(tipo)
       setSelectedButton(tipo)
@@ -39,12 +43,31 @@ export default function Buscador({
     }
     if (subtipo) setSubTipoSeleccionado(subtipo)
     else setSubTipoSeleccionado(null)
+
+    if (codigoParam)
+      setSelectedCodigo(codigoParam) // <-- inicializa el código desde URL
+    else setSelectedCodigo(null)
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams?.toString()])
 
   useEffect(() => {
     setSelectedButton(tipoSeleccionado || null)
   }, [tipoSeleccionado])
+
+  useEffect(() => {
+    if (!subTipoSeleccionado) {
+      setCodigosDisponibles([])
+      return
+    }
+
+    const codigos = codigosPorModelo[subTipoSeleccionado] || []
+    setCodigosDisponibles(codigos)
+
+    if (selectedCodigo && !codigos.includes(selectedCodigo)) {
+      setSelectedCodigo(null)
+    }
+  }, [subTipoSeleccionado])
 
   const filtrosCount = () => {
     let count = 0
@@ -55,6 +78,7 @@ export default function Buscador({
     if (searchParams.get("leather")) count++
     if (searchParams.get("tipo")) count++
     if (searchParams.get("subtipo")) count++
+    if (selectedCodigo) count++
     return count
   }
 
@@ -71,6 +95,7 @@ export default function Buscador({
       setSubTipoSeleccionado(null)
       params.delete("tipo")
       params.delete("subtipo")
+      params.delete("codigo")
       router.push(`?${params.toString()}`, { scroll: false })
       return
     }
@@ -81,6 +106,7 @@ export default function Buscador({
     // borrar subtipo anterior para que no quede inválido
     params.set("tipo", tipo)
     params.delete("subtipo")
+    params.delete("codigo")
     router.push(`?${params.toString()}`, { scroll: false })
   }
 
@@ -100,6 +126,21 @@ export default function Buscador({
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value)
+  }
+
+  const handleCodigoClick = (codigo) => {
+    const params = new URLSearchParams(searchParams.toString())
+
+    if (selectedCodigo === codigo) {
+      // deseleccionar
+      params.delete("codigo")
+      setSelectedCodigo(null)
+    } else {
+      params.set("codigo", codigo)
+      setSelectedCodigo(codigo)
+    }
+
+    router.push(`?${params.toString()}`, { scroll: false })
   }
 
   const handleClearFilters = () => {
@@ -192,9 +233,34 @@ export default function Buscador({
                     subcategorias={filtros.modelos[selectedButton]}
                     setSubTipoSeleccionado={setSubTipoSeleccionado}
                     initialSubtipo={subTipoSeleccionado}
+                    setSelectedCodigo={setSelectedCodigo} 
                   />
                 </div>
               )}
+
+            {subTipoSeleccionado && codigosDisponibles.length > 0 && (
+              <div className="subcategoria-container">
+                <section class="contenedor-card_models_subtypes">
+                  {codigosDisponibles.map((codigo) => (
+                    <button
+                      key={codigo}
+                      onClick={() => handleCodigoClick(codigo)}
+                      className={`button-card_models_subtypes ${
+                        selectedCodigo === codigo ? "selected" : ""
+                      }`}
+                    >
+                      <h4
+                        className={`card-title_submodels ${
+                          selectedCodigo === codigo ? "selected2" : ""
+                        }`}
+                      >
+                        {codigo}
+                      </h4>
+                    </button>
+                  ))}
+                </section>
+              </div>
+            )}
 
             {/* ---- filtros nuevos sin tocar 'tipo'/'subtipo' ---- */}
 
