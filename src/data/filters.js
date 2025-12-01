@@ -85,9 +85,28 @@ export const filtros = {
   },
 }
 
+// export const codigosPorModelo = {
+//   oxfords: ["1122", "1108", "1107", "1103"],
+//   derby: ["1119", "1116", "1115", "1100", "Coll"],
+//   "con-hebillas": ["2 Hebillas", "1 Hebilla"],
+//   // etc...
+// }
+
 export const codigosPorModelo = {
-  oxfords: ["1122", "1108", "1107", "1103"],
-  derby: ["1119", "1116", "1115", "1100", "Coll"],
-  "con-hebillas": ["2 Hebillas", "1 Hebilla"],
-  // etc...
+  oxfords: [
+    { value: "1122", label: "1122" },
+    { value: "1108", label: "1108" },
+    { value: "1107", label: "1107" },
+  ],
+  derby: [
+    { value: "1119", label: "1119" },
+    { value: "1116", label: "1116" },
+    { value: "1115", label: "1115" },
+    { value: "1100", label: "1100" },
+    { value: "coll", label: "Coll" },
+  ],
+  "con-hebillas": [
+    { value: "2 hebillas", label: "2 Hebillas" },
+    { value: "1 hebilla", label: "1 Hebilla" },
+  ],
 }

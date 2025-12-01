@@ -64,7 +64,7 @@ export default function Buscador({
     const codigos = codigosPorModelo[subTipoSeleccionado] || []
     setCodigosDisponibles(codigos)
 
-    if (selectedCodigo && !codigos.includes(selectedCodigo)) {
+    if (selectedCodigo && !codigos.some((c) => c.value === selectedCodigo)) {
       setSelectedCodigo(null)
     }
   }, [subTipoSeleccionado])
@@ -244,18 +244,18 @@ export default function Buscador({
                 <section class="contenedor-card_models_subtypes">
                   {codigosDisponibles.map((codigo) => (
                     <button
-                      key={codigo}
-                      onClick={() => handleCodigoClick(codigo)}
+                      key={codigo.value}
+                      onClick={() => handleCodigoClick(codigo.value)}
                       className={`button-card_models_subtypes ${
-                        selectedCodigo === codigo ? "selected" : ""
+                        selectedCodigo === codigo.value ? "selected" : ""
                       }`}
                     >
                       <h4
                         className={`card-title_submodels ${
-                          selectedCodigo === codigo ? "selected2" : ""
+                          selectedCodigo === codigo.value ? "selected2" : ""
                         }`}
                       >
-                        {codigo}
+                        {codigo.label}
                       </h4>
                     </button>
                   ))}
