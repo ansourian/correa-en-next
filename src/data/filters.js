@@ -28,9 +28,9 @@ export const filtros = {
     { value: "cuero vegetal", label: "Cuero Vegetal" },
   ],
   sewing: [
-    { value: "estandar", label: "Estándar" },
-    { value: "diente-de-caballo", label: "Diente de caballo" },
-    { value: "diente-de-perro", label: "Diente de perro" },
+    { value: "Estándar", label: "Estándar" },
+    { value: "diente-de-caballo", label: "Diente de Caballo" },
+    { value: "diente-de-perro", label: "Diente de Perro" },
   ],
   linea: [
     { value: "ready-to-wear", label: "Ready To Wear" },

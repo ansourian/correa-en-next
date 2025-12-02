@@ -3,6 +3,13 @@ import { modelos } from "@/data/data-modelos"
 import GaleriaModelos from "@/components/GaleriaModelos"
 import Label from "@/components/Label"
 import { Tooltip } from "@mui/material"
+import {
+  BlurOnOutlined,
+  ColorLensOutlined,
+  InsightsOutlined,
+  WavesOutlined,
+} from "@mui/icons-material"
+import { DetallesModelCard } from "@/components/DetallesModelCard"
 
 export function generateStaticParams() {
   return modelos.map((m) => ({
@@ -16,7 +23,7 @@ export default function Modelos({ params }) {
 
   const relatedModels = modelos.filter(
     (m) =>
-      m.name === modelo.name && m.class === modelo.class && m.id !== modelo.id
+      m.name === modelo.name && m.class === modelo.class && m.leather === modelo.leather && m.id !== modelo.id
   )
 
   const classToUrl = {
@@ -110,10 +117,12 @@ export default function Modelos({ params }) {
         <div className="row div-model">
           <h4 className="h4-model">Descripción</h4>
           <p className="p-model">{modelo.description}</p>
-          <h4 className="h4-model">Tipo de cuero</h4>
-          <p className="p-model">{modelo.leather}</p>
-          <h4 className="h4-model">Color</h4>
-          <p className="p-model">{modelo.color}</p>
+          <div className="div-detalles-model">
+            <DetallesModelCard detalle="cuero" modelo={modelo} />
+            <DetallesModelCard detalle="color" modelo={modelo} />
+            <DetallesModelCard detalle="costura" modelo={modelo} />
+            <DetallesModelCard detalle="estilo" modelo={modelo} />
+          </div>
           <h4 className="h4-model">Código de Modelo</h4>
           <p className="p-model">{modelo.codigo}</p>
           {relatedModels.length > 0 && (

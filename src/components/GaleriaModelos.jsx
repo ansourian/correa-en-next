@@ -130,7 +130,7 @@ export default function GaleriaModelos({ images }) {
             src={img}
             alt={`Miniatura de la imagen ${index + 1}`}
             style={{
-              width: "100px", // Tamaño de las miniaturas
+              width: "80px", // Tamaño de las miniaturas
               height: "auto",
               cursor: "pointer",
               margin: "10px",

@@ -85,8 +85,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Negro",
-    leather: "Cuero vacuno",
-    sewing: "estandar",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1122",
     previewImage: "/images/ready to wear/135 - 21.webp",
     images: [
@@ -106,7 +106,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Natural",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1122",
     previewImage: "/images/ready to wear/123 - 5.webp",
     images: [
@@ -126,7 +127,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Marrón",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1122",
     previewImage: "/images/ready to wear/135 - 24.webp",
     images: [
@@ -146,7 +148,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Tabaco",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1122",
     previewImage: "/images/ready to wear/123 - 9.webp",
     images: [
@@ -165,7 +168,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Café",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1122",
     previewImage: "/images/ready to wear/138 - 4.webp",
     images: [
@@ -184,7 +188,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Suela",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1122",
     previewImage: "/images/ready to wear/122 - 29.webp",
     images: [
@@ -203,7 +208,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Verde",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1122",
     previewImage: "/images/ready to wear/123 - 1.webp",
     images: [
@@ -222,7 +228,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Rojo",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1122",
     previewImage: "/images/ready to wear/147 - 3.webp",
     images: [
@@ -241,7 +248,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Azul",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1122",
     previewImage: "/images/ready to wear/147 - 6.webp",
     images: [
@@ -260,7 +268,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Negro",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1119",
     previewImage: "/images/ready to wear/136 - 9.webp",
     images: [
@@ -279,7 +288,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Guinda",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1119",
     previewImage: "/images/ready to wear/136 - 12.webp",
     images: [
@@ -298,7 +308,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Marrón",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1119",
     previewImage: "/images/ready to wear/136 - 15.webp",
     images: [
@@ -317,7 +328,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Café",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1119",
     previewImage: "/images/ready to wear/136 - 18.webp",
     images: [
@@ -335,7 +347,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Diamante Café",
-    leather: "Cuero vacuno (graneado)",
+    leather: "Vacuno (graneado)",
+    sewing: "Estándar",
     codigo: "1116",
     previewImage: "/images/ready to wear/136 - 22.webp",
     images: [
@@ -353,7 +366,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Diamante Castaña",
-    leather: "Cuero vacuno (graneado)",
+    leather: "Vacuno (graneado)",
+    sewing: "Estándar",
     codigo: "1116",
     previewImage: "/images/ready to wear/136 - 25.webp",
     images: [
@@ -371,7 +385,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Verde",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1116",
     previewImage: "/images/ready to wear/136 - 28.webp",
     images: [
@@ -390,7 +405,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Negro",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1108",
     previewImage: "/images/ready to wear/132 - 5.webp",
     images: [
@@ -409,7 +425,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Guinda",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1108",
     previewImage: "/images/ready to wear/127 - 5.webp",
     images: [
@@ -428,7 +445,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Natural",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1108",
     previewImage: "/images/ready to wear/137 - 1.webp",
     images: [
@@ -447,7 +465,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Marrón",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1108",
     previewImage: "/images/ready to wear/137 - 4.webp",
     images: [
@@ -466,7 +485,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Guinda",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1108",
     previewImage: "/images/ready to wear/137 - 10.webp",
     images: [
@@ -485,7 +505,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Suela",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1108",
     previewImage: "/images/ready to wear/137 - 7.webp",
     images: [
@@ -504,7 +525,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Café",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1108",
     previewImage: "/images/ready to wear/137 - 13.webp",
     images: [
@@ -523,7 +545,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford-1107")?.desc,
     color: "Tabaco",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1107",
     previewImage: "/images/ready to wear/127 - 9.webp",
     images: [
@@ -542,7 +565,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford-1107")?.desc,
     color: "Guinda",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1107",
     previewImage: "/images/ready to wear/135 - 13.webp",
     images: [
@@ -561,7 +585,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford-1107")?.desc,
     color: "Marrón",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1107",
     previewImage: "/images/ready to wear/137 - 20.webp",
     images: [
@@ -580,7 +605,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford-1107")?.desc,
     color: "Suela",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1107",
     previewImage: "/images/ready to wear/137 - 23.webp",
     images: [
@@ -599,7 +625,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford-1107-flor")?.desc,
     color: "Marrón",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1107",
     previewImage: "/images/ready to wear/135 - 10.webp",
     images: [
@@ -618,7 +645,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford-1107-flor")?.desc,
     color: "Tabaco",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1107",
     previewImage: "/images/ready to wear/127 - 13.webp",
     images: [
@@ -637,7 +665,8 @@ export const modelos = [
     subtype: "oxfords",
     description: "Un zapato sencillo y elegante. Cuenta con una tira picada.",
     color: "Negro",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1107",
     previewImage: "/images/ready to wear/127 - 17.webp",
     images: [
@@ -656,7 +685,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford-1103")?.desc,
     color: "Negro",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1103",
     previewImage: "/images/ready to wear/121 - 1.webp",
     images: [
@@ -675,7 +705,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford-1103")?.desc,
     color: "Suela",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1103",
     previewImage: "/images/ready to wear/135 - 7.webp",
     images: [
@@ -694,7 +725,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford-1103")?.desc,
     color: "Café",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1103",
     previewImage: "/images/ready to wear/121 - 4.webp",
     images: [
@@ -713,7 +745,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford-1103")?.desc,
     color: "Marrón",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1103",
     previewImage: "/images/ready to wear/121 - 8.webp",
     images: [
@@ -732,7 +765,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford-1103")?.desc,
     color: "Guinda",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1103",
     previewImage: "/images/ready to wear/127 - 1.webp",
     images: [
@@ -751,7 +785,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby-tres")?.desc,
     color: "Negro",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1100 3 ojales",
     previewImage: "/images/ready to wear/126 - 12.webp",
     images: [
@@ -770,7 +805,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby-tres")?.desc,
     color: "Natural",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1100 3 ojales",
     previewImage: "/images/ready to wear/135 - 1.webp",
     images: [
@@ -789,7 +825,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby-tres")?.desc,
     color: "Suela",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1100 3 ojales",
     previewImage: "/images/ready to wear/132 - 9.webp",
     images: [
@@ -808,7 +845,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby-tres")?.desc,
     color: "Mostaza",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1100 3 ojales",
     previewImage: "/images/ready to wear/132 - 12.webp",
     images: [
@@ -827,7 +865,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby-tres")?.desc,
     color: "Marrón",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1100 3 ojales",
     previewImage: "/images/ready to wear/135 - 4.webp",
     images: [
@@ -846,7 +885,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby-tres")?.desc,
     color: "Tabaco",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1100 3 ojales",
     previewImage: "/images/ready to wear/132 - 15.webp",
     images: [
@@ -865,7 +905,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "derby-tres")?.desc,
     color: "Guinda",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1100 3 ojales",
     previewImage: "/images/ready to wear/132 - 18.webp",
     images: [
@@ -884,7 +925,8 @@ export const modelos = [
     subtype: "dandy",
     description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Diamante Negro",
-    leather: "Cuero vacuno (graneado)",
+    leather: "Vacuno (graneado)",
+    sewing: "Estándar",
     codigo: "1100",
     previewImage: "/images/ready to wear/131 - 8.webp",
     images: [
@@ -903,7 +945,8 @@ export const modelos = [
     subtype: "dandy",
     description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Diamante Castaña",
-    leather: "Cuero vacuno (graneado)",
+    leather: "Vacuno (graneado)",
+    sewing: "Estándar",
     codigo: "1100",
     previewImage: "/images/ready to wear/131 - 4.webp",
     images: [
@@ -923,6 +966,8 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Chocolate",
     leather: "Gamuza",
+    sewing: "Estándar",
+    sewing: "Estándar",
     codigo: "1100",
     previewImage: "/images/ready to wear/131 - 12.webp",
     images: [
@@ -942,6 +987,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "swann")?.desc,
     color: "Tabaco",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Swann",
     previewImage: "/images/ready to wear/139 - 4.webp",
     images: [
@@ -961,6 +1007,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "swann")?.desc,
     color: "Negro",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Swann",
     previewImage: "/images/ready to wear/139 - 1.webp",
     images: [
@@ -981,6 +1028,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "swann")?.desc,
     color: "Verde",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Swann",
     previewImage: "/images/ready to wear/184 - 25.webp",
     images: [
@@ -999,7 +1047,7 @@ export const modelos = [
     subtype: "dandy",
     description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Diamante Negro",
-    leather: "Cuero vacuno (graneado)",
+    leather: "Vacuno (graneado)",
     codigo: "Bota Dandy",
     previewImage: "/images/ready to wear/131 - 18.webp",
     images: [
@@ -1018,7 +1066,7 @@ export const modelos = [
     subtype: "dandy",
     description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Diamante Castaña",
-    leather: "Cuero vacuno (graneado)",
+    leather: "Vacuno (graneado)",
     codigo: "Bota Dandy",
     previewImage: "/images/ready to wear/131 - 15.webp",
     images: [
@@ -1038,6 +1086,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "dandy")?.desc,
     color: "Chocolate",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Bota Dandy",
     previewImage: "/images/ready to wear/131 - 21.webp",
     images: [
@@ -1057,6 +1106,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "bota-carioca")?.desc,
     color: "Arena",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Bot. Carioca",
     previewImage: "/images/ready to wear/131 - 24.webp",
     images: [
@@ -1076,6 +1126,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "bota-carioca")?.desc,
     color: "Negro",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Bot. Carioca",
     previewImage: "/images/ready to wear/148 - 12.webp",
     images: [
@@ -1094,7 +1145,8 @@ export const modelos = [
     subtype: "con-hebillas",
     description: descriptions.find((d) => d.id === "2-hebillas")?.desc,
     color: "Negro",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "2 Hebillas",
     previewImage: "/images/ready to wear/130 - 41.webp",
     images: [
@@ -1113,7 +1165,8 @@ export const modelos = [
     subtype: "con-hebillas",
     description: descriptions.find((d) => d.id === "2-hebillas")?.desc,
     color: "Suela",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "2 Hebillas",
     previewImage: "/images/ready to wear/130 - 45.webp",
     images: [
@@ -1132,7 +1185,8 @@ export const modelos = [
     subtype: "con-hebillas",
     description: descriptions.find((d) => d.id === "2-hebillas")?.desc,
     color: "Café",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "2 Hebillas",
     previewImage: "/images/ready to wear/130 - 48.webp",
     images: [
@@ -1151,7 +1205,8 @@ export const modelos = [
     subtype: "con-hebillas",
     description: descriptions.find((d) => d.id === "2-hebillas")?.desc,
     color: "Marrón",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "2 Hebillas",
     previewImage: "/images/ready to wear/130 - 54.webp",
     images: [
@@ -1171,7 +1226,8 @@ export const modelos = [
     subtype: "bajos",
     description: descriptions.find((d) => d.id === "borcego-corto")?.desc,
     color: "Suela",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Borcego Corto",
     previewImage: "/images/ready to wear/180 - 5.webp",
     images: [
@@ -1191,7 +1247,8 @@ export const modelos = [
     subtype: "bajos",
     description: descriptions.find((d) => d.id === "borcego-corto")?.desc,
     color: "Negro",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Borcego Corto",
     previewImage: "/images/ready to wear/184 - 13.webp",
     images: [
@@ -1210,7 +1267,7 @@ export const modelos = [
     subtype: "bajos",
     description: descriptions.find((d) => d.id === "borcego-corto")?.desc,
     color: "Piedra",
-    leather: "Cuero vacuno (graneado)",
+    leather: "Vacuno (graneado)",
     codigo: "Borcego Corto",
     previewImage: "/images/ready to wear/115 - 13.webp",
     images: [
@@ -1230,7 +1287,8 @@ export const modelos = [
     subtype: "bajos",
     description: descriptions.find((d) => d.id === "borcego-corto")?.desc,
     color: "Guinda",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Borcego Corto",
     previewImage: "/images/ready to wear/184 - 36.webp",
     images: [
@@ -1250,6 +1308,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "borcego-texano")?.desc,
     color: "Negro",
     leather: "Búfalo",
+    sewing: "Estándar",
     codigo: "Borcego Texano",
     previewImage: "/images/made by order/130 - 5.webp",
     images: [
@@ -1269,6 +1328,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "borcego-texano")?.desc,
     color: "Suela",
     leather: "Búfalo",
+    sewing: "Estándar",
     codigo: "Borcego Texano",
     previewImage: "/images/made by order/130 - 9.webp",
     images: [
@@ -1288,6 +1348,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "borcego-texano")?.desc,
     color: "Chocolate",
     leather: "Búfalo",
+    sewing: "Estándar",
     codigo: "Borcego Texano",
     previewImage: "/images/made by order/130 - 12.webp",
     images: [
@@ -1305,7 +1366,8 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Suela",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Zap",
     previewImage: "/images/ready to wear/122 - 26.webp",
     images: [
@@ -1323,7 +1385,8 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Chocolate",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Zap",
     previewImage: "/images/ready to wear/117 - 10.webp",
     images: [
@@ -1341,7 +1404,8 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Negro",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Zap",
     previewImage: "/images/ready to wear/156 - 20.webp",
     images: [
@@ -1359,7 +1423,8 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Negro Gastado",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Zap",
     previewImage: "/images/ready to wear/122 - 20.webp",
     images: [
@@ -1377,7 +1442,8 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Azul",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Zap",
     previewImage: "/images/ready to wear/122 - 17.webp",
     images: [
@@ -1395,7 +1461,8 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Verde Claro",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Zap",
     previewImage: "/images/ready to wear/117 - 13.webp",
     images: [
@@ -1413,7 +1480,8 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Verde",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Zap",
     previewImage: "/images/ready to wear/156 - 25.webp",
     images: [
@@ -1431,7 +1499,8 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Rojo",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Zap",
     previewImage: "/images/ready to wear/156 - 5.webp",
     images: [
@@ -1449,7 +1518,8 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Blanco con talón negro",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Zap",
     previewImage: "/images/ready to wear/133 - 19.webp",
     images: [
@@ -1467,7 +1537,8 @@ export const modelos = [
     subtype: "urbana",
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Blanco con talón rojo",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Zap",
     previewImage: "/images/ready to wear/133 - 23.webp",
     images: [
@@ -1486,6 +1557,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Suela",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Zap SC",
     previewImage: "/images/ready to wear/152 - 19.webp",
     images: [
@@ -1504,6 +1576,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "sneaker")?.desc,
     color: "Arena",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Zap SC",
     previewImage: "/images/ready to wear/152 - 16.webp",
     images: [
@@ -1522,6 +1595,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "sneaker-bota")?.desc,
     color: "Azul",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Zap",
     previewImage: "/images/ready to wear/148 - 5.webp",
     images: [
@@ -1540,6 +1614,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "sneaker-bota")?.desc,
     color: "Rojo",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Zap",
     previewImage: "/images/ready to wear/148 - 16.webp",
     images: [
@@ -1558,6 +1633,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "sneaker-bota")?.desc,
     color: "Amarillo",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Zap",
     previewImage: "/images/ready to wear/149 - 12.webp",
     images: [
@@ -1575,7 +1651,8 @@ export const modelos = [
     subtype: "bota",
     description: descriptions.find((d) => d.id === "sneaker-bota")?.desc,
     color: "Verde",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Zap",
     previewImage: "/images/ready to wear/148 - 9.webp",
     images: [
@@ -1595,6 +1672,7 @@ export const modelos = [
       "Mocasín fresco, liviano y flexible ideal para las temporadas primavera/verano.",
     color: "Arena",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Slipper 123",
     previewImage: "/images/ready to wear/126 - 4.webp",
     images: [
@@ -1614,6 +1692,7 @@ export const modelos = [
       "Mocasín fresco, liviano y flexible ideal para las temporadas primavera/verano.",
     color: "Tostado",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Slipper 123",
     previewImage: "/images/ready to wear/117 - 23.webp",
     images: [
@@ -1633,6 +1712,7 @@ export const modelos = [
       "Mocasín fresco, liviano y flexible ideal para las temporadas primavera/verano.",
     color: "Violeta",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Slipper 123",
     previewImage: "/images/ready to wear/142 - 27.webp",
     images: [
@@ -1652,6 +1732,7 @@ export const modelos = [
       "Mocasín fresco, liviano y flexible ideal para las temporadas primavera/verano.",
     color: "Verde Musgo",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Slipper 123",
     previewImage: "/images/ready to wear/126 - 8.webp",
     images: [
@@ -1670,7 +1751,8 @@ export const modelos = [
     description:
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
     color: "Suela",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "MP con Costurín",
     previewImage: "/images/ready to wear/145 - 17.webp",
     images: [
@@ -1689,7 +1771,8 @@ export const modelos = [
     description:
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
     color: "Marrón",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "MP con Costurín",
     previewImage: "/images/ready to wear/147 - 12.webp",
     images: [
@@ -1708,7 +1791,8 @@ export const modelos = [
     description:
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
     color: "Verde",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "MP con Costurín",
     previewImage: "/images/ready to wear/147 - 16.webp",
     images: [
@@ -1727,7 +1811,8 @@ export const modelos = [
     description:
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
     color: "Café",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "MP con Costurín",
     previewImage: "/images/ready to wear/147 - 19.webp",
     images: [
@@ -1746,7 +1831,8 @@ export const modelos = [
     description:
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
     color: "Negro",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "MP con Costurín",
     previewImage: "/images/ready to wear/147 - 22.webp",
     images: [
@@ -1822,7 +1908,8 @@ export const modelos = [
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Suela",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Mocasín",
     previewImage: "/images/ready to wear/141 - 21.webp",
     images: [
@@ -1841,7 +1928,8 @@ export const modelos = [
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Suela",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Mocasín USA",
     previewImage: "/images/ready to wear/161 - 15.webp",
     images: [
@@ -1860,7 +1948,8 @@ export const modelos = [
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Guinda",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Mocasín USA",
     previewImage: "/images/ready to wear/161 - 11.webp",
     images: [
@@ -1879,7 +1968,8 @@ export const modelos = [
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Negro",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Mocasín USA",
     previewImage: "/images/ready to wear/161 - 18.webp",
     images: [
@@ -1898,7 +1988,8 @@ export const modelos = [
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Azul",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "226",
     previewImage: "/images/ready to wear/119 - 17.webp",
     images: [
@@ -1917,7 +2008,8 @@ export const modelos = [
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Negro",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "226",
     previewImage: "/images/ready to wear/119 - 21.webp",
     images: [
@@ -1936,7 +2028,8 @@ export const modelos = [
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Maíz",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "226",
     previewImage: "/images/ready to wear/130 - 25.webp",
     images: [
@@ -1955,7 +2048,8 @@ export const modelos = [
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Verde",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "226",
     previewImage: "/images/ready to wear/130 - 29.webp",
     images: [
@@ -1973,6 +2067,7 @@ export const modelos = [
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Marrón",
     leather: "Carpincho",
+    sewing: "Estándar",
     codigo: "226",
     previewImage: "/images/ready to wear/141 - 18.webp",
     images: [
@@ -1991,7 +2086,8 @@ export const modelos = [
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Marrón",
-    leather: "Cuero vacuno (símil croco)",
+    leather: "Vacuno (símil croco)",
+    sewing: "Estándar",
     codigo: "226",
     previewImage: "/images/ready to wear/130 - 33.webp",
     images: [
@@ -2010,7 +2106,8 @@ export const modelos = [
     description:
       "Esta colaboración entre Calzados Correa e Industry Of All Nations, tiene como resultado un mocasín de cuero curtido vegetal con un enfoque ecológico.",
     color: "Natural",
-    leather: "Cuero Vegetal",
+    leather: "Vegetal",
+    sewing: "Estándar",
     codigo: "Mocasín Industry",
     previewImage: "/images/ready to wear/123 - 32.webp",
     images: [
@@ -2029,7 +2126,8 @@ export const modelos = [
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Suela",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Náutico",
     previewImage: "/images/ready to wear/145 - 21.webp",
     images: [
@@ -2048,7 +2146,8 @@ export const modelos = [
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Azul",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Náutico",
     previewImage: "/images/ready to wear/149 - 5.webp",
     images: [
@@ -2067,7 +2166,8 @@ export const modelos = [
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Chocolate",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Náutico",
     previewImage: "/images/ready to wear/149 - 9.webp",
     images: [
@@ -2086,7 +2186,8 @@ export const modelos = [
     description:
       "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
     color: "Chocolate (Oscuro)",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Náutico Pull-up",
     previewImage: "/images/ready to wear/149 - 1.webp",
     images: [
@@ -2106,7 +2207,8 @@ export const modelos = [
     description:
       "Una bota clásica, cómoda y atemporal. Desde paseos por la ciudad hasta eventos formales, la bota inglesa ofrece un toque de sofisticación a cualquier conjunto.",
     color: "Marrón",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Bota Inglesa",
     previewImage: "/images/ready to wear/144 - 1.webp",
     images: [
@@ -2126,7 +2228,8 @@ export const modelos = [
     description:
       "Una bota clásica, cómoda y atemporal. Desde paseos por la ciudad hasta eventos formales, la bota inglesa ofrece un toque de sofisticación a cualquier conjunto.",
     color: "Negro",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Bota Inglesa",
     previewImage: "/images/ready to wear/144 - 5.webp",
     images: [
@@ -2146,7 +2249,7 @@ export const modelos = [
     description:
       "Un clásico de la casa. Esta bota cuenta con una costura redondeada y presenta un diseño clásico con un toque más suave y contemporáneo. Ofrece un equilibrio perfecto entre class tradicional y comodidad moderna.",
     color: "Suela",
-    leather: "Cuero vacuno (graneado)",
+    leather: "Vacuno (graneado)",
     codigo: "Bota Petta",
     previewImage: "/images/ready to wear/144 - 8.webp",
     images: [
@@ -2166,7 +2269,7 @@ export const modelos = [
     description:
       "Un clásico de la casa. Esta bota cuenta con una costura redondeada y presenta un diseño clásico con un toque más suave y contemporáneo. Ofrece un equilibrio perfecto entre class tradicional y comodidad moderna.",
     color: "Negro",
-    leather: "Cuero vacuno (graneado)",
+    leather: "Vacuno (graneado)",
     codigo: "Bota Petta",
     previewImage: "/images/ready to wear/144 - 12.webp",
     images: [
@@ -2186,7 +2289,7 @@ export const modelos = [
     description:
       "Un clásico de la casa. Esta bota cuenta con una costura redondeada y presenta un diseño clásico con un toque más suave y contemporáneo. Ofrece un equilibrio perfecto entre class tradicional y comodidad moderna.",
     color: "Verde",
-    leather: "Cuero vacuno (graneado)",
+    leather: "Vacuno (graneado)",
     codigo: "Bota Petta",
     previewImage: "/images/ready to wear/144 - 15.webp",
     images: [
@@ -2206,7 +2309,8 @@ export const modelos = [
     description:
       "Una bota moderna y elegante ideal para combinar con jeans y con pantalones de vestir.",
     color: "Negro",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Bota ET",
     previewImage: "/images/ready to wear/143 - 8.webp",
     images: [
@@ -2226,7 +2330,8 @@ export const modelos = [
     description:
       "Una bota moderna y elegante ideal para combinar con jeans y con pantalones de vestir.",
     color: "Suela",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Bota ET",
     previewImage: "/images/ready to wear/143 - 4.webp",
     images: [
@@ -2247,6 +2352,7 @@ export const modelos = [
       "Una bota moderna y elegante ideal para combinar con jeans y con pantalones de vestir.",
     color: "Arena",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Bota ET",
     previewImage: "/images/ready to wear/143 - 11.webp",
     images: [
@@ -2265,7 +2371,8 @@ export const modelos = [
     description:
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Negro",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Bota Elástico",
     previewImage: "/images/made by order/131 - 28.webp",
     images: [
@@ -2284,7 +2391,8 @@ export const modelos = [
     description:
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Suela",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Bota Elástico",
     previewImage: "/images/made by order/131 - 31.webp",
     images: [
@@ -2304,7 +2412,8 @@ export const modelos = [
     description:
       "Un zapato sencillo y elegante gracias a su aspecto liso y sin picar. Su combinación de colores le otorgan mucha presencia. ",
     color: "Suela - Maíz",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1122 Liso",
     previewImage: "/images/made by order/112 - 25.webp",
     images: [
@@ -2323,7 +2432,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Negro - Marrón",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1122",
     previewImage: "/images/made by order/114 - 4.webp",
     images: [
@@ -2342,7 +2452,7 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Azul - Maíz",
-    leather: "Combinado de Cuero Vacuno y Cabretilla",
+    leather: "Combinado de Vacuno y Cabretilla",
     codigo: "1122",
     previewImage: "/images/made by order/142 - 18.webp",
     images: [
@@ -2361,7 +2471,7 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Negro - Rojo",
-    leather: "Combinado de Cuero Vacuno y Cabretilla",
+    leather: "Combinado de Vacuno y Cabretilla",
     codigo: "1122",
     previewImage: "/images/made by order/114 - 15.webp",
     images: [
@@ -2399,7 +2509,7 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Suela - Gamuza Marrón",
-    leather: "Combinado de Cuero Vacuno y Gamuza",
+    leather: "Combinado de Vacuno y Gamuza",
     codigo: "1108",
     previewImage: "/images/made by order/142 - 31.webp",
     images: [
@@ -2418,7 +2528,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Suela (con pátina)",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1107 MTO",
     previewImage: "/images/made by order/161 - 6.webp",
     images: [
@@ -2437,7 +2548,7 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Chocolate - Verde",
-    leather: "Combinado de Anca de potro, gamuza y cuero vacuno",
+    leather: "Combinado de Anca de potro, gamuza y Vacuno",
     codigo: "1103",
     previewImage: "/images/made by order/137 - 16.webp",
     images: [
@@ -2456,7 +2567,8 @@ export const modelos = [
     subtype: "swann",
     description: descriptions.find((d) => d.id === "swann")?.desc,
     color: "Maíz",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Swann",
     previewImage: "/images/made by order/112 - 21.webp",
     images: [
@@ -2475,7 +2587,8 @@ export const modelos = [
     subtype: "swann",
     description: descriptions.find((d) => d.id === "swann")?.desc,
     color: "Marrón",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Swann",
     previewImage: "/images/made by order/119 - 5.webp",
     images: [
@@ -2494,7 +2607,8 @@ export const modelos = [
     subtype: "swann",
     description: descriptions.find((d) => d.id === "swann")?.desc,
     color: "Verde - Blanco - Rojo",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Swann",
     previewImage: "/images/made by order/171 - 31.webp",
     images: [
@@ -2514,7 +2628,8 @@ export const modelos = [
     description:
       "Una versión exótica de nuestro clásico de una sola pieza. Esta versión de nuestro modelo Swann exhibe capelladas de cuero que incluyen su pelaje bovino original.",
     color: "Café",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Swann con pelo",
     previewImage: "/images/made by order/146 - 7.webp",
     images: [
@@ -2534,7 +2649,8 @@ export const modelos = [
     description:
       'Este modelo se caracteriza por estar confeccionado a partir de una sola pieza de cuero, lo que le confiere un aspecto elegante y limpio, ya que no tiene costuras visibles en la parte superior del zapato. El modelo "Club" cuenta con la cordonera en la cara externa del calzado.',
     color: "Rojo",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Swann Club",
     previewImage: "/images/made by order/143 - 1.webp",
     images: [
@@ -2555,6 +2671,7 @@ export const modelos = [
       "Este es un modelo de class elegante que se distingue por sus dos hebillas en lugar de cordones (de las cuales una cuenta con un elástico), lo que le confiere una apariencia sofisticada y versátil, adecuada tanto para ocasiones formales como informales.",
     color: "Marrón",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "2 Hebillas",
     previewImage: "/images/ready to wear/130 - 51.webp",
     images: [
@@ -2574,7 +2691,8 @@ export const modelos = [
     description:
       "Esta bota Derby se caracteriza por su class picado. Este diseño proporciona mayor comodidad y ajuste, ya que la lengüeta se puede ajustar de acuerdo con el ancho del pie.",
     color: "Negro",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Bota Alpina",
     previewImage: "/images/made by order/123 - 15.webp",
     images: [
@@ -2594,7 +2712,8 @@ export const modelos = [
     description:
       "Esta bota Derby se caracteriza por su class picado. Este diseño proporciona mayor comodidad y ajuste, ya que la lengüeta se puede ajustar de acuerdo con el ancho del pie.",
     color: "Marrón",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Bota Alpina",
     previewImage: "/images/made by order/117 - 01.webp",
     images: [
@@ -2614,7 +2733,7 @@ export const modelos = [
     description:
       "Esta bota Derby se caracteriza por no contar con picados. Este diseño proporciona mayor comodidad y ajuste, ya que la lengüeta se puede ajustar de acuerdo con el ancho del pie.",
     color: "Chocolate",
-    leather: "Cuero vacuno (graneado)",
+    leather: "Vacuno (graneado)",
     codigo: "Bota Alpina",
     previewImage: "/images/made by order/130 - 22.webp",
     images: [
@@ -2635,6 +2754,7 @@ export const modelos = [
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Gris",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Bota Elástico",
     previewImage: "/images/made by order/85 - 11.webp",
     images: [
@@ -2655,6 +2775,7 @@ export const modelos = [
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Chocolate",
     leather: "Búfalo",
+    sewing: "Estándar",
     codigo: "Bota Elástico",
     previewImage: "/images/made by order/144 - 21.webp",
     images: [
@@ -2675,6 +2796,7 @@ export const modelos = [
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Café",
     leather: "Búfalo",
+    sewing: "Estándar",
     codigo: "Bota Elástico",
     previewImage: "/images/made by order/155 - 8.webp",
     images: [
@@ -2695,6 +2817,7 @@ export const modelos = [
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Marrón",
     leather: "Búfalo",
+    sewing: "Estándar",
     codigo: "Bota Elástico",
     previewImage: "/images/made by order/155 - 4.webp",
     images: [
@@ -2715,6 +2838,7 @@ export const modelos = [
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Verde",
     leather: "Búfalo",
+    sewing: "Estándar",
     codigo: "Bota Elástico",
     previewImage: "/images/made by order/156 - 8.webp",
     images: [
@@ -2735,6 +2859,7 @@ export const modelos = [
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Negro",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Bota Elástico",
     previewImage: "/images/made by order/113 - 24.webp",
     images: [
@@ -2755,6 +2880,7 @@ export const modelos = [
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Chocolate",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Bota Elástico",
     previewImage: "/images/made by order/114 - 1.webp",
     images: [
@@ -2775,6 +2901,7 @@ export const modelos = [
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Verde Musgo",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Bota Elástico",
     previewImage: "/images/made by order/117 - 03.webp",
     images: [
@@ -2795,6 +2922,7 @@ export const modelos = [
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Arena",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Bota Elástico",
     previewImage: "/images/made by order/131 - 1.webp",
     images: [
@@ -2815,6 +2943,7 @@ export const modelos = [
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Azul",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Bota Elástico",
     previewImage: "/images/made by order/133 - 16.webp",
     images: [
@@ -2835,6 +2964,7 @@ export const modelos = [
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Rojo",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Bota Elástico",
     previewImage: "/images/made by order/157 - 27.webp",
     images: [
@@ -2854,7 +2984,8 @@ export const modelos = [
     description:
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Negro",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Bota con Cierre",
     previewImage: "/images/made by order/153 - 1.webp",
     images: [
@@ -2874,7 +3005,8 @@ export const modelos = [
     description:
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Guinda",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Bota con Cierre",
     previewImage: "/images/made by order/153 - 9.webp",
     images: [
@@ -2895,6 +3027,7 @@ export const modelos = [
       "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
     color: "Tostado",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Bota con Cierre",
     previewImage: "/images/made by order/153 - 5.webp",
     images: [
@@ -2913,7 +3046,8 @@ export const modelos = [
     description:
       "Este modelo cuenta con una costura que divide la puntera en dos secciones, añadiendo un toque distintivo al diseño. Al ser un modelo Derby, cuenta con una gran flexibilidad en la cordonera.",
     color: "Verde - Blanco",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1115 Copete Aparado",
     previewImage: "/images/made by order/113 - 1.webp",
     images: [
@@ -2934,6 +3068,7 @@ export const modelos = [
       "Un clásico liso de cordonera abierta. Este modelo logra un atractivo estilizado sin romper sus líneas tradicionales. Se recomienda para personas con empeine alto.",
     color: "Verde Musgo",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "1100 MTO",
     previewImage: "/images/made by order/153 - 23.webp",
     images: [
@@ -2952,7 +3087,7 @@ export const modelos = [
     description:
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con un costurín y vincha.",
     color: "Diamante Castaña",
-    leather: "Cuero vacuno (graneado)",
+    leather: "Vacuno (graneado)",
     codigo: "123 con Costurín y Vincha",
     previewImage: "/images/made by order/112 - 29.webp",
     images: [
@@ -2971,7 +3106,8 @@ export const modelos = [
     description:
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera.",
     color: "Negro - Blanco",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "123 Liguria",
     previewImage: "/images/made by order/142 - 37.webp",
     images: [
@@ -2990,7 +3126,8 @@ export const modelos = [
     description:
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
     color: "Guinda - Blanco",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "123 Liguria",
     previewImage: "/images/made by order/141 - 6.webp",
     images: [
@@ -3009,7 +3146,8 @@ export const modelos = [
     description:
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera.",
     color: "Natural",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "123 con Costurín Recto y Vincha",
     previewImage: "/images/made by order/141 - 9.webp",
     images: [
@@ -3028,7 +3166,8 @@ export const modelos = [
     description:
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera.",
     color: "Verde",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "123 con Costurín Recto y Vincha",
     previewImage: "/images/made by order/142 - 34.webp",
     images: [
@@ -3048,6 +3187,7 @@ export const modelos = [
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera.",
     color: "Arena",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "123 con Costurín Recto y Vincha",
     previewImage: "/images/made by order/142 - 6.webp",
     images: [
@@ -3067,6 +3207,7 @@ export const modelos = [
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera.",
     color: "Azul",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "123 con Costurín Recto y Vincha",
     previewImage: "/images/made by order/142 - 9.webp",
     images: [
@@ -3086,6 +3227,7 @@ export const modelos = [
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera.",
     color: "Chocolate",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "123 con Costurín y Vincha",
     previewImage: "/images/made by order/152 - 36.webp",
     images: [
@@ -3105,6 +3247,7 @@ export const modelos = [
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
     color: "Arena",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "MP con Costurín Recto y Campanillas",
     previewImage: "/images/made by order/141 - 24.webp",
     images: [
@@ -3124,6 +3267,7 @@ export const modelos = [
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
     color: "Chocolate",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "MP con Costurín Recto y Campanillas",
     previewImage: "/images/made by order/141 - 27.webp",
     images: [
@@ -3143,6 +3287,7 @@ export const modelos = [
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
     color: "Azul",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "MP con Costurín y Campanillas",
     previewImage: "/images/made by order/141 - 12.webp",
     images: [
@@ -3162,6 +3307,7 @@ export const modelos = [
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
     color: "Violeta",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "MP con Costurín y Campanillas",
     previewImage: "/images/made by order/156 - 1.webp",
     images: [
@@ -3180,7 +3326,8 @@ export const modelos = [
     description:
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
     color: "Verde",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "MP con Costurín",
     previewImage: "/images/made by order/119 - 25.webp",
     images: [
@@ -3199,7 +3346,8 @@ export const modelos = [
     description:
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
     color: "Rojo",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "MP con Costurín",
     previewImage: "/images/made by order/153 - 16.webp",
     images: [
@@ -3218,7 +3366,8 @@ export const modelos = [
     description:
       "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas y una capellada lisa.",
     color: "Maíz",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "MP sin Costurín",
     previewImage: "/images/made by order/119 - 9.webp",
     images: [
@@ -3238,6 +3387,7 @@ export const modelos = [
       "Un borcego rígido y robusto. Su construcción incorpora suelas y tacos de cuero terminados con suelinas y sobretacos de goma. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
     color: "Natural",
     leather: "Búfalo",
+    sewing: "Estándar",
     codigo: "Borcego GC Texano",
     previewImage: "/images/made by order/123 - 12.webp",
     images: [
@@ -3257,6 +3407,7 @@ export const modelos = [
       "Un borcego rígido y robusto. Su construcción incorpora bases de cuero y suela FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
     color: "Guinda",
     leather: "Búfalo",
+    sewing: "Estándar",
     codigo: "Borcego GC Texano",
     previewImage: "/images/made by order/130 - 15.webp",
     images: [
@@ -3276,6 +3427,7 @@ export const modelos = [
       "Un borcego rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
     color: "Marrón",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Borcego GC Texano",
     previewImage: "/images/made by order/148 - 26.webp",
     images: [
@@ -3295,6 +3447,7 @@ export const modelos = [
       "Un borcego rígido y robusto. Su construcción incorpora bases de cuero y suela FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
     color: "Negro",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Borcego GC Texano",
     previewImage: "/images/bespoke/115 - 17.webp",
     images: [
@@ -3314,6 +3467,7 @@ export const modelos = [
       "Un borcego rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
     color: "Búfalo con pecas",
     leather: "Búfalo",
+    sewing: "Estándar",
     codigo: "Borcego Texano",
     previewImage: "/images/made by order/127 - 25.webp",
     images: [
@@ -3333,6 +3487,7 @@ export const modelos = [
       "Un borcego rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
     color: "Natural",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Borcego Texano",
     previewImage: "/images/made by order/130 - 19.webp",
     images: [
@@ -3351,7 +3506,8 @@ export const modelos = [
     description:
       "Un zapato rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Un modelo ideal para el uso urbano y aptas para caminos rurales.",
     color: "Guinda",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Derby Coll",
     previewImage: "/images/made by order/128 - 10.webp",
     images: [
@@ -3370,7 +3526,8 @@ export const modelos = [
     description:
       "Un zapato rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Un modelo ideal para el uso urbano y aptas para caminos rurales.",
     color: "Negro",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Derby Coll",
     previewImage: "/images/made by order/160 - 11.webp",
     images: [
@@ -3390,7 +3547,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Maíz",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1122 Bespoke",
     previewImage: "/images/bespoke/112 - 1.webp",
     images: [
@@ -3410,7 +3568,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Pátina Museum",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1122 Bespoke",
     previewImage: "/images/bespoke/142 - 24.webp",
     images: [
@@ -3430,7 +3589,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Rojo",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1122 Bespoke",
     previewImage: "/images/bespoke/152 - 1.webp",
     images: [
@@ -3451,6 +3611,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Verde Inglés",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "1122 Bespoke",
     previewImage: "/images/bespoke/139 - 7.webp",
     images: [
@@ -3470,7 +3631,8 @@ export const modelos = [
     subtype: "con-hebillas",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Maíz",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1047 Bespoke",
     previewImage: "/images/bespoke/150 - 25.webp",
     images: [
@@ -3490,7 +3652,8 @@ export const modelos = [
     subtype: "con-hebillas",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Suela",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1047 Bespoke HD",
     previewImage: "/images/bespoke/152 - 12.webp",
     images: [
@@ -3510,7 +3673,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Café",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1108 Bespoke",
     previewImage: "/images/bespoke/112 - 5.webp",
     images: [
@@ -3530,7 +3694,8 @@ export const modelos = [
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Negro",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1103 Bespoke",
     previewImage: "/images/bespoke/140 - 31.webp",
     images: [
@@ -3549,7 +3714,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Maíz",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1116 Bespoke",
     previewImage: "/images/bespoke/113 - 5.webp",
     images: [
@@ -3568,7 +3734,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Cognac",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1116 Bespoke",
     previewImage: "/images/bespoke/150 - 28.webp",
     images: [
@@ -3587,7 +3754,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Suela",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1116 Bespoke",
     previewImage: "/images/bespoke/123 - 20.webp",
     images: [
@@ -3608,7 +3776,8 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Tabaco",
     leather: "Vacuno",
-    sewing: "diente de caballo",
+    sewing: "Estándar",
+    sewing: "Diente de Caballo",
     codigo: "Swann Bespoke",
     previewImage: "/images/bespoke/152 - 5.webp",
     images: [
@@ -3629,6 +3798,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Café",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Swann Bespoke",
     previewImage: "/images/bespoke/113 - 12.webp",
     images: [
@@ -3649,6 +3819,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Museum",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Swann Bespoke",
     previewImage: "/images/bespoke/123 - 16.webp",
     images: [
@@ -3688,7 +3859,8 @@ export const modelos = [
     subtype: "inglesa",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Negro",
-    leather: "Cuero Vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Bota Inglesa Bespoke",
     previewImage: "/images/bespoke/152 - 22.webp",
     images: [
@@ -3748,6 +3920,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Suela",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Wholecut 1116",
     previewImage: "/images/bespoke/114 - 19.webp",
     images: [
@@ -3767,7 +3940,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Marrón",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1100 Bespoke",
     previewImage: "/images/bespoke/123 - 24.webp",
     images: [
@@ -3787,7 +3961,8 @@ export const modelos = [
     subtype: "derby",
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Verde - Suela - Rojo",
-    leather: "Cuero vacuno",
+    leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "1100 Bespoke",
     previewImage: "/images/bespoke/168 - 14.webp",
     images: [
@@ -3808,6 +3983,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Marrón",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Bota Petta Bespoke",
     previewImage: "/images/bespoke/123 - 28.webp",
     images: [
@@ -3868,6 +4044,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Natural",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Swann Bespoke",
     previewImage: "/images/bespoke/117 - 6.webp",
     images: [
@@ -3884,6 +4061,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Rojo - Blanco - Verde",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Cinturón Clásico Tricolor",
     previewImage: "/images/cinturones/171 - 35.webp",
     images: ["/images/cinturones/171 - 35.webp", "", "", ""],
@@ -3895,6 +4073,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "cinturon-rustico")?.desc,
     color: "Maíz",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Cinturón Rústico",
     previewImage: "/images/cinturones/140 - 38.webp",
     images: ["/images/cinturones/140 - 38.webp", "", "", ""],
@@ -3906,6 +4085,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "cinturon-rustico")?.desc,
     color: "Marrón Oscuro",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Cinturón Rústico",
     previewImage: "/images/cinturones/140 - 46.webp",
     images: ["/images/cinturones/140 - 46.webp", "", "", ""],
@@ -3917,6 +4097,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "cinturon-rustico")?.desc,
     color: "Blanco",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Cinturón Rústico",
     previewImage: "/images/cinturones/141 - 5.webp",
     images: ["/images/cinturones/141 - 5.webp", "", "", ""],
@@ -3928,6 +4109,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Guinda",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Cinturón Clásico",
     previewImage: "/images/cinturones/140 - 39.webp",
     images: ["/images/cinturones/140 - 39.webp", "", "", ""],
@@ -3939,6 +4121,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Maíz",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Cinturón Clásico",
     previewImage: "/images/cinturones/140 - 41.webp",
     images: ["/images/cinturones/140 - 41.webp", "", "", ""],
@@ -3961,6 +4144,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Rojo",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Cinturón Clásico",
     previewImage: "/images/cinturones/140 - 43.webp",
     images: ["/images/cinturones/140 - 43.webp", "", "", ""],
@@ -3972,6 +4156,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Negro",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Cinturón Clásico",
     previewImage: "/images/cinturones/140 - 44.webp",
     images: ["/images/cinturones/140 - 44.webp", "", "", ""],
@@ -3983,6 +4168,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Verde",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Cinturón Clásico",
     previewImage: "/images/cinturones/140 - 45.webp",
     images: ["/images/cinturones/140 - 45.webp", "", "", ""],
@@ -3994,6 +4180,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Azul",
     leather: "Vacuno",
+    sewing: "Estándar",
     codigo: "Cinturón Clásico",
     previewImage: "/images/cinturones/140 - 47.webp",
     images: ["/images/cinturones/140 - 47.webp", "", "", ""],
@@ -4005,6 +4192,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Marrón",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Cinturón Clásico",
     previewImage: "/images/cinturones/141 - 2.webp",
     images: ["/images/cinturones/141 - 2.webp", "", "", ""],
@@ -4016,6 +4204,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Rojo",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Cinturón Clásico",
     previewImage: "/images/cinturones/140 - 40.webp",
     images: ["/images/cinturones/140 - 40.webp", "", "", ""],
@@ -4027,6 +4216,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Azul",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Cinturón Clásico",
     previewImage: "/images/cinturones/141 - 1.webp",
     images: ["/images/cinturones/141 - 1.webp", "", "", ""],
@@ -4038,6 +4228,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "cinturon-clasico")?.desc,
     color: "Amarillo",
     leather: "Gamuza",
+    sewing: "Estándar",
     codigo: "Cinturón Clásico",
     previewImage: "/images/cinturones/141 - 4.webp",
     images: ["/images/cinturones/141 - 4.webp", "", "", ""],

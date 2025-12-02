@@ -12,7 +12,12 @@
 
 main {
   margin-bottom: 5rem;
+  padding-inline: var(--gutter);
 }
+
+/* :root {
+  --gutter: 1rem;
+} */
 
 nav {
   display: flex;
@@ -2114,7 +2119,7 @@ footer {
 }
 
 .div-galeria {
-  width: 50%;
+  width: 45%;
   min-height: 300px;
 }
 
@@ -2163,7 +2168,7 @@ footer {
 }
 
 .div-info-modelo {
-  width: 50%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -2190,7 +2195,7 @@ footer {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   gap: 2rem;
 }
 
@@ -2396,6 +2401,55 @@ body {
   transform: rotate(180deg);
 }
 
+.div-detalles-model {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 1vw;
+  padding: 1rem 0 2rem;
+  overflow-x: visible;
+  flex-wrap: wrap;
+}
+
+.div-detalles-model-individual {
+  border: 1px solid #d9d9d9;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: rgb(0, 0, 0);
+  background-color: #f6f6f6;
+  white-space: nowrap;
+}
+
+.div-detalles-model::-webkit-scrollbar {
+  height: 6px;
+}
+
+.div-detalles-model::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+  border-radius: 10px;
+}
+
+.div-detalles-model-individual-title {
+  display: flex;
+  flex-direction: row;
+  color: #000000;
+}
+
+.p-detalles-model-individual {
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
 @media screen and (min-width: 300px) and (max-width: 767px) {
   main {
     width: 90%;
@@ -2404,6 +2458,11 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto 3rem;
+    /* padding: 0; */
+  }
+
+  :root {
+    --gutter: 0.5rem;
   }
 
   h1 {
@@ -3714,6 +3773,10 @@ body {
     margin: 0 1rem;
   }
 
+  .otros-modelos {
+    padding-inline: 0 !important;
+  }
+
   .otros-modelos-grid {
     display: flex;
     justify-content: center;
@@ -3758,5 +3821,26 @@ body {
   .contenedor-mantenimiento {
     width: 100%;
     margin: 0vw auto;
+  }
+
+  .div-detalles-model {
+    flex-wrap: nowrap; /* ❌ no wrap */
+    overflow-x: auto; /* ✅ scroll horizontal */
+    scroll-snap-type: x mandatory;
+  }
+
+  .div-detalles-model-individual {
+    flex: 0 0 auto;
+    min-width: 220px;
+    scroll-snap-align: start;
+  }
+
+  .div-detalles-model::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .div-detalles-model::-webkit-scrollbar-thumb {
+    background: #cfcfcf;
+    border-radius: 10px;
   }
 }
