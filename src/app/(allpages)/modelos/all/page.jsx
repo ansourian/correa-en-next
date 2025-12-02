@@ -77,7 +77,9 @@ export default function AllModels() {
         ? normalizedLeather.includes(leatherNormalizado)
         : true
       const matchesCodigo = selectedCodigo
-        ? modelo.name.toLowerCase().includes(selectedCodigo.toLowerCase())
+        ? selectedCodigo === "Mod. Swann"
+          ? modelo.name.trim().toLowerCase() === "mod. swann"
+          : modelo.name.toLowerCase().includes(selectedCodigo.toLowerCase())
         : true
       const isNotBelt = modelo.class !== "ACCESORIOS"
       return (

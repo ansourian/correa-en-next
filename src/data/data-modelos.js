@@ -2448,7 +2448,7 @@ export const modelos = [
   },
   {
     id: "Swann-Maiz",
-    name: "Mod. Swann Wholecut",
+    name: "Mod. Swann",
     variant: "Wholecut",
     class: "MADE TO ORDER",
     type: "zapatos",
@@ -2467,7 +2467,7 @@ export const modelos = [
   },
   {
     id: "Swann-Marron",
-    name: "Mod. Swann Wholecut",
+    name: "Mod. Swann",
     variant: "Wholecut",
     class: "MADE TO ORDER",
     type: "zapatos",
@@ -2525,7 +2525,7 @@ export const modelos = [
   },
   {
     id: "Swann-Club-Rojo",
-    name: "Mod. Swann Club Wholecut",
+    name: "Mod. Swann Club",
     variant: "Wholecut",
     class: "MADE TO ORDER",
     type: "zapatos",
@@ -3599,7 +3599,7 @@ export const modelos = [
   {
     isMedida: "true",
     id: "Swann-Wholecut-DC-Tabaco",
-    name: "Mod. Swann Wholecut (Diente de Caballo)",
+    name: "Mod. Swann (Diente de Caballo)",
     variant: "Wholecut",
     class: "BESPOKE",
     type: "zapatos",
@@ -3619,7 +3619,7 @@ export const modelos = [
   {
     isMedida: "true",
     id: "Swann-Wholecut-Cafe",
-    name: "Mod. Swann Wholecut",
+    name: "Mod. Swann",
     variant: "Wholecut",
     class: "BESPOKE",
     type: "zapatos",
@@ -3639,7 +3639,7 @@ export const modelos = [
   {
     isMedida: "true",
     id: "Swann-Museum",
-    name: "Mod. Swann Wholecut",
+    name: "Mod. Swann",
     variant: "Wholecut",
     class: "BESPOKE",
     type: "zapatos",
@@ -3858,7 +3858,7 @@ export const modelos = [
   {
     isMedida: "true",
     id: "Swann-Tatuado-Natural",
-    name: "Mod. Swann",
+    name: "Mod. Swann (Tatuado)",
     variant: "Wholecut",
     class: "BESPOKE",
     type: "zapatos",

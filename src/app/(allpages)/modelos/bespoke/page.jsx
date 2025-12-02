@@ -73,7 +73,9 @@ export default function Modelos() {
         ? normalizedLeather.includes(leatherNormalizado)
         : true
       const matchesCodigo = selectedCodigo
-        ? modelo.name.toLowerCase().includes(selectedCodigo.toLowerCase())
+        ? selectedCodigo === "Mod. Swann"
+          ? modelo.name.trim().toLowerCase() === "mod. swann"
+          : modelo.name.toLowerCase().includes(selectedCodigo.toLowerCase())
         : true
       return (
         (normalizedName.includes(normalizedTerm) ||

@@ -97,6 +97,13 @@ export const codigosPorModelo = {
     { value: "1122", label: "1122" },
     { value: "1108", label: "1108" },
     { value: "1107", label: "1107" },
+    { value: "1103", label: "1103" },
+  ],
+  swann: [
+    { value: "Mod. Swann", label: "Estándar" },
+    { value: "club", label: "Club" },
+    { value: "wookie", label: "Wookie" },
+    { value: "tatuado", label: "Tatuado" },
   ],
   derby: [
     { value: "1119", label: "1119" },
