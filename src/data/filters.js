@@ -27,6 +27,11 @@ export const filtros = {
     { value: "carpincho", label: "Carpincho" },
     { value: "cuero vegetal", label: "Cuero Vegetal" },
   ],
+  sewing: [
+    { value: "estandar", label: "Estándar" },
+    { value: "diente-de-caballo", label: "Diente de caballo" },
+    { value: "diente-de-perro", label: "Diente de perro" },
+  ],
   linea: [
     { value: "ready-to-wear", label: "Ready To Wear" },
     { value: "made-to-order", label: "Made To Order" },

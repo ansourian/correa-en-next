@@ -86,6 +86,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "oxford")?.desc,
     color: "Negro",
     leather: "Cuero vacuno",
+    sewing: "estandar",
     codigo: "1122",
     previewImage: "/images/ready to wear/135 - 21.webp",
     images: [
@@ -3607,6 +3608,7 @@ export const modelos = [
     description: descriptions.find((d) => d.id === "bespoke")?.desc,
     color: "Tabaco",
     leather: "Vacuno",
+    sewing: "diente de caballo",
     codigo: "Swann Bespoke",
     previewImage: "/images/bespoke/152 - 5.webp",
     images: [

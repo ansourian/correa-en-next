@@ -9,6 +9,7 @@ import {
   ArrowDropDownOutlined,
   BlurOnOutlined,
   ColorLensOutlined,
+  InsightsOutlined,
   WavesOutlined,
 } from "@mui/icons-material"
 import { codigosPorModelo, filtros } from "@/data/filters"
@@ -76,6 +77,7 @@ export default function Buscador({
     if (searchParams.get("linea")) count++
     if (searchParams.get("estilo")) count++
     if (searchParams.get("leather")) count++
+    if (searchParams.get("sewing")) count++
     if (searchParams.get("tipo")) count++
     if (searchParams.get("subtipo")) count++
     if (selectedCodigo) count++
@@ -396,6 +398,51 @@ export default function Buscador({
                   <FiltroBotones
                     nombreParam="leather"
                     opciones={filtros.cuero}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* SUB-ACCORDION — COSTURA (SEWING) */}
+            <div className="accordion-item accordion-filters">
+              <h2 className="accordion-header" id="heading-sewing">
+                <button
+                  className="accordion-button_filters collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse-sewing"
+                  aria-expanded="false"
+                  aria-controls="collapse-sewing"
+                >
+                  <InsightsOutlined
+                    style={{
+                      color: searchParams.get("sewing") ? "#3481c7" : "black",
+                    }}
+                  />
+                  <p
+                    className="p-filters"
+                    style={{
+                      color: searchParams.get("sewing") ? "#3481c7" : "black",
+                    }}
+                  >
+                    Costura
+                  </p>
+                  <ArrowDropDownOutlined
+                    className="arrow-icon"
+                    style={{ color: "black" }}
+                  />
+                </button>
+              </h2>
+
+              <div
+                id="collapse-sewing"
+                className="accordion-collapse collapse"
+                aria-labelledby="heading-sewing"
+              >
+                <div className="accordion-body">
+                  <FiltroBotones
+                    nombreParam="sewing"
+                    opciones={filtros.sewing}
                   />
                 </div>
               </div>
