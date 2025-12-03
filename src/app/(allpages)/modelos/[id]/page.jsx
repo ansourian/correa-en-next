@@ -3,12 +3,6 @@ import { modelos } from "@/data/data-modelos"
 import GaleriaModelos from "@/components/GaleriaModelos"
 import Label from "@/components/Label"
 import { Tooltip } from "@mui/material"
-import {
-  BlurOnOutlined,
-  ColorLensOutlined,
-  InsightsOutlined,
-  WavesOutlined,
-} from "@mui/icons-material"
 import { DetallesModelCard } from "@/components/DetallesModelCard"
 
 export function generateStaticParams() {
@@ -23,7 +17,10 @@ export default function Modelos({ params }) {
 
   const relatedModels = modelos.filter(
     (m) =>
-      m.name === modelo.name && m.class === modelo.class && m.leather === modelo.leather && m.id !== modelo.id
+      m.name === modelo.name &&
+      m.class === modelo.class &&
+      m.leather === modelo.leather &&
+      m.id !== modelo.id
   )
 
   const classToUrl = {
@@ -42,6 +39,15 @@ export default function Modelos({ params }) {
 
   // Filtra las imágenes válidas (no nulas)
   const validImages = images ? images.filter((image) => image) : []
+
+  const detalles = [
+    "cuero",
+    "color",
+    "costura",
+    "estilo",
+    "plantillado",
+    "patina",
+  ]
 
   return (
     <div className="div-modelo">
@@ -117,11 +123,16 @@ export default function Modelos({ params }) {
         <div className="row div-model">
           <h4 className="h4-model">Descripción</h4>
           <p className="p-model">{modelo.description}</p>
-          <div className="div-detalles-model">
+          {/* <div className="div-detalles-model">
             <DetallesModelCard detalle="cuero" modelo={modelo} />
             <DetallesModelCard detalle="color" modelo={modelo} />
             <DetallesModelCard detalle="costura" modelo={modelo} />
             <DetallesModelCard detalle="estilo" modelo={modelo} />
+          </div> */}
+          <div className="div-detalles-model">
+            {detalles.map((d) => (
+              <DetallesModelCard key={d} detalle={d} modelo={modelo} />
+            ))}
           </div>
           <h4 className="h4-model">Código de Modelo</h4>
           <p className="p-model">{modelo.codigo}</p>

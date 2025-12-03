@@ -1495,6 +1495,11 @@ h4 {
   color: #29395c;
 }
 
+.h4-model2 {
+  color: #e8d7a4;
+  font-weight: 400;
+}
+
 h3 {
   color: #000000;
   font-family: "Outfit", sans-serif;
@@ -2411,6 +2416,11 @@ body {
   flex-wrap: wrap;
 }
 
+.div-detalles-model2 {
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+}
+
 .div-detalles-model-individual {
   border: 1px solid #d9d9d9;
   padding: 0.5rem 2rem;
@@ -2423,6 +2433,13 @@ body {
   color: rgb(0, 0, 0);
   background-color: #f6f6f6;
   white-space: nowrap;
+}
+
+.div-detalles-model-individual2 {
+  background-color: #303030 !important;
+  border: 0 !important;
+  padding: 0.5rem 1rem;
+  min-width: fit-content !important;
 }
 
 .div-detalles-model::-webkit-scrollbar {
@@ -2440,6 +2457,12 @@ body {
   color: #000000;
 }
 
+.div-detalles-model-individual-title2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .p-detalles-model-individual {
   font-family: "Outfit", sans-serif;
   font-size: 1rem;
@@ -2448,6 +2471,21 @@ body {
 
 .no-margin {
   margin: 0 !important;
+}
+
+.card-especial {
+  position: relative;
+  background: #343a48;
+  /* border: 1px solid #e8d7a4; */
+}
+
+.card-especial h4,
+.card-especial p {
+  display: flex;
+  align-items: center;
+  color: #e8d7a4;
+  font-weight: 300;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 300px) and (max-width: 767px) {
