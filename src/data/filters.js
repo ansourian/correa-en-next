@@ -1,16 +1,26 @@
 export const filtros = {
   colores: [
     { value: "negro", label: "Negro" },
-    { value: "natural", label: "Natural" },
-    { value: "arena", label: "Arena" },
-    { value: "suela", label: "Suela" },
-    { value: "maiz", label: "Maíz" },
-    { value: "marron", label: "Marrón" },
-    { value: "guinda", label: "Guinda" },
-    { value: "tabaco", label: "Tabaco" },
-    { value: "cafe", label: "Café" },
-    { value: "chocolate", label: "Chocolate" },
-    { value: "rojo", label: "Rojo" },
+    {
+      value: ["natural", "arena"],
+      label: "Natural / Arena",
+    },
+    {
+      value: ["suela", "maiz"],
+      label: "Suela / Maíz",
+    },
+    {
+      value: ["marron", "tabaco"],
+      label: "Marrón",
+    },
+    {
+      value: ["cafe", "chocolate"],
+      label: "Chocolate / Café",
+    },
+    {
+      value: ["rojo", "guinda"],
+      label: "Rojo / Guinda",
+    },
     { value: "azul", label: "Azul" },
     { value: "verde", label: "Verde" },
     { value: "gris", label: "Gris" },
@@ -115,3 +125,50 @@ export const codigosPorModelo = {
     { value: "1 hebilla", label: "1 Hebilla" },
   ],
 }
+
+// export const colorGroups = [
+//   {
+//     label: "Negro",
+//     values: ["negro"],
+//   },
+//   {
+//     label: "Natural",
+//     values: ["natural", "arena"],
+//   },
+//   {
+//     label: "Suela / Maíz",
+//     values: ["suela", "maiz"],
+//   },
+//   {
+//     label: "Marrón",
+//     values: ["marron", "tabaco"],
+//   },
+//   {
+//     label: "Chocolate",
+//     values: ["cafe", "chocolate"],
+//   },
+//   {
+//     label: "Rojo",
+//     values: ["rojo", "guinda"],
+//   },
+//   {
+//     label: "Azul",
+//     values: ["azul"],
+//   },
+//   {
+//     label: "Verde",
+//     values: ["verde"],
+//   },
+//   {
+//     label: "Gris",
+//     values: ["gris"],
+//   },
+//   {
+//     label: "Violeta",
+//     values: ["violeta"],
+//   },
+//   {
+//     label: "Amarillo",
+//     values: ["amarillo"],
+//   },
+// ]

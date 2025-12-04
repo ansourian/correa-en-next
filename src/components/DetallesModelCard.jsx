@@ -3,11 +3,9 @@ import {
   ColorLensOutlined,
   InsightsOutlined,
   BlurOnOutlined,
-  BrushOutlined,
-  HandymanOutlined,
-  StarOutline,
   Star,
 } from "@mui/icons-material"
+import { Tooltip } from "@mui/material"
 
 const config = {
   cuero: {
@@ -58,10 +56,18 @@ export function DetallesModelCard({ detalle, modelo }) {
   if (!value || value === "false" || value.trim?.() === "") return null
 
   const Icon = data.icon
-
   const finalText = data.fixedValue ?? value
 
-  return (
+  const isPatina = data.field === "patina"
+
+  const isPatinaPintada =
+    typeof value === "string" && value.toLowerCase().includes("pintad")
+
+  const tooltipText = isPatinaPintada
+    ? "Aplicación manual de capas de pigmento para lograr tonalidades y efectos personalizados en el cuero."
+    : "Proceso artesanal que intensifica el color del cuero, aportando brillo, profundidad y un acabado único e irrepetible."
+
+  const cardContent = (
     <div
       className={`div-detalles-model-individual ${
         data.special ? "card-especial" : ""
@@ -72,23 +78,26 @@ export function DetallesModelCard({ detalle, modelo }) {
           style={{
             color: data.special ? "#e8d7a4" : "#29395c",
             marginRight: "5px",
-            width: "20px",
+            width: "15px",
           }}
         />
 
-        <h4
-          className={`h4-model ${data.special ? "h4-especial" : ""}`}
-        >
+        <h4 className={`h4-model ${data.special ? "h4-especial" : ""}`}>
           {data.special ? finalText : data.title}
         </h4>
       </div>
 
-      {/* Solo las NORMALES tienen <p> */}
       {!data.special && (
-        <p className="p-detalles-model-individual no-margin">
-          {value}
-        </p>
+        <p className="p-detalles-model-individual no-margin">{value}</p>
       )}
     </div>
+  )
+
+  return isPatina ? (
+    <Tooltip title={tooltipText} arrow>
+      {cardContent}
+    </Tooltip>
+  ) : (
+    cardContent
   )
 }

@@ -25,16 +25,22 @@ export default function FiltroBotones({
   }, [searchParams?.toString(), nombreParam])
 
   const handleClick = (valor) => {
+    const valores = Array.isArray(valor) ? valor : [valor]
     const params = new URLSearchParams(searchParams.toString())
 
     if (multiple) {
-      const actuales = params.getAll(nombreParam) // array actual
-      const tiene = actuales.includes(valor)
+      const actuales = params.getAll(nombreParam)
+
       let nuevoArray
-      if (tiene) {
-        nuevoArray = actuales.filter((v) => v !== valor)
+
+      const todosYaEstan = valores.every((v) => actuales.includes(v))
+
+      if (todosYaEstan) {
+        // quitar todos
+        nuevoArray = actuales.filter((v) => !valores.includes(v))
       } else {
-        nuevoArray = [...actuales, valor]
+        // agregar solo los que no están
+        nuevoArray = [...new Set([...actuales, ...valores])]
       }
 
       params.delete(nombreParam)
@@ -87,7 +93,9 @@ export default function FiltroBotones({
         const rawLabel = typeof valor === "string" ? valor : valor.label
 
         const isSelected = multiple
-          ? selected && selected.includes(rawValue)
+          ? Array.isArray(rawValue)
+            ? rawValue.every((v) => selected?.includes(v))
+            : selected?.includes(rawValue)
           : selected === rawValue
 
         return (
