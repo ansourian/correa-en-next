@@ -76,9 +76,9 @@ export function DetallesModelCard({ detalle, modelo }) {
       <div className="div-detalles-model-individual-title">
         <Icon
           style={{
-            color: data.special ? "#e8d7a4" : "#29395c",
+            color: data.special ? "#fff5d9" : "#29395c",
             marginRight: "5px",
-            width: "15px",
+            width: "20px",
           }}
         />
 

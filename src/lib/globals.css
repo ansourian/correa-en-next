@@ -2433,6 +2433,7 @@ body {
   color: rgb(0, 0, 0);
   background-color: #f6f6f6;
   white-space: nowrap;
+  /* min-height: 65px; */
 }
 
 .div-detalles-model-individual2 {
@@ -2475,15 +2476,20 @@ body {
 
 .card-especial {
   position: relative;
-  background: #343a48;
-  /* border: 1px solid #e8d7a4; */
+  background: linear-gradient(
+    320deg,
+    rgb(109 102 77) 0%,
+    rgb(171 162 133) 50%,
+    rgb(139 127 92) 100%
+  );
+  border: none;
 }
 
 .card-especial h4,
 .card-especial p {
   display: flex;
   align-items: center;
-  color: #e8d7a4;
+  color: #fff5d9;
   font-weight: 300;
   font-size: 1rem;
 }
