@@ -2452,7 +2452,7 @@ export const modelos = [
     type: "zapatos",
     subtype: "oxfords",
     description: descriptions.find((d) => d.id === "oxford")?.desc,
-    color: "Pátina pintada Suela - Chocolate",
+    color: "Suela - Chocolate",
     leather: "Vacuno",
     sewing: "Estándar",
     codigo: "1108 MTO",

@@ -9,10 +9,7 @@ export const filtros = {
       value: ["suela", "maiz"],
       label: "Suela / Maíz",
     },
-    {
-      value: ["marron", "tabaco"],
-      label: "Marrón",
-    },
+    { value: "marron", label: "Marrón" },
     {
       value: ["cafe", "chocolate"],
       label: "Chocolate / Café",
