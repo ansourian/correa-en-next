@@ -72,8 +72,30 @@ export default function Buscador({
 
   const filtrosCount = () => {
     let count = 0
-    if (searchParams.getAll("color").length > 0)
-      count += searchParams.getAll("color").length
+
+    const normalize = (text) =>
+      text
+        ? text
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/-/g, " ")
+            .toLowerCase()
+        : ""
+
+    const selectedColors = searchParams.getAll("color") || []
+    const selectedColorsNormalized = selectedColors.map((c) => normalize(c))
+
+    const colorOptions = filtros.colores || []
+
+    const selectedColorOptions = colorOptions.filter((option) => {
+      const vals = Array.isArray(option.value) ? option.value : [option.value]
+      return vals.some((v) =>
+        selectedColorsNormalized.includes(normalize(String(v)))
+      )
+    })
+
+    if (selectedColorOptions.length > 0) count += selectedColorOptions.length
+
     if (searchParams.get("linea")) count++
     if (searchParams.get("estilo")) count++
     if (searchParams.get("leather")) count++
@@ -81,6 +103,7 @@ export default function Buscador({
     if (searchParams.get("tipo")) count++
     if (searchParams.get("subtipo")) count++
     if (selectedCodigo) count++
+
     return count
   }
 

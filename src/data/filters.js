@@ -50,6 +50,7 @@ export const filtros = {
     { value: "wingtip", label: "Wingtip" },
     { value: "captoe-full-brogued", label: "Captoe Full Brogued" },
     { value: "captoe-semi-brogued", label: "Captoe Semi Brogued" },
+    { value: "split-toe", label: "Split Toe" },
     { value: "captoe", label: "Captoe" },
     { value: "plain-toe-full-brogued", label: "Plain Toe Full Brogued" },
     { value: "plain-toe-semi-brogued", label: "Plain Toe Semi Brogued" },
