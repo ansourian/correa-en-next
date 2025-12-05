@@ -97,7 +97,6 @@ export const modelos = [
       "/images/ready to wear/135 - 23.webp",
       "/images/ready to wear/123 - 8.webp",
     ],
-    plantillado: true
   },
   {
     // isNuevo: "true",

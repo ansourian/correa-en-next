@@ -36,6 +36,13 @@ export const filtros = {
   ],
   sewing: [
     { value: "Estándar", label: "Estándar" },
+    { value: "Blake Rapid", label: "Blake Rapid" },
+    {
+      value: "Blake Rapid (suelas anchas)",
+      label: "Blake Rapid (suelas anchas)",
+    },
+    { value: "Alpina", label: "Alpina / Vira Volcada" },
+    { value: "Norvegesse", label: "Norvegesse" },
     { value: "diente-de-caballo", label: "Diente de Caballo" },
     { value: "diente-de-perro", label: "Diente de Perro" },
   ],
