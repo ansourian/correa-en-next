@@ -30,13 +30,6 @@ const config = {
   },
 
   // ESPECIALES
-  plantillado: {
-    icon: Star,
-    title: "Plantillado a mano",
-    field: "plantillado",
-    fixedValue: "Plantillado a mano",
-    special: true,
-  },
 
   patina: {
     icon: Star,

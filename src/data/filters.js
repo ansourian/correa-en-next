@@ -35,14 +35,14 @@ export const filtros = {
     { value: "vegetal", label: "Cuero Vegetal" },
   ],
   sewing: [
-    { value: "Estándar", label: "Estándar" },
+    { value: "Estándar", label: "Plantillado a mano" },
     { value: "Blake Rapid", label: "Blake Rapid" },
     {
       value: "Blake Rapid (suelas anchas)",
       label: "Blake Rapid (suelas anchas)",
     },
     { value: "Alpina", label: "Alpina / Vira Volcada" },
-    { value: "Norvegesse", label: "Norvegesse" },
+    { value: "Norvegese", label: "Norvegese" },
     { value: "diente-de-caballo", label: "Diente de Caballo" },
     { value: "diente-de-perro", label: "Diente de Perro" },
   ],
