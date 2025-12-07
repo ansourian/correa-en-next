@@ -48,7 +48,7 @@ export function Navbar({ scroll }) {
         >
           <img
             className="logo"
-            src="/images/logo.png"
+            src="/images/logos/logo.png"
             alt="Logo Calzados Correa"
             style={{ pointerEvents: "none" }}
           />
@@ -60,7 +60,7 @@ export function Navbar({ scroll }) {
         >
           <img
             className="instagram-nav"
-            src="/images/ig-logo.svg"
+            src="/images/iconos/ig-logo.svg"
             alt="Enlace a Instagram"
           />
         </Link>
@@ -107,7 +107,7 @@ export function Navbar({ scroll }) {
           >
             <img
               className="instagram-nav"
-              src="/images/ig-logo.svg"
+              src="/images/iconos/ig-logo.svg"
               alt="Enlace a Instagram"
             />
           </Link>

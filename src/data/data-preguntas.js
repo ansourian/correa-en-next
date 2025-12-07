@@ -174,14 +174,14 @@ export const preguntas = [
           </div>
           <div>
             <img
-              src="/images/visa.svg" // Ruta de tu logo
+              src="/images/iconos/visa.svg"
               alt="Mercado Pago"
-              style={{ width: "100px", height: "auto", marginRight: 10 }} // Ajusta el tamaño según lo necesites
+              style={{ width: "100px", height: "auto", marginRight: 10 }}
             />
             <img
-              src="/images/mastercard.svg" // Ruta de tu logo
+              src="/images/iconos/mastercard.svg"
               alt="Mercado Pago"
-              style={{ width: "60px", height: "auto", marginRight: 10 }} // Ajusta el tamaño según lo necesites
+              style={{ width: "60px", height: "auto", marginRight: 10 }}
             />
             (Tanto crédito como débito)
           </div>
@@ -190,9 +190,9 @@ export const preguntas = [
           </div>
           <div>
             <img
-              src="/images/mercado-pago.svg" // Ruta de tu logo
+              src="/images/iconos/mercado-pago.svg"
               alt="Mercado Pago"
-              style={{ width: "100px", height: "auto" }} // Ajusta el tamaño según lo necesites
+              style={{ width: "100px", height: "auto" }}
             />
           </div>
         </div>

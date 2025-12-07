@@ -16,7 +16,7 @@ export default function NuestroTrabajo() {
       <section className="section-trabajo">
         <FadeIn>
           <section className="section-nuestro_trabajo_reverse">
-            <div className="div-nuestro_trabajo">
+            <div className="div-nuestro_trabajo">acerca-de/
               <h2 className="h2-pages fade-section">
                 Todos nuestros calzados están fabricados en cuero vacuno
               </h2>
@@ -31,7 +31,7 @@ export default function NuestroTrabajo() {
             <div className="div-nuestro_trabajo">
               <img
                 className="img-nuestro_trabajo fade-section"
-                src="/images/cueros.webp"
+                src="/images/acerca-de/cueros.webp"
                 alt="Cueros"
               />
             </div>
@@ -52,7 +52,7 @@ export default function NuestroTrabajo() {
             <div className="div-nuestro_trabajo">
               <img
                 className="img-nuestro_trabajo fade-section"
-                src="/images/plantillado.webp"
+                src="/images/acerca-de/plantillado.webp"
                 alt="Plantillado"
               />
             </div>
@@ -73,7 +73,7 @@ export default function NuestroTrabajo() {
             <div className="div-nuestro_trabajo">
               <img
                 className="img-nuestro_trabajo fade-section"
-                src="/images/colores.webp"
+                src="/images/acerca-de/colores.webp"
                 alt="Colores"
               />
             </div>

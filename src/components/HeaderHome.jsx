@@ -5,7 +5,7 @@ export default function HeaderHome() {
         <div className="div-bienvenida-title">
           <img
             className="logo-header"
-            src="/images/logo-correa-header.png"
+            src="/images/logos/logo-correa-header.png"
             alt="Logo Calzados Correa"
             draggable={false}
             style={{ pointerEvents: "none" }}
@@ -16,7 +16,7 @@ export default function HeaderHome() {
           </h2> */}
         </div>
         <a id="redirection" href="#section-1" style={{ flex: 1 }}>
-          <img className="flecha-index" src="/images/flecha.png" />
+          <img className="flecha-index" src="/images/iconos/flecha-index.png" />
         </a>
       </div>
       <video

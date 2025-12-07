@@ -14,7 +14,7 @@ export default function Footer({}) {
             >
               <img
                 className="instagram-logo"
-                src="/images/Instagram logo.png"
+                src="/images/iconos/Instagram logo.png"
                 alt="enlace a instagram"
               />
             </a>
@@ -25,7 +25,7 @@ export default function Footer({}) {
             >
               <img
                 className="facebook-logo"
-                src="/images/facebook logo.png"
+                src="/images/iconos/facebook logo.png"
                 alt="enlace a facebook"
               />
             </a>

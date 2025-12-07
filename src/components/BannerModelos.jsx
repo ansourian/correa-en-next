@@ -22,7 +22,7 @@ export default function BannerModelos({ subtitle, title, description }) {
         <a className="button-slide" href={navigation.left}>
           <img
             className="logo-arrow arrow"
-            src="/images/arrow.svg"
+            src="/images/iconos/arrow.svg"
             alt="Botón para navegar a la izquierda"
           />
         </a>
@@ -30,7 +30,7 @@ export default function BannerModelos({ subtitle, title, description }) {
         <a className="button-slide" href={navigation.right}>
           <img
             className="logo-arrow"
-            src="/images/arrow.svg"
+            src="/images/iconos/arrow.svg"
             alt="Botón para navegar a la derecha"
           />
         </a>

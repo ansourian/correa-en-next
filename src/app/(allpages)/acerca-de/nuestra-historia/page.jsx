@@ -15,28 +15,28 @@ export default function NuestraHistoria() {
       <hr className="hr-custom" />
       <FadeIn>
         <img
-          class="banner-quienes_somos"
-          src="/images/quienes somos.webp"
+          className="banner-quienes_somos"
+          src="/images/acerca-de/quienes somos.webp"
           alt="don felix correa junto a un trabajador"
         />
       </FadeIn>
       <FadeIn>
-        <div class="textos-historia">
-          <p class="p-general">
+        <div className="textos-historia">
+          <p className="p-general">
             Desde su fundación en el año 1955 en Buenos Aires, Calzados Correa
             ha sido un pilar de la industria del calzado artesanal en Argentina.
             Esta empresa familiar de tercera generación ha mantenido una
             tradición arraigada en la fabricación a mano de piezas de calzado de
             la más alta calidad.
           </p>
-          <p class="p-general">
+          <p className="p-general">
             Lo que distingue a Correa de otras marcas es el enfoque artesanal y
             el amor por el oficio que sus expertos artesanos transmiten en cada
             atención y en cada par de zapatos que crean. Estos maestros
             artesanos han perfeccionado sus habilidades a lo largo de las
             décadas, convirtiéndolos en verdaderos profesionales en la materia.
           </p>
-          <p class="p-general">
+          <p className="p-general">
             La clave del éxito radica en la selección cuidadosa de los mejores
             cueros de Argentina, combinado con el servicio de atención. Estos
             cueros, reconocidos por su calidad y durabilidad, garantizan que los
@@ -46,7 +46,7 @@ export default function NuestraHistoria() {
             de la empresa, asegurando así un producto final de máxima
             excelencia.
           </p>
-          <p class="p-general">
+          <p className="p-general">
             En Calzados Correa, los clientes tienen la oportunidad de elegir
             entre una amplia variedad de modelos, desde los listos para vestir
             (Ready To Wear) hasta los personalizados (Made To Order) y los
@@ -58,7 +58,7 @@ export default function NuestraHistoria() {
             gustos y necesidades, ya sea eligiendo el tipo de cuero, el color,
             el diseño o incluso agregando detalles especiales.
           </p>
-          <p class="p-general">
+          <p className="p-general">
             A lo largo de los años, han forjado una reputación sólida y una base
             de clientes leales, quienes aprecian la artesanía excepcional y la
             atención al detalle que caracterizan a cada par de zapatos que sale
@@ -68,17 +68,17 @@ export default function NuestraHistoria() {
           </p>
         </div>
       </FadeIn>
-      <div class="blue-section">
+      <div className="blue-section">
         <FadeIn>
-          <div class="contenedor-biografia">
+          <div className="contenedor-biografia">
             <img
-              class="img-biografia_left"
-              src="/images/don felix biografia.webp"
+              className="img-biografia_left"
+              src="/images/acerca-de/don felix biografia.webp"
             />
-            <div class="div-biografia d-flex">
-              <h2 class="h2-quienes_somos">Don Félix Correa</h2>
-              <h4 class="h4-biografia">FUNDADOR</h4>
-              <p class="p-biografia">
+            <div className="div-biografia d-flex">
+              <h2 className="h2-quienes_somos">Don Félix Correa</h2>
+              <h4 className="h4-biografia">FUNDADOR</h4>
+              <p className="p-biografia">
                 Nacido en Corrientes, vino con su familia a probar suerte a
                 Buenos Aires. Se alquilaron una casa en una pensión y, en 1940,
                 la madre de Félix padre tuvo la visión de recomendarlo y dejarlo
@@ -97,17 +97,17 @@ export default function NuestraHistoria() {
             </div>
           </div>
         </FadeIn>
-        <hr class="hr-custom hr-white" />
+        <hr className="hr-custom hr-white" />
         <FadeIn>
-          <div class="contenedor-biografia2">
+          <div className="contenedor-biografia2">
             <img
-              class="img-biografia_right"
-              src="/images/dany biografia.webp"
+              className="img-biografia_right"
+              src="/images/acerca-de/dany biografia.webp"
             />
-            <div class="div-biografia2 d-flex">
-              <h2 class="h2-quienes_somos">Félix A. Correa</h2>
-              <h4 class="h4-biografia">DIRECTOR GENERAL - MAESTRO ZAPATERO</h4>
-              <p class="p-biografia">
+            <div className="div-biografia2 d-flex">
+              <h2 className="h2-quienes_somos">Félix A. Correa</h2>
+              <h4 className="h4-biografia">DIRECTOR GENERAL - MAESTRO ZAPATERO</h4>
+              <p className="p-biografia">
                 Félix Correa, hijo del fundador, está a cargo del negocio
                 familiar. Se crió desde niño jugando en los pasillos de la
                 zapatería la cual hoy en día se encuentra a su cargo. Comenzó a
@@ -123,19 +123,19 @@ export default function NuestraHistoria() {
             </div>
           </div>
         </FadeIn>
-        <hr class="hr-custom hr-white" />
+        <hr className="hr-custom hr-white" />
         <FadeIn>
-          <div class="contenedor-biografia">
+          <div className="contenedor-biografia">
             <img
-              class="img-biografia_left"
-              src="/images/hector biografia.webp"
+              className="img-biografia_left"
+              src="/images/acerca-de/hector biografia.webp"
             />
-            <div class="div-biografia d-flex">
-              <h2 class="h2-quienes_somos">Hector Pelizoli</h2>
-              <h4 class="h4-biografia">
+            <div className="div-biografia d-flex">
+              <h2 className="h2-quienes_somos">Hector Pelizoli</h2>
+              <h4 className="h4-biografia">
                 DIRECTOR DE PRODUCCIÓN - MAESTRO ZAPATERO
               </h4>
-              <p class="p-biografia">
+              <p className="p-biografia">
                 Yerno de Felix A. Correa (padre), aprendió el oficio del
                 maestro. Tenía 16 años cuando entró de cadete y hoy en día sabe
                 todos los secretos. Es la voz de la experiencia, pero eso no es
@@ -149,13 +149,13 @@ export default function NuestraHistoria() {
             </div>
           </div>
         </FadeIn>
-        {/* <hr class="hr-custom hr-white" />
+        {/* <hr className="hr-custom hr-white" />
         <FadeIn>
-          <div class="contenedor-biografia">
-            <div class="div-biografia2 d-flex">
-              <h2 class="h2-quienes_somos">José A. Correa</h2>
-              <h4 class="h4-biografia">SEGUNDA GENERACIÓN</h4>
-              <p class="p-biografia">
+          <div className="contenedor-biografia">
+            <div className="div-biografia2 d-flex">
+              <h2 className="h2-quienes_somos">José A. Correa</h2>
+              <h4 className="h4-biografia">SEGUNDA GENERACIÓN</h4>
+              <p className="p-biografia">
                 José Correa, sobrino de Don Félix Correa, personifica la pasión
                 por la artesanía del calzado. Además de mantener viva la
                 tradición familiar, José tiene una afición por desarrollar
@@ -168,17 +168,17 @@ export default function NuestraHistoria() {
                 y satisfactorio.
               </p>
             </div>
-            <img class="img-biografia_right" src="/images/jose biografia.jpg" />
+            <img className="img-biografia_right" src="/images/jose biografia.jpg" />
           </div>
         </FadeIn>
-        <hr class="hr-custom hr-white" />
+        <hr className="hr-custom hr-white" />
         <FadeIn>
-          <div class="contenedor-biografia">
-            <img class="img-biografia_right" src="/images/juan biografia.jpg" />
-            <div class="div-biografia d-flex">
-              <h2 class="h2-quienes_somos">Juan Cruz Correa</h2>
-              <h4 class="h4-biografia">TERCER GENERACIÓN</h4>
-              <p class="p-biografia">
+          <div className="contenedor-biografia">
+            <img className="img-biografia_right" src="/images/juan biografia.jpg" />
+            <div className="div-biografia d-flex">
+              <h2 className="h2-quienes_somos">Juan Cruz Correa</h2>
+              <h4 className="h4-biografia">TERCER GENERACIÓN</h4>
+              <p className="p-biografia">
                 Juan Cruz Correa, uno de los nietos de Don Felix Correa, forma
                 parte de la tercera generación de la familia. De la misma forma
                 que su padre comenzó, colaboró con tareas generales y atención

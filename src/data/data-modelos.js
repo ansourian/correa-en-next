@@ -7,7 +7,7 @@
 const descriptions = [
   {
     id: "oxford",
-    desc: "Un clásico atemporal, de mucha presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
+    desc: "Un clásico atemporal, de gran presencia. Se destaca por su gran versatilidad, tanto en lo formal como en lo casual.",
   },
   {
     id: "oxford-1107",
@@ -35,15 +35,15 @@ const descriptions = [
   },
   {
     id: "swann",
-    desc: "Este modelo se caracteriza por estar confeccionado a partir de una sola pieza de cuero, lo que le confiere un aspecto elegante y limpio, ya que no tiene costuras visibles en la parte superior del zapato.",
+    desc: "Este modelo se caracteriza por estar confeccionado a partir de un solo corte de cuero. Al no tener costuras visibles en sus capelladas, le confiere un aspecto limpio y elegante.",
   },
   {
     id: "bota-carioca",
-    desc: "Un clásico liso de cordonera abierta. Una versión que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
+    desc: "Un clásico muy popularizado en la Ciudad de La Plata por los años 80. Una version de la bota inglesa que logra un atractivo relajado. Este modelo se recomienda para personas con empeine alto.",
   },
   {
     id: "2-hebillas",
-    desc: "Este es un modelo elegante que se distingue por sus dos hebillas en lugar de cordones (de las cuales una cuenta con un elástico), lo que le confiere una apariencia sofisticada y versátil, adecuada tanto para ocasiones formales como informales.",
+    desc: "Un modelo elegante de la linea “Monk's” distinguido por sus dos hebillas en el empeine, con elastico incorporado para mayor comodidad de ajuste. Expresa una apariencia sofisticada y versátil.",
   },
   {
     id: "borcego-corto",

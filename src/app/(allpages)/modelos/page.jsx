@@ -1,14 +1,11 @@
 import Banner from "@/components/Banner";
-import ButtonVolver from "@/components/ButtonVolver";
 import FadeIn from "@/components/FadeInAnimation";
 import ModelStylesCard from "@/components/ModelStylesCard";
 import React from "react";
-import { Fade } from "react-bootstrap";
 
 export default function Modelos() {
   return (
     <>
-      {/* <ButtonVolver /> */}
       <Banner
         title={"Variedad para cada estilo de vida"}
         subtitle={"NUESTROS ZAPATOS"}
@@ -64,7 +61,7 @@ export default function Modelos() {
             <div className="carousel-inner carousel-modelos">
               <a href="/modelos/all" className="carousel-item active">
                 <img
-                  src="../images/all-models.webp"
+                  src="../images/carousel/all-models car.webp"
                   className="d-block w-100 img-carousel"
                   alt="..."
                 />
@@ -77,7 +74,7 @@ export default function Modelos() {
               </a>
               <a href="/modelos/ready-to-wear" className="carousel-item">
                 <img
-                  src="../images/ready to wear car.webp"
+                  src="../images/carousel/ready to wear car.webp"
                   className="d-block w-100 img-carousel"
                   alt="..."
                 />
@@ -88,7 +85,7 @@ export default function Modelos() {
               </a>
               <a href="/modelos/made-to-order" className="carousel-item">
                 <img
-                  src="../images/made to order car.webp"
+                  src="../images/carousel/made to order car.webp"
                   className="d-block w-100 img-carousel"
                   alt="..."
                 />
@@ -101,7 +98,7 @@ export default function Modelos() {
               </a>
               <a href="/modelos/bespoke" className="carousel-item">
                 <img
-                  src="../images/bespoke car.webp"
+                  src="../images/carousel/bespoke car.webp"
                   className="d-block w-100 img-carousel"
                   alt="..."
                 />
@@ -114,7 +111,7 @@ export default function Modelos() {
               </a>
               <a href="/modelos/cinturones" className="carousel-item">
                 <img
-                  src="../images/cinturones car.webp"
+                  src="../images/carousel/cinturones car.webp"
                   className="d-block w-100 img-carousel"
                   alt="..."
                 />
@@ -151,7 +148,7 @@ export default function Modelos() {
           </div>
           <section className="contenedor-tipo_modelos fade-section">
             <ModelStylesCard
-              imageSrc="/images/Ready to Wear.webp"
+              imageSrc="/images/carousel/Ready to Wear.webp"
               title="Modelos Ready to Wear"
               subtitle="(Modelos Listos para usar)"
               link="/modelos/ready-to-wear"
@@ -159,7 +156,7 @@ export default function Modelos() {
               height={"10vw"}
             />
             <ModelStylesCard
-              imageSrc="/images/Made to Order.webp"
+              imageSrc="/images/carousel/Made to Order.webp"
               title="Modelos Made to Order"
               subtitle="(Personalizados a pedido)"
               link="/modelos/made-to-order"
@@ -167,7 +164,7 @@ export default function Modelos() {
               height={"10vw"}
             />
             <ModelStylesCard
-              imageSrc="/images/Bespoke.webp"
+              imageSrc="/images/carousel/Bespoke.webp"
               title="Modelos Bespoke"
               subtitle="(Exclusivos de medida)"
               link="/modelos/bespoke"
@@ -175,7 +172,7 @@ export default function Modelos() {
               height={"10vw"}
             />
             <ModelStylesCard
-              imageSrc="/images/cinturones.webp"
+              imageSrc="/images/carousel/cinturones.webp"
               title="Cinturones"
               subtitle="(Modelos exclusivos)"
               link="/modelos/cinturones"
