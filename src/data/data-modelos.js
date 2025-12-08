@@ -30,6 +30,10 @@ const descriptions = [
     desc: "Un clásico liso de cordonera abierta. Una versión modernizada de 3 ojales que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
   },
   {
+    id: "derby-coll",
+    desc: "Un zapato rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Un modelo ideal para el uso urbano y aptas para caminos rurales.",
+  },
+  {
     id: "dandy",
     desc: "Un clásico liso de cordonera abierta. Una versión que logra un atractivo estilizado sin romper sus líneas tradicionales. Este modelo se recomienda para personas con empeine alto.",
   },
@@ -42,16 +46,36 @@ const descriptions = [
     desc: "Un clásico muy popularizado en la Ciudad de La Plata por los años 80. Una version de la bota inglesa que logra un atractivo relajado. Este modelo se recomienda para personas con empeine alto.",
   },
   {
+    id: "bota-inglesa",
+    desc: "Una bota clásica, cómoda y atemporal. Desde paseos por la ciudad hasta eventos formales, la bota inglesa ofrece un toque de sofisticación a cualquier conjunto.",
+  },
+  {
+    id: "bota-petta",
+    desc: "Un clásico de la casa. Esta bota cuenta con una costura redondeada y presenta un diseño clásico con un toque más suave y contemporáneo. Ofrece un equilibrio perfecto de estilo tradicional y comodidad moderna.",
+  },
+  {
+    id: "bota-et",
+    desc: "Una bota moderna y elegante ideal para combinar con jeans y con pantalones de vestir.",
+  },
+  {
+    id: "bota-chelsea",
+    desc: "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+  },
+  {
+    id: "bota-manchester",
+    desc: "Esta bota tiene un diseño minimalista con cierre interno para un calce práctico y discreto. Un modelo elegante y versátil que combina comodidad, presencia y estilo atemporal para acompañar cualquier ocasión.",
+  },
+  {
     id: "2-hebillas",
     desc: "Un modelo elegante de la linea “Monk's” distinguido por sus dos hebillas en el empeine, con elastico incorporado para mayor comodidad de ajuste. Expresa una apariencia sofisticada y versátil.",
   },
   {
     id: "borcego-corto",
-    desc: "Un borcego suelto y robusto de caña baja a la altura del tobillo. Las suelas cuentan con una combinación de cuero y goma apta para diversos tipos de terreno.",
+    desc: "Un borcego suelto y robusto con cañas a la altura de los tobillos. Sus suelas cuentan con un diseño apto para diversos tipos de terreno, tanto en la naturaleza como en la ciudad.",
   },
   {
     id: "borcego-texano",
-    desc: "Un borcego rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
+    desc: "Un borcego rígido y robusto. Su construcción incorpora bases de Goma Ruta de FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
   },
   {
     id: "sneaker",
@@ -63,15 +87,35 @@ const descriptions = [
   },
   {
     id: "bespoke",
-    desc: "Este modelo es una versión exclusiva de realización a medida. Puede existir el mismo modelo o similar en versiones estándar. Este modelo puede ser customizado a gusto del cliente.",
+    desc: "Este modelo es una versión exclusiva de realización a medida. Puede existir versiones estándar del mismo modelo. Los calzados bespoke pueden ser customizados a gusto del cliente.",
+  },
+  {
+    id: "slipper",
+    desc: "Mocasín fresco, liviano y flexible ideal para las temporadas primavera/verano.",
+  },
+  {
+    id: "mp",
+    desc: "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
+  },
+  {
+    id: "800",
+    desc: "Gracias a su liviana construccion es un modelo ideal para aquellas personas que buscan una comodidad superior. Únicamente realizados en cuero de Cabritilla y cuenta con elásticos internos. Tambien disponible en su horma de ancho extraordinario.",
+  },
+  {
+    id: "mocasin-clasico",
+    desc: "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
+  },
+  {
+    id: "escarpin-123",
+    desc:  "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera.",
   },
   {
     id: "cinturon-clasico",
-    desc: "Este modelo es un cinturón de estilo clásico que cuenta con una hebilla plateada y un ancho de 5 centímetros.",
+    desc: "Este modelo es un cinturón de estilo clásico que cuenta con una hebilla plateada y un ancho de 35 milímetros.",
   },
   {
     id: "cinturon-rustico",
-    desc: "Este modelo es un cinturón de estilo rústico. Se caracteriza por su textura más áspera y su ancho de 5,5 centímetros.",
+    desc: "Este modelo es un cinturón de estilo rústico. Se caracteriza por su textura más áspera y su ancho de 40 milímetros.",
   },
 ]
 
@@ -1732,8 +1776,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "escarpines",
     subtype: "slipper",
-    description:
-      "Mocasín fresco, liviano y flexible ideal para las temporadas primavera/verano.",
+    description: descriptions.find((d) => d.id === "slipper")?.desc,
     color: "Arena",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -1752,8 +1795,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "escarpines",
     subtype: "slipper",
-    description:
-      "Mocasín fresco, liviano y flexible ideal para las temporadas primavera/verano.",
+    description: descriptions.find((d) => d.id === "slipper")?.desc,
     color: "Tostado",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -1772,8 +1814,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "escarpines",
     subtype: "slipper",
-    description:
-      "Mocasín fresco, liviano y flexible ideal para las temporadas primavera/verano.",
+    description: descriptions.find((d) => d.id === "slipper")?.desc,
     color: "Violeta",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -1792,8 +1833,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "escarpines",
     subtype: "slipper",
-    description:
-      "Mocasín fresco, liviano y flexible ideal para las temporadas primavera/verano.",
+    description: descriptions.find((d) => d.id === "slipper")?.desc,
     color: "Verde Musgo",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -1812,8 +1852,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "escarpines",
     subtype: "MP",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
+    description: descriptions.find((d) => d.id === "mp")?.desc,
     color: "Suela",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -1832,8 +1871,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "escarpines",
     subtype: "MP",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
+    description: descriptions.find((d) => d.id === "mp")?.desc,
     color: "Marrón",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -1852,8 +1890,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "escarpines",
     subtype: "MP",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
+    description: descriptions.find((d) => d.id === "mp")?.desc,
     color: "Verde",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -1872,8 +1909,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "escarpines",
     subtype: "MP",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
+    description: descriptions.find((d) => d.id === "mp")?.desc,
     color: "Café",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -1892,8 +1928,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "escarpines",
     subtype: "MP",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
+    description: descriptions.find((d) => d.id === "mp")?.desc,
     color: "Negro",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -1912,8 +1947,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "mocasines",
     subtype: "clasicos",
-    description:
-      "Gracias a su liviana construccion es un modelo ideal para aquellas personas que buscan una comodidad superior. Únicamente realizados en cuero de Cabritilla y cuenta con elásticos internos. Tambien disponible en su horma de ancho extraordinario.",
+    description: descriptions.find((d) => d.id === "800")?.desc,
     color: "Negro",
     leather: "Cabretilla",
     codigo: "Mocasín 800",
@@ -1931,8 +1965,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "mocasines",
     subtype: "clasicos",
-    description:
-      "Gracias a su liviana construccion es un modelo ideal para aquellas personas que buscan una comodidad superior. Únicamente realizados en cuero de Cabritilla y cuenta con elásticos internos. Tambien disponible en su horma de ancho extraordinario.",
+    description: descriptions.find((d) => d.id === "800")?.desc,
     color: "Guinda",
     leather: "Cabretilla",
     codigo: "Mocasín 800",
@@ -1950,8 +1983,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "mocasines",
     subtype: "clasicos",
-    description:
-      "Gracias a su liviana construccion es un modelo ideal para aquellas personas que buscan una comodidad superior. Únicamente realizados en cuero de Cabritilla y cuenta con elásticos internos. Tambien disponible en su horma de ancho extraordinario.",
+    description: descriptions.find((d) => d.id === "800")?.desc,
     color: "Marrón",
     leather: "Cabretilla",
     codigo: "Mocasín 800",
@@ -1969,8 +2001,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "mocasines",
     subtype: "archibaldo",
-    description:
-      "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
+    description: descriptions.find((d) => d.id === "mocasin-clasico")?.desc,
     color: "Suela",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -1989,8 +2020,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "mocasines",
     subtype: "clasicos",
-    description:
-      "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
+    description: descriptions.find((d) => d.id === "mocasin-clasico")?.desc,
     color: "Suela",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -2009,8 +2039,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "mocasines",
     subtype: "clasicos",
-    description:
-      "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
+    description: descriptions.find((d) => d.id === "mocasin-clasico")?.desc,
     color: "Guinda",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -2029,8 +2058,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "mocasines",
     subtype: "clasicos",
-    description:
-      "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
+    description: descriptions.find((d) => d.id === "mocasin-clasico")?.desc,
     color: "Negro",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -2049,8 +2077,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "mocasines",
     subtype: "archibaldo",
-    description:
-      "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
+    description: descriptions.find((d) => d.id === "mocasin-clasico")?.desc,
     color: "Azul",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -2069,8 +2096,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "mocasines",
     subtype: "archibaldo",
-    description:
-      "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
+    description: descriptions.find((d) => d.id === "mocasin-clasico")?.desc,
     color: "Negro",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -2089,8 +2115,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "mocasines",
     subtype: "archibaldo",
-    description:
-      "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
+    description: descriptions.find((d) => d.id === "mocasin-clasico")?.desc,
     color: "Maíz",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -2109,17 +2134,13 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "mocasines",
     subtype: "archibaldo",
-    description:
-      "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
+    description: descriptions.find((d) => d.id === "mocasin-clasico")?.desc,
     color: "Verde",
     leather: "Vacuno",
     sewing: "Estándar",
     codigo: "226",
     previewImage: "/images/modelos/130 - 29.webp",
-    images: [
-      "/images/modelos/130 - 29.webp",
-      "/images/modelos/130 - 30.webp",
-    ],
+    images: ["/images/modelos/130 - 29.webp", "/images/modelos/130 - 30.webp"],
   },
   {
     id: "Mocasin-Archibaldo-Carpincho",
@@ -2127,8 +2148,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "mocasines",
     subtype: "archibaldo",
-    description:
-      "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
+    description: descriptions.find((d) => d.id === "mocasin-clasico")?.desc,
     color: "Marrón",
     leather: "Carpincho",
     sewing: "Estándar",
@@ -2147,8 +2167,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "mocasines",
     subtype: "archibaldo",
-    description:
-      "El mocasín más fresco y liviano de nuestro catálogo. Su costura frontal, al no ser sellada, proporciona mayor ventilación, convirtiéndolo en el mocasín ideal para los días de calor.",
+    description: descriptions.find((d) => d.id === "mocasin-clasico")?.desc,
     color: "Marrón",
     leather: "Vacuno (símil croco)",
     sewing: "Estándar",
@@ -2268,8 +2287,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "inglesa",
-    description:
-      "Una bota clásica, cómoda y atemporal. Desde paseos por la ciudad hasta eventos formales, la bota inglesa ofrece un toque de sofisticación a cualquier conjunto.",
+    description: descriptions.find((d) => d.id === "bota-inglesa")?.desc,
     color: "Marrón",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -2289,8 +2307,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "inglesa",
-    description:
-      "Una bota clásica, cómoda y atemporal. Desde paseos por la ciudad hasta eventos formales, la bota inglesa ofrece un toque de sofisticación a cualquier conjunto.",
+    description: descriptions.find((d) => d.id === "bota-inglesa")?.desc,
     color: "Negro",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -2310,8 +2327,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "petta",
-    description:
-      "Un clásico de la casa. Esta bota cuenta con una costura redondeada y presenta un diseño clásico con un toque más suave y contemporáneo. Ofrece un equilibrio perfecto entre class tradicional y comodidad moderna.",
+    description: descriptions.find((d) => d.id === "bota-petta")?.desc,
     color: "Suela",
     leather: "Vacuno (graneado)",
     codigo: "Bota Petta",
@@ -2330,8 +2346,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "petta",
-    description:
-      "Un clásico de la casa. Esta bota cuenta con una costura redondeada y presenta un diseño clásico con un toque más suave y contemporáneo. Ofrece un equilibrio perfecto entre class tradicional y comodidad moderna.",
+    description: descriptions.find((d) => d.id === "bota-petta")?.desc,
     color: "Negro",
     leather: "Vacuno (graneado)",
     codigo: "Bota Petta",
@@ -2350,8 +2365,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "petta",
-    description:
-      "Un clásico de la casa. Esta bota cuenta con una costura redondeada y presenta un diseño clásico con un toque más suave y contemporáneo. Ofrece un equilibrio perfecto entre class tradicional y comodidad moderna.",
+    description: descriptions.find((d) => d.id === "bota-petta")?.desc,
     color: "Verde",
     leather: "Vacuno (graneado)",
     codigo: "Bota Petta",
@@ -2370,8 +2384,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "ET",
-    description:
-      "Una bota moderna y elegante ideal para combinar con jeans y con pantalones de vestir.",
+    description: descriptions.find((d) => d.id === "bota-et")?.desc,
     color: "Negro",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -2391,8 +2404,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "ET",
-    description:
-      "Una bota moderna y elegante ideal para combinar con jeans y con pantalones de vestir.",
+    description: descriptions.find((d) => d.id === "bota-et")?.desc,
     color: "Suela",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -2412,8 +2424,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "ET",
-    description:
-      "Una bota moderna y elegante ideal para combinar con jeans y con pantalones de vestir.",
+    description: descriptions.find((d) => d.id === "bota-et")?.desc,
     color: "Arena",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -2426,7 +2437,7 @@ export const modelos = [
       "/images/modelos/143 - 7.webp",
     ],
   },
-    {
+  {
     isNuevo: true,
     id: "Bota-ET-Combinado-Verde",
     name: "Bota ET",
@@ -2434,8 +2445,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "ET",
-    description:
-      "Una bota moderna y elegante ideal para combinar con jeans y con pantalones de vestir.",
+    description: descriptions.find((d) => d.id === "bota-et")?.desc,
     color: "Verde",
     leather: "Combinado Vacuno - Lagarto",
     sewing: "Estándar",
@@ -2455,8 +2465,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "chelsea",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-chelsea")?.desc,
     color: "Negro",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -2476,8 +2485,7 @@ export const modelos = [
     class: "READY TO WEAR",
     type: "botas",
     subtype: "chelsea",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-chelsea")?.desc,
     color: "Suela",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -2860,8 +2868,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-chelsea")?.desc,
     color: "Gris",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -2881,8 +2888,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-chelsea")?.desc,
     color: "Chocolate",
     leather: "Búfalo",
     sewing: "Estándar",
@@ -2902,8 +2908,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-chelsea")?.desc,
     color: "Café",
     leather: "Búfalo",
     sewing: "Estándar",
@@ -2923,8 +2928,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-chelsea")?.desc,
     color: "Marrón",
     leather: "Búfalo",
     sewing: "Estándar",
@@ -2944,8 +2948,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-chelsea")?.desc,
     color: "Verde",
     leather: "Búfalo",
     sewing: "Estándar",
@@ -2965,8 +2968,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-chelsea")?.desc,
     color: "Negro",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -2986,8 +2988,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-chelsea")?.desc,
     color: "Chocolate",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3007,8 +3008,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-chelsea")?.desc,
     color: "Verde Musgo",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3028,8 +3028,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-chelsea")?.desc,
     color: "Arena",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3049,8 +3048,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-chelsea")?.desc,
     color: "Azul",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3070,8 +3068,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "chelsea",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-chelsea")?.desc,
     color: "Rojo",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3091,8 +3088,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "manchester",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-manchester")?.desc,
     color: "Negro",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -3112,8 +3108,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "manchester",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-manchester")?.desc,
     color: "Guinda",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -3133,8 +3128,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "botas",
     subtype: "manchester",
-    description:
-      "Un calzado versátil, adecuado tanto para ocasiones casuales como formales. Es fácil de combinar con una amplia gama de atuendos, desde jeans hasta trajes elegantes. Su diseño sin cordones y elástico la hacen cómoda y conveniente para el uso diario.",
+    description: descriptions.find((d) => d.id === "bota-manchester")?.desc,
     color: "Tostado",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3154,8 +3148,7 @@ export const modelos = [
     variant: "Split Toe",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Este modelo cuenta con una costura que divide la puntera en dos secciones, añadiendo un toque distintivo al diseño. Al ser un modelo Derby, cuenta con una gran flexibilidad en la cordonera.",
+    description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Verde - Blanco",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -3175,8 +3168,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico liso de cordonera abierta. Este modelo logra un atractivo estilizado sin romper sus líneas tradicionales. Se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Verde Musgo",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3197,8 +3189,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un clásico liso de cordonera abierta. Este modelo logra un atractivo estilizado sin romper sus líneas tradicionales. Se recomienda para personas con empeine alto.",
+    description: descriptions.find((d) => d.id === "derby")?.desc,
     color: "Pátina Verde",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -3278,8 +3269,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "escarpines",
     subtype: "americano",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera.",
+    description: descriptions.find((d) => d.id === "escarpin-123")?.desc,
     color: "Maíz",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -3298,8 +3288,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "escarpines",
     subtype: "americano",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera.",
+    description: descriptions.find((d) => d.id === "escarpin-123")?.desc,
     color: "Verde",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -3318,8 +3307,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "escarpines",
     subtype: "americano",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera.",
+    description: descriptions.find((d) => d.id === "escarpin-123")?.desc,
     color: "Arena",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3338,8 +3326,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "escarpines",
     subtype: "americano",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera.",
+    description: descriptions.find((d) => d.id === "escarpin-123")?.desc,
     color: "Azul",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3358,8 +3345,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "escarpines",
     subtype: "americano",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera.",
+    description: descriptions.find((d) => d.id === "escarpin-123")?.desc,
     color: "Chocolate",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3378,8 +3364,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "escarpines",
     subtype: "MP",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
+    description: descriptions.find((d) => d.id === "mp")?.desc,
     color: "Arena",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3398,8 +3383,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "escarpines",
     subtype: "MP",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
+    description: descriptions.find((d) => d.id === "mp")?.desc,
     color: "Chocolate",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3418,8 +3402,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "escarpines",
     subtype: "MP",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
+    description: descriptions.find((d) => d.id === "mp")?.desc,
     color: "Azul",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3438,8 +3421,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "escarpines",
     subtype: "MP",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
+    description: descriptions.find((d) => d.id === "mp")?.desc,
     color: "Violeta",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3458,8 +3440,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "escarpines",
     subtype: "MP",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
+    description: descriptions.find((d) => d.id === "mp")?.desc,
     color: "Verde",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -3478,8 +3459,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "escarpines",
     subtype: "MP",
-    description:
-      "El mocasín escarpín es una fusión entre un mocasín y un zapato de vestir, con una suela más delgada y detalles de costura en la parte delantera. Este modelo cuenta con campanillas.",
+    description: descriptions.find((d) => d.id === "mp")?.desc,
     color: "Rojo",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -3518,8 +3498,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "borcegos",
     subtype: "altos",
-    description:
-      "Un borcego rígido y robusto. Su construcción incorpora suelas y tacos de cuero terminados con suelinas y sobretacos de goma. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
+    description: descriptions.find((d) => d.id === "borcego-texano")?.desc,
     color: "Natural",
     leather: "Búfalo",
     sewing: "Estándar",
@@ -3539,8 +3518,7 @@ export const modelos = [
     variant: "Plain Toe",
     type: "borcegos",
     subtype: "altos",
-    description:
-      "Un borcego rígido y robusto. Su construcción incorpora bases de cuero y suela FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
+    description: descriptions.find((d) => d.id === "borcego-texano")?.desc,
     color: "Guinda",
     leather: "Búfalo",
     sewing: "Estándar",
@@ -3560,8 +3538,7 @@ export const modelos = [
     variant: "Plain Toe",
     type: "borcegos",
     subtype: "altos",
-    description:
-      "Un borcego rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
+    description: descriptions.find((d) => d.id === "borcego-texano")?.desc,
     color: "Marrón",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -3581,8 +3558,7 @@ export const modelos = [
     variant: "Plain Toe",
     type: "borcegos",
     subtype: "altos",
-    description:
-      "Un borcego rígido y robusto. Su construcción incorpora bases de cuero y suela FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
+    description: descriptions.find((d) => d.id === "borcego-texano")?.desc,
     color: "Negro",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -3602,8 +3578,7 @@ export const modelos = [
     variant: "Plain Toe",
     type: "borcegos",
     subtype: "altos",
-    description:
-      "Un borcego rígido y robusto. Su construcción incorpora bases de cuero y suela FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
+    description: descriptions.find((d) => d.id === "borcego-texano")?.desc,
     color: "Negro",
     leather: "Buffalo (graneado)",
     sewing: "Blake Rapid",
@@ -3622,8 +3597,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "borcegos",
     subtype: "altos",
-    description:
-      "Un borcego rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
+    description: descriptions.find((d) => d.id === "borcego-texano")?.desc,
     color: "Búfalo con pecas",
     leather: "Búfalo",
     sewing: "Estándar",
@@ -3642,8 +3616,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "borcegos",
     subtype: "altos",
-    description:
-      "Un borcego rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Unas botas ideales para el uso urbano y aptas para caminos rurales.",
+    description: descriptions.find((d) => d.id === "borcego-texano")?.desc,
     color: "Natural",
     leather: "Gamuza",
     sewing: "Estándar",
@@ -3662,8 +3635,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un zapato rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Un modelo ideal para el uso urbano y aptas para caminos rurales.",
+    description: descriptions.find((d) => d.id === "derby-coll")?.desc,
     color: "Guinda",
     leather: "Vacuno",
     sewing: "Estándar",
@@ -3682,8 +3654,7 @@ export const modelos = [
     class: "MADE TO ORDER",
     type: "zapatos",
     subtype: "derby",
-    description:
-      "Un zapato rígido y robusto. Su construcción incorpora bases de Goma Rural FEBO. Un modelo ideal para el uso urbano y aptas para caminos rurales.",
+    description: descriptions.find((d) => d.id === "derby-coll")?.desc,
     color: "Negro",
     leather: "Vacuno",
     sewing: "Estándar",

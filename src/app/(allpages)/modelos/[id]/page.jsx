@@ -49,6 +49,56 @@ export default function Modelos({ params }) {
     "patina",
   ]
 
+  const BASE_TEXT =
+    "Nuestros cueros poseen un curtido artesanal que puede variar sutilmente de tono según la partida de producción."
+
+  const normalize = (s) =>
+    String(s || "")
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, " ")
+
+  const sewingIntroMap = {
+    "estándar":
+      "Calzados 100% plantillados a mano. Proceso artesanal que asegura ajuste y comodidad únicos en cada par.",
+
+    "blake rapid":
+      "Costura Blake Rapid: ligera y flexible, ideal para un calce más delgado y cómodo en el uso diario.",
+
+    "blake rapid (suelas anchas)":
+      "Costura Blake Rapid con suelas anchas: mayor superficie de apoyo y estabilidad sin perder flexibilidad.",
+
+    "alpina / vira volcada":
+      "Costura Alpina / Vira Volcada: Durante siglos se utilizó esta construcción para reforzar el calzado de los montañeses. Hoy es un icono clásico sinónimo de fortaleza en la pisada.",
+
+    "norvegese":
+      "Costura Norvegese: extremadamente resistente, pensada para durar en condiciones exigentes.",
+
+    "diente de caballo":
+      "Costura Diente de Caballo: terminación distintiva que aporta carácter y robustez al calzado.",
+
+    "diente de perro":
+      "Costura Diente de Perro: detalle ornamental de inspiración clásica, con gran presencia visual.",
+  }
+
+  const getSewingDescription = (sewing) => {
+    const key = normalize(sewing)
+
+    if (sewingIntroMap[key]) {
+      return `${sewingIntroMap[key]} ${BASE_TEXT}`
+    }
+
+    const foundKey = Object.keys(sewingIntroMap).find((k) => key.includes(k))
+
+    if (foundKey) {
+      return `${sewingIntroMap[foundKey]} ${BASE_TEXT}`
+    }
+
+    return BASE_TEXT
+  }
+
+  const sewingText = getSewingDescription(modelo?.sewing)
+
   return (
     <div className="div-modelo">
       <div className="div-galeria">
@@ -159,11 +209,7 @@ export default function Modelos({ params }) {
             </div>
           )}
 
-          <p className="aclaracion-colores">
-            Calzados 100% plantillados a mano. Nuestros cueros poseen un curtido
-            artesanal el cual puede variar sutilmente de tono según la partida
-            de producción.
-          </p>
+          <p className="aclaracion-colores">{sewingText}</p>
         </div>
       </div>
     </div>
