@@ -3077,6 +3077,7 @@ body {
     height: 25vh;
     margin: 2rem auto;
     border-radius: 10px;
+    background-attachment: scroll;
     object-fit: cover;
   }
 

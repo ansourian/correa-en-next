@@ -4,6 +4,7 @@ import GaleriaModelos from "@/components/GaleriaModelos"
 import Label from "@/components/Label"
 import { Tooltip } from "@mui/material"
 import { DetallesModelCard } from "@/components/DetallesModelCard"
+import Link from "next/link"
 
 export function generateStaticParams() {
   return modelos.map((m) => ({
@@ -192,9 +193,10 @@ export default function Modelos({ params }) {
 
               <div className="otros-modelos-grid">
                 {relatedModels.map((item) => (
-                  <a
+                  <Link
                     key={item.id}
                     href={`/modelos/${item.id}`}
+                    replace
                     className="otros-modelos-item"
                   >
                     <img
@@ -203,7 +205,7 @@ export default function Modelos({ params }) {
                       className="otros-modelos-img"
                     />
                     <span className="otros-modelos-color">{item.color}</span>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
