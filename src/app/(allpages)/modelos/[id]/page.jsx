@@ -44,12 +44,13 @@ export default function Modelos({ params }) {
   const detalles = [
     "cuero",
     "color",
-    "costura",
+    // "costura",
     "estilo",
     "plantillado",
     "patina",
   ]
 
+  /*
   const BASE_TEXT =
     "Nuestros cueros poseen un curtido artesanal que puede variar sutilmente de tono según la partida de producción."
 
@@ -98,7 +99,8 @@ export default function Modelos({ params }) {
     return BASE_TEXT
   }
 
-  const sewingText = getSewingDescription(modelo?.sewing)
+  */
+  // const sewingText = getSewingDescription(modelo?.sewing)
 
   return (
     <div className="div-modelo">
@@ -211,7 +213,7 @@ export default function Modelos({ params }) {
             </div>
           )}
 
-          <p className="aclaracion-colores">{sewingText}</p>
+          {/* <p className="aclaracion-colores">{sewingText}</p> */}
         </div>
       </div>
     </div>

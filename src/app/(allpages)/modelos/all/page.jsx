@@ -48,9 +48,9 @@ export default function AllModels() {
       : null
     const leatherNormalizado = normalizeText(leatherSeleccionado)
 
-    const sewingSeleccionado = searchParams ? searchParams.get("sewing") : null
+    // const sewingSeleccionado = searchParams ? searchParams.get("sewing") : null
 
-    const sewingNormalizado = normalizeText(sewingSeleccionado)
+    // const sewingNormalizado = normalizeText(sewingSeleccionado)
 
     // Filtrar todos los modelos
     const modelosFiltrados = modelos.filter((modelo) => {
@@ -60,7 +60,7 @@ export default function AllModels() {
       const normalizedColor = normalizeText(modelo.color)
       const normalizedLinea = normalizeText(lineaSeleccionada)
       const normalizedLeather = normalizeText(modelo.leather)
-      const normalizedSewing = normalizeText(modelo.sewing)
+      // const normalizedSewing = normalizeText(modelo.sewing)
       const matchesTipo = tipoSeleccionado
         ? modelo.type === tipoSeleccionado
         : true
@@ -81,9 +81,10 @@ export default function AllModels() {
       const matchesLeather = leatherSeleccionado
         ? normalizedLeather.includes(leatherNormalizado)
         : true
-      const matchesSewing = sewingSeleccionado
-        ? normalizedSewing.includes(sewingNormalizado)
-        : true
+      // const matchesSewing = sewingSeleccionado
+      //   ? normalizedSewing.includes(sewingNormalizado)
+      //   : true
+      const matchesSewing = true
       const matchesCodigo = selectedCodigo
         ? selectedCodigo === "Mod. Swann"
           ? modelo.name.trim().toLowerCase() === "mod. swann"

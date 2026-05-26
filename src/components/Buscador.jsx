@@ -9,7 +9,7 @@ import {
   ArrowDropDownOutlined,
   BlurOnOutlined,
   ColorLensOutlined,
-  InsightsOutlined,
+  // InsightsOutlined,
   WavesOutlined,
 } from "@mui/icons-material"
 import { codigosPorModelo, filtros } from "@/data/filters"
@@ -99,7 +99,7 @@ export default function Buscador({
     if (searchParams.get("linea")) count++
     if (searchParams.get("estilo")) count++
     if (searchParams.get("leather")) count++
-    if (searchParams.get("sewing")) count++
+    // if (searchParams.get("sewing")) count++
     if (searchParams.get("tipo")) count++
     if (searchParams.get("subtipo")) count++
     if (selectedCodigo) count++
@@ -427,6 +427,7 @@ export default function Buscador({
             </div>
 
             {/* SUB-ACCORDION — COSTURA (SEWING) */}
+            {/*
             <div className="accordion-item accordion-filters">
               <h2 className="accordion-header" id="heading-sewing">
                 <button
@@ -470,6 +471,7 @@ export default function Buscador({
                 </div>
               </div>
             </div>
+            */}
 
             {/* SUB-ACCORDION — ESTILO */}
             <div className="accordion-item accordion-filters">
