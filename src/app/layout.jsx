@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "@/lib/globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import ScrollTopButton from "@/components/ScrollTopButton"
 import { useEffect } from "react"
 import { usePathname } from "next/navigation"
 
@@ -47,9 +48,11 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
+        <span id="page-top" />
         <Header />
         {children}
         <Footer />
+        <ScrollTopButton />
       </body>
     </html>
   )

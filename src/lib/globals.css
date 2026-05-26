@@ -704,6 +704,61 @@ a:visited {
   margin-right: 5px;
 }
 
+.scroll-top-button {
+  font-family: "Outfit", sans-serif;
+  color: #929292 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed !important;
+  top: auto;
+  left: auto;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 99999;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background: #a0a0a03d;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  padding: 0;
+  transition: 0.4s;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+}
+
+.scroll-top-button:hover {
+  color: #ffffff !important;
+  background: #4141415e;
+  box-shadow: 0 0 0 1px #dfdfdf;
+  transition: 0.4s;
+}
+
+.scroll-top-button-visible {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-top-button .volver-text {
+  display: none;
+}
+
+.scroll-top-button .icono-volver {
+  margin-right: 0;
+}
+
 .imagenes-button {
   font-family: "Outfit", sans-serif;
   color: #1f2337;
@@ -2621,6 +2676,32 @@ body {
     margin-right: 0;
   }
 
+  .scroll-top-button {
+    position: fixed !important;
+    top: auto !important;
+    left: auto !important;
+    right: calc(1rem + env(safe-area-inset-right));
+    bottom: calc(1rem + env(safe-area-inset-bottom));
+    z-index: 99999;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0;
+    transform: translateY(12px);
+  }
+
+  .scroll-top-button-visible {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
   .hr-custom {
     width: 100%;
     margin: 3rem auto !important;
@@ -3053,7 +3134,6 @@ body {
     overflow-x: hidden;
     height: 100%;
     width: 100%;
-    transform: translate3d(0, 0, 0);
   }
 
   .container-var {
