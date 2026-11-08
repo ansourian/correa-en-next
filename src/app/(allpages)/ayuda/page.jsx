@@ -3,7 +3,7 @@ import CardPreguntas from "@/components/CardPreguntas";
 import FadeIn from "@/components/FadeInAnimation";
 import SectionHome from "@/components/SectionHome";
 import { Fade } from "@mui/material";
-import React from "react";
+import React, { Suspense } from "react";
 
 export default function Ayuda() {
   return (
@@ -16,7 +16,9 @@ export default function Ayuda() {
         }
       />
       <FadeIn>
-        <CardPreguntas />
+        <Suspense fallback={null}>
+          <CardPreguntas />
+        </Suspense>
       </FadeIn>
       <FadeIn>
         <SectionHome

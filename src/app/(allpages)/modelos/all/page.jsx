@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import React, { Suspense, useState, useEffect } from "react"
 import BannerModelos from "@/components/BannerModelos"
 import Article from "@/components/Article"
 import { modelos } from "@/data/data-modelos"
@@ -8,6 +8,14 @@ import Buscador from "@/components/Buscador"
 import { useSearchParams } from "next/navigation"
 
 export default function AllModels() {
+  return (
+    <Suspense fallback={null}>
+      <AllModelsContent />
+    </Suspense>
+  )
+}
+
+function AllModelsContent() {
   const [tipoSeleccionado, setTipoSeleccionado] = useState("")
   const [subTipoSeleccionado, setSubTipoSeleccionado] = useState("")
   const [selectedCodigo, setSelectedCodigo] = useState(null)
