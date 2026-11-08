@@ -1,15 +1,13 @@
 import React from "react"
-import { modelos } from "@/data/data-modelos"
 import Label from "./Label"
-import { Tooltip } from "@mui/material"
 
-export default function Article({ params }) {
-  const { id } = params
-  const modelo = modelos.find((a) => a.id == id)
-
+export default function Article({ modelo, loading = "lazy" }) {
   if (!modelo) {
     return <div>Modelo no encontrado</div>
   }
+
+  const smallImage = encodeURI(modelo.previewImage.replace("/images/", "/images/cards/320/"))
+  const largeImage = encodeURI(modelo.previewImage.replace("/images/", "/images/cards/640/"))
 
   return (
     <article className="producto model">
@@ -17,7 +15,11 @@ export default function Article({ params }) {
         <img
           className="img-models"
           alt={`${modelo.name}(${modelo.color})`}
-          src={modelo.previewImage}
+          src={smallImage}
+          srcSet={`${smallImage} 320w, ${largeImage} 640w`}
+          sizes="(max-width: 767px) 45vw, 300px"
+          loading={loading}
+          decoding="async"
         />
         <div className="div-article-info">
           {modelo.isAgotado && (

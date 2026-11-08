@@ -4,10 +4,10 @@ import React, { useState, useRef, useEffect } from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import { Modal, Button } from "react-bootstrap" // Asegúrate de tener react-bootstrap instalado
+import { Modal } from "react-bootstrap"
 import { AdsClick, Pinch } from "@mui/icons-material"
 
-export default function GaleriaModelos({ images }) {
+export default function GaleriaModelos({ images, modelName = "este modelo" }) {
   const [selectedImage, setSelectedImage] = useState(images[0])
   const [modalOpen, setModalOpen] = useState(false) // Estado para controlar la apertura del modal
   const [activeImageIndex, setActiveImageIndex] = useState(0) // Estado para almacenar el índice de la imagen seleccionada
@@ -18,6 +18,26 @@ export default function GaleriaModelos({ images }) {
   const [isThumbnailClick, setIsThumbnailClick] = useState(false)
 
   const sliderRef = useRef(null) // Crear una referencia para el slider
+  const galleryRef = useRef(null)
+
+  const handleSliderAccessibility = () => {
+    // Slick duplica diapositivas: solo la visible debe entrar en el recorrido de Tab.
+    let focusedSlideHidden = false
+    galleryRef.current?.querySelectorAll(".slick-slide").forEach((slide) => {
+      const isHidden = slide.getAttribute("aria-hidden") === "true"
+      if (isHidden && slide.contains(document.activeElement)) {
+        focusedSlideHidden = true
+      }
+      slide.querySelectorAll(".gallery-image-button").forEach((button) => {
+        button.tabIndex = isHidden ? -1 : 0
+      })
+    })
+    if (focusedSlideHidden) {
+      galleryRef.current
+        ?.querySelector(".slick-active .gallery-image-button")
+        ?.focus({ preventScroll: true })
+    }
+  }
 
   // Detectar si el dispositivo es móvil o no
   useEffect(() => {
@@ -41,6 +61,8 @@ export default function GaleriaModelos({ images }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
+    onInit: handleSliderAccessibility,
+    onReInit: handleSliderAccessibility,
     beforeChange: (current, next) => {
       setSelectedImage(images[next]) // Actualiza la imagen seleccionada cuando el slider cambia
       if (!isThumbnailClick) {
@@ -83,8 +105,31 @@ export default function GaleriaModelos({ images }) {
     return () => clearTimeout(timer)
   }, [])
 
+  const modalImage = (
+    <img
+      src={images[activeImageIndex]}
+      alt={`${modelName}, imagen ${activeImageIndex + 1}`}
+      loading="eager"
+      decoding="async"
+      draggable={false}
+      style={{
+        width: isMobile ? "100%" : "auto",
+        height: isMobile ? "auto" : "90vh",
+        maxWidth: "100%",
+        maxHeight: "100%",
+        transform: isZoomed
+          ? isMobile
+            ? "scale(1.1)"
+            : "scale(1.6)"
+          : "scale(1)",
+        transition: "transform 0.3s ease",
+        objectFit: "contain",
+      }}
+    />
+  )
+
   return (
-    <div>
+    <div ref={galleryRef}>
       {/* Galería deslizable de imágenes grandes */}
       <div className="main-gallery">
         <div
@@ -103,19 +148,27 @@ export default function GaleriaModelos({ images }) {
           <Slider {...settings} ref={sliderRef}>
             {images.map((img, index) => (
               <div key={index}>
-                <img
-                  src={img}
-                  alt={`Imagen grande ${index + 1}`}
-                  style={{
-                    width: "100%",
-                    maxHeight: "650px",
-                    objectFit: "contain",
-                    cursor: "zoom-in", // Indica que se puede hacer zoom
-                    outline: "none", // Evita el outline al hacer clic
-                    border: "none", // Asegura que no haya borde
-                  }}
-                  onClick={() => handleImageClick(index)} // Al hacer clic en la imagen, abre el modal
-                />
+                <button
+                  type="button"
+                  className="gallery-image-button"
+                  aria-label={`Ampliar imagen ${index + 1} de ${modelName}`}
+                  onClick={() => handleImageClick(index)}
+                >
+                  <img
+                    src={img}
+                    alt={`${modelName}, imagen ${index + 1}`}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      maxHeight: "650px",
+                      objectFit: "contain",
+                      cursor: "zoom-in", // Indica que se puede hacer zoom
+                      border: "none", // Asegura que no haya borde
+                    }}
+                  />
+                </button>
               </div>
             ))}
           </Slider>
@@ -125,28 +178,27 @@ export default function GaleriaModelos({ images }) {
       {/* Miniaturas debajo de la galería */}
       <div className="thumbnails">
         {images.map((img, index) => (
-          <img
+          <button
             key={index}
-            src={img}
-            alt={`Miniatura de la imagen ${index + 1}`}
-            style={{
-              width: "80px", // Tamaño de las miniaturas
-              height: "auto",
-              cursor: "pointer",
-              margin: "10px",
-              border: "2px solid rgb(167 167 167)",
-              padding: "5px",
-              borderRadius: "10px",
-              border:
-                selectedImage === img ? "2px solid rgb(167 167 167)" : "none", // Resalta la miniatura seleccionada
-            }}
+            type="button"
+            className="gallery-thumbnail-button"
+            aria-label={`Ver imagen ${index + 1} de ${modelName}`}
+            aria-pressed={selectedImage === img}
             onClick={() => handleThumbnailClick(img, index)} // Cambia la imagen al hacer clic
-          />
+          >
+            <img
+              src={img}
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </button>
         ))}
       </div>
 
       {/* Modal de pantalla completa con zoom */}
       <Modal
+        aria-label={`Imágenes de ${modelName}`}
         show={modalOpen}
         onHide={() => setModalOpen(false)}
         size="lg"
@@ -184,32 +236,32 @@ export default function GaleriaModelos({ images }) {
                 </p>
               </div>
             )}
-            <img
-              src={images[activeImageIndex]}
-              alt={`Imagen a pantalla completa ${activeImageIndex + 1}`}
-              draggable="false"
-              style={{
-                width: isMobile ? "100%" : "auto", // En móvil, usa el 100% de ancho; en web, ajustamos el height
-                height: isMobile ? "auto" : "90vh", // En móvil, la imagen tiene un tamaño automático; en web, el height es 90vh
-                maxWidth: "100%", // Limitar el ancho máximo
-                maxHeight: "100%", // Limitar la altura máxima
-                transform: isZoomed
-                  ? isMobile
-                    ? "scale(1.1)" // Zoom moderado en móvil
-                    : "scale(1.6)" // Zoom leve en web
-                  : "scale(1)", // Sin zoom
-                transition: "transform 0.3s ease", // Transición suave para el zoom
-                objectFit: "contain", // Asegura que la imagen mantenga la proporción
-              }}
-              onClick={handleZoomToggle} // Alternar zoom al hacer clic en la imagen
-            />
+            {isMobile ? (
+              modalImage
+            ) : (
+              <button
+                type="button"
+                className="gallery-zoom-button"
+                aria-label={`Zoom de la imagen ${activeImageIndex + 1} de ${modelName}`}
+                aria-pressed={isZoomed}
+                onClick={handleZoomToggle}
+              >
+                {modalImage}
+              </button>
+            )}
           </div>
         </Modal.Body>
 
         {/* Botón para cerrar el modal */}
         <Modal.Footer>
-          <div className="div-button" onClick={() => setModalOpen(false)}>
-            <a className="button-index">CERRAR</a>
+          <div className="div-button">
+            <button
+              type="button"
+              className="button-index gallery-close-button"
+              onClick={() => setModalOpen(false)}
+            >
+              CERRAR
+            </button>
           </div>
         </Modal.Footer>
       </Modal>

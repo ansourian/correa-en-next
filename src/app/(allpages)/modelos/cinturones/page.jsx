@@ -26,12 +26,16 @@ export default function Modelos() {
       <hr className="hr-custom" />
       {/* <section id="lista-productos">
         {modelosCinturones.map((modelo) => (
-          <Article key={modelo.id} params={{ id: modelo.id }} />
+          <Article key={modelo.id} modelo={modelo} />
         ))}
       </section> */}
       <section id="lista-productos">
-        {modelosCinturones.slice(0, visibleCount).map((modelo) => (
-          <Article key={modelo.id} params={{ id: modelo.id }} />
+        {modelosCinturones.slice(0, visibleCount).map((modelo, index) => (
+          <Article
+            key={modelo.id}
+            modelo={modelo}
+            loading={index < 4 ? "eager" : "lazy"}
+          />
         ))}
       </section>
 

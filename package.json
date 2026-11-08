@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "images:cards": "node scripts/generate-card-images.mjs",
+    "predev": "npm run images:cards",
     "dev": "next dev",
+    "prebuild": "npm run images:cards",
     "build": "next build",
     "start": "serve out --listen 8080",
     "lint": "next lint"
@@ -27,6 +30,7 @@
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "14.2.25",
-    "serve": "14.2.7"
+    "serve": "14.2.7",
+    "sharp": "^0.35.5"
   }
 }

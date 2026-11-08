@@ -157,8 +157,12 @@ function CatalogoModelosContent({ categoria, showLineaFilter }) {
             </button>
           </div>
         ) : (
-          modelosVisibles.map((modelo) => (
-            <Article key={modelo.id} params={{ id: modelo.id }} />
+          modelosVisibles.map((modelo, index) => (
+            <Article
+              key={modelo.id}
+              modelo={modelo}
+              loading={index < 4 ? "eager" : "lazy"}
+            />
           ))
         )}
       </section>

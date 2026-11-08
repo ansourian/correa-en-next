@@ -6,6 +6,8 @@ import { Tooltip } from "@mui/material"
 import { DetallesModelCard } from "@/components/DetallesModelCard"
 import Link from "next/link"
 
+export const dynamicParams = false
+
 export function generateStaticParams() {
   return modelos.map((m) => ({
     id: m.id,
@@ -15,6 +17,11 @@ export function generateStaticParams() {
 export default function Modelos({ params }) {
   const { id } = params
   const modelo = modelos.find((a) => a.id == id)
+
+  // Verifica si se encontró el modelo
+  if (!modelo) {
+    return <div>No se encontró el modelo.</div> // Si no se encuentra el modelo, muestra un mensaje
+  }
 
   const relatedModels = modelos.filter(
     (m) =>
@@ -29,11 +36,6 @@ export default function Modelos({ params }) {
     "MADE TO ORDER": "/modelos/made-to-order",
     BESPOKE: "/modelos/bespoke",
     ACCESORIOS: "/modelos/cinturones",
-  }
-
-  // Verifica si se encontró el modelo
-  if (!modelo) {
-    return <div>No se encontró el modelo.</div> // Si no se encuentra el modelo, muestra un mensaje
   }
 
   const { images } = modelo
@@ -106,7 +108,10 @@ export default function Modelos({ params }) {
     <div className="div-modelo">
       <div className="div-galeria">
         {validImages.length > 0 ? (
-          <GaleriaModelos images={validImages} />
+          <GaleriaModelos
+            images={validImages}
+            modelName={`${modelo.name}, ${modelo.color}`}
+          />
         ) : (
           <div>No hay imágenes disponibles.</div>
         )}
@@ -202,9 +207,11 @@ export default function Modelos({ params }) {
                     className="otros-modelos-item"
                   >
                     <img
-                      src={item.previewImage}
+                      src={encodeURI(item.previewImage.replace("/images/", "/images/cards/320/"))}
                       alt={item.color}
                       className="otros-modelos-img"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <span className="otros-modelos-color">{item.color}</span>
                   </Link>
