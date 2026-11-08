@@ -162,7 +162,7 @@ export default function GaleriaModelos({ images, modelName = "este modelo" }) {
                     style={{
                       width: "100%",
                       height: "auto",
-                      maxHeight: "650px",
+                      maxHeight: "40.625rem",
                       objectFit: "contain",
                       cursor: "zoom-in", // Indica que se puede hacer zoom
                       border: "none", // Asegura que no haya borde

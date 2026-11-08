@@ -17,7 +17,7 @@ export default function Article({ modelo, loading = "lazy" }) {
           alt={`${modelo.name}(${modelo.color})`}
           src={smallImage}
           srcSet={`${smallImage} 320w, ${largeImage} 640w`}
-          sizes="(max-width: 767px) 45vw, 300px"
+          sizes="(max-width: 24rem) 90vw, (max-width: 767px) 45vw, 18.75rem"
           loading={loading}
           decoding="async"
         />
