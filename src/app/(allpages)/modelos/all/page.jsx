@@ -1,5 +1,9 @@
 import CatalogoModelos from "@/components/CatalogoModelos"
 
+export const metadata = {
+  title: "Todos los Modelos",
+}
+
 export default function AllModels() {
   return (
     <CatalogoModelos

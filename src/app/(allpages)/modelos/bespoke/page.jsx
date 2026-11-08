@@ -1,5 +1,9 @@
 import CatalogoModelos from "@/components/CatalogoModelos"
 
+export const metadata = {
+  title: "Bespoke",
+}
+
 export default function Modelos() {
   return (
     <CatalogoModelos

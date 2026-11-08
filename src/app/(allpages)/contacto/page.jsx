@@ -2,6 +2,10 @@ import Banner from "@/components/Banner";
 import ContactForm from "@/components/ContactForm";
 import React from "react";
 
+export const metadata = {
+  title: "Contacto",
+};
+
 export default function Ayuda() {
     return (
         <>
@@ -9,4 +13,4 @@ export default function Ayuda() {
             <ContactForm />
         </>
     );
-  }  
+  }

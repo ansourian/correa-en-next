@@ -5,7 +5,7 @@ export function Navbar({ scroll }) {
   const router = useRouter()
   const pathname = usePathname()
 
-  const handleLogoClick = (e) => {
+  const handleLogoClick = async (e) => {
     e.preventDefault()
 
     const collapseEl = document.getElementById("navbarNav")
@@ -17,9 +17,9 @@ export function Navbar({ scroll }) {
     }
 
     if (isOpen) {
+      const { Collapse } = await import("bootstrap/dist/js/bootstrap")
       const bsCollapse =
-        bootstrap.Collapse.getInstance(collapseEl) ||
-        new bootstrap.Collapse(collapseEl)
+        Collapse.getInstance(collapseEl) || new Collapse(collapseEl)
       bsCollapse.hide()
       setTimeout(scrollToTop, 300)
     } else {

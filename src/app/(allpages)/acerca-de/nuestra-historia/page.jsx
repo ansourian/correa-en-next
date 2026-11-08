@@ -2,6 +2,10 @@ import Banner from "@/components/Banner";
 import FadeIn from "@/components/FadeInAnimation";
 import React from "react";
 
+export const metadata = {
+  title: "Nuestra Historia",
+};
+
 export default function NuestraHistoria() {
   return (
     <>

@@ -5,6 +5,10 @@ import SectionHome from "@/components/SectionHome";
 import { Fade } from "@mui/material";
 import React, { Suspense } from "react";
 
+export const metadata = {
+  title: "Ayuda",
+};
+
 export default function Ayuda() {
   return (
     <>

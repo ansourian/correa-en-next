@@ -3,6 +3,10 @@ import FadeIn from "@/components/FadeInAnimation";
 import ModelStylesCard from "@/components/ModelStylesCard";
 import React from "react";
 
+export const metadata = {
+  title: "Modelos",
+};
+
 export default function Modelos() {
   return (
     <>

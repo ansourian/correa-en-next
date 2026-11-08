@@ -5,6 +5,10 @@ import FadeIn from "@/components/FadeInAnimation";
 import MantenimientoSteps from "@/components/MantenimientoSteps";
 import React from "react";
 
+export const metadata = {
+  title: "Mantenimiento",
+};
+
 export default function Mantenimiento() {
   return (
     <>
