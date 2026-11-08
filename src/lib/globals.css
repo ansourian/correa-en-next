@@ -72,7 +72,7 @@ ul {
   flex-direction: row;
   justify-content: center;
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .nav-item {
@@ -395,7 +395,7 @@ p {
 
 .p-general_center {
   text-align: center;
-  font-size: 1.1vw;
+  font-size: 0.99rem;
   padding: 0 11vw;
   margin: 3vw 8vw;
   font-family: "EB Garamond", serif;
@@ -446,14 +446,14 @@ p {
 .p-price {
   margin: 0 0 1vw;
   text-align: flex-start;
-  font-size: 1.4vw;
+  font-size: 1.26rem;
   font-family: "Outfit", sans-serif;
   color: #2a2a2a;
 }
 
 .p-descripcion {
   text-align: left;
-  font-size: 1.3vw;
+  font-size: 1.17rem;
   padding: 0px;
   margin: 2rem 5rem;
   font-family: "EB Garamond", serif;
@@ -484,7 +484,7 @@ p {
 
 .p-aclaracion {
   text-align: left;
-  font-size: 1.2vw;
+  font-size: 1.08rem;
   padding: 0px;
   margin: 0 1rem;
   font-family: "EB Garamond", serif;
@@ -494,7 +494,7 @@ p {
 
 .p-404 {
   text-align: center;
-  font-size: 1.3vw;
+  font-size: 1.17rem;
   margin: 2vw 0vw 2vw;
   font-family: "EB Garamond", serif;
 }
@@ -512,7 +512,7 @@ p {
 }
 
 .p-preguntas {
-  font-size: 1.3vw;
+  font-size: 1.17rem;
   font-family: "EB Garamond", serif;
   color: rgb(255, 255, 255);
   display: flex;
@@ -571,7 +571,7 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 1.2vw;
+  font-size: 1.08rem;
   margin: 2vw 26vw;
   color: #df1616;
 }
@@ -795,7 +795,7 @@ a:visited {
   padding: 1vw 3vw;
   margin: 1vw 0;
   text-decoration: none;
-  font-size: 1vw;
+  font-size: 0.9rem;
   transition: 0.3s;
   border-radius: 0;
 }
@@ -972,7 +972,7 @@ button:focus:not(:focus-visible) {
 .form-contact {
   margin: 3vw 22vw;
   font-family: "EB Garamond", serif;
-  font-size: 1.3vw;
+  font-size: 1.17rem;
 }
 
 /* 
@@ -1343,7 +1343,7 @@ button:focus:not(:focus-visible) {
 }
 
 .accordion-button {
-  font-size: 1vw !important;
+  font-size: 0.9rem !important;
   text-align: center !important;
   font-family: "EB Garamond", serif !important;
   display: flex !important;
@@ -1491,7 +1491,7 @@ h2 {
 .h2-anuncio {
   color: rgb(255, 255, 255);
   text-align: center;
-  font-size: 0.9vw;
+  font-size: 0.81rem;
   margin: 1vw;
   font-family: "Outfit", sans-serif;
 }
@@ -1570,7 +1570,7 @@ h4 {
 h3 {
   color: #000000;
   font-family: "Outfit", sans-serif;
-  font-size: 1.5vw;
+  font-size: 1.35rem;
   text-align: center;
   letter-spacing: 0.3vw;
 }
@@ -1586,7 +1586,7 @@ h3 {
 .h3-pages {
   color: #000000;
   font-family: "Outfit", sans-serif;
-  font-size: 1.3vw;
+  font-size: 1.17rem;
   text-align: center;
   letter-spacing: 0.3vw;
 }
@@ -1629,7 +1629,7 @@ h3 {
 
 .h3-precio {
   color: #000000;
-  font-size: 1vw;
+  font-size: 0.9rem;
   text-align: center;
   margin: 0.5vw 0;
   letter-spacing: 0;
@@ -1646,7 +1646,7 @@ h3 {
 .model-subtitles {
   margin: auto 1rem;
   text-align: center;
-  font-size: 1.3vw;
+  font-size: 1.17rem;
   font-family: "EB Garamond", serif;
   color: #595959;
 }
@@ -1655,14 +1655,14 @@ h3 {
   margin: auto -1vw;
   justify-content: center;
   align-items: center;
-  font-size: 1.2vw;
+  font-size: 1.08rem;
   color: white;
 }
 
 .model-type_subtitles {
   margin: auto -1vw;
   text-align: center;
-  font-size: 1.3vw;
+  font-size: 1.17rem;
   font-family: "EB Garamond", serif;
   color: #d8d8d8;
 }
@@ -1672,21 +1672,21 @@ h3 {
   justify-content: center;
   align-items: center;
   font-family: "EB Garamond", serif;
-  font-size: 4vw;
+  font-size: 3.6rem;
   color: rgb(255, 219, 140);
 }
 
 .model-subtitles_car {
   margin: auto 1rem;
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 1.35rem;
   color: #ffffff;
 }
 
 h5 {
   color: #000000;
   text-align: left;
-  font-size: 3vw;
+  font-size: 2.7rem;
   margin: 0 0 2vw 2vw;
   font-family: "EB Garamond", serif;
 }
@@ -1713,7 +1713,7 @@ h5 {
   margin: 0;
   transform: translateY(-50%);
   color: #e7e7e7;
-  font-size: 20vw;
+  font-size: 18rem;
   font-family: "EB Garamond", serif;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1728,7 +1728,7 @@ h5 {
 }
 
 .h5-nuestro_trabajo {
-  font-size: 2.5vw;
+  font-size: 2.25rem;
   margin: 0 0 1vw;
 }
 
@@ -1761,7 +1761,7 @@ h5 {
   margin: auto -1vw;
   justify-content: center;
   align-items: center;
-  font-size: 2vw;
+  font-size: 1.8rem;
   color: white;
 }
 
@@ -2114,7 +2114,7 @@ footer {
 }
 
 .card-subtitle {
-  font-size: 1vw;
+  font-size: 1.1rem;
   margin-top: 4px;
   opacity: 0.9;
 }
@@ -2454,7 +2454,7 @@ footer {
 
 .otros-modelos-color {
   margin-top: 4px;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #333;
   text-align: center;
 }
@@ -2488,7 +2488,7 @@ footer {
 }
 
 .estilo-x {
-  font-size: calc(1em + 1vw);
+  font-size: 1.9rem;
 }
 
 body {
