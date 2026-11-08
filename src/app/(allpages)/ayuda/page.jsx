@@ -1,5 +1,5 @@
 import Banner from "@/components/Banner";
-import CardPreguntas from "@/components/CardPreguntas";
+import AccordionPreguntas from "@/components/AccordionPreguntas";
 import FadeIn from "@/components/FadeInAnimation";
 import SectionHome from "@/components/SectionHome";
 import { Fade } from "@mui/material";
@@ -23,7 +23,7 @@ export default function Ayuda() {
       />
       <FadeIn>
         <Suspense fallback={null}>
-          <CardPreguntas />
+          <AccordionPreguntas />
         </Suspense>
       </FadeIn>
       <FadeIn>

@@ -200,7 +200,7 @@ export default function Buscador({
 
             {subTipoSeleccionado && codigosDisponibles.length > 0 && (
               <div className="subcategoria-container">
-                <section class="contenedor-card_models_subtypes">
+                <section className="contenedor-card_models_subtypes">
                   {codigosDisponibles.map((codigo) => (
                     <button
                       key={codigo.value}

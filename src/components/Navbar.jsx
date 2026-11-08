@@ -5,6 +5,11 @@ export function Navbar({ scroll }) {
   const router = useRouter()
   const pathname = usePathname()
 
+  const isActive = (path) =>
+    path === "/"
+      ? pathname === "/"
+      : pathname === path || pathname?.startsWith(`${path}/`)
+
   const handleLogoClick = async (e) => {
     e.preventDefault()
 
@@ -70,32 +75,32 @@ export function Navbar({ scroll }) {
         >
           <ul className="navbar-nav mx-auto text-center">
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className={`nav-link${isActive("/") ? " active" : ""}`} href="/">
                 INICIO
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/modelos">
+              <a className={`nav-link${isActive("/modelos") ? " active" : ""}`} href="/modelos">
                 MODELOS
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/mantenimiento">
+              <a className={`nav-link${isActive("/mantenimiento") ? " active" : ""}`} href="/mantenimiento">
                 MANTENIMIENTO
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/acerca-de/nuestra-historia">
+              <a className={`nav-link${isActive("/acerca-de") ? " active" : ""}`} href="/acerca-de/nuestra-historia">
                 ACERCA DE
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/ayuda">
+              <a className={`nav-link${isActive("/ayuda") ? " active" : ""}`} href="/ayuda">
                 AYUDA
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/contacto">
+              <a className={`nav-link${isActive("/contacto") ? " active" : ""}`} href="/contacto">
                 CONTACTO
               </a>
             </li>

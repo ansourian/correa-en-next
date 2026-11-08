@@ -93,6 +93,10 @@ ul {
   position: relative;
 }
 
+.nav-link.active {
+  color: #fff9b7 !important;
+}
+
 .nav-link::after {
   content: "";
   position: absolute;
