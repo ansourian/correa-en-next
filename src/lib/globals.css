@@ -226,6 +226,12 @@ ul {
   margin: 0 auto;
 }
 
+.catalogo-resultados {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.9rem;
+  color: grey;
+}
+
 .img-models {
   width: 300px;
   margin: 1rem;

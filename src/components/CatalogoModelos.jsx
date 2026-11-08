@@ -1,11 +1,12 @@
 "use client"
 
 import { Suspense, useState } from "react"
-import { useSearchParams } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 import BannerModelos from "./BannerModelos"
 import Article from "./Article"
 import Buscador from "./Buscador"
 import { modelos } from "@/data/data-modelos"
+import { codigosPorModelo } from "@/data/filters"
 
 const MODELS_PER_PAGE = 32
 
@@ -45,12 +46,18 @@ export default function CatalogoModelos({
 }
 
 function CatalogoModelosContent({ categoria, showLineaFilter }) {
-  const [tipoSeleccionado, setTipoSeleccionado] = useState("")
-  const [subTipoSeleccionado, setSubTipoSeleccionado] = useState("")
-  const [selectedCodigo, setSelectedCodigo] = useState(null)
   const [searchTerm, setSearchTerm] = useState("")
   const [visibleCount, setVisibleCount] = useState(MODELS_PER_PAGE)
+  const router = useRouter()
   const searchParams = useSearchParams()
+  const tipoSeleccionado = searchParams.get("tipo") || ""
+  const subTipoSeleccionado = searchParams.get("subtipo") || ""
+  const codigoParam = searchParams.get("codigo")
+  const selectedCodigo =
+    !subTipoSeleccionado ||
+    codigosPorModelo[subTipoSeleccionado]?.some((c) => c.value === codigoParam)
+      ? codigoParam
+      : null
 
   const coloresNormalizados = searchParams.getAll("color").map(normalizeText)
   const estilosNormalizados = searchParams.getAll("estilo").map(normalizeText)
@@ -115,23 +122,45 @@ function CatalogoModelosContent({ categoria, showLineaFilter }) {
     setVisibleCount((prev) => prev + MODELS_PER_PAGE)
   }
 
+  const handleClearFilters = () => {
+    setSearchTerm("")
+    router.push("?", { scroll: false })
+  }
+
   return (
     <>
       <Buscador
-        setTipoSeleccionado={setTipoSeleccionado}
-        setSubTipoSeleccionado={setSubTipoSeleccionado}
-        setSelectedCodigo={setSelectedCodigo}
         selectedCodigo={selectedCodigo}
         setSearchTerm={setSearchTerm}
         searchTerm={searchTerm}
         tipoSeleccionado={tipoSeleccionado}
         subTipoSeleccionado={subTipoSeleccionado}
         showLineaFilter={showLineaFilter}
+        handleClearFilters={handleClearFilters}
       />
+      <p className="catalogo-resultados text-center my-3" role="status">
+        Mostrando {modelosVisibles.length} de {filteredModels.length}{" "}
+        {filteredModels.length === 1 ? "modelo" : "modelos"}
+      </p>
       <section id="lista-productos">
-        {modelosVisibles.map((modelo) => (
-          <Article key={modelo.id} params={{ id: modelo.id }} />
-        ))}
+        {filteredModels.length === 0 ? (
+          <div className="d-flex flex-column align-items-center gap-3 my-5 w-100">
+            <p className="p-sub mb-0">
+              No encontramos modelos que coincidan con tu búsqueda.
+            </p>
+            <button
+              type="button"
+              className="button-index"
+              onClick={handleClearFilters}
+            >
+              Limpiar filtros de búsqueda
+            </button>
+          </div>
+        ) : (
+          modelosVisibles.map((modelo) => (
+            <Article key={modelo.id} params={{ id: modelo.id }} />
+          ))
+        )}
       </section>
       {visibleCount < filteredModels.length && (
         <div className="ver-mas-container">

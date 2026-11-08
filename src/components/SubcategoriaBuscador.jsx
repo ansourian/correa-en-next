@@ -1,50 +1,30 @@
 "use client"
 import { useRouter, useSearchParams } from "next/navigation"
-import React, { useEffect, useState } from "react"
+import React from "react"
 
-export default function SubcategoriaBuscador({
-  subcategorias,
-  setSubTipoSeleccionado,
-  initialSubtipo,
-  setSelectedCodigo,
-}) {
-  const [selectedSubButton, setSelectedSubButton] = useState(null)
+export default function SubcategoriaBuscador({ subcategorias }) {
   const router = useRouter()
   const searchParams = useSearchParams()
+  const selectedSubButton = searchParams.get("subtipo")
 
   const handleSubTipoClick = (subtipo) => {
     const params = new URLSearchParams(searchParams.toString())
 
     if (selectedSubButton === subtipo) {
-      setSubTipoSeleccionado(null)
-      setSelectedSubButton(null)
-      setSelectedCodigo(null)
       params.delete("subtipo")
       params.delete("codigo")
       router.push(`?${params.toString()}`, { scroll: false })
       return
     }
 
-    setSubTipoSeleccionado(subtipo)
-    setSelectedSubButton(subtipo)
-
     params.set("subtipo", subtipo)
 
     if (params.get("codigo")) {
       params.delete("codigo")
-      setSelectedCodigo(null)
     }
 
     router.push(`?${params.toString()}`, { scroll: false })
   }
-
-  useEffect(() => {
-    if (initialSubtipo) {
-      setSelectedSubButton(initialSubtipo)
-    } else {
-      setSelectedSubButton(null)
-    }
-  }, [subcategorias, initialSubtipo])
 
   return (
     <section className="contenedor-card_models_subtypes">

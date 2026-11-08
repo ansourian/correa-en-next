@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 
 export default function FiltroBotones({
@@ -11,18 +11,9 @@ export default function FiltroBotones({
 }) {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const [selected, setSelected] = useState(multiple ? [] : null)
-
-  // sincronizar desde URL cada vez que cambian los searchParams
-  useEffect(() => {
-    if (!searchParams) return
-    if (multiple) {
-      setSelected(searchParams.getAll(nombreParam) || [])
-    } else {
-      setSelected(searchParams.get(nombreParam) || null)
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams?.toString(), nombreParam])
+  const selected = multiple
+    ? searchParams.getAll(nombreParam)
+    : searchParams.get(nombreParam)
 
   const handleClick = (valor) => {
     const valores = Array.isArray(valor) ? valor : [valor]
@@ -33,9 +24,9 @@ export default function FiltroBotones({
 
       let nuevoArray
 
-      const todosYaEstan = valores.every((v) => actuales.includes(v))
+      const algunoYaEsta = valores.some((v) => actuales.includes(v))
 
-      if (todosYaEstan) {
+      if (algunoYaEsta) {
         // quitar todos
         nuevoArray = actuales.filter((v) => !valores.includes(v))
       } else {
@@ -46,7 +37,6 @@ export default function FiltroBotones({
       params.delete(nombreParam)
       nuevoArray.forEach((v) => params.append(nombreParam, v))
 
-      setSelected(nuevoArray)
       router.push(`?${params.toString()}`, { scroll: false })
       if (onChange) onChange(nuevoArray)
       return
@@ -56,7 +46,6 @@ export default function FiltroBotones({
     const actual = params.get(nombreParam)
     if (actual === valor) {
       params.delete(nombreParam)
-      setSelected(null)
       router.push(`${params.toString() ? "?" + params.toString() : "?"}`, {
         scroll: false,
       })
@@ -66,7 +55,6 @@ export default function FiltroBotones({
 
     // set nuevo valor único
     params.set(nombreParam, valor)
-    setSelected(valor)
     router.push(`?${params.toString()}`, { scroll: false })
     if (onChange) onChange(valor)
   }
@@ -94,7 +82,7 @@ export default function FiltroBotones({
 
         const isSelected = multiple
           ? Array.isArray(rawValue)
-            ? rawValue.every((v) => selected?.includes(v))
+            ? rawValue.some((v) => selected?.includes(v))
             : selected?.includes(rawValue)
           : selected === rawValue
 

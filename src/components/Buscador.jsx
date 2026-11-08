@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from "react"
+import React from "react"
 import TuneIcon from "@mui/icons-material/Tune"
 import { useSearchParams, useRouter } from "next/navigation"
 import FiltroBotones from "./FiltroBotones"
@@ -15,60 +15,17 @@ import {
 import { codigosPorModelo, filtros } from "@/data/filters"
 
 export default function Buscador({
-  setTipoSeleccionado,
-  setSubTipoSeleccionado,
   searchTerm,
   setSearchTerm,
   tipoSeleccionado,
   subTipoSeleccionado,
   selectedCodigo,
-  setSelectedCodigo,
   showLineaFilter = false,
+  handleClearFilters,
 }) {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const [selectedButton, setSelectedButton] = useState(tipoSeleccionado || null)
-  const [codigosDisponibles, setCodigosDisponibles] = useState([])
-
-  // sincronizar con los params 'tipo' y 'subtipo' (tu lógica original)
-  useEffect(() => {
-    const tipo = searchParams.get("tipo")
-    const subtipo = searchParams.get("subtipo")
-    const codigoParam = searchParams.get("codigo")
-    if (tipo) {
-      setTipoSeleccionado(tipo)
-      setSelectedButton(tipo)
-    } else {
-      setTipoSeleccionado("")
-      setSelectedButton(null)
-    }
-    if (subtipo) setSubTipoSeleccionado(subtipo)
-    else setSubTipoSeleccionado(null)
-
-    if (codigoParam)
-      setSelectedCodigo(codigoParam) // <-- inicializa el código desde URL
-    else setSelectedCodigo(null)
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams?.toString()])
-
-  useEffect(() => {
-    setSelectedButton(tipoSeleccionado || null)
-  }, [tipoSeleccionado])
-
-  useEffect(() => {
-    if (!subTipoSeleccionado) {
-      setCodigosDisponibles([])
-      return
-    }
-
-    const codigos = codigosPorModelo[subTipoSeleccionado] || []
-    setCodigosDisponibles(codigos)
-
-    if (selectedCodigo && !codigos.some((c) => c.value === selectedCodigo)) {
-      setSelectedCodigo(null)
-    }
-  }, [subTipoSeleccionado])
+  const codigosDisponibles = codigosPorModelo[subTipoSeleccionado] || []
 
   const filtrosCount = () => {
     let count = 0
@@ -113,11 +70,7 @@ export default function Buscador({
   const handleTipoClick = (tipo) => {
     const params = new URLSearchParams(searchParams.toString())
 
-    if (selectedButton === tipo) {
-      // deseleccionar (tu comportamiento original)
-      setTipoSeleccionado("")
-      setSelectedButton(null)
-      setSubTipoSeleccionado(null)
+    if (tipoSeleccionado === tipo) {
       params.delete("tipo")
       params.delete("subtipo")
       params.delete("codigo")
@@ -125,9 +78,6 @@ export default function Buscador({
       return
     }
 
-    // seleccionar nueva categoria (tipo)
-    setTipoSeleccionado(tipo)
-    setSelectedButton(tipo)
     // borrar subtipo anterior para que no quede inválido
     params.set("tipo", tipo)
     params.delete("subtipo")
@@ -159,23 +109,11 @@ export default function Buscador({
     if (selectedCodigo === codigo) {
       // deseleccionar
       params.delete("codigo")
-      setSelectedCodigo(null)
     } else {
       params.set("codigo", codigo)
-      setSelectedCodigo(codigo)
     }
 
     router.push(`?${params.toString()}`, { scroll: false })
-  }
-
-  const handleClearFilters = () => {
-    // limpiamos todo: dejamos solo el search vacío (si querés)
-    setTipoSeleccionado("")
-    setSubTipoSeleccionado(null)
-    setSearchTerm("")
-    setSelectedButton(null)
-    setSelectedCodigo(null)
-    router.push("?", { scroll: false })
   }
 
   return (
@@ -233,13 +171,13 @@ export default function Buscador({
                     key={tipo}
                     onClick={() => handleTipoClick(tipo)}
                     className={`button-card_models ${
-                      selectedButton === tipo ? "selected" : ""
+                      tipoSeleccionado === tipo ? "selected" : ""
                     }`}
                     data-categoria={tipo}
                   >
                     <h4
                       className={`card-title_models ${
-                        selectedButton === tipo ? "selected2" : ""
+                        tipoSeleccionado === tipo ? "selected2" : ""
                       }`}
                     >
                       {tipo.charAt(0).toUpperCase() + tipo.slice(1)}
@@ -250,16 +188,12 @@ export default function Buscador({
             </div>
 
             {/* SUBCATEGORIAS: mantenemos componente similar al tuyo */}
-            {selectedButton &&
-              filtros.modelos[selectedButton] &&
-              filtros.modelos[selectedButton].length > 0 && (
+            {tipoSeleccionado &&
+              filtros.modelos[tipoSeleccionado] &&
+              filtros.modelos[tipoSeleccionado].length > 0 && (
                 <div className="subcategoria-container">
-                  {/* Reutilizo tu SubcategoriaBuscador (no hace falta cambiarlo) */}
                   <SubcategoriaBuscador
-                    subcategorias={filtros.modelos[selectedButton]}
-                    setSubTipoSeleccionado={setSubTipoSeleccionado}
-                    initialSubtipo={subTipoSeleccionado}
-                    setSelectedCodigo={setSelectedCodigo}
+                    subcategorias={filtros.modelos[tipoSeleccionado]}
                   />
                 </div>
               )}
