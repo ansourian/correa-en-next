@@ -162,29 +162,28 @@ ul {
 
 .div-bienvenida-title {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 
-.flecha-index {
+svg.flecha-index {
   justify-content: center;
   align-items: center;
-  width: 3vw;
+  width: 4vw;
   display: flex;
   bottom: 0;
-  height: auto;
+  height: 4vw;
+  color: #ffffff70;
 }
 
 .h1-index {
-  font-size: 0.1rem;
-  font-family: "Dancing Script", cursive;
-  color: #fff7b7;
-  visibility: hidden;
-  /* text-align: center; */
-  /* margin: 0 0 0 0; */
-  /* font-size: 7rem; */
+  margin: 0;
+  width: 100%;
+  line-height: 0;
+  text-align: center;
 }
 
 .h2-titulo {
@@ -2971,18 +2970,14 @@ body {
     flex: 5;
   }
 
-  .h1-index {
-    font-size: 0.1rem;
-    /* font-size: 5rem; */
-  }
-
   .h2-titulo {
     margin: 2rem 0;
     font-size: 2rem;
   }
 
-  .flecha-index {
+  svg.flecha-index {
     width: 10vw;
+    height: 10vw;
     left: 45%;
     flex: 1;
   }

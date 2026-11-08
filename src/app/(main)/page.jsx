@@ -16,6 +16,17 @@ export default function Home() {
       {/* <AnuncioApertura dia="26/03" apertura="cerrado" /> */}
       {/* <AnuncioMultiFeriado dias={["26/12", "27/12", "29/12"]} vuelta="30/12" /> */}
       <HeaderHome />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Calzados Correa",
+            url: "https://calzadoscorrea.com.ar/",
+          }),
+        }}
+      />
       <FadeIn>
         <SectionHome
           id="section-1"

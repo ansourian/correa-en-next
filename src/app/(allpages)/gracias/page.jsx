@@ -1,6 +1,11 @@
 import React from "react"
 import Banner from "@/components/Banner"
 
+export const metadata = {
+  title: "Gracias por comunicarte",
+  robots: { index: false, follow: true },
+}
+
 export default function Gracias() {
   return (
     <>

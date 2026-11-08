@@ -1,6 +1,11 @@
 import Banner from "@/components/Banner"
 import FadeIn from "@/components/FadeInAnimation"
 
+export const metadata = {
+  title: "Nuestro trabajo",
+  robots: { index: false, follow: true },
+}
+
 export default function NuestroTrabajo() {
   return (
     <>

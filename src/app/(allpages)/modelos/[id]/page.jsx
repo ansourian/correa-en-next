@@ -8,6 +8,20 @@ import Link from "next/link"
 
 export const dynamicParams = false
 
+export function generateMetadata({ params }) {
+  const modelo = modelos.find((item) => item.id === params.id)
+
+  if (!modelo) {
+    return { title: "Modelo no encontrado", robots: { index: false } }
+  }
+
+  return {
+    title: `${modelo.name} - ${modelo.color}`,
+    description: `${modelo.name} en color ${modelo.color}. ${modelo.description || "Conocé sus características y fotos en Calzados Correa."}`,
+    alternates: { canonical: `/modelos/${encodeURIComponent(modelo.id)}/` },
+  }
+}
+
 export function generateStaticParams() {
   return modelos.map((m) => ({
     id: m.id,

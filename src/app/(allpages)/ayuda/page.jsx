@@ -7,6 +7,8 @@ import React, { Suspense } from "react";
 
 export const metadata = {
   title: "Ayuda",
+  description: "Encontrá respuestas a las preguntas frecuentes sobre el calzado y los servicios de Calzados Correa.",
+  alternates: { canonical: "/ayuda/" },
 };
 
 export default function Ayuda() {

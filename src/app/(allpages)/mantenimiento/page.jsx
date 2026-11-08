@@ -7,6 +7,8 @@ import React from "react";
 
 export const metadata = {
   title: "Mantenimiento",
+  description: "Conocé las recomendaciones de Calzados Correa para limpiar, cuidar y mantener tu calzado de cuero.",
+  alternates: { canonical: "/mantenimiento/" },
 };
 
 export default function Mantenimiento() {
@@ -92,7 +94,11 @@ export default function Mantenimiento() {
         </div>
       </FadeIn>
       <FadeIn>
-        <img className="img-recomendaciones" src="/images/mantenimiento/saphir.webp" />
+        <img
+          className="img-recomendaciones"
+          src="/images/mantenimiento/saphir.webp"
+          alt="Frasco de crema Saphir Médaille d’Or para el cuidado del calzado de cuero"
+        />
       </FadeIn>
     </>
   );

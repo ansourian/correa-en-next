@@ -3,6 +3,12 @@ import FadeIn from "@/components/FadeInAnimation";
 import ModelStylesCard from "@/components/ModelStylesCard";
 import React from "react";
 
+export const metadata = {
+  title: "Acerca de",
+  description: "Conocé Calzados Correa, nuestra historia y los productos que trabajamos.",
+  alternates: { canonical: "/acerca-de/" },
+};
+
 export default function AcercaDe() {
   return (
     <main>

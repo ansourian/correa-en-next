@@ -5,6 +5,8 @@ import React from "react";
 
 export const metadata = {
   title: "Modelos",
+  description: "Descubrí las líneas de Calzados Correa: Ready to Wear, Made to Order y Bespoke, además de nuestros cinturones.",
+  alternates: { canonical: "/modelos/" },
 };
 
 export default function Modelos() {

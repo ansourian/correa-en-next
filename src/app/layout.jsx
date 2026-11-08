@@ -5,6 +5,10 @@ import Footer from "@/components/Footer"
 import ScrollTopButton from "@/components/ScrollTopButton"
 import BootstrapClient from "@/components/BootstrapClient"
 
+export const metadata = {
+  metadataBase: new URL("https://calzadoscorrea.com.ar"),
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="es">

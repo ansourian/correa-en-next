@@ -4,6 +4,8 @@ import React from "react";
 
 export const metadata = {
   title: "Contacto",
+  description: "Comunicate con Calzados Correa para consultar sobre nuestros productos y envíos nacionales o internacionales.",
+  alternates: { canonical: "/contacto/" },
 };
 
 export default function Ayuda() {

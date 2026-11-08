@@ -4,6 +4,8 @@ import React from "react";
 
 export const metadata = {
   title: "Nuestra Historia",
+  description: "Conocé la historia de Calzados Correa y su tradición de confección artesanal de calzado en Buenos Aires desde 1955.",
+  alternates: { canonical: "/acerca-de/nuestra-historia/" },
 };
 
 export default function NuestraHistoria() {
@@ -78,6 +80,7 @@ export default function NuestraHistoria() {
             <img
               className="img-biografia_left"
               src="/images/acerca-de/don felix biografia.webp"
+              alt="Don Félix Correa, fundador de Calzados Correa"
             />
             <div className="div-biografia d-flex">
               <h2 className="h2-quienes_somos">Don Félix Correa</h2>
@@ -107,6 +110,7 @@ export default function NuestraHistoria() {
             <img
               className="img-biografia_right"
               src="/images/acerca-de/dany biografia.webp"
+              alt="Félix A. Correa, director general y maestro zapatero"
             />
             <div className="div-biografia2 d-flex">
               <h2 className="h2-quienes_somos">Félix A. Correa</h2>
@@ -133,6 +137,7 @@ export default function NuestraHistoria() {
             <img
               className="img-biografia_left"
               src="/images/acerca-de/hector biografia.webp"
+              alt="Héctor Pelizoli, director de producción y maestro zapatero"
             />
             <div className="div-biografia d-flex">
               <h2 className="h2-quienes_somos">Hector Pelizoli</h2>
