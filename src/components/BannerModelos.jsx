@@ -1,3 +1,6 @@
+import ChevronLeft from "@mui/icons-material/ChevronLeft"
+import ChevronRight from "@mui/icons-material/ChevronRight"
+
 const navigationMap = {
   "Todos los Modelos": {
     left: "/modelos/cinturones",
@@ -19,20 +22,12 @@ export default function BannerModelos({ subtitle, title, description }) {
     <div className="div-section_pages">
       <h3 className="h3-pages">{subtitle}</h3>
       <div className="slide-styles">
-        <a className="button-slide" href={navigation.left}>
-          <img
-            className="logo-arrow arrow"
-            src="/images/iconos/arrow.svg"
-            alt="Botón para navegar a la izquierda"
-          />
+        <a className="button-slide" href={navigation.left} aria-label="Ir a la categoría anterior">
+          <ChevronLeft className="logo-arrow" aria-hidden="true" />
         </a>
         <h2 className="h2-pages">{title}</h2>
-        <a className="button-slide" href={navigation.right}>
-          <img
-            className="logo-arrow"
-            src="/images/iconos/arrow.svg"
-            alt="Botón para navegar a la derecha"
-          />
+        <a className="button-slide" href={navigation.right} aria-label="Ir a la categoría siguiente">
+          <ChevronRight className="logo-arrow" aria-hidden="true" />
         </a>
       </div>
       <hr className="linea-subtitulo" />

@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import "../lib/globals.css";
 
 export default function FadeIn({ children }) {
   const [isVisible, setIsVisible] = useState(false);

@@ -149,7 +149,6 @@ const ScrollTopButton = () => {
   return (
     <button
       aria-label="Volver arriba"
-      aria-hidden={!isVisible}
       className={`scroll-top-button ${
         isVisible ? "scroll-top-button-visible" : ""
       }`}

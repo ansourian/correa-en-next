@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "@/lib/globals.css"
+import "@/lib/globalsResponsive.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import ScrollTopButton from "@/components/ScrollTopButton"
