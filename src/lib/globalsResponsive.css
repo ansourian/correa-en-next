@@ -1,11 +1,12 @@
 @media screen and (min-width: 300px) and (max-width: 767px) {
   main {
+    --page-end-space: 3rem;
     width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 3rem;
+    margin: 0 auto;
     /* padding: 0; */
   }
 
@@ -669,7 +670,6 @@
     /* padding-top: 2.5rem; */
     padding: 4rem 0 3rem;
     width: 117%;
-    margin-bottom: -3rem;
   }
 
   .h3-color {

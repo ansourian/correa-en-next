@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function AcercaDe() {
   return (
-    <main>
+    <>
       <Banner
         title="Acerca de"
         subtitle="CALZADOS CORREA"
@@ -36,6 +36,6 @@ export default function AcercaDe() {
           />
         </section>
       </FadeIn>
-    </main>
+    </>
   );
 }

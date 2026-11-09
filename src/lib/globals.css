@@ -11,8 +11,18 @@
 }
 
 main {
-  margin-bottom: 5rem;
+  --page-end-space: 5rem;
+  margin-bottom: 0;
+  padding-bottom: var(--page-end-space);
   padding-inline: var(--gutter);
+}
+
+main:has(> .blue-section:last-child) {
+  padding-bottom: 0;
+}
+
+main > .blue-section:last-child {
+  padding-bottom: var(--page-end-space);
 }
 
 /* :root {

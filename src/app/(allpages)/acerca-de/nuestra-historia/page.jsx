@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import FadeIn from "@/components/FadeInAnimation";
+import MiembroHistoria from "@/components/MiembroHistoria";
 import React from "react";
 
 export const metadata = {
@@ -75,131 +76,45 @@ export default function NuestraHistoria() {
         </div>
       </FadeIn>
       <div className="blue-section">
-        <FadeIn>
-          <div className="contenedor-biografia">
-            <img
-              className="img-biografia_left"
-              src="/images/acerca-de/don felix biografia.webp"
-              alt="Don Félix Correa, fundador de Calzados Correa"
-            />
-            <div className="div-biografia d-flex">
-              <h2 className="h2-quienes_somos">Don Félix Correa</h2>
-              <h4 className="h4-biografia">FUNDADOR</h4>
-              <p className="p-biografia">
-                Nacido en Corrientes, vino con su familia a probar suerte a
-                Buenos Aires. Se alquilaron una casa en una pensión y, en 1940,
-                la madre de Félix padre tuvo la visión de recomendarlo y dejarlo
-                en un taller de zapatería del barrio. Allí, los grandes maestros
-                italianos y españoles le enseñaron el oficio. Tuvo su primer
-                local en Gascón al 900, en sociedad con otro zapatero de
-                apellido Petta. La firma era Petta y Correa, y se dedicaban más
-                que nada a la compostura del calzado. Pero el don de Correa
-                pronto creció. Se separaron y, en 1955, abrió la zapatería en su
-                local de Mario Bravo. Empezó bien de abajo, muy seguro del
-                producto que hacía. Juntaba cuatro o cinco pares y los llevaba a
-                las grandes tiendas del centro para mostrarlos y levantar
-                pedidos. Pronto tuvo éxito. Para 1960, Calzados Correa ya era
-                una zapatería de prestigio.{" "}
-              </p>
-            </div>
-          </div>
-        </FadeIn>
+        <MiembroHistoria
+          nombre="Don Félix Correa"
+          rol="FUNDADOR"
+          descripcion="Nacido en Corrientes, vino con su familia a probar suerte a Buenos Aires. Se alquilaron una casa en una pensión y, en 1940, la madre de Félix padre tuvo la visión de recomendarlo y dejarlo en un taller de zapatería del barrio. Allí, los grandes maestros italianos y españoles le enseñaron el oficio. Tuvo su primer local en Gascón al 900, en sociedad con otro zapatero de apellido Petta. La firma era Petta y Correa, y se dedicaban más que nada a la compostura del calzado. Pero el don de Correa pronto creció. Se separaron y, en 1955, abrió la zapatería en su local de Mario Bravo. Empezó bien de abajo, muy seguro del producto que hacía. Juntaba cuatro o cinco pares y los llevaba a las grandes tiendas del centro para mostrarlos y levantar pedidos. Pronto tuvo éxito. Para 1960, Calzados Correa ya era una zapatería de prestigio."
+          imagen="/images/acerca-de/don felix biografia.webp"
+          alineacion="left"
+        />
         <hr className="hr-custom hr-white" />
-        <FadeIn>
-          <div className="contenedor-biografia2">
-            <img
-              className="img-biografia_right"
-              src="/images/acerca-de/dany biografia.webp"
-              alt="Félix A. Correa, director general y maestro zapatero"
-            />
-            <div className="div-biografia2 d-flex">
-              <h2 className="h2-quienes_somos">Félix A. Correa</h2>
-              <h4 className="h4-biografia">DIRECTOR GENERAL - MAESTRO ZAPATERO</h4>
-              <p className="p-biografia">
-                Félix Correa, hijo del fundador, está a cargo del negocio
-                familiar. Se crió desde niño jugando en los pasillos de la
-                zapatería la cual hoy en día se encuentra a su cargo. Comenzó a
-                trabajar a los 18 años, colaborando con tareas generales, como
-                organizar y etiquetar las cajas de los modelos, barrido y
-                atención al cliente. Fue aprendiendo el oficio a través de las
-                enseñanzas de los maestros zapateros de Correa para convertirse
-                el también en uno. Su visión generó una revolución positiva en
-                lo que hoy en dia Correa representa, manteniendo el lineamiento
-                éstetico de la zapateria intacto, pero a su vez sumando nuevas
-                formas de concebir el calzado.
-              </p>
-            </div>
-          </div>
-        </FadeIn>
+        <MiembroHistoria
+          nombre="Félix A. Correa"
+          rol="DIRECTOR GENERAL - MAESTRO ZAPATERO"
+          descripcion="Félix Correa, hijo del fundador, está a cargo del negocio familiar. Se crió desde niño jugando en los pasillos de la zapatería la cual hoy en día se encuentra a su cargo. Comenzó a trabajar a los 18 años, colaborando con tareas generales, como organizar y etiquetar las cajas de los modelos, barrido y atención al cliente. Fue aprendiendo el oficio a través de las enseñanzas de los maestros zapateros de Correa para convertirse el también en uno. Su visión generó una revolución positiva en lo que hoy en dia Correa representa, manteniendo el lineamiento éstetico de la zapateria intacto, pero a su vez sumando nuevas formas de concebir el calzado."
+          imagen="/images/acerca-de/dany biografia.webp"
+          alineacion="right"
+        />
         <hr className="hr-custom hr-white" />
-        <FadeIn>
-          <div className="contenedor-biografia">
-            <img
-              className="img-biografia_left"
-              src="/images/acerca-de/hector biografia.webp"
-              alt="Héctor Pelizoli, director de producción y maestro zapatero"
-            />
-            <div className="div-biografia d-flex">
-              <h2 className="h2-quienes_somos">Hector Pelizoli</h2>
-              <h4 className="h4-biografia">
-                DIRECTOR DE PRODUCCIÓN - MAESTRO ZAPATERO
-              </h4>
-              <p className="p-biografia">
-                Yerno de Felix A. Correa (padre), aprendió el oficio del
-                maestro. Tenía 16 años cuando entró de cadete y hoy en día sabe
-                todos los secretos. Es la voz de la experiencia, pero eso no es
-                casualidad, sino el resultado del amor por el oficio que el
-                ejerce. Su carisma y dedicación, lo convirtieron en un referente
-                de las futuras generaciones de Correa. Para Hector la relación
-                con el cliente es un pilar fundamental que tiene la misma
-                importancia que el producto que queremos ofrecer, ya que según
-                él, Correa es familia y los clientes son parte de ella.
-              </p>
-            </div>
-          </div>
-        </FadeIn>
+        <MiembroHistoria
+          nombre="Hector Pelizoli"
+          rol="DIRECTOR DE PRODUCCIÓN - MAESTRO ZAPATERO"
+          descripcion="Yerno de Felix A. Correa (padre), aprendió el oficio del maestro. Tenía 16 años cuando entró de cadete y hoy en día sabe todos los secretos. Es la voz de la experiencia, pero eso no es casualidad, sino el resultado del amor por el oficio que el ejerce. Su carisma y dedicación, lo convirtieron en un referente de las futuras generaciones de Correa. Para Hector la relación con el cliente es un pilar fundamental que tiene la misma importancia que el producto que queremos ofrecer, ya que según él, Correa es familia y los clientes son parte de ella."
+          imagen="/images/acerca-de/hector biografia.webp"
+          alineacion="left"
+        />
         {/* <hr className="hr-custom hr-white" />
-        <FadeIn>
-          <div className="contenedor-biografia">
-            <div className="div-biografia2 d-flex">
-              <h2 className="h2-quienes_somos">José A. Correa</h2>
-              <h4 className="h4-biografia">SEGUNDA GENERACIÓN</h4>
-              <p className="p-biografia">
-                José Correa, sobrino de Don Félix Correa, personifica la pasión
-                por la artesanía del calzado. Además de mantener viva la
-                tradición familiar, José tiene una afición por desarrollar
-                nuevas herramientas de trabajo para las distintas tareas del día
-                a día. Su compromiso no solo se evidencia en su destreza
-                técnica, sino también en la atención ejemplar que brinda a los
-                clientes. Cada vez que alguien recibe atención de José,
-                experimenta su dedicación inquebrantable para asegurarse de que
-                quienes confían en su habilidad reciban un servicio excepcional
-                y satisfactorio.
-              </p>
-            </div>
-            <img className="img-biografia_right" src="/images/jose biografia.jpg" />
-          </div>
-        </FadeIn>
+        <MiembroHistoria
+          nombre="José A. Correa"
+          rol="SEGUNDA GENERACIÓN"
+          descripcion="José Correa, sobrino de Don Félix Correa, personifica la pasión por la artesanía del calzado. Además de mantener viva la tradición familiar, José tiene una afición por desarrollar nuevas herramientas de trabajo para las distintas tareas del día a día. Su compromiso no solo se evidencia en su destreza técnica, sino también en la atención ejemplar que brinda a los clientes. Cada vez que alguien recibe atención de José, experimenta su dedicación inquebrantable para asegurarse de que quienes confían en su habilidad reciban un servicio excepcional y satisfactorio."
+          imagen="/images/jose biografia.jpg"
+          alineacion="right"
+        />
         <hr className="hr-custom hr-white" />
-        <FadeIn>
-          <div className="contenedor-biografia">
-            <img className="img-biografia_right" src="/images/juan biografia.jpg" />
-            <div className="div-biografia d-flex">
-              <h2 className="h2-quienes_somos">Juan Cruz Correa</h2>
-              <h4 className="h4-biografia">TERCER GENERACIÓN</h4>
-              <p className="p-biografia">
-                Juan Cruz Correa, uno de los nietos de Don Felix Correa, forma
-                parte de la tercera generación de la familia. De la misma forma
-                que su padre comenzó, colaboró con tareas generales y atención
-                al cliente. Con el tiempo, su ambición lo llevó a querer conocer
-                el ambiente de las zapaterías Bespoke de en otras partes del
-                mundo. Durante un período breve, tuvo la oportunidad de trabajar
-                con distintos zapateros de Italia, y de esa forma sumar
-                experiencias para plasmar en su proyección.
-              </p>
-            </div>
-          </div>
-        </FadeIn> */}
+        <MiembroHistoria
+          nombre="Juan Cruz Correa"
+          rol="TERCER GENERACIÓN"
+          descripcion="Juan Cruz Correa, uno de los nietos de Don Felix Correa, forma parte de la tercera generación de la familia. De la misma forma que su padre comenzó, colaboró con tareas generales y atención al cliente. Con el tiempo, su ambición lo llevó a querer conocer el ambiente de las zapaterías Bespoke de en otras partes del mundo. Durante un período breve, tuvo la oportunidad de trabajar con distintos zapateros de Italia, y de esa forma sumar experiencias para plasmar en su proyección."
+          imagen="/images/juan biografia.jpg"
+          alineacion="left"
+        /> */}
       </div>
     </>
   );
