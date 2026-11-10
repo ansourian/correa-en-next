@@ -285,9 +285,9 @@
   }
 
   svg.logo-arrow {
-    width: 50px;
-    height: 50px;
-    margin-top: 5px;
+    width: 32px;
+    height: 32px;
+    margin-top: 0;
   }
 
   .logo-header {
@@ -547,6 +547,7 @@
   .slide-styles {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     width: 90%;
     margin: 0;
@@ -918,6 +919,7 @@
 
   .button-card_models {
     margin: 1rem 0;
+    padding: 12px 16px;
   }
 
   .button-card_models_subtypes {
@@ -1159,6 +1161,18 @@
   .div-galeria .thumbnails {
     padding-inline: var(--model-content-gutter);
     scroll-padding-inline: var(--model-content-gutter);
+  }
+
+  .div-galeria .thumbnails:has(> :nth-child(4):last-child) {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .div-galeria .thumbnails:has(> :nth-child(4):last-child) > .gallery-thumbnail-button {
+    width: 100%;
+    min-width: 0;
+    margin: 10px 0;
   }
 
   .div-click-zoom {

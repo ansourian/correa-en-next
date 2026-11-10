@@ -29,6 +29,18 @@ npm ci
 
 `next.config.mjs` desactiva la exportación estática durante el desarrollo y mantiene `output: "export"` y `trailingSlash: true` para producción.
 
+### Acceder desde el celular
+
+Conectar la computadora y el celular a la misma red Wi-Fi. Desde la raíz del proyecto, ejecutar:
+
+```bash
+npm run dev -- --hostname 0.0.0.0
+```
+
+Con el servidor ejecutándose, abrir en el navegador del celular `http://IP_DE_LA_COMPUTADORA:3000`. Por ejemplo, si la IPv4 de la computadora es `192.168.1.25`, ingresar `http://192.168.1.25:3000`.
+
+Para consultar la IPv4 en Windows, presionar **Windows + R**, escribir `cmd /k ipconfig` y presionar Enter. La ventana quedará abierta; buscar **Dirección IPv4** dentro del adaptador Wi-Fi.
+
 ## Estructura
 
 ```text
