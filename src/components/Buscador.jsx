@@ -156,9 +156,9 @@ export default function Buscador({
               <section className="contenedor-card_clean_filters fade-section">
                 <button
                   onClick={handleClearFilters}
-                  className="button-card_allmodels"
+                  className="button-card_models button-card_allmodels"
                 >
-                  <h4 className="card-title_clean_models">
+                  <h4 className="card-title_models">
                     Limpiar filtros de búsqueda
                   </h4>
                 </button>
@@ -205,12 +205,12 @@ export default function Buscador({
                     <button
                       key={codigo.value}
                       onClick={() => handleCodigoClick(codigo.value)}
-                      className={`button-card_models_subtypes ${
+                      className={`button-card_models button-card_models_subtypes ${
                         selectedCodigo === codigo.value ? "selected" : ""
                       }`}
                     >
                       <h4
-                        className={`card-title_submodels ${
+                        className={`card-title_models ${
                           selectedCodigo === codigo.value ? "selected2" : ""
                         }`}
                       >

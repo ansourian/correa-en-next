@@ -918,17 +918,12 @@
 
   .button-card_models {
     margin: 1rem 0;
-    padding: 1rem 1.75rem;
   }
 
   .button-card_models_subtypes {
     display: inline-block;
     margin: 0 0 1rem;
-    padding: 1rem 2rem;
     text-align: center;
-    white-space: nowrap;
-    color: black;
-    border: 1px solid #b1b1b1;
   }
 
   .accordion-collapse {
@@ -944,17 +939,6 @@
 
   .card-title_models {
     margin: 0;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.975rem;
-    white-space: nowrap;
-    color: #3e3e3e;
-  }
-
-  .card-title_clean_models {
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
   }
 
   .acordion-filters {
@@ -1294,8 +1278,7 @@
   }
 
   .button-card_allmodels {
-    padding: 1rem 2rem;
-    border: none;
+    margin: 0;
   }
 
   .h2-model {

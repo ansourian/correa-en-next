@@ -853,8 +853,9 @@ a:visited {
 }
 
 .button-card_models {
-  padding: 10px 15px;
+  padding: 4px 10px;
   border-radius: 50px;
+  color: #3e3e3e;
   background-color: #ffffff;
   border: 1px solid #b1b1b1;
   transition: 0.3s;
@@ -862,22 +863,8 @@ a:visited {
 
 .button-card_models:hover {
   background-color: #bababad6;
-  border: 1px solid #bababad6;
+  border-color: #bababad6;
   transition: 0.3s;
-}
-
-.button-card_models_subtypes {
-  padding: 10px 15px;
-  border-radius: 50px;
-  background-color: #ffffff;
-  border: 1px solid #b1b1b1;
-  transition: 0.3s;
-}
-
-.button-card_models_subtypes:hover {
-  background-color: #bababad6;
-  transition: 0.3s;
-  border: 1px solid #bababad6;
 }
 
 .button-card_shoe_models {
@@ -890,12 +877,9 @@ a:visited {
 
 .button-card_allmodels {
   width: 100%;
-  padding: 10px 15px;
-  border-radius: 50px;
   border: none;
   color: #5c5c5c;
   background: #a0a0a03d;
-  transition: 0.3s;
 }
 
 .button-card_allmodels:hover {
@@ -930,7 +914,6 @@ a:visited {
 .accordion-collapse {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
 }
 
 .accordion-filters {
@@ -1766,25 +1749,10 @@ h5 {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
+  color: inherit;
   white-space: nowrap;
-}
-
-.card-title_submodels {
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.card-title_clean_models {
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  font-weight: 400;
 }
 
 .acerca_de_titles {

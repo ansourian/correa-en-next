@@ -33,12 +33,12 @@ export default function SubcategoriaBuscador({ subcategorias }) {
           key={value}
           data-subcategoria={value}
           onClick={() => handleSubTipoClick(value)}
-          className={`button-card_models_subtypes ${
+          className={`button-card_models button-card_models_subtypes ${
             selectedSubButton === value ? "selected" : ""
           }`}
         >
           <h4
-            className={`card-title_submodels ${
+            className={`card-title_models ${
               selectedSubButton === value ? "selected2" : ""
             }`}
           >
