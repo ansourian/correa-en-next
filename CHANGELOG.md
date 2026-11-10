@@ -1,3 +1,22 @@
+## v1.2.0
+
+**FEATURE**
+
+> - Incorporar versiones optimizadas del video de inicio para escritorio y móvil, sin audio y con inicio progresivo.
+> - Mostrar una imagen de portada antes de la reproducción y cuando se detecta reducción de movimiento o ahorro de datos.
+> - Seleccionar una sola fuente de video al ingresar, evitando otra descarga al rotar o redimensionar la pantalla.
+> - Permitir desplazar las miniaturas y características de la ficha móvil hasta los bordes, conservando márgenes interiores en los textos.
+
+**BUGFIX**
+
+> - Sustituir el margen negativo del texto de filtros móviles por margen normal y padding del botón.
+
+**CHORE**
+
+> - Agregar el comando `video:hero` para regenerar los videos y la portada mediante FFmpeg y `sharp`, conservando los originales.
+> - Eliminar las declaraciones de márgenes negativos sin referencias actuales.
+> - Actualizar la documentación del proyecto y el historial de versiones.
+
 ## v1.1.0
 
 **FEATURE**

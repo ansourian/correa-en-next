@@ -1,4 +1,5 @@
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown"
+import VideoPortada from "./VideoPortada"
 
 export default function HeaderHome() {
   return (
@@ -22,14 +23,7 @@ export default function HeaderHome() {
           <KeyboardArrowDown className="flecha-index" aria-hidden="true" />
         </a>
       </div>
-      <video
-        className="video-index"
-        src="/video/mantenimiento.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-      ></video>
+      <VideoPortada />
     </div>
   )
 }

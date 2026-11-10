@@ -1,9 +1,10 @@
 {
   "name": "correa-en-next",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "images:cards": "node scripts/generate-card-images.mjs",
+    "video:hero": "node scripts/optimize-hero-video.mjs",
     "predev": "npm run images:cards",
     "dev": "next dev",
     "prebuild": "npm run images:cards",

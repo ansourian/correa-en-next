@@ -20,6 +20,7 @@ npm ci
 | --- | --- |
 | `npm run dev` | Genera las portadas e inicia el desarrollo en `http://localhost:3000`. |
 | `npm run images:cards` | Genera o actualiza las portadas pequeñas. |
+| `npm run video:hero` | Regenera los videos optimizados y su imagen de portada; requiere FFmpeg. |
 | `npm run lint` | Revisa el código con ESLint. |
 | `npm run build` | Genera las portadas y exporta producción a `out/`. |
 | `npm run start` | Sirve el contenido existente de `out/` en `http://localhost:8080`. |
@@ -88,6 +89,28 @@ El script compara las fechas de modificación de originales, copias y del propio
 
 Los integrantes comentados en Nuestra historia permanecen ocultos. Antes de habilitarlos, comprobar que existan sus imágenes.
 
+## Video de inicio
+
+`HeaderHome` conserva el contenido de marca en el servidor y utiliza `VideoPortada` para seleccionar el video en el navegador. El HTML inicial contiene la imagen `public/images/home/portada-video.webp`, sin una fuente de video asignada.
+
+Al iniciar, se elige una sola versión según el ancho de pantalla: `portada-mobile.mp4` (432 × 768, recorte central vertical) hasta 767 px, o `portada-desktop.mp4` (1280 × 720). No se cambia de archivo al rotar o redimensionar para evitar otra descarga. Ambas versiones son H.264 sin audio, con `faststart`.
+
+Cuando se detecta reducción de movimiento o `navigator.connection.saveData`, se muestra únicamente la portada. Si esas preferencias cambian durante la visita, se actualiza el estado del video. La detección de ahorro de datos depende del soporte del navegador; no identifica por sí sola todas las conexiones celulares. Si el video falla, se vuelve a la imagen estática. La reproducción automática sigue dependiendo de las políticas del navegador.
+
+Los originales `mantenimiento.mp4` y `mantenimiento.webm` se conservan. Para regenerar las versiones después de reemplazar el MP4 original, instalar FFmpeg en la computadora de desarrollo y ejecutar:
+
+```bash
+npm run video:hero
+```
+
+Si FFmpeg no está en el PATH, pasar la ruta de su ejecutable:
+
+```powershell
+npm run video:hero -- "C:\herramientas\ffmpeg\bin\ffmpeg.exe"
+```
+
+También se admite la variable `FFMPEG_PATH`. Esta conversión es manual: no se ejecuta en cada build. Los dos MP4 optimizados y el WebP se guardan en `public/`, se versionan y se incluyen en `out/` al compilar. FFmpeg no es necesario para visitar la web ni para servirla en cPanel.
+
 ## Estilos y adaptación
 
 El layout principal importa primero `globals.css` y después `globalsResponsive.css`. Los estilos globales se cargan desde ese punto; algunos componentes tienen estilos propios, como el módulo CSS del acordeón.
@@ -136,7 +159,7 @@ El build puede mostrar advertencias por el uso de `<img>` y por Browserslist des
 
 ## Versionado
 
-La versión base **v1.0.0** describe la web anterior a las mejoras del 8 de noviembre de 2026. Los cambios de ese día se agrupan en **v1.1.0** en [CHANGELOG.md](CHANGELOG.md). Los ajustes locales posteriores quedan pendientes de una próxima versión. Una versión registrada no confirma su despliegue en cPanel.
+La versión base **v1.0.0** describe la web anterior a las mejoras del 8 de noviembre de 2026. Los cambios de ese día se agrupan en **v1.1.0**; la optimización del video y los ajustes posteriores de espaciado móvil se registran en **v1.2.0** en [CHANGELOG.md](CHANGELOG.md). Una versión registrada no confirma su despliegue en cPanel.
 
 Cada nueva versión se agrega al principio del changelog con un encabezado como `## v1.0.1`. Sus cambios se agrupan bajo **FEATURE**, **BUGFIX** y **CHORE**, usando listas dentro de bloques de cita. Incluir únicamente las categorías que tengan cambios y mantener sincronizados `package.json` y `package-lock.json` con la versión correspondiente.
 
