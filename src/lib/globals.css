@@ -785,6 +785,10 @@ a:visited {
   transform: translateY(0);
 }
 
+body:has(.model-image-modal) .scroll-top-button {
+  display: none;
+}
+
 .scroll-top-button .volver-text {
   display: none;
 }
@@ -2167,13 +2171,82 @@ footer {
   width: 100%;
 }
 
+.gallery-image-button img {
+  width: 100%;
+  height: auto;
+  max-height: 40.625rem;
+  object-fit: contain;
+  cursor: zoom-in;
+}
+
+.model-image-modal .gallery-modal-body {
+  padding: 0;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.gallery-modal-viewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  cursor: default;
+}
+
+.model-image-modal .gallery-zoom-wrapper,
+.model-image-modal .gallery-zoom-content {
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+
+.model-image-modal .gallery-zoom-wrapper {
+  touch-action: none;
+}
+
+.model-image-modal .gallery-zoom-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-modal-image {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.gallery-modal-image-mobile {
+  width: 100%;
+}
+
 .gallery-zoom-button {
   max-width: 100%;
-  cursor: inherit;
+  height: 100%;
+}
+
+.model-image-modal .gallery-zoom-button:not(:disabled) {
+  cursor: zoom-in;
+}
+
+.model-image-modal .gallery-zoom-button:not(:disabled)[aria-pressed="true"] {
+  cursor: zoom-out;
 }
 
 .gallery-zoom-button img {
   display: block;
+}
+
+.volver-button.gallery-close-button {
+  position: absolute;
+  top: max(1rem, env(safe-area-inset-top));
+  right: max(1rem, env(safe-area-inset-right));
+  left: auto;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
 }
 
 .gallery-thumbnail-button {
@@ -2195,11 +2268,33 @@ footer {
 }
 
 .gallery-thumbnail-button:hover {
-  border-color: #007bff;
+  border-color: #a3bfe7;
 }
 
 .gallery-thumbnail-button[aria-pressed="true"] {
   border-color: rgb(167 167 167);
+}
+
+.gallery-modal-thumbnails {
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.75rem 1rem max(0.75rem, env(safe-area-inset-bottom));
+}
+
+.gallery-modal-thumbnails .gallery-thumbnail-button {
+  width: 4rem;
+  margin: 0;
+}
+
+.gallery-modal-thumbnails .gallery-thumbnail-button:first-child {
+  margin-left: auto;
+}
+
+.gallery-modal-thumbnails .gallery-thumbnail-button:last-child {
+  margin-right: auto;
 }
 
 .gallery-image-button:focus-visible {
@@ -2607,4 +2702,185 @@ body {
   color: #fff5d9;
   font-weight: 300;
   font-size: 1rem;
+}
+
+/* Preguntas frecuentes */
+.faq-accordion {
+  width: calc(100% - 2rem);
+  max-width: 880px;
+  margin: 2rem auto;
+  font-family: "Outfit", sans-serif;
+}
+
+.faq-accordion .faq-item {
+  margin: 0;
+  border: 0 !important;
+  border-bottom: 1px solid #dedede !important;
+  border-radius: 0;
+  background: transparent;
+  scroll-margin-top: 100px;
+}
+
+.faq-accordion .faq-item:first-child {
+  border-top: 1px solid #dedede !important;
+}
+
+.faq-accordion .accordion-header {
+  margin: 0;
+}
+
+.faq-accordion .accordion-button {
+  gap: 1rem !important;
+  padding: 1rem 0;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #333333 !important;
+  box-shadow: none;
+  font-family: "Outfit", sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left !important;
+}
+
+.faq-accordion .accordion-button:hover {
+  color: #000000 !important;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  box-shadow: none;
+}
+
+.faq-accordion .faq-highlighted .accordion-button {
+  color: #567ab0 !important;
+}
+
+.faq-accordion .accordion-button:focus-visible {
+  outline: 2px solid #3481c7 !important;
+  outline-offset: 4px;
+}
+
+.faq-accordion .accordion-button::after {
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  background-image: none !important;
+  transform: rotate(45deg);
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+  transform: rotate(225deg);
+}
+
+.faq-accordion .accordion-collapse {
+  margin-bottom: 0;
+}
+
+.faq-accordion .faq-body {
+  padding: 0 1.5rem 1.25rem 0 !important;
+  color: #626262;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.faq-accordion .faq-body p,
+.faq-accordion .faq-body ul,
+.faq-accordion .faq-body > div {
+  margin: 0 0 0.75rem;
+}
+
+.faq-accordion .faq-body p,
+.faq-accordion .faq-body ul {
+  font: inherit;
+  color: inherit;
+  text-align: left;
+}
+
+.faq-accordion .faq-body > :last-child,
+.faq-accordion .faq-body > div > :last-child {
+  margin-bottom: 0;
+}
+
+.faq-accordion .faq-body h3 {
+  margin: 1rem 0 0.35rem;
+  color: #333333;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.faq-accordion .faq-body ul {
+  display: block;
+  list-style-type: disc;
+  padding-left: 1.25rem;
+}
+
+.faq-accordion .faq-body li + li {
+  margin-top: 0.5rem;
+}
+
+.faq-accordion .faq-body a {
+  color: #586ea9;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+.faq-accordion .faq-body .faq-link {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.faq-accordion .faq-body .faq-payments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-accordion .faq-body .faq-payment-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.faq-accordion .faq-body .faq-payments > :not(:first-child) {
+  text-align: center;
+}
+
+.faq-accordion .faq-body .faq-payments > .faq-payment-logos {
+  justify-content: center;
+}
+
+.faq-accordion .faq-body .faq-payment-logos img {
+  max-width: 70px;
+  max-height: 36px;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .faq-accordion {
+    margin: 1.5rem auto;
+  }
+
+  .faq-accordion .accordion-button {
+    font-size: 0.95rem !important;
+  }
+
+  .faq-accordion .faq-body {
+    padding-right: 0 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-accordion .accordion-button::after {
+    transition: none;
+  }
 }

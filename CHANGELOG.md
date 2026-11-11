@@ -2,6 +2,9 @@
 
 **FEATURE**
 
+> - Destacar la pregunta frecuente consultada desde el footer para facilitar su identificación.
+> - Permitir cambiar de imagen desde las miniaturas del modal de la galería.
+> - Mejorar la presentación de las miniaturas y el acceso al cierre del modal.
 > - Incorporar versiones optimizadas del video de inicio para escritorio y móvil, sin audio y con inicio progresivo.
 > - Mostrar una imagen de portada antes de la reproducción y cuando se detecta reducción de movimiento o ahorro de datos.
 > - Seleccionar una sola fuente de video al ingresar, evitando otra descarga al rotar o redimensionar la pantalla.
@@ -9,10 +12,14 @@
 
 **BUGFIX**
 
+> - Corregir el zoom de la galería para ampliar solo la imagen en escritorio y móvil.
+> - Ocultar Volver arriba mientras está abierto el modal de imágenes.
+> - Corregir el cursor y la interacción de zoom y arrastre en la galería.
 > - Sustituir el margen negativo del texto de filtros móviles por margen normal y padding del botón.
 
 **CHORE**
 
+> - Simplificar el componente de galería para facilitar su mantenimiento.
 > - Agregar el comando `video:hero` para regenerar los videos y la portada mediante FFmpeg y `sharp`, conservando los originales.
 > - Eliminar las declaraciones de márgenes negativos sin referencias actuales.
 > - Actualizar la documentación del proyecto y el historial de versiones.

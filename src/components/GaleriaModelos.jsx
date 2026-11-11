@@ -1,24 +1,31 @@
 "use client"
 
-import React, { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect } from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import { Modal } from "react-bootstrap"
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch"
 import { AdsClick, Pinch } from "@mui/icons-material"
+import CloseIcon from "@mui/icons-material/Close"
+
+const PAN_THRESHOLD = 5
 
 export default function GaleriaModelos({ images, modelName = "este modelo" }) {
-  const [selectedImage, setSelectedImage] = useState(images[0])
-  const [modalOpen, setModalOpen] = useState(false) // Estado para controlar la apertura del modal
-  const [activeImageIndex, setActiveImageIndex] = useState(0) // Estado para almacenar el índice de la imagen seleccionada
-  const [isZoomed, setIsZoomed] = useState(false) // Estado para controlar el zoom de la imagen
-  const [isMobile, setIsMobile] = useState(false) // Estado para detectar si es móvil
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0)
+  const [modalOpen, setModalOpen] = useState(false)
+  const [activeImageIndex, setActiveImageIndex] = useState(0)
+  const [isZoomed, setIsZoomed] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const [showHint, setShowHint] = useState(true)
   const [showModalHint, setShowModalHint] = useState(true)
-  const [isThumbnailClick, setIsThumbnailClick] = useState(false)
 
-  const sliderRef = useRef(null) // Crear una referencia para el slider
+  const sliderRef = useRef(null)
   const galleryRef = useRef(null)
+  const zoomRef = useRef(null)
+  const hasPannedRef = useRef(false)
+  const panStartRef = useRef(null)
+  const isThumbnailClickRef = useRef(false)
 
   const handleSliderAccessibility = () => {
     // Slick duplica diapositivas: solo la visible debe entrar en el recorrido de Tab.
@@ -39,21 +46,18 @@ export default function GaleriaModelos({ images, modelName = "este modelo" }) {
     }
   }
 
-  // Detectar si el dispositivo es móvil o no
   useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.matchMedia("(max-width: 1023.98px)").matches)
-    }
+    const mediaQuery = window.matchMedia("(max-width: 1023.98px)")
+    const handleViewportChange = () => setIsMobile(mediaQuery.matches)
 
-    checkIfMobile()
-    window.addEventListener("resize", checkIfMobile)
+    handleViewportChange()
+    mediaQuery.addEventListener("change", handleViewportChange)
 
     return () => {
-      window.removeEventListener("resize", checkIfMobile)
+      mediaQuery.removeEventListener("change", handleViewportChange)
     }
   }, [])
 
-  // Configuración del slider para la galería principal (imagen grande)
   const settings = {
     dots: true,
     infinite: true,
@@ -63,39 +67,76 @@ export default function GaleriaModelos({ images, modelName = "este modelo" }) {
     adaptiveHeight: true,
     onInit: handleSliderAccessibility,
     onReInit: handleSliderAccessibility,
-    beforeChange: (current, next) => {
-      setSelectedImage(images[next]) // Actualiza la imagen seleccionada cuando el slider cambia
-      if (!isThumbnailClick) {
+    beforeChange: (_, next) => {
+      setSelectedImageIndex(next)
+      if (!isThumbnailClickRef.current) {
         setShowHint(false)
       }
-      setIsThumbnailClick(false)
+      isThumbnailClickRef.current = false
     },
   }
 
-  // Función para manejar el clic en la imagen y abrir el modal
   const handleImageClick = (index) => {
-    setActiveImageIndex(index) // Establece el índice de la imagen seleccionada
-    setModalOpen(true) // Abre el modal
-    setIsZoomed(false) // Al abrir el modal, inicializamos el estado del zoom en falso
+    setActiveImageIndex(index)
+    setModalOpen(true)
+    setIsZoomed(false)
+    hasPannedRef.current = false
     setShowModalHint(true)
+    handleHideHint()
   }
 
-  // Función para manejar el clic en una miniatura
-  const handleThumbnailClick = (image, index) => {
-    setIsThumbnailClick(true)
-    setSelectedImage(image) // Cambia la imagen seleccionada al hacer clic en una miniatura
-    if (sliderRef.current) {
-      sliderRef.current.slickGoTo(index) // Desplaza el slider a la miniatura seleccionada
+  const handleCloseModal = () => setModalOpen(false)
+  const handleHideHint = () => setShowHint(false)
+  const handleHideModalHint = () => setShowModalHint(false)
+
+  const handleThumbnailClick = (index) => {
+    if (index === selectedImageIndex) return
+
+    isThumbnailClickRef.current = true
+    sliderRef.current?.slickGoTo(index)
+  }
+
+  const handleModalThumbnailClick = (index) => {
+    if (index === activeImageIndex) return
+
+    setActiveImageIndex(index)
+    setIsZoomed(false)
+    hasPannedRef.current = false
+    panStartRef.current = null
+    handleThumbnailClick(index)
+  }
+
+  const handleZoomToggle = (event) => {
+    // El clic posterior a un arrastre no debe restablecer el zoom.
+    if (event.detail > 0 && hasPannedRef.current) {
+      hasPannedRef.current = false
+      return
     }
+    if (!zoomRef.current) return
+
+    if (isZoomed) {
+      zoomRef.current.resetTransform()
+      return
+    }
+    zoomRef.current.centerView(1.6)
   }
 
-  // Función para alternar el zoom en la imagen
-  const handleZoomToggle = () => {
-    if (isMobile) return
-    setIsZoomed(!isZoomed) // Cambia el estado de zoom cada vez que se hace clic
+  const handleTransformed = (_, state) => setIsZoomed(state.scale > 1)
+  const handlePanningStart = (_, event) => {
+    const pointer = event.touches?.[0] || event
+    panStartRef.current = { x: pointer.clientX, y: pointer.clientY }
+    hasPannedRef.current = false
   }
+  const handlePanning = (_, event) => {
+    if (!panStartRef.current) return
 
-  const DEBUG_HINT = true
+    const pointer = event.touches?.[0] || event
+    const distance = Math.hypot(
+      pointer.clientX - panStartRef.current.x,
+      pointer.clientY - panStartRef.current.y
+    )
+    if (distance >= PAN_THRESHOLD) hasPannedRef.current = true
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -112,19 +153,7 @@ export default function GaleriaModelos({ images, modelName = "este modelo" }) {
       loading="eager"
       decoding="async"
       draggable={false}
-      style={{
-        width: isMobile ? "100%" : "auto",
-        height: isMobile ? "auto" : "90vh",
-        maxWidth: "100%",
-        maxHeight: "100%",
-        transform: isZoomed
-          ? isMobile
-            ? "scale(1.1)"
-            : "scale(1.6)"
-          : "scale(1)",
-        transition: "transform 0.3s ease",
-        objectFit: "contain",
-      }}
+      className={`gallery-modal-image${isMobile ? " gallery-modal-image-mobile" : ""}`}
     />
   )
 
@@ -133,7 +162,6 @@ export default function GaleriaModelos({ images, modelName = "este modelo" }) {
       {/* Galería deslizable de imágenes grandes */}
       <div className="main-gallery">
         <div
-          onClick={() => setShowHint(false)}
           className={`div-click-zoom ${showHint ? "visible" : "hidden"}`}
         >
           <AdsClick />
@@ -141,9 +169,7 @@ export default function GaleriaModelos({ images, modelName = "este modelo" }) {
         </div>
         <div
           className="slider-wrapper"
-          onClick={() => setShowHint(false)} // click estándar
-          onMouseDown={() => setShowHint(false)} // arranque de drag en desktop
-          onTouchStart={() => setShowHint(false)} // arranque de swipe en mobile
+          onPointerDownCapture={handleHideHint}
         >
           <Slider {...settings} ref={sliderRef}>
             {images.map((img, index) => (
@@ -159,14 +185,6 @@ export default function GaleriaModelos({ images, modelName = "este modelo" }) {
                     alt={`${modelName}, imagen ${index + 1}`}
                     loading={index === 0 ? "eager" : "lazy"}
                     decoding="async"
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      maxHeight: "40.625rem",
-                      objectFit: "contain",
-                      cursor: "zoom-in", // Indica que se puede hacer zoom
-                      border: "none", // Asegura que no haya borde
-                    }}
                   />
                 </button>
               </div>
@@ -183,8 +201,8 @@ export default function GaleriaModelos({ images, modelName = "este modelo" }) {
             type="button"
             className="gallery-thumbnail-button"
             aria-label={`Ver imagen ${index + 1} de ${modelName}`}
-            aria-pressed={selectedImage === img}
-            onClick={() => handleThumbnailClick(img, index)} // Cambia la imagen al hacer clic
+            aria-pressed={selectedImageIndex === index}
+            onClick={() => handleThumbnailClick(index)}
           >
             <img
               src={img}
@@ -198,31 +216,16 @@ export default function GaleriaModelos({ images, modelName = "este modelo" }) {
 
       {/* Modal de pantalla completa con zoom */}
       <Modal
+        className="model-image-modal"
         aria-label={`Imágenes de ${modelName}`}
         show={modalOpen}
-        onHide={() => setModalOpen(false)}
-        size="lg"
-        centered
-        fullscreen // Esto hace que el modal ocupe el 100% de la pantalla
+        onHide={handleCloseModal}
+        fullscreen
       >
-        <Modal.Body style={{ padding: 0 }}>
+        <Modal.Body className="gallery-modal-body">
           <div
-            onClick={() => setShowModalHint(false)}
-            onMouseDown={() => setShowModalHint(false)}
-            onTouchStart={() => setShowModalHint(false)}
-            onTouchMove={() => setShowModalHint(false)}
-            onDragStart={() => setShowModalHint(false)}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              position: "relative",
-              height: isZoomed ? (isMobile ? "100%" : "200%") : "100%",
-              width: isZoomed ? (isMobile ? "200%" : "100%") : "100%", // Cambia el ancho solo cuando está en zoom
-              cursor: isZoomed ? "grab" : "zoom-in", // Cambiar el cursor dependiendo del zoom
-              overflow: "visible", // Permite el desplazamiento sin ocultar el contenido
-              transition: "width 0.3s ease", // Suavizar el cambio de tamaño cuando se hace zoom
-            }}
+            onPointerDownCapture={handleHideModalHint}
+            className="gallery-modal-viewport"
           >
             {isMobile && (
               <div
@@ -236,34 +239,62 @@ export default function GaleriaModelos({ images, modelName = "este modelo" }) {
                 </p>
               </div>
             )}
-            {isMobile ? (
-              modalImage
-            ) : (
-              <button
-                type="button"
-                className="gallery-zoom-button"
-                aria-label={`Zoom de la imagen ${activeImageIndex + 1} de ${modelName}`}
-                aria-pressed={isZoomed}
-                onClick={handleZoomToggle}
+            <TransformWrapper
+              key={activeImageIndex}
+              ref={zoomRef}
+              minScale={1}
+              maxScale={4}
+              wheel={{ disabled: true }}
+              doubleClick={{ disabled: true }}
+              onTransformed={handleTransformed}
+              onPanningStart={handlePanningStart}
+              onPanning={handlePanning}
+            >
+              <TransformComponent
+                wrapperClass="gallery-zoom-wrapper"
+                contentClass="gallery-zoom-content"
               >
-                {modalImage}
-              </button>
-            )}
+                {isMobile ? modalImage : (
+                  <button
+                    type="button"
+                    className="gallery-zoom-button"
+                    aria-label={`Zoom de la imagen ${activeImageIndex + 1} de ${modelName}`}
+                    aria-pressed={isZoomed}
+                    onClick={handleZoomToggle}
+                  >
+                    {modalImage}
+                  </button>
+                )}
+              </TransformComponent>
+            </TransformWrapper>
           </div>
         </Modal.Body>
 
-        {/* Botón para cerrar el modal */}
-        <Modal.Footer>
-          <div className="div-button">
+        <div className="gallery-modal-thumbnails">
+          {images.map((img, index) => (
             <button
+              key={index}
               type="button"
-              className="button-index gallery-close-button"
-              onClick={() => setModalOpen(false)}
+              className="gallery-thumbnail-button"
+              aria-label={`Ver imagen ${index + 1} de ${modelName}`}
+              aria-pressed={activeImageIndex === index}
+              onClick={() => handleModalThumbnailClick(index)}
             >
-              CERRAR
+              <img src={img} alt="" loading="lazy" decoding="async" />
             </button>
-          </div>
-        </Modal.Footer>
+          ))}
+        </div>
+
+        {/* Botón para cerrar el modal */}
+        <button
+          type="button"
+          className="volver-button gallery-close-button"
+          aria-label="Cerrar imagen"
+          title="Cerrar imagen"
+          onClick={handleCloseModal}
+        >
+          <CloseIcon />
+        </button>
       </Modal>
     </div>
   )
