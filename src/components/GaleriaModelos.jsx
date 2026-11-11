@@ -42,7 +42,7 @@ export default function GaleriaModelos({ images, modelName = "este modelo" }) {
   // Detectar si el dispositivo es móvil o no
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth <= 768) // 768px es el límite para considerar un dispositivo móvil
+      setIsMobile(window.matchMedia("(max-width: 1023.98px)").matches)
     }
 
     checkIfMobile()

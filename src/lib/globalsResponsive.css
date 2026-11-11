@@ -103,29 +103,6 @@
     font-size: 0.7312rem;
   }
 
-  .volver-button {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    position: sticky;
-    top: 13%;
-    left: 5%;
-    font-size: 1rem;
-    padding: 0;
-    cursor: pointer;
-  }
-
-  .volver-text {
-    display: none;
-  }
-
-  .icono-volver {
-    margin-right: 0;
-  }
-
   .scroll-top-button {
     position: fixed !important;
     top: auto !important;
@@ -1179,14 +1156,6 @@
     width: max-content;
   }
 
-  .div-footer {
-    width: 90%;
-    flex-direction: column-reverse;
-    margin: 1rem auto;
-    padding: 0;
-    gap: 2rem;
-  }
-
   .div-article-info {
     min-height: 130px;
   }
@@ -1194,11 +1163,6 @@
   .div-color-variant-article {
     flex-direction: column-reverse;
     gap: 0.5rem;
-  }
-
-  .h3-footer {
-    font-size: 1rem;
-    margin: 0 0 2rem;
   }
 
   .p-footer {
@@ -1213,46 +1177,6 @@
   .h2-footer {
     font-size: 1.5rem;
     margin: 0 10px 0 0;
-  }
-
-  .div-footer_info_contacto {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .div-footer_sociales {
-    border-right: none;
-    padding-bottom: 2rem;
-  }
-
-  .div-footer_sociales_content {
-    margin: 1rem 0rem;
-  }
-
-  .div-footer_modelos {
-    border-right: none;
-    border-bottom: 1px solid #ffffff17;
-    padding-bottom: 2rem;
-  }
-
-  .div-footer_ayuda {
-    border-right: none;
-    border-bottom: 1px solid #ffffff17;
-    padding-bottom: 2rem;
-  }
-
-  .div-footer_contacto {
-    padding-bottom: 2rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-bottom: 1px solid #ffffff17;
-  }
-
-  .div-footer_contacto_content {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
   }
 
   .modal-image {
@@ -1456,3 +1380,271 @@
     border-radius: 10px;
   }
 }
+@media screen and (min-width: 300px) and (max-width: 1023.98px) {
+  .div-footer {
+    width: 90%;
+    flex-direction: column-reverse;
+    margin: 1rem auto;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  .h3-footer {
+    font-size: 1rem;
+    margin: 0 0 2rem;
+  }
+
+  .div-footer_info_contacto {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .div-footer_sociales {
+    border-right: none;
+    padding-bottom: 2rem;
+  }
+
+  .div-footer_sociales_content {
+    margin: 1rem 0rem;
+  }
+
+  .div-footer_modelos,
+  .div-footer_ayuda {
+    border-right: none;
+    border-bottom: 1px solid #ffffff17;
+    padding-bottom: 2rem;
+  }
+
+  .div-footer_contacto {
+    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #ffffff17;
+  }
+
+  .div-footer_contacto_content {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .volver-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: sticky;
+    top: 13%;
+    padding: 0;
+  }
+
+  .volver-text {
+    display: none;
+  }
+
+  .icono-volver {
+    margin-right: 0;
+  }
+}
+
+/* Tablets: distribución intermedia entre móvil y escritorio. */
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+  main {
+    --page-end-space: 4rem;
+  }
+
+  .div-section_pages {
+    gap: 1.5rem;
+    margin: 3rem 0;
+  }
+
+  .h2-pages,
+  .h2-quienes_somos {
+    font-size: 2.5rem;
+  }
+
+  .slide-styles {
+    align-items: center;
+    width: 90%;
+    gap: 1.5rem;
+  }
+
+  svg.logo-arrow {
+    width: 36px;
+    height: 36px;
+    margin-top: 0;
+  }
+
+  #lista-productos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 90%;
+  }
+
+  .div-accordion_filters {
+    width: 90%;
+  }
+
+  .div-filters_top_buttons {
+    flex-direction: column;
+  }
+
+  .contenedor-card_models {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .button-card_models {
+    padding: 12px 16px;
+  }
+
+  .model-carousel,
+  .contenedor-tipo_modelos,
+  .container-info_modelos {
+    width: 90%;
+  }
+
+  .model-carousel .carousel-modelos {
+    border-radius: 12px;
+  }
+
+  .model-carousel .img-carousel {
+    aspect-ratio: 16 / 7;
+  }
+
+  .model-carousel .carousel-caption {
+    top: 50%;
+    bottom: auto !important;
+    padding: 0 4rem !important;
+    transform: translateY(-50%);
+  }
+
+  .model-carousel .model-titles_car {
+    font-size: 2.75rem;
+  }
+
+  .model-carousel .model-subtitles_car {
+    font-size: 1.125rem;
+    margin: 0.5rem 0 0;
+  }
+
+  .contenedor-tipo_modelos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .contenedor-tipo_modelos .clickable-card {
+    width: 100% !important;
+    height: 12rem !important;
+  }
+
+  .container-info_modelos {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .div-modelo {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .div-galeria {
+    max-width: 36rem;
+    margin-inline: auto;
+  }
+
+  .div-info-modelo {
+    max-width: 44rem;
+    margin-inline: auto;
+  }
+
+  .h2-model {
+    font-size: 2.75rem;
+    margin: 0;
+  }
+
+  .div-info-modelo > .div-model {
+    margin: 1.5rem 0 0;
+  }
+
+  .div-galeria .thumbnails {
+    justify-content: flex-start;
+    max-width: 28rem;
+    margin-inline: auto;
+  }
+
+  .div-galeria .thumbnails:has(> :nth-child(4):last-child) {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .div-galeria .thumbnails:has(> :nth-child(4):last-child) > .gallery-thumbnail-button {
+    width: 100%;
+    min-width: 0;
+    margin: 10px 0;
+  }
+
+  .contenedor-biografia,
+  .contenedor-biografia2 {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    gap: 1.5rem;
+    padding: 3rem 0;
+  }
+
+  .img-biografia_left,
+  .img-biografia_right {
+    width: 12rem;
+    margin: 0;
+  }
+
+  .div-biografia,
+  .div-biografia2 {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .p-biografia {
+    width: 100%;
+    max-width: 42rem;
+    margin: 0;
+  }
+
+  .contenedor-mantenimiento {
+    width: 90%;
+  }
+
+  .div-mantenimiento {
+    flex-direction: column;
+  }
+
+  .texto-mantenimiento {
+    flex: none;
+    width: 100%;
+  }
+
+  .texto-mantenimiento .h-right,
+  .texto-mantenimiento .p-right {
+    text-align: left;
+  }
+
+  .img-mantenimiento {
+    flex: none;
+    max-width: 32rem;
+  }
+
+  .div-footer > div {
+    min-width: 0;
+    border-right: none;
+  }
+
+  .div-footer_info_contacto {
+    overflow-wrap: anywhere;
+  }
+
+  .div-copyright {
+    margin-inline: 0;
+  }
+}
